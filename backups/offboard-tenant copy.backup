@@ -1,0 +1,71 @@
+---
+
+copyright:
+  years:  2022, 2023
+lastupdated: "2023-11-29"
+
+keywords:
+
+subcollection: logs-router
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Deleting (offboarding) a tenant from {{site.data.keyword.logs_routing_full_notm}}
+{: #offboarding}
+
+You can delete (offboard) a tenant from {{site.data.keyword.logs_routing_full_notm}}.
+{: shortdesc}
+
+{{site.data.content.tenant_definition_note}}
+
+## Getting an IAM access token
+{: #tenant-remove-step1}
+
+Complete the following steps:
+
+1. Log in to {{site.data.keyword.cloud_notm}} by using the [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
+
+    ```text
+    ibmcloud login [--sso]
+    ```
+    {: pre}
+
+    For federated users, run `ibmcloud login --sso`.
+    {: note}
+
+2. Generate an IAM access token. Run the following command to retrieve your {{site.data.keyword.cloud_notm}} IAM access token.
+
+    ```text
+    ibmcloud iam oauth-tokens | grep IAM | cut -d ' ' -f 5 | sed 's/^ *//
+    ```
+    {: pre}
+
+3. Copy the access token into an environment variable.
+
+    ```sh
+    export IAM_TOKEN=<insert_access_token>
+    ```
+    {: pre}
+
+## Deleting (offboarding) a tenant
+{: #tenant-remove-step2}
+
+The management endpoint that you call to remove a tenant is only available by using VPE.
+{: important}
+
+Run the following command to delete (offboard) a tenant from the {{site.data.keyword.logs_routing_full_notm}} service:
+
+```sh
+curl -X DELETE -H "Authorization: bearer ${IAM_TOKEN}" management.private.${REGION}.logs-router.test.cloud.ibm.com/v1/tenants/${TENANT_ID}
+```
+{: pre}
+
+Where:
+
+- `IAM_TOKEN` is the IAM token that you must use to authenticate the request.
+
+- `TENANT_ID` defines the ID of the tenant that you are removing which was returned when the service was created (onboarded).
+
+- `REGION` defines the region where your tenant is located.
