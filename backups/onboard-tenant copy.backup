@@ -1,0 +1,149 @@
+---
+
+copyright:
+  years:  2022, 2024
+lastupdated: "2024-01-08"
+
+keywords:
+
+subcollection: logs-router
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Creating (onboarding) as a tenant in {{site.data.keyword.logs_routing_full}}
+{: #onboarding}
+
+You must create (onboard) a tenant in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs in the {{site.data.keyword.cloud_notm}}.
+{: shortdesc}
+
+{{site.data.content.tenant_definition_note}}
+
+You must create (onboard) a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
+{: important}
+
+## Before you begin
+{: #before-you-begin}
+
+1. Review the [getting started](/docs/logs-router?topic=logs-router-getting-started) to understand {{site.data.keyword.logs_routing_full}} concepts and configuration steps.
+
+2. Be sure that you installed all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+
+
+### Enabling connectivity
+{: #enable-connectivity}
+
+
+
+Ensure that you can connect to both the management and ingestion endpoints by following the instructions in [connecting to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-connecting).
+
+### Setting up permissions for onboarding
+{: #setting-permissions}
+
+To create (onboard) a tenant for an account, you must have the `Manager` role for {{site.data.keyword.logs_routing_full_notm}}. To see what IAM roles are available for {{site.data.keyword.logs_routing_full_notm}}, see [managing IAM access](/docs/logs-router?topic=logs-router-iam).
+
+If you are the account owner, you might already have sufficient access without requiring extra permissions.
+{: tip}
+
+Granting the role can be done by using the `ibmcloud` CLI. Use the appropriate command for the type of identity:
+
+For user accounts:
+```text
+ibmcloud iam user-policy-create <username> --roles Manager --service-name logs-router
+```
+{: pre}
+
+For service IDs:
+```text
+ibmcloud iam service-policy-create <serviceID> --roles Manager --service-name logs-router
+```
+{: pre}
+
+For trusted profiles:
+```text
+ibmcloud iam tp-policy-create <trustedProfile> --roles Manager --service-name logs-router
+```
+{: pre}
+
+Instead of assigning roles directly to identities,
+a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
+{: tip}
+
+### Retrieving your {{site.data.keyword.la_full_notm}} information
+{: #retrieve-log-analysis-information}
+
+To onboard as a {{site.data.keyword.la_full_notm}} tenant, you must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
+- The instance [CRN](/docs/account?topic=account-crn)
+- The ingestion key
+- The endpoint (hostname and port)
+
+To obtain the instance CRN for the {{site.data.keyword.la_full_notm}} instance, run this command:
+
+```text
+ibmcloud resource service-instances --service-name logdna --long
+```
+{: pre}
+
+This command lists all of your {{site.data.keyword.la_short}} instances. You can find the CRN for each in the `ID` field, for example:
+
+```text
+ID:                 crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b1a2b3c::
+GUID:               48b580c-34ad-c985-1g2g-e1g75b1a2b3c
+Name                MyLogDNAProd
+Location            us-east
+```
+{: screen}
+
+To retrieve the ingestion key for your instance, follow [these steps](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui#ingestion_key_ui).
+
+To determine the correct {{site.data.keyword.la_short}} endpoint information, including the hostname and port, see the list of [{{site.data.keyword.la_short}} endpoints](/docs/log-analysis?topic=log-analysis-endpoints).
+
+## Creating (onboarding) a tenant
+{: #step-by-step}
+
+### Retrieving the IAM bearer token
+{: #retrieve-iam-token}
+{: step}
+
+Retrieve your IAM bearer token and export it as an environment variable by running the following command:
+
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
+
+### Submitting the creation (onboarding) API request
+{: #submit-onboarding-api-request}
+
+Submit the create (onboard) request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+
+The following example shows the creation of a tenant to {{site.data.keyword.logs_routing_full_notm}} in the `us-east` region by using a VPE, and specifying target information for a {{site.data.keyword.la_full_notm}} instance that is also in `us-east`:
+
+```sh
+curl -X POST  -H "Content-Type: application/json" -H "Authorization: ${IAM_TOKEN}" --data "{
+    \"target_type\": \"logdna\",
+    \"access_credential\": \"REPLACEWITHYOUR_INGESTION_KEY\",
+    \"target_instance_crn\": \"crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b1a2b3c::\",
+    \"target_host\": \"logs.us-east.logging.cloud.ibm.com\",
+    \"target_port\": 443}" https://management.private.us-east.logs-router.cloud.ibm.com:443/v1/tenants
+```
+{: pre}
+
+
+If the creation (onboarding) request was successful, a response that contains your tenant metadata is returned. For example,
+
+```json
+{
+    “id”: "97543c-77b7-eg23-8114-999b1a2b3c",
+    “bss_account_id”: "473958g47b35f11111",
+    “target_id”: "86432b-66a6-df12-7003-888a2aaa12",
+    “target_instance_crn”: "crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b1a2b3c::",
+    “target_type”: "logdna",
+    “target_host”: "logs.us-east.logging.cloud.ibm.com",
+    “target_port”: 443,
+    “created_at”: "2020-09-28T17:49+0000",
+    “updated_at”: "2020-09-28T17:49+0000"
+}
+```
+{: screen}

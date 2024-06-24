@@ -1,0 +1,92 @@
+---
+
+copyright:
+  years:  2022, 2023
+lastupdated: "2023-12-11"
+
+keywords:
+
+subcollection: logs-router
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Getting started with {{site.data.keyword.logs_routing_full}}
+{: #getting-started}
+
+Use the {{site.data.keyword.logs_routing_full_notm}} service to collect and route {{site.data.keyword.cloud_notm}} logs to your chosen target. You can route logs from your own {{site.data.keyword.cloud_notm}} workloads, such as applications on [{{site.data.keyword.containerlong_notm}}](https://www.ibm.com/products/kubernetes-service) clusters, and from  {{site.data.keyword.cloud_notm}} service instances.
+{: shortdesc}
+
+{{site.data.keyword.logs_routing_full_notm}} uses the concept of tenants and targets.
+
+{{site.data.content.tenant_definition-paragraph}}
+
+To start using the service, you need to:
+- Create (onboard) a {{site.data.keyword.logs_routing_full_notm}} tenant in your {{site.data.keyword.cloud_notm}} account in at least one [supported {{site.data.keyword.cloud}} region](/docs/logs-router?topic=logs-router-locations).
+- Install and configure the {{site.data.keyword.logs_routing_full_notm}} agent to collect log events.
+
+![Flow of routed logs](../images/Logs-Router-05.svg "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
+
+The following steps can be used to start using {{site.data.keyword.logs_routing_full}}.
+
+## Before you begin
+{: #before-you-begin}
+{: step}
+
+Before you start, check that the user who is configuring {{site.data.keyword.logs_routing_full_notm}} for the {{site.data.keyword.cloud}} account has sufficient permissions to manage the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
+
+Create an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration) if you do not already have one.
+
+### Installation prerequisites
+{: #install-prerequisites}
+
+Install the following tools:
+- [Install the Kubernetes CLI (`kubectl`)](https://kubernetes.io/docs/tasks/tools/){: external}
+- If you are installing the agent on an [{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/docs/openshift) cluster: [Install the Red Hat Openshift CLI (`oc`)](/docs/openshift?topic=openshift-cli-install)
+- [Download and install the {{site.data.keyword.cloud}} CLI](/docs/cli)
+- If you do not have an existing {{site.data.keyword.la_full_notm}} instance to use as a target to receive routed logs: [Provision an IBM Log Analysis instance](/docs/log-analysis?topic=log-analysis-provision)
+- If you are going to be running the agent in an {{site.data.keyword.vpc_full}} and will be using the {{site.data.keyword.cloud}} CLI to configure networking, [install the {{site.data.keyword.vpc_full}} CLI plugin](/docs/vpc?topic=vpc-set-up-environment&interface=cli)
+- [Download and install jq](https://stedolan.github.io/jq/){: external}
+
+### Collecting required information
+{: #collect-required-information}
+
+Collect the following information:
+- The full CRN of the {{site.data.keyword.la_full_notm}} instance that will be the target to receive routed logs.
+- The {{site.data.keyword.la_full_notm}} [endpoint](/docs/log-analysis?topic=log-analysis-endpoints). This _MUST_ be the endpoint for the region where the instance was created.
+- The [ingestion key](/docs/log-analysis?topic=log-analysis-ingestion_key) for your {{site.data.keyword.la_full_notm}} instance
+
+You can find instructions for retrieving this information [here](/docs/logs-router?topic=logs-router-onboarding&interface=ui#onboarding-retrieve-log-analysis-information).
+{: tip}
+
+{{site.data.keyword.logs_routing_full_notm}} supports only {{site.data.keyword.la_full_notm}} targets.
+{: important}
+
+## Enabling connectivity
+{: #getting-started-enable-connectivity}
+{: step}
+
+Ensure that you can connect to both the management and ingestion endpoints by following the instructions for [connecting to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-connecting).
+
+## Creating (onboarding) a tenant
+{: #getting-started-onboard-tenant}
+{: step}
+
+Create (onboard) a tenant by following [Onboarding to the {{site.data.keyword.logs_routing_full_notm}} service](/docs/logs-router?topic=logs-router-onboarding).
+
+## Installing the {{site.data.keyword.logs_routing_full_notm}} agent on your cluster
+{: #getting-started-deploy-agent}
+{: step}
+
+The {{site.data.keyword.logs_routing_full_notm}} agent collects logs events from containerized workloads that run on a Kubernetes cluster.
+
+Complete the steps in [Deploying the agent on a cluster](/docs/logs-router?topic=logs-router-deploying-agent).
+
+## Verifying that logs are sent to the destination target
+{: #getting-started-verify-logs}
+{: step}
+
+Verify that the logs for your cluster are routed to your {{site.data.keyword.la_short}} instance.
+
+[Launch the {{site.data.keyword.la_short}} web UI](/docs/log-analysis?topic=log-analysis-launch&interface=ui) for the target {{site.data.keyword.la_short}} instance and check that logs from your cluster are displayed.

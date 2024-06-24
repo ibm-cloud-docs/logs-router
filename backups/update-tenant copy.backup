@@ -1,0 +1,136 @@
+---
+
+copyright:
+  years:  2022, 2024
+lastupdated: "2024-01-08"
+
+keywords: 
+
+subcollection: logs-router
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Editing (updating) a tenant in {{site.data.keyword.logs_routing_full_notm}}
+{: #update-tenant-information}
+
+You can update information for an existing tenant in {{site.data.keyword.logs_routing_full}}.
+{: shortdesc}
+
+{{site.data.content.tenant_definition_note}}
+
+After you [create (onboard) a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant. For example, you might need to modify the target information, such as the ingestion key or hostname.
+
+## Before you begin
+{: #before-you-begin}
+
+Be sure that all prerequisite tools are installed as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+
+### Enabling connectivity
+{: #enable-connectivity}
+
+Ensure that you can connect to both the management and ingestion endpoints by following the instructions in [connecting to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-connecting).
+
+### Setting up permissions for updating a tenant
+{: #setting-permissions}
+
+To update a tenant, you must have the `Manager` role for {{site.data.keyword.logs_routing_full_notm}}. To see what IAM roles are available for {{site.data.keyword.logs_routing_full_notm}}, see [managing IAM access](/docs/logs-router?topic=logs-router-iam).
+
+If you are the account owner, you might already have sufficient access without requiring extra permissions.
+{: tip}
+
+Granting the role can be done by using the `ibmcloud` CLI. Use the appropriate command for the type of identity:
+
+For user accounts:
+```text
+ibmcloud iam user-policy-create <username> --roles Manager --service-name logs-router
+```
+{: pre}
+
+For service IDs:
+```text
+ibmcloud iam service-policy-create <serviceID> --roles Manager --service-name logs-router
+```
+{: pre}
+
+For trusted profiles:
+```text
+ibmcloud iam tp-policy-create <trustedProfile> --roles Manager --service-name logs-router
+```
+{: pre}
+
+Instead of assigning roles directly to identities,
+a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
+{: tip}
+
+### Getting the tenant ID
+{: #get-tenant-id}
+
+Updating a tenant requires the tenant ID. If you do not remember your tenant ID, [you can retrieve it](/docs/logs-router?topic=logs-router-get-tenant&interface=api).
+{: important}
+
+### Retrieving {{site.data.keyword.loganalysisfull_notm}} information
+{: #retrieve-log-analysis-information}
+
+You can modify only the target for an existing tenant. {{site.data.keyword.logs_routing_full_notm}} supports only targets of type `logdna` ({{site.data.keyword.loganalysisfull_notm}}). To get the information you need, see [retrieving your {{site.data.keyword.la_full_notm}} information](/docs/logs-router?topic=logs-router-onboarding&interface=ui#onboarding-retrieve-log-analysis-information).
+
+## Updating a tenant
+{: #update-tenant-step-by-step}
+
+Use the tenant update capability to update tenant information.
+
+### Retrieving the IAM bearer token
+{: #retrieve-iam-token}
+{: step}
+
+Retrieve your IAM bearer token and export it as an environment variable.
+
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
+
+### Submitting an API request to update a tenant
+{: #submit-update-tenant-api-request}
+{: step}
+
+Submit the update tenant request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+
+In the request body, you are only required to supply the fields you are modifying. Any fields that are not included in the request body are not changed.
+{: note}
+
+The following example shows updating a {{site.data.keyword.logs_routing_full_notm}} tenant in the `us-east` region by using a VPE.  In this case, the request changes the target from one {{site.data.keyword.la_short}} instance to a different one, so the fields to be updated are `access_credential` and `target_instance_crn`:
+
+```sh
+curl -X PATCH  -H "Content-Type: application/json" -H "Authorization: ${IAM_TOKEN}" --data "{
+    \"access_credential\": \"INGESTIONKEY_FOR_OTHER_INSTANCE\",
+    \"target_instance_crn\": \"crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:37a479b-23gc-b874-0f1f-d0f64a61a2bc::\"
+    }" https://management.private.us-east.logs-router.cloud.ibm.com:443/v1/tenants/97543c-77b7-eg23-8114-999b31a2bc
+```
+{: pre}
+
+A successful request returns a response that contains the updated tenant, for example:
+
+```json
+{
+    "tenants" [
+        {
+            “id”: "97543c-77b7-eg23-8114-999b31a2bc", 
+            “bss_account_id”: "473958g47b35faa111", 
+            “target_id”: "86432b-66a6-df12-7003-888a21a2bc", 
+            “target_instance_crn”: "crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:37a479b-23gc-b874-0f1f-d0f64a61a2bc::",
+            “target_type”: "logdna", 
+            “target_host”: "logs.us-east.logging.cloud.ibm.com", 
+            “target_port”: 443, 
+            “created_at”: "2020-09-28T17:49+0000", 
+            “updated_at”: "2023-10-23T12:26+0000"
+        }
+    ]
+}
+```
+{: screen}
+
+For security reasons, you cannot retrieve an {{site.data.keyword.la_full_notm}} ingestion key that is stored in {{site.data.keyword.logs_routing_full_notm}}. This field is always omitted from API responses, even if you change the ingestion key with an update request.
+{: important}
+
