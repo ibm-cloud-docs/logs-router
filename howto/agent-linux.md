@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022, 2024
-lastupdated: "2024-05-01"
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -55,7 +55,7 @@ Complete the following steps:
 
 1. Log in to your Linux environment.
 
-2. Download the required RPM  or DEB package. For information on the current {{site.data.keyword.logs_routing_full_notm}} Agent version, see the [release notes.](/docs/logs-router?topic=logs-router-release-notes)
+2. Download the required RPM  or DEB package. For information on the current {{site.data.keyword.logs_routing_full_notm}} Agent version, see the [agent release notes.](/docs/logs-router?topic=logs-router-release-notes-agent)
 
 3. Validate the checksum by running the following command:
 

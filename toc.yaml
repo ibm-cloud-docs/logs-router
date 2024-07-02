@@ -24,8 +24,13 @@ toc:
             navtitle: About platform logs
       - topic: learn/use-cases.md
         navtitle: Use cases
-      - topic: learn/releasenotes.md
-        navtitle: Release notes
+      - topicgroup:
+          label: Release notes
+          topics:
+          - topic: learn/releasenotes.md
+            navtitle: Release notes
+          - topic: learn/releasenotes_agent.md
+            navtitle: Agent release notes
       - reference/cloud-services-locations.md
 
   - navgroup:
