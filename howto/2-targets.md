@@ -2,7 +2,7 @@
 
 copyright:
   years:  2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-07-02"
 
 keywords:
 
@@ -233,7 +233,7 @@ curl -X POST "https://management.us-east.logs-router.cloud.ibm.com/v1/tenants/97
 If the creation request was successful, a response that contains your tenant metadata is returned.
 
 ### Adding an {{site.data.keyword.logs_full_notm}} target to an existing tenant using the API
-{: #migration-add-la-target-api}
+{: #migration-add-logs-target-api}
 {: api}
 
 To add a target, you must supply information about the destination where you want your logs delivered.
