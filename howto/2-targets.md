@@ -291,14 +291,7 @@ If the creation request was successful, a response that contains your tenant met
 
 You can get the information about the complete tenant by following [Getting tenant information by using the API](/docs/logs-router?topic=logs-router-get-tenant&interface=api) or for all tenants in your account as described in [Listing tenants by using the API](/docs/logs-router?topic=logs-router-list-tenants&interface=api).
 
-<!-- 
-## Getting tenant information through the UI
-{: #2-tenant-get-tenant-ui}
-{: ui}
 
-You can get the information about the tenants in your account as described in [Listing tenants through the UI](/docs/logs-router?topic=logs-router-list-tenants-ui).
-
--->
 
 ## Updating one or both targets of the tenant using the API
 {: #2-tenant-update-tenant-api}
@@ -307,14 +300,7 @@ You can get the information about the tenants in your account as described in [L
 It is possible to update one target at a time.
 For more information, follow the documentation on [Updating a target by using the API](/docs/logs-router?topic=logs-router-update-tenant&interface=api).
 
-<!--
-## Updating one or both targets of the tenant through the UI
-{: #2-tenant-update-tenant-ui}
-{: ui}
 
-It is possible to update one target at a time.
-For more information, follow the documentation on [Editing a target through the UI](/docs/logs-router?topic=logs-router-update-tenant-ui).
--->
 
 ## Deleting a target using the API
 {: #2-tenant-delete-target-api}

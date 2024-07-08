@@ -112,7 +112,10 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 
 | Service          | Description | More information         |
 |------------------|-------------|-------------------|
-| | |
+| [Dedicated Host for VPC](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances) | You can create a dedicated host to carve out a single-tenant compute node, free from users outside of your organization.  | [More information](/docs/vpc?topic=vpc-logging#logging-dedicated-host) |
+| [Flow Log Collector](/docs/vpc?topic=vpc-flow-logs)| This service is used to collect and store information regarding the Internet Protocol (IP) traffic going to and from network interfaces within your Virtual Private Cloud (VPC) |[More information](/docs/vpc?topic=vpc-logging#logging-flow-log-collector_msgs) |
+| [Snapshots for VPC](/docs/vpc?topic=vpc-snapshots-vpc-about)| This offering is used to create a point-in-time copy of your boot or data volume. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-snapshots) |
+| [{{site.data.keyword.filestorage_vpc_short}}](/docs/vpc?topic=vpc-file-storage-vpc-about)| {{site.data.keyword.filestorage_vpc_short}} provides NFS-based file storage services within the VPC Infrastructure. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-file-share-replication) |
 {: caption="Table 8. List of IBM Cloud VPC services" caption-side="top"}
 
 ## Networking services
