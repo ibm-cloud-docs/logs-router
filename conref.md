@@ -17,7 +17,7 @@ content-type: conref
 # Reusable content for {{site.data.keyword.logs_routing_full_notm}}
 {: #lclr_conrefs}
 
-<!------------------------------------------->
+
 
 ## Reused definitions
 {: #conref_defs}
@@ -29,4 +29,4 @@ A tenant is the account-specific configuration of {{site.data.keyword.logs_routi
 A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes the target definition. The target defines where the logs are routed.
 {: #tenant_definition-paragraph}
 
-<!------------------------------------------->
+

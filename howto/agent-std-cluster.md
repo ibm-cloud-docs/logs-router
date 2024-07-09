@@ -342,20 +342,4 @@ Complete the following steps to remove an agent:
    {: pre}
 
 
-<!--
 
-2. Uninstall the {{site.data.keyword.logs_routing_full_notm}} agent.
-
-    Run the following `curl` command in your terminal:
-
-    ```sh
-    curl -sSL https://ibm.biz/logs-router-uninstall | bash -s -- -t <cluster_type>
-    ```
-    {: pre}
-
-    Where:
-
-    `-t`
-    :   Cluster type. Use this option to define the cluster type where the {{site.data.keyword.logs_routing_full_notm}} agent is deployed. Choose `Kubernetes` for removing an agent from a Kubernetes cluster.
-
--->

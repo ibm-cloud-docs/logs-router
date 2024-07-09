@@ -34,24 +34,9 @@ A region (location) is a geographically and physically separate group of one or 
 
 See [Your responsibilities when using {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-shared-responsibilities).
 
-<!-- ## What level of availability do I need?
-{: #ha-level}
 
-You can achieve high availability on different levels in your IT infrastructure and within different components of your cluster. The level of availability that is right for you depends on several factors, such as your business requirements, the service level agreements (SLAs) that you have with your customers, and the resources that you want to expend.-->
 
-<!-- ## What level of availability does {{site.data.keyword.cloud_notm}} offer?
-{: #ha-service}
 
-The level of availability that you set up for your cluster impacts your coverage under the {{site.data.keyword.cloud_notm}} high availability service level agreement terms.
-
-Service level objectives (SLOs) describe the design points that the {{site.data.keyword.cloud_notm}} services are engineered to meet. _service-name_ is designed to achieve the following availability target.
-
-| Availability target | Target Value   |
-|---|---|
-|  Availability % |   |
-{: caption="Table 1. SLO for _service-name_" caption-side="bottom"}
-
-The SLO is not a warranty and {{site.data.keyword.IBM_notm}} will not issue credits for failure to meet an objective. Refer to the SLAs for commitments and credits that are issued for failure to meet any committed SLAs. For a summary of all SLOs, see [{{site.data.keyword.cloud_notm}} service level objectives](/docs/overview?topic=overview-slo). -->
 
 
 ## Locations
