@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-01"
+  years:  2023, 2024
+lastupdated: "2024-07-10"
 
 keywords:
 
@@ -172,7 +172,7 @@ curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
 -H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
 -H 'IBM-API-Version: DATE' \
---data "{
+--data '{
     "name": "TENANT_NAME",
     "targets": [
         {
