@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -35,7 +35,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
 {: release-note}
 
 {{site.data.keyword.logs_routing_full_notm}} is generally available
-: For more information, see the [Learning about {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about)
+: For more information, see [Learning about {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about)
 
 ## 10 June 2024
 {: #logs-router-jun1024}
