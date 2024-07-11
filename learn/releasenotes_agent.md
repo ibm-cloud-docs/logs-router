@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-02"
+  years:  2023, 2024
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -22,6 +22,49 @@ Use these release notes to learn about updates to the {{site.data.keyword.logs_r
 
 For release notes about {{site.data.keyword.logs_routing_full}} in general, see [Release notes for {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-release-notes).
 {: note}
+
+## 11 July 2024
+{: #logs-router-agent-jul1124}
+{: release-note}
+
+Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
+:   {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL8, RHEL 9, Ubuntu 20, Ubuntu 22, and Debian 11, and Debian 12.  This release is based on fluentbit [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external}.
+
+   This version includes the following notable changes:
+
+   * Addition of a {{site.data.keyword.logs_routing_full_notm}} Agent image that can run as a container sidecar.
+       * `icr.io/ibm/observe/logs-router-agent-sidecar`
+   * Fixed bug related to efficiency in handling payloads.
+   * Users can now send logs directly to {{site.data.keyword.logs_full_notm}} in Linux agent with the optional `--send-directly-to-icl` flag
+
+   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available:
+
+   RHEL 8
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rehl8-1.2.3.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.2.3.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.2.3.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-rhel8-1.2.3.rpm.sha256){: external}
+
+   RHEL 9
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.rpm](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.rpm){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.rpm.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.rpm.sha256){: external}
+
+   Debian 11
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.2.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.2.3.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.2.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-deb11-1.2.3.deb.sha256){: external}
+
+
+   Ubuntu 20
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-routing-agent-ubuntu20-1.2.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.2.3.deb.sha256){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.2.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-ubuntu20-1.2.3.deb){: external}
+
+
+   Debian 12 & Ubuntu 22
+
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.deb](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.deb){: external}
+   * [https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.deb.sha256](https://logs-router-agent-install-packages.s3.us.cloud-object-storage.appdomain.cloud/logs-router-agent-1.2.3.deb.sha256){: external}
 
 
 ## 10 June 2024
