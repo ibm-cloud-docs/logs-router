@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-07-11"
 
 keywords:
 
@@ -33,7 +33,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
    This version includes the following notable changes:
 
    * Addition of a {{site.data.keyword.logs_routing_full_notm}} Agent image that can run as a container sidecar.
-       * [icr.io/ibm/observe/logs-router-agent-sidecar](icr.io/ibm/observe/logs-router-agent-sidecar)
+       * [icr.io/ibm/observe/logs-router-agent-sidecar](icr.io/ibm/observe/logs-router-agent-sidecar){: external}
    * Fixed bug related to efficiency in handling payloads.
    * Users can now send logs directly to {{site.data.keyword.logs_full_notm}} in Linux agent with the optional `--send-directly-to-icl` flag
 
