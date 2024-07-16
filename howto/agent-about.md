@@ -75,7 +75,7 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.logs_routing_full_notm}} agent  | Based on Fluent Bit Version |
 |-----------------------------------------------------|---------|
-| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external}. |
+| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
 {: caption="Supported agent versions" caption-side="bottom"}
 
 For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/logs-router?topic=logs-router-fluentbit-support)
