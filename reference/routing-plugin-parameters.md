@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-30"
+  years:  2023, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -16,8 +16,11 @@ subcollection: logs-router
 {: #routing-plugin-parameters}
 
 
-List of parameters that you can configure for a {{site.data.keyword.logs_routing_full_notm}} agent:
+List of parameters that you can configure for a {{site.data.keyword.logs_routing_full_notm}} agent.
 {: shortdesc}
+
+These parameters only apply if the agent is configured without specifying the the `--send-directly-to-icl` flag. See [{{site.data.keyword.logs_full_notm}} plug-in parameters](/docs/logs-router?topic=logs-router-logs-plugin-parameters) if you specified the `--send-directly-to-icl` flag to route logs directly to {{site.data.keyword.logs_full_notm}}.
+{: important}
 
 ## FluentBit parameters
 {: #fluentbit}
