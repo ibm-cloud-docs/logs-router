@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -75,7 +75,7 @@ The following table lists the agent versions that are supported and the version 
 
 | {{site.data.keyword.logs_routing_full_notm}} agent  | Based on Fluent Bit Version |
 |-----------------------------------------------------|---------|
-| v1.1.1                                              | [v3.0.2](https://fluentbit.io/announcements/v3.0.2/){: external} |
+| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
 {: caption="Supported agent versions" caption-side="bottom"}
 
 For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/logs-router?topic=logs-router-fluentbit-support)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-06-20"
+  years:  2023, 2024
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -16,8 +16,11 @@ subcollection: logs-router
 {: #logs-plugin-parameters}
 
 
-List of parameters that you can configure when using the {{site.data.keyword.logs_routing_full_notm}} agent to send logs directly to {{site.data.keyword.logs_full_notm}}:
+List of parameters that you can configure when using the {{site.data.keyword.logs_routing_full_notm}} agent to send logs directly to {{site.data.keyword.logs_full_notm}}.
 {: shortdesc}
+
+These parameters only apply when you configure the agent with the `--send-directly-to-icl` flag specified to send logs directly to {{site.data.keyword.logs_full_notm}}. See [{{site.data.keyword.logs_routing_full_notm}} plug-in parameters](/docs/logs-router?topic=logs-router-routing-plugin-parameters) if you are not specifying the `--send-directly-to-icl` flag.
+{: important}
 
 ## FluentBit parameters
 {: #icl-fluentbit}
@@ -61,3 +64,5 @@ List of parameters that you can configure when using the {{site.data.keyword.log
 |  `CR_Token_Mount_Path` |  Path where the CRToken is present |  `/var/run/secrets/tokens/vault-token` | any string  | false - Only used when Authentication_Mode is set to TrustedProfile  |
 |  `Trusted_Profile_ID` |  ID of the Trusted Profile to be used |  n/a |  any string	  | true - Only used when Authentication_Mode is set to TrustedProfile |
 {: caption="Table 4. Authentication parameters" caption-side="bottom"}
+
+
