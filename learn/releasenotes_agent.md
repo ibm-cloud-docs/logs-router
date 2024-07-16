@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-11"
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -22,6 +22,8 @@ Use these release notes to learn about updates to the {{site.data.keyword.logs_r
 
 For release notes about {{site.data.keyword.logs_routing_full}} in general, see [Release notes for {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-release-notes).
 {: note}
+
+
 
 ## 11 July 2024
 {: #logs-router-agent-jul1124}
