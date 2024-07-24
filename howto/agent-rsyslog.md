@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-06-13"
+  years:  2023, 2024
+lastupdated: "2024-07-24"
 
 keywords:
 
@@ -80,7 +80,19 @@ You can configure the {{site.data.keyword.logs_routing_full_notm}} agent to coll
 ## Step 2. Stop and start the agent
 {: #syslog-s2}
 
-Run the following command.
+Run the following commands.
+
+```sh
+systemctl daemon-reload
+```
+{: pre}
+  
+```sh
+systemctl restart fluent-bit
+```
+{: pre}
+
+Run the following command to start the agent if you want to receive the Syslog messages from localhost in TCP mode.
 
 ```sh
 <FLUENT-BIT-INSTALL-DIR>/bin/fluent-bit -c /etc/fluent-bit/fluent-bit.conf
