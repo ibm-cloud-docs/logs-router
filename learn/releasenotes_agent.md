@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-24"
 
 keywords:
 
@@ -39,7 +39,10 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
    * Fixed bug related to efficiency in handling payloads.
    * Users can now send logs directly to {{site.data.keyword.logs_full_notm}} in Linux agent with the optional `--send-directly-to-icl` flag
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available:
+   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+
+   Both packages are required for the installation.
+   {: important}
 
    RHEL 8
 
@@ -80,7 +83,10 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.2
 
    * Enables per-message acknowledgements.  With this feature, each event bundle sent by the agent to the ingester is assigned an ID, and the {{site.data.keyword.logs_routing_full_notm}} ingester will send the agent an acknowledgement once the bundle has been sent through the data plane.  This helps avoid losing log events, for example due to abnormal connection closure or network outage, since the agent will resend unacknowledged bundles.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available:
+   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+
+   Both packages are required for the installation.
+   {: important}
 
    RHEL 8
 
@@ -123,7 +129,10 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.0
    * Enables IAM Trusted Profiles for non-containerized agents (agents running directly on Linux hosts).
    * Renames the Kubernetes `init` container to `logs-router-agent-init`.  The previous `logger-agent-init` tag can still be used, but the `logger-agent-init` tag will be disabled in the future and users are encouraged to update their deployment `yaml` file to reference the new image tag.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available:
+   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+
+   Both packages are required for the installation.
+   {: important}
 
    RHEL 9
 
@@ -143,7 +152,10 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.0
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.1
 :   {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.1 is available for {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.openshiftlong_notm}}, RHEL 9, Ubuntu 22, and Debian 12.  This release is based on fluentbit [v3.0.2](https://fluentbit.io/announcements/v3.0.2/){: external}, which includes a critical fix for passing backpressure signals to input plugins from specific filter plugins.
 
-   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available: 
+   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available.
+
+   Both packages are required for the installation.
+   {: important}
    
    RHEL 9
    
@@ -163,6 +175,9 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.1
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.0
 :   The following new {{site.data.keyword.logs_routing_full_notm}} Agent packages are available: 
+
+   Both packages are required for the installation.
+   {: important}
 
    RHEL 9
 

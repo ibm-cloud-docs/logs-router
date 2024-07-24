@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-07-02"
+  years:  2023, 2024
+lastupdated: "2024-07-24"
 
 keywords:
 
@@ -55,30 +55,34 @@ Complete the following steps:
 
 1. Log in to your Linux environment.
 
-2. Download the required RPM  or DEB package. For information on the current {{site.data.keyword.logs_routing_full_notm}} Agent version, see the [agent release notes.](/docs/logs-router?topic=logs-router-release-notes-agent)
+2. Download the required RPM or DEB packages. For information about the current {{site.data.keyword.logs_routing_full_notm}} agent version, see the [agent release notes.](/docs/logs-router?topic=logs-router-release-notes-agent)
 
 3. Validate the checksum by running the following command:
 
    ```sh
-   sha256sum -c <sha256 filename>
+   sha256sum -c <sha256_filename>
    ```
    {: pre}
+
+   Where `<sha256_filename>` is the filename of the download `*.sha256` file.
 
 5. Install the agent.
 
    * For RHEL run:
 
-       ```sh
-     rpm -ivh <rpm filename>
-      ```
-      {: pre}
+     ```sh
+     rpm -ivh <rpm_filename>
+     ```
+     {: pre}
 
    * For Debian and Ubuntu run:
 
-      ```sh
-      dpkg -i <deb filename>
-      ```
-      {: pre}
+     ```sh
+     dpkg -i <deb_filename>
+     ```
+     {: pre}
+
+   Where `<rpm_filename>` or `<deb_filename>` is the name of the downloaded `*.rpm` or `*.deb` file.
 
 6. Download the configuration file.
 
