@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-12-29"
+  years:  2023, 2024
+lastupdated: "2024-07-30"
 
 keywords:
 
@@ -34,6 +34,7 @@ Use the appropriate command for the type of identity:
 | User account      | `ibmcloud iam user-policy-create <username> --roles Manager --service-name logs-router` |
 | Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Manager --service-name logs-router` |
 | Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Manager --service-name logs-router` |
+| Access group      | `ibmcloud iam access-group-policy-create ACCESS_GROUP --roles Manager --service-name logs-router` |
 {: caption="Table 1. Command to grant IAM permissions by type of identity" caption-side="top"}
 
 Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)

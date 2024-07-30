@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-01"
+  years:  2023, 2024
+lastupdated: "2024-07-30"
 
 keywords:
 
@@ -36,6 +36,8 @@ Complete the following steps to deploy an agent on an {{site.data.keyword.contai
     - The Kubernetes CLI to manage the cluster by using `kubectl` commands. [Learn more](/docs/containers?topic=containers-cli-install).
 
 - Read about [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about&interface=api#about_connecting).
+
+- Check the agent versions that are available. For more information, see [Checking the available agent versions](https://cloud.ibm.com/docs/logs-router?topic=logs-router-check-agent-versions).
 
 
 ### Step 1. Define the authentication method for the agent
@@ -144,7 +146,7 @@ Complete the following steps:
     : Specify the subsystem name that you want to see in your {{site.data.keyword.logs_full_notm}} instance. If in the metadata, the subsystem name defaults to container name. You can also use variables from the environment, for example `'${NODE_NAME}'`.
 
     `--send-directly-to-icl`
-    :   (Optional) Directly send logs to {{site.data.keyword.logs_full_notm}} instead of through the {{site.data.keyword.logs_routing_full_notm}} data plane. This option is beneficial when managing multiple {{site.data.keyword.logs_full_notm}} instances within the same account for advanced logging configurations. 
+    :   (Optional) Directly send logs to {{site.data.keyword.logs_full_notm}} instead of through the {{site.data.keyword.logs_routing_full_notm}} data plane. This option is beneficial when managing multiple {{site.data.keyword.logs_full_notm}} instances within the same account for advanced logging configurations.
 
     For instance, this allows you to segregate logs from different environments (for example, development and production) into separate {{site.data.keyword.logs_full_notm}} instances.
 
