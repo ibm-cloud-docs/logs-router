@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-12-29"
+  years:  2023, 2024
+lastupdated: "2024-07-30"
 
 keywords:
 
@@ -30,6 +30,7 @@ Use the appropriate command for the type of identity:
 
 | Type of identity  | Command |
 |-------------------|---------|
+| Access group      | `ibmcloud iam access-group-policy-create ACCESS_GROUP --roles Writer --service-name logs-router` |
 | User account      | `ibmcloud iam user-policy-create <username> --roles Writer --service-name logs-router` |
 | Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Writer --service-name logs-router` |
 | Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Writer --service-name logs-router` |
