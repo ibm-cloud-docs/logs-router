@@ -18,10 +18,10 @@ subcollection: logs-router
 You must grant permissions to the API key or trusted profile that you use to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
-To send logs to {{site.data.keyword.logs_routing_full_notm}}, choose one of the following options to set the permissions on the API key or trusted profile that you use to send logs to the {{site.data.keyword.logs_full_notm}} instance:
-- Option 1:
-- Option 2: The API key or trusted profile must have the `Writer` role for the {{site.data.keyword.logs_routing_full_notm}} service if you configure your agent to send logs through the {{site.data.keyword.logs_routing_full_notm}} service.
 
+
+
+The API key or trusted profile must have the `Writer` role for the {{site.data.keyword.logs_routing_full_notm}} service if you configure your agent to send logs through the {{site.data.keyword.logs_routing_full_notm}} service.
 
 
 You can grant premissions to:
