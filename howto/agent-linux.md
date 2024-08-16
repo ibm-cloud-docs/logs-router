@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-24"
+lastupdated: "2024-08-16"
 
 keywords:
 
@@ -94,12 +94,12 @@ Complete the following steps:
 7. Run the configuration script.
 
    ```sh
-   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> -d <trusted_profile_id> [--send-directly-to-icl]
+   ./post-config.sh -h <target_host> -p <target_port> -t <target_path> -a <auth_mode> -k <iam_api_key> -d <trusted_profile_id> [--send-directly-to-icl] [-s <vsi_secure_access_enabled>]
    ```
    {: pre}
 
    <target_host>
-   :   Is the [ingestion endpoint](/docs/logs-router?topic=logs-router-endpoints) where logs will be sent. For example, `ingester.private.eu-gb.logs-router.dev.cloud.ibm.com`.
+   :   Is the [ingestion endpoint](/docs/logs-router?topic=logs-router-endpoints) where logs will be sent. For example, `ingester.private.eu-gb.logs-router.cloud.ibm.com`.
 
     <target_port>
     :   Specify `3443`.
@@ -121,8 +121,8 @@ Complete the following steps:
 
         For more information on Trusted Profiles, see [Creating a Trusted Profile](/docs/account?topic=account-create-trusted-profile).
         {: tip}
-    
-    [--send-directly-to-icl]
+
+    --send-directly-to-icl
 
     :   (Optional) Use this option to send logs directly to {{site.data.keyword.logs_full_notm}}, bypassing the {{site.data.keyword.logs_routing_full_notm}} data plane. This option is useful when you have multiple {{site.data.keyword.logs_full_notm}} instances within the same account and require advanced logging configurations. For example, you can direct logs from different environments (for example, development and production) to separate {{site.data.keyword.logs_full_notm}} instances.
 
@@ -133,6 +133,9 @@ Complete the following steps:
         - <target_port>: specify `443`.
 
         - <target_path>: Specify `/logs/v1/singles`.
+
+    -s
+    :   (Optional) Set this to `true` if you have secure access enabled in your VSI. It will be set to `false` by default. For example, `-s true`.
 
 
 
