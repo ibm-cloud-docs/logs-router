@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-03-14"
+  years:  2023, 2024
+lastupdated: "2024-08-16"
 
 keywords:
 
@@ -62,8 +62,8 @@ Install the following tools:
 - If you are installing the agent on an [{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/docs/openshift) cluster, [install the Red Hat Openshift CLI (`oc`)](/docs/openshift?topic=openshift-cli-install).
 - Provision an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
 - If you are going to be running the agent in an {{site.data.keyword.vpc_full}} and will be using the {{site.data.keyword.cloud}} CLI to configure networking, [install the {{site.data.keyword.vpc_full}} CLI plugin](/docs/vpc?topic=vpc-set-up-environment&interface=cli).
-- [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results. JQ stands for JSON processor.
-
+- [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
+- [Download and install yq](https://github.com/mikefarah/yq?tab=readme-ov-file#install){: external} to read, write, and manipulate YAML files in a similar way to using `jq` for JSON files.
 
 ## Creating (onboarding) a tenant
 {: #getting-started-onboard-tenant}

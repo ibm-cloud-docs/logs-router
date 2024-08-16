@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-01"
+  years:  2023, 2024
+lastupdated: "2024-08-16"
 
 keywords:
 
@@ -36,6 +36,10 @@ Complete the following steps to deploy an agent on an OpenShift cluster:
     - The Openshift CLI to manage the cluster from the command line. [Learn more](/docs/openshift?topic=openshift-cli-install).
 
 - Read about [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about&interface=api#about_connecting).
+
+- [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
+
+- [Download and install yq](https://github.com/mikefarah/yq?tab=readme-ov-file#install){: external} to read, write, and manipulate YAML files in a similar way to using `jq` for JSON files.
 
 
 ### Step 1. Define the authentication method for the agent
