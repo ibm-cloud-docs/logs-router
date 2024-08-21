@@ -34,7 +34,7 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - ../cloud-logs/kube-logs.md
+      - include: ../cloud-logs/kube-logs.md
   - navgroup:
       id: howto
       topics:
