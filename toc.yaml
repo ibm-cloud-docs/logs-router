@@ -32,10 +32,6 @@ toc:
             navtitle: Agent release notes
       - reference/cloud-services-locations.md
   - navgroup:
-      id: tutorial
-      topics:
-      - include: ../cloud-logs/kube-logs.md
-  - navgroup:
       id: howto
       topics:
       - topicgroup:
