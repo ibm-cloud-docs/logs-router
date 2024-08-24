@@ -18,7 +18,7 @@ subcollection: logs-router
 Use the {{site.data.keyword.logs_routing_full_notm}} service to route logs from your {{site.data.keyword.cloud_notm}} account to your chosen target. You can route logs from your own {{site.data.keyword.cloud_notm}} workloads, such as, applications on your [{{site.data.keyword.containerlong_notm}}](/docs/containers) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift) clusters, and from selected {{site.data.keyword.cloud_notm}} service instances.
 {: shortdesc}
 
-![Flow of routed logs](../images/get-started.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
+![Flow of routed logs](/images/get-started.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
 
 
 Complete the following steps to start using {{site.data.keyword.logs_routing_full}}:

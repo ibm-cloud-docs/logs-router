@@ -19,7 +19,7 @@ You can use the {{site.data.keyword.logs_routing_full_notm}} service to route lo
 {: shortdesc}
 
 
-![Flow of routed logs](../images/get-started.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
+![Flow of routed logs](/images/get-started.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
 
 ## Tenants and targets
 {: #about_tenant_target}
@@ -53,7 +53,7 @@ You must ensure that you can connect to both the management and ingestion endpoi
 {: note}
 
 
-![Flow of routed logs](../images/Logs-Router-04--1.svg "Resources"){: caption="Figure 1. Resources" caption-side="bottom"}
+![Flow of routed logs](/images/Logs-Router-04--1.svg "Resources"){: caption="Figure 1. Resources" caption-side="bottom"}
 
 
 The {{site.data.keyword.logs_routing_full}} supports the following types of endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}:
