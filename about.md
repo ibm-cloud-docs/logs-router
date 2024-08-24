@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2024-03-07"
+  years:  2023, 2024
+lastupdated: "2024-08-24"
 
 keywords:
 
@@ -72,7 +72,7 @@ You can only access the {{site.data.keyword.logs_routing_full_notm}} UI through 
 
 Logs can be received by {{site.data.keyword.logs_routing_full}} from two sources:
 
-* Log data sent to {{site.data.keyword.logs_routing_full}} by {{site.data.keyword.cloud_notm}} [services that support {{site.data.keyword.logs_routing_full}}.](/docs/logs-router?topic=logs-router-cloud_services_locations).
+* Log data sent to {{site.data.keyword.logs_routing_full}} by {{site.data.keyword.cloud_notm}} [services that support {{site.data.keyword.logs_routing_full}}.](/docs/logs-router?topic=logs-router-cloud_services).
 
 * Applications with a running {{site.data.keyword.logs_routing_full}} agent on [{{site.data.keyword.containerlong_notm}}](/docs/containers) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift) clusters.
 

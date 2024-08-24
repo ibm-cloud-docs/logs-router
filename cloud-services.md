@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-24"
 
 keywords:
 
@@ -106,5 +106,3 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 |-------------|-------------|-------------------------------------------------------------------------|
 | {{site.data.keyword.secrets-manager_full_notm}} | With {{site.data.keyword.secrets-manager_full_notm}}, you can create, lease, and centrally manage secrets that are used in {{site.data.keyword.cloud_notm}} services or your custom-built applications. | [More information](/docs/secrets-manager?topic=secrets-manager-service-logs) |
 {: caption="List of security Cloud services" caption-side="top"}
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-24"
 
 keywords:
 
@@ -18,10 +18,10 @@ subcollection: logs-router
 You must grant permissions to the API key or trusted profile that you use to send logs to an {{site.data.keyword.logs_full_notm}} instance.
 {: shortdesc}
 
+To send logs to {{site.data.keyword.logs_routing_full_notm}}, choose one of the following options to set the permissions on the API key or trusted profile that you use to send logs to the {{site.data.keyword.logs_full_notm}} instance:
+- Option 1: The API key or trusted profile must have the `Sender` role for the {{site.data.keyword.logs_full_notm}} service if you configure your agent to send logs directly to the {{site.data.keyword.logs_full_notm}} service.
+- Option 2: The API key or trusted profile must have the `Writer` role for the {{site.data.keyword.logs_routing_full_notm}} service if you configure your agent to send logs through the {{site.data.keyword.logs_routing_full_notm}} service.
 
-
-
-The API key or trusted profile must have the `Writer` role for the {{site.data.keyword.logs_routing_full_notm}} service if you configure your agent to send logs through the {{site.data.keyword.logs_routing_full_notm}} service.
 
 
 You can grant premissions to:
@@ -41,7 +41,6 @@ There are two common ways to assign access to {{site.data.keyword.logs_full_notm
 * Access groups. You can manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 * Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
-
 
 
 
