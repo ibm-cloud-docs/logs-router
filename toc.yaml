@@ -97,9 +97,6 @@ toc:
             navtitle: Setting up IAM permissions for ingestion
           - topic: howto/api-key.md
             navtitle: Generating an API Key for ingestion
-      - topicgroup:
-          label: Logging agent
-          topics:
           - topicgroup:
              label: Orchestrated environments
              topics:
@@ -121,7 +118,7 @@ toc:
       - topicgroup:
            label: Observability
            topics:
-            - topic: howto/activity-tracker.md
+            - topic: activity-tracker.md
               navtitle: Auditing events
   - navgroup:
       id: reference

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-10"
+lastupdated: "2024-08-24"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enabling platform logs
+# Enabling platform logs to route logs to an {{site.data.keyword.logs_full_notm}} instance
 {: #platform-logs-enable}
 
 `Platform logs` are logs that are exposed by enabled services and the platform in {{site.data.keyword.cloud_notm}}. You must configure {{site.data.keyword.logs_routing_full}} in a region to collect platform logs and route them to a target destination.
@@ -20,7 +20,7 @@ subcollection: logs-router
 
 
 ## Before you begin
-{: #onboard-cloud-logs-tenant-before-you-begin}
+{: #platform-logs-enable-prereqs}
 
 Be sure that you have completed the following steps:
 
@@ -35,11 +35,11 @@ Be sure that you have completed the following steps:
 
 
 ## Creating a service to service authorization
-{: #onboard-cloud-logs-tenant-s2s}
+{: #platform-logs-enable-s2s}
 {: step}
 
 
-You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your tenant.
+You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your {{site.data.keyword.logs_full_notm}} destination (target).
 
 Run the following command:
 
