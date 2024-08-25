@@ -47,7 +47,7 @@ You can deploy the agent in the following platforms:
 
 The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
 
-![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 1. Flow of logs from cluster" caption-side="bottom"}
+![Flow of logs from cluster](../images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 3. Flow of logs from cluster" caption-side="bottom"}
 
 ## Logs agent for non-orchestarted environments
 {: #agent-about-std}
