@@ -49,9 +49,9 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
-          - topic: howto/architecture-workload-isolation.md
+          - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
-          - topic: howto/mng-data.md
+          - topic: mng-data.md
             navtitle: Securing your data
           - topicgroup:
               label: Privately connecting to Logs Routing
@@ -69,18 +69,18 @@ toc:
             navtitle: Configuring a Cloud Logs destination
           - topic: howto/onboard-log-analysis-tenant.md
             navtitle: Configuring a Log Analysis destination
-          - topic: howto/update-tenant.md
-            navtitle: Editing a destination
-          - topic: howto/offboard-tenant.md
-            navtitle: Deleting a destination
-          - topic: howto/get-tenant.md
-            navtitle: Retrieving information on a destination
-          - topic: howto/list-tenants.md
-            navtitle: Listing destinations
-          - topic: howto/2-targets.md
-            navtitle: Configuring destinations of different types
-          - topic: howto/agent-multiple-icl-targets.md
-            navtitle: Configuring multiple destinations of the same type 
+      - topic: howto/update-tenant.md
+        navtitle: Editing a destination
+      - topic: howto/offboard-tenant.md
+        navtitle: Deleting a destination
+      - topic: howto/get-tenant.md
+        navtitle: Retrieving information on a destination
+      - topic: howto/list-tenants.md
+        navtitle: Listing destinations
+      - topic: howto/2-targets.md
+        navtitle: Configuring destinations of different types
+      - topic: howto/agent-multiple-icl-targets.md
+        navtitle: Configuring multiple destinations of the same type 
       - topicgroup:
            label: Observability
            topics:

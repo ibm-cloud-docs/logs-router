@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-08"
+  years:  2023, 2024
+lastupdated: "2024-08-25"
 
-keywords: 
+keywords:
 
 subcollection: logs-router
 
@@ -18,7 +18,7 @@ subcollection: logs-router
 Learn about the architecture and isolation model for {{site.data.keyword.logs_routing_full}}. This information is provided so that you can understand which parts of the service are shared by multiple tenants and which are dedicated to a single tenant. Based on that information you can make an informed decision on how you want to use this {{site.data.keyword.cloud_notm}} service.
 {: shortdesc}
 
-## {{site.data.keyword.logs_routing_full_notm}} Architecture
+## {{site.data.keyword.logs_routing_full_notm}} architecture
 {: #architecture}
 
 The {{site.data.keyword.logs_routing_full}} service is a multi-tenant, platform service that is available in {{site.data.keyword.cloud_notm}}.

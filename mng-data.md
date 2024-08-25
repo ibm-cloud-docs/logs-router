@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-11-29"
+  years:  2023, 2024
+lastupdated: "2024-08-25"
 
 keywords:
 
@@ -44,7 +44,7 @@ Any stored credentials (such as {{site.data.keyword.la_short}} ingestion keys) a
 
 Log data that is routed by {{site.data.keyword.logs_routing_full_notm}} is secured by using a private connection. The connection supports TLS 1.2.
 
-Log data is stored in a configured {{site.data.keyword.la_full_notm}} instance. You manage the instance and the data that is collected in the instance. For more information about {{site.data.keyword.la_full_notm}} data security, see [Data security](/docs/log-analysis?topic=log-analysis-mng-data).
+Log data is routed to a destination such as an {{site.data.keyword.logs_full_notm}} instance or an {{site.data.keyword.la_full_notm}} instance. You manage the instance and the data that is collected in the instance. For example, for more information about {{site.data.keyword.la_full_notm}} data security, see [Data security](/docs/log-analysis?topic=log-analysis-mng-data).
 {: note}
 
 
@@ -56,9 +56,7 @@ Log data is stored in a configured {{site.data.keyword.la_full_notm}} instance. 
 
 {{site.data.keyword.logs_routing_full_notm}} stores configuration data only.
 
-You can delete any tenant definition.
-
-To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to the configured {{site.data.keyword.la_full_notm}} instance, [delete (offboard) the tenant.](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui)
+You can delete any tenant definition. To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a destination, see [Delete (offboard) the tenant](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui).
 
 
 To completely delete all the configuration data of the account, complete the following steps:
