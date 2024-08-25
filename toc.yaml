@@ -66,21 +66,24 @@ toc:
           label: Configuring platform logs
           topics:
           - topic: howto/onboard-cloud-logs-tenant.md
-            navtitle: Configuring a Cloud Logs destination
+            navtitle: Configuring 1 Cloud Logs destination
           - topic: howto/onboard-log-analysis-tenant.md
-            navtitle: Configuring a Log Analysis destination
-      - topic: howto/update-tenant.md
-        navtitle: Editing a destination
-      - topic: howto/offboard-tenant.md
-        navtitle: Deleting a destination
-      - topic: howto/get-tenant.md
-        navtitle: Retrieving information on a destination
-      - topic: howto/list-tenants.md
-        navtitle: Listing destinations
-      - topic: howto/2-targets.md
-        navtitle: Configuring destinations of different types
-      - topic: howto/agent-multiple-icl-targets.md
-        navtitle: Configuring multiple destinations of the same type 
+            navtitle: Configuring 1 Log Analysis destination
+          - topic: howto/2-targets.md
+            navtitle: Configuring destinations of different types
+          - topic: howto/agent-multiple-icl-targets.md
+            navtitle: Configuring multiple destinations of the same type
+      - topicgroup:
+          label: Managing tenant configurations
+          topics:
+          - topic: howto/update-tenant.md
+            navtitle: Editing a destination
+          - topic: howto/offboard-tenant.md
+            navtitle: Deleting a destination
+          - topic: howto/get-tenant.md
+            navtitle: Retrieving information on a destination
+          - topic: howto/list-tenants.md
+            navtitle: Listing destinations 
       - topicgroup:
            label: Observability
            topics:
