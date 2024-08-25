@@ -71,6 +71,15 @@ If you are connecting from a system that is not contained in an {{site.data.keyw
 
 You can only access the {{site.data.keyword.logs_routing_full_notm}} UI through the public network.
 
+
+You can manage {{site.data.keyword.logs_routing_full_notm}} by using the management API. The management API supports either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
+
+- To create, update, or delete a configuration, you must use the {{site.data.keyword.logs_routing_full_notm}} management API.
+- To see the list of management endpoints, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+
+Using the public endpoint does not require additional work.
+
+
 ## Common use cases configuring {{site.data.keyword.logs_routing_full_notm}}
 {: #about_use_cases}
 
