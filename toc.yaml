@@ -18,18 +18,17 @@ toc:
         navtitle: About Logs Routing
       - topic: connectivity.md
         navtitle: Connectivity (private/public)
-      - topicgroup:
-          label: Platform logs
-          topics:
-          - topic: platform-logs-about.md
-            navtitle: Platform logs
-          - topic: cloud-services.md
-            navtitle: IBM Cloud services that generate platform logs 
+      - topic: platform-logs-about.md
+        navtitle: Platform logs
+      - topic: cloud-services.md
+        navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
           label: Release notes
           topics:
           - topic: learn/releasenotes.md
-            navtitle: Release notes 
+            navtitle: Release notes
+          - topic: agent/releasenotes_agent.md
+            navtitle: Agent release notes 
   - navgroup:
       id: howto
       topics:
