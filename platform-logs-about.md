@@ -62,7 +62,7 @@ To configure the {{site.data.keyword.logs_routing_full_notm}} service, choose 1 
 - [Configuring multiple targets of the same type](/docs/logs-router?topic=logs-router-multi-icl-config).
 
 - [Configuring multiple targets of different type](/docs/logs-router?topic=logs-router-config-2-targets).
-]
+
 
 ## Fields that are included in platform logs
 {: #about-platform-logs-2}
