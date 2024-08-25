@@ -35,7 +35,7 @@ The following table lists the different S2S authorizations that you might need w
 
 | S2S Authorization | Source service | Target service |
 |-------------------|----------------|----------------|
-| Authorize sending logs to a tenant | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
+| Authorize sending logs to an {{site.data.keyword.logs_full_notm}} instance | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
 {: caption="Table 1. S2S authorizations."}
 
 For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
@@ -65,7 +65,7 @@ Users can only see authorizations that they configure in the account.
 {: #iam-service-auth-create}
 
 Choose one of the following options to create a S2S authorization:
-- [Authorize sending logs to a tenant](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
+- [Authorize sending logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 
 ## Removing an authorization
