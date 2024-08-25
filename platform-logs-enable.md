@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-08-25"
 
 keywords:
 
@@ -28,7 +28,7 @@ Be sure that you have completed the following steps:
 
 2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+3. Set up permissions to manage platform logs in the account. For more information, see [Granting IAM permissions](/docs/logs-router?topic=logs-router-iam-permissions).
 
 4. To create a target by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Enabling connectivity to manage tenants in {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-tenant-enable-connectivity).
 
@@ -41,12 +41,14 @@ Be sure that you have completed the following steps:
 
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your {{site.data.keyword.logs_full_notm}} destination (target).
 
-Run the following command:
+For example, from a command line, you can run the following command:
 
 ```text
 ibmcloud iam authorization-policy-create logs-router logs Sender
 ```
 {: codeblock}
+
+For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 
 ## Retrieving your {{site.data.keyword.logs_full_notm}} information

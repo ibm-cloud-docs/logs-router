@@ -24,21 +24,12 @@ toc:
           - topic: platform-logs-about.md
             navtitle: Platform logs
           - topic: cloud-services.md
-            navtitle: IBM Cloud services that generate platform logs
-      - topicgroup:
-          label: Logging agent
-          topics:
-          - topic: agent-about.md
-            navtitle: About the agent
-          - topic: agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
+            navtitle: IBM Cloud services that generate platform logs 
       - topicgroup:
           label: Release notes
           topics:
           - topic: learn/releasenotes.md
-            navtitle: Release notes
-          - topic: learn/releasenotes_agent.md
-            navtitle: Agent release notes 
+            navtitle: Release notes 
   - navgroup:
       id: howto
       topics:
@@ -92,36 +83,7 @@ toc:
           - topic: howto/2-targets.md
             navtitle: Configuring destinations of different types
           - topic: howto/agent-multiple-icl-targets.md
-            navtitle: Configuring multiple destinations of the same type
-      - topicgroup:
-          label: Logging agent
-          topics:
-          - topic: howto/agent-set-appsubname.md
-            navtitle: Configuring applicationName and subsystemName
-          - topic: howto/configure-agent.md
-            navtitle: Filtering logs
-          - topic: howto/agent-iam-permissions.md
-            navtitle: Setting up IAM permissions for ingestion
-          - topic: howto/api-key.md
-            navtitle: Generating an API Key for ingestion
-          - topicgroup:
-             label: Orchestrated environments
-             topics:
-             - topic: howto/agent-version.md
-               navtitle: Checking the available agent versions
-             - topic: howto/download-agent-yaml.md
-               navtitle: Downloading the agent YAML file
-             - topic: howto/agent-openshift.md
-               navtitle: Managing the agent for Openshift clusters
-             - topic: howto/agent-std-cluster.md
-               navtitle: Managing the agent for Kubernetes clusters
-          - topicgroup:
-             label: Non-orchestrated environments
-             topics:
-             - topic: howto/agent-linux.md
-               navtitle: Managing the agent Linux environments
-          - topic: howto/agent-rsyslog.md
-            navtitle: Routing (r)syslog messages
+            navtitle: Configuring multiple destinations of the same type 
       - topicgroup:
            label: Observability
            topics:
@@ -132,13 +94,13 @@ toc:
       topics:
       - topic: reference/limits.md
         navtitle: Considerations and limitations
-      - topic: reference/routing-plugin-parameters.md
+      - topic: agent/routing-plugin-parameters.md
         navtitle: Logs Routing plug-in parameters
-      - topic: reference/logs-plugin-parameters.md
+      - topic: agent/logs-plugin-parameters.md
         navtitle: Cloud Logs plug-in parameters
-      - topic: reference/fluentbit_support.md
+      - topic: agent/fluentbit_support.md
         navtitle: Agent plug-in support
-      - topic: reference/logger-agent-config.md
+      - topic: agent/logger-agent-config.md
         navtitle: Agent configuration files
       - topic: reference/endpoints.md
         navtitle: Endpoints

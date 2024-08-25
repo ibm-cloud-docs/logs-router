@@ -15,21 +15,17 @@ subcollection: logs-router
 
 
 # About the {{site.data.keyword.logs_routing_full_notm}} agent
-{: #agent-about}
+{: #agent-about-pdf}
 
 The {{site.data.keyword.logs_routing_full_notm}} agent is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the IBM Cloud Logs Routing agent in supported environments and manage data from various sources and formats.
 {: shortdesc}
 
 The agent collects and sends infrastructure and application logs to the {{site.data.keyword.logs_routing_full_notm}} service.
 
-The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
-
-![Flow of logs from agent](/images/cloud-logs-agent-to-instance.png "Flow of platform logs"){: caption="Figure 1. Flow of platform logs" caption-side="bottom"}
-
 
 
 ## {{site.data.keyword.logs_routing_full_notm}} agent for orchestrated environments
-{: #agent-about-orchestrated}
+{: #agent-about-orchestrated-pdf}
 
 You can deploy the {{site.data.keyword.logs_routing_full_notm}} agent on a {{site.data.keyword.openshiftlong_notm}} or {{site.data.keyword.containerlong_notm}} cluster.
 
@@ -43,12 +39,8 @@ You can deploy the agent in the following platforms:
 - Kubernetes clusters
 - OpenShift clusters
 
-The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
-
-![Flow of logs from cluster](/images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 1. Flow of logs from cluster" caption-side="bottom"}
-
 ## {{site.data.keyword.logs_routing_full_notm}} agent for non-orchestarted environments
-{: #agent-about-std}
+{: #agent-about-std-pdf}
 
 You can deploy the {{site.data.keyword.logs_routing_full_notm}} agent in Linux environments.
 
@@ -62,7 +54,7 @@ The following platforms are supported:
 - Debian 12
 
 ## Supported formats
-{: #agent-about-formats}
+{: #agent-about-formats-pdf}
 
 
 The agent supports the following input formats:
@@ -75,28 +67,3 @@ The agent supports the following input formats:
 * docker (JSON with the docker-specific timestamp format)
 * cri
 * syslog
-
-## Supported agent versions
-{: #agent-about-versions}
-
-The following table lists the agent versions that are supported and the version of Fluent Bit the agent is based on:
-
-| {{site.data.keyword.logs_routing_full_notm}} agent  | Based on Fluent Bit Version |
-|-----------------------------------------------------|---------|
-| v1.2.4                                              | [v3.1.4](https://fluentbit.io/announcements/v3.1.4/){: external} |
-| v1.2.3                                              | [v3.0.4](https://fluentbit.io/announcements/v3.0.4/){: external} |
-{: caption="Supported agent versions" caption-side="bottom"}
-
-For information on recommended and supported Fluent Bit plug-ins see [Fluent Bit support](/docs/logs-router?topic=logs-router-fluentbit-support)
-{: tip}
-
-## Agent support policy
-{: #agent-support-policy}
-
-{{site.data.keyword.logs_routing_full_notm}} will release agent updates on a quarterly basis and will continue to provide assistance for two releases prior to the latest release.
-
-For example, if agent version `1.3.x` is the most currently release, then questions related to agents `1.2.x` and `1.1.x` will be answered.
-
-However, new functions and security fixes will only be made available as the most current release and modification level.
-
-For example, if a security vulnerability is found in the agent, and the current agent version is `1.3.3`, the security vulnerability will be fixed and released as `1.3.4`. Even though `1.2.x` and `1.1.x` are still supported for technical questions, patches to these releases will not be made available.

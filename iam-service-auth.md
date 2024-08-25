@@ -65,14 +65,14 @@ Users can only see authorizations that they configure in the account.
 {: #iam-service-auth-create}
 
 Choose one of the following options to create a S2S authorization:
-- [Authorize sending logs to a tenant](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-logs-routing).
+- [Authorize sending logs to a tenant](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 
 ## Removing an authorization
 {: #iam-service-mgmt-auth-remove-auth}
 
 Choose one of the following options to remove a S2S authorization:
-- [Remove a S2S authorization through the UI](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-remove-auth&interface=ui)
-- [Remove a S2S authorization by using the CLI](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-remove-auth&interface=cli)
-- [Remove a S2S authorization by using the API](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-remove-auth&interface=api)
-- [Remove a S2S authorization by using terraform](/docs/cloud-logs?topic=cloud-logs-iam-service-auth-remove-auth&interface=terraform)
+- [Remove a S2S authorization through the UI](/docs/logs-router?topic=logs-router-iam-service-auth-remove-auth&interface=ui)
+- [Remove a S2S authorization by using the CLI](/docs/logs-router?topic=logs-router-iam-service-auth-remove-auth&interface=cli)
+- [Remove a S2S authorization by using the API](/docs/logs-router?topic=logs-router-iam-service-auth-remove-auth&interface=api)
+- [Remove a S2S authorization by using terraform](/docs/logs-router?topic=logs-router-iam-service-auth-remove-auth&interface=terraform)
