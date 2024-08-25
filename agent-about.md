@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-08-25"
 
 keywords:
 
@@ -17,10 +17,14 @@ subcollection: logs-router
 # About the {{site.data.keyword.logs_routing_full_notm}} agent
 {: #agent-about}
 
-The {{site.data.keyword.logs_routing_full_notm}} agent is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the IBM Cloud Logs Routing agent in supported environments and manage data from various sources and formats. 
+The {{site.data.keyword.logs_routing_full_notm}} agent is based on the Fluent Bit open-source agent which is used to collect and process log data. You can deploy the IBM Cloud Logs Routing agent in supported environments and manage data from various sources and formats.
 {: shortdesc}
 
 The agent collects and sends infrastructure and application logs to the {{site.data.keyword.logs_routing_full_notm}} service.
+
+The following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
+
+![Flow of logs from agent](/images/cloud-logs-agent-to-instance.png "Flow of platform logs"){: caption="Figure 1. Flow of platform logs" caption-side="bottom"}
 
 
 
@@ -38,6 +42,10 @@ By default, the {{site.data.keyword.logs_routing_full_notm}} agent monitors and 
 You can deploy the agent in the following platforms:
 - Kubernetes clusters
 - OpenShift clusters
+
+The following diagram shows the high level view when the source of logs is a Kubernetes or OpenShift cluster:
+
+![Flow of logs from cluster](/images/cloud-logs-agent-to-instance-2.png "Flow of logs from cluster"){: caption="Figure 1. Flow of logs from cluster" caption-side="bottom"}
 
 ## {{site.data.keyword.logs_routing_full_notm}} agent for non-orchestarted environments
 {: #agent-about-std}
@@ -92,5 +100,3 @@ For example, if agent version `1.3.x` is the most currently release, then questi
 However, new functions and security fixes will only be made available as the most current release and modification level.
 
 For example, if a security vulnerability is found in the agent, and the current agent version is `1.3.3`, the security vulnerability will be fixed and released as `1.3.4`. Even though `1.2.x` and `1.1.x` are still supported for technical questions, patches to these releases will not be made available.
-
-

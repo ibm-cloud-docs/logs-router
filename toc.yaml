@@ -16,8 +16,6 @@ toc:
         navtitle: Getting started
       - topic: about.md
         navtitle: About Logs Routing
-      - topic: use-cases.md
-        navtitle: Use cases
       - topic: connectivity.md
         navtitle: Connectivity (private/public)
       - topicgroup:

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-08-25"
 
 keywords:
 
@@ -38,7 +38,7 @@ The schema for a Fluent Bit configuration is divided into multiple sections.
 
 The following diagram shows the order in which sections are applied:
 
-![Fluent Bit processing order of sections](../images/logs-routing-plugin-flow.svg "Fluent Bit processing order of sections"){: caption="Figure 1. Fluent Bit processing order of sections" caption-side="bottom"}
+![Fluent Bit processing order of sections](/images/logs-routing-plugin-flow.svg "Fluent Bit processing order of sections"){: caption="Figure 1. Fluent Bit processing order of sections" caption-side="bottom"}
 
 
 ### `SERVICE` section
@@ -151,7 +151,7 @@ For example, a sample FILTER section can be the following:
 ### `OUTPUT` section
 {: #agent-fluentbit-5}
 
-You can configure `OUTPUT` sections to define the destinations where Fluent Bit should send the data after a Tag match. 
+You can configure `OUTPUT` sections to define the destinations where Fluent Bit should send the data after a Tag match.
 
 Fluent Bit can route up to 256 `OUTPUT` plug-ins.
 {: note}
