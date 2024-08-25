@@ -49,6 +49,15 @@ toc:
             navtitle: Managing IAM access
           - topic: iam-permissions.md
             navtitle: Granting IAM permissions
+          - topicgroup:
+              label: S2S authorizations
+              topics:
+               - topic: iam-service-auth.md
+                 navtitle: Managing authorizations
+               - topic: iam-service-auth-logs-routing.md
+                 navtitle: S2S for Logs Routing
+               - topic: iam-service-auth-remove-auth.md
+                 navtitle: Removing authorizations
       - topicgroup:
           label: Enhancing security
           topics:
