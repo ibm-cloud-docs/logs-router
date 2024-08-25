@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2023, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-08-25"
 
 keywords:
 
@@ -11,7 +11,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating (onboarding) a tenant in {{site.data.keyword.logs_routing_full}}
+# Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance
 {: #onboard-log-analysis-tenant}
 
 You must create (onboard) a tenant in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs in the {{site.data.keyword.cloud_notm}}.
