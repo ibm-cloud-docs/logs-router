@@ -26,7 +26,7 @@ toc:
           - topic: learn/releasenotes.md
             navtitle: Release notes
           - topic: agent/releasenotes_agent.md
-            navtitle: Agent release notes 
+            navtitle: Agent release notes
   - navgroup:
       id: howto
       topics:
