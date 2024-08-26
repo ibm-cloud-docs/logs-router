@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-26"
 
 keywords:
 
@@ -28,7 +28,7 @@ For more information, see [About platform logs](/docs/logs-router?topic=logs-rou
 ## Tenants and targets
 {: #about_tenant_target}
 
-{{site.data.keyword.logs_routing_full_notm}} uses tenants and targets.
+{{site.data.keyword.logs_routing_full_notm}} uses tenants and targets (destinations).
 
 {{site.data.content.tenant_definition-paragraph}}
 
@@ -39,6 +39,10 @@ You must create (onboard) a tenant in your account in each region where you want
 - {{site.data.keyword.logs_full_notm}}
 
 Instances can be in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
+
+The following figure shows a high level view of the components and how they relate to each other:
+
+![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="Figure 1. High level view of the components" caption-side="bottom"}
 
 
 
