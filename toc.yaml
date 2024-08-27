@@ -76,14 +76,14 @@ toc:
       - topicgroup:
           label: Managing tenant configurations
           topics:
-          - topic: howto/update-tenant.md
-            navtitle: Editing a destination
-          - topic: howto/offboard-tenant.md
-            navtitle: Deleting a destination
-          - topic: howto/get-tenant.md
-            navtitle: Retrieving information on a destination
-          - topic: howto/list-tenants.md
-            navtitle: Listing destinations 
+          - topic: tenant-update.md
+            navtitle: Editing a tenant
+          - topic: tenant-delete.md
+            navtitle: Deleting a tenant
+          - topic: tenant-get.md
+            navtitle: Retrieving information on a tenant
+          - topic: tenants-list.md
+            navtitle: Listing tenants 
       - topicgroup:
            label: Observability
            topics:

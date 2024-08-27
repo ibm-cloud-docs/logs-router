@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -69,4 +69,4 @@ To completely delete all the configuration data of the account, complete the fol
 ### Log data
 {: #mng-data-storage-delete-logs}
 
-To delete log data, remove the data from the {{site.data.keyword.la_full_notm}} instance. For more information about {{site.data.keyword.la_full_notm}} data security, see [Data security](/docs/log-analysis?topic=log-analysis-mng-data).
+The {{site.data.keyword.logs_routing_full_notm}} service routes data to 1 or more destinations. It does not store log data.

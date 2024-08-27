@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-03-22"
+  years:  2023, 2024
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -13,17 +13,17 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 # Updating a tenant in {{site.data.keyword.logs_routing_full_notm}}
-{: #update-tenant}
+{: #tenant-update}
 
-You can update information for an existing tenant in {{site.data.keyword.logs_routing_full}}.
+After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
-After you [create (onboard) a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant. For example, you might need to modify the target information, such as the ingestion key or the hostname.
+
 
 ## Before you begin
-{: #update-tenant-prereqs}
+{: #tenant-update-prereqs}
 
 Be sure that you have completed the following steps:
 
@@ -38,9 +38,9 @@ Be sure that you have completed the following steps:
 5. To update a target by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Enabling connectivity to manage tenants in {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-tenant-enable-connectivity).
 
 ### Getting the tenant ID
-{: #update-tenant-get-id}
+{: #tenant-update-get-id}
 
-Updating a tenant requires the tenant ID. If you do not remember your tenant ID, [you can retrieve it](/docs/logs-router?topic=logs-router-get-tenant&interface=api).
+Updating a tenant requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
 {: important}
 
 ### Retrieving {{site.data.keyword.loganalysisfull_notm}} information
@@ -48,13 +48,13 @@ Updating a tenant requires the tenant ID. If you do not remember your tenant ID,
 
 You can modify only the target for an existing tenant.
 
-{{site.data.keyword.logs_routing_full_notm}} supports only targets of type `logdna` ({{site.data.keyword.loganalysisfull_notm}}).
+{{site.data.keyword.logs_routing_full_notm}} supports targets of type `logdna` ({{site.data.keyword.loganalysisfull_notm}}).
 
 To get the information you need, see [retrieving your {{site.data.keyword.la_full_notm}} information](/docs/logs-router?topic=logs-router-onboarding&interface=ui#onboarding-retrieve-log-analysis-information).
 
 
 ## Retrieving the IAM bearer token
-{: #update-tenant-retrieve-iam-token-cli}
+{: #tenant-update-retrieve-iam-token-cli}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -66,7 +66,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 {: pre}
 
 ## Updating a tenant by using the API
-{: #update-tenant-api}
+{: #tenant-update-api}
 {: api}
 
 Submit the update tenant request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
@@ -207,14 +207,14 @@ For security reasons, you cannot retrieve an {{site.data.keyword.la_full_notm}} 
 
 
 ## Editing a target through the UI
-{: #update-tenant-ui}
+{: #tenant-update-ui}
 {: ui}
 
 When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
 
 To edit a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region:
 
-1. Click the ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the region that you want to change.
+1. Click the ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the region that you want to change.
 
 2. Click **Edit target**.
 

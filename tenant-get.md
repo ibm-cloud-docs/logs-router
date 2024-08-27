@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-01"
+  years:  2023, 2024
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 # Retrieving tenant information in {{site.data.keyword.logs_routing_full_notm}}
-{: #get-tenant}
+{: #tenant-get}
 
 You can get information for an existing tenant in {{site.data.keyword.logs_routing_full}}.
 {: shortdesc}
@@ -25,7 +25,7 @@ After a tenant is [created (onboarded)](/docs/logs-router?topic=logs-router-onbo
 - Delete (offboard) a tenant from the service.
 
 ## Before you begin
-{: #get-tenant-prereqs}
+{: #tenant-get-prereqs}
 
 Be sure that you have completed the following steps:
 
@@ -41,7 +41,7 @@ Be sure that you have completed the following steps:
 
 
 ## Retrieving the IAM bearer token
-{: #get-tenant-retrieve-iam-token}
+{: #tenant-get-retrieve-iam-token}
 
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
@@ -55,12 +55,12 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 
 ## Getting tenant information by using the API
-{: #get-tenant-api}
+{: #tenant-get-api}
 {: api}
 
 Submit the get tenant request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
 
-You can use the tenant listing capability to retrieve tenant information if you do not know your tenant's ID. If you know the ID of the tenant, you can use {{site.data.keyword.logs_routing_full_notm}} to retrieve that tenant's specific information. For more information, see [Listing tenants that are defined in the account](/docs/logs-router?topic=logs-router-list-tenants&interface=ui).
+You can use the tenant listing capability to retrieve tenant information if you do not know your tenant's ID. If you know the ID of the tenant, you can use {{site.data.keyword.logs_routing_full_notm}} to retrieve that tenant's specific information. For more information, see [Listing tenants that are defined in the account](/docs/logs-router?topic=logs-router-tenants-list&interface=ui).
 {: tip}
 
 The following example shows getting information about an {{site.data.keyword.logs_routing_full_notm}} tenant in the `us-east` region by using a VPE:

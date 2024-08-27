@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2024
-lastupdated: "2024-05-01"
+  years:  2023, 2024
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 # Listing tenants that are defined in the account
-{: #list-tenants}
+{: #tenants-list}
 
 You can list existing tenants in {{site.data.keyword.logs_routing_full}} that are defined in the account.
 {: shortdesc}
@@ -25,7 +25,7 @@ An account can have only a single tenant within a region, but listing capability
 
 
 ## Before you begin
-{: #list-tenants-prereqs}
+{: #tenants-list-prereqs}
 
 Be sure that you have completed the following steps:
 
@@ -41,7 +41,7 @@ Be sure that you have completed the following steps:
 
 
 ## Retrieving the IAM bearer token
-{: #list-tenants-retrieve-iam-token-cli}
+{: #tenants-list-retrieve-iam-token-cli}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -54,7 +54,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 
 ## Listing tenants by using the API
-{: #list-tenants-api}
+{: #tenants-list-api}
 {: api}
 
 Submit the list tenant request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
@@ -103,7 +103,7 @@ A successful request returns a response with an array that contains a single ten
 
 
 ## Listing tenants through the UI
-{: #list-tenants-ui}
+{: #tenants-list-ui}
 {: ui}
 
 
@@ -113,7 +113,7 @@ To list the tenants that are configured in the account, you must launch the {{si
 
 	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
 
-2. Click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
+2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
 
 3. Click **Logging** > **Routing**.
 
