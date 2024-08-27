@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-11-29"
+  years:  2023, 2024
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using the {{site.data.keyword.logs_routing_full_notm}} console
+# Managing targets by using the {{site.data.keyword.logs_routing_full_notm}} console
 {: #lr_ui}
 
 {{site.data.keyword.logs_routing_full}} provides an {{site.data.keyword.cloud_notm}} console that can be used to configure and review the {{site.data.keyword.logs_routing_full_notm}} routing configuration.

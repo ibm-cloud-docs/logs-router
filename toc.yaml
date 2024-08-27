@@ -78,6 +78,8 @@ toc:
       - topicgroup:
           label: Managing targets (destinations)
           topics:
+          - topic: lr_ui.md
+            navtitle: Managing targets in the UI
           - topic: target-create.md
             navtitle: Creating a target
           - topic: target-update.md
