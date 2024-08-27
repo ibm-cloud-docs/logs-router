@@ -76,6 +76,8 @@ toc:
       - topicgroup:
           label: Managing tenant configurations
           topics:
+          - topic: tenant-create.md
+            navtitle: Creating a tenant
           - topic: tenant-update.md
             navtitle: Editing a tenant
           - topic: tenant-delete.md

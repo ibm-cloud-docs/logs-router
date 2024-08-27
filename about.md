@@ -32,13 +32,16 @@ For more information, see [About platform logs](/docs/logs-router?topic=logs-rou
 
 {{site.data.content.tenant_definition-paragraph}}
 
-You must create (onboard) a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
+You must create a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
 
 {{site.data.keyword.logs_routing_full_notm}} supports the following {{site.data.keyword.cloud_notm}} services as targets:
-- {{site.data.keyword.la_full_notm}}
 - {{site.data.keyword.logs_full_notm}}
+- {{site.data.keyword.la_full_notm}}
 
-Instances can be in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
+
+You can define a target destination to configure the details of an instance that is located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
+- For {{site.data.keyword.logs_full_notm}} targets, authorization is done through IAM.
+- For {{site.data.keyword.la_full_notm}} targets, you must provide ingestion details that include the credentials.
 
 The following figure shows a high level view of the components and how they relate to each other:
 
