@@ -32,12 +32,25 @@ To configure platform logs, you must configure tenants and targets (destinations
 
 {{site.data.content.tenant_definition-paragraph}}
 
-You must create a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}} to collect and route platform logs.
+
+The following figure shows a high level view of the components and how they relate to each other:
+
+![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="Figure 2. High level view of the components" caption-side="bottom"}
+
+
+
+### Tenants
+{: #about_tenants}
+
 
 When you manage tenants, consider the following information:
 
-- Each region is independent.
-- Regions do not share data.
+- You must create a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}} to collect and route platform logs.
+
+    Each region is independent.
+
+    Regions do not share data.
+
 - When you create a tenant, you must define 1 target destination. For more information, see [Creating a tenant](/docs/logs-router?topic=logs-router-tenant-create).
 - You can define up to 2 target destinations per target. The targets must be of different type.
 - When you update a tenant, you can modify the name of the tenant only.
@@ -45,6 +58,8 @@ When you manage tenants, consider the following information:
 - You can list all the tenants in an account by using the `v1/tenants` route.
 - To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
 
+### Targets
+{: #about_targets}
 
 {{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
 - {{site.data.keyword.logs_full_notm}} instances
@@ -72,14 +87,11 @@ When you manage targets, consider the following information:
 
 - To get the details of a target, the route accepts a query parameter name to return details of the named target.
 
+
+
 Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done as follows:
 - For {{site.data.keyword.logs_full_notm}} targets, authorization is done through IAM.
 - For {{site.data.keyword.la_full_notm}} targets, you must provide ingestion details that include the credentials.
-
-The following figure shows a high level view of the components and how they relate to each other:
-
-![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="Figure 2. High level view of the components" caption-side="bottom"}
-
 
 
 ## Connecting to {{site.data.keyword.logs_routing_full_notm}}
