@@ -22,11 +22,9 @@ content-type: conref
 ## Reused definitions
 {: #conref_defs}
 
-A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes 1 or more target definitions. The target defines where the logs are routed.
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes a maximum of 2 target definitions. The target defines where the logs are routed.
 {: note}
 {: #tenant_definition_note}
 
-A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes 1 or more target definitions. The target defines where the logs are routed.
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes a maximum of 2 target definitions. The target defines where the logs are routed.
 {: #tenant_definition-paragraph}
-
-

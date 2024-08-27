@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 # Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance
-{: #onboard-cloud-logs-tenant}
+{: #target-cloud-logs}
 
 You must create tenants in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs that are generated in that region of the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
@@ -24,7 +24,7 @@ You must create a tenant in your account **in each region** where you want to us
 {: important}
 
 ## Before you begin
-{: #onboard-cloud-logs-tenant-before-you-begin}
+{: #target-cloud-logs-prereqs}
 
 Complete the following steps:
 
@@ -36,9 +36,15 @@ Complete the following steps:
 
 4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
+5. Platform logs that are routed to {{site.data.keyword.logs_full_notm}} include metadata fields that you can use to manage the data and configure features in your {{site.data.keyword.logs_full_notm}} instance.
+
+    The application name is the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. Platform logs have the application name set to `ibm-platform-log`.
+
+    The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}. Platform logs have the subsystem name set to `CRNserviceName:instanceID`. For VPC platform logs, the fields is set to `is:resourceType`.
+
 
 ## Retrieving the IAM bearer token
-{: #onboard-cloud-logs-tenant-retrieve-iam-token-cli}
+{: #target-cloud-logs-retrieve-iam-token-cli}
 {: step}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
@@ -51,7 +57,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 {: pre}
 
 ## Creating a service to service authorization
-{: #onboard-cloud-logs-tenant-s2s}
+{: #target-cloud-logs-s2s}
 {: step}
 
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your tenant.
@@ -66,8 +72,7 @@ ibmcloud iam authorization-policy-create logs-router logs Sender
 For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 ## Retrieving your {{site.data.keyword.logs_full_notm}} information
-{: #onboard-cloud-logs-tenant-retrieve-information}
-{: cli}
+{: #target-cloud-logs-retrieve-information}
 {: step}
 
 You must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
@@ -162,13 +167,14 @@ The following sample shows some of the information that you can get:
 {: screen}
 
 
-## Creating a tenant by using the API
-{: #onboard-cloud-logs-tenant-api-create}
-{: api}
+## Creating a tenant and target by using the API
+{: #target-cloud-logs-api-create}
 {: step}
 
 
 Submit the create request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+
+The create requests creates the tenant in the region and the destination.{: important}
 
 ```sh
 curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -61,10 +61,6 @@ To configure the {{site.data.keyword.logs_routing_full_notm}} service, choose 1 
 - [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).
 
 - [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-log-analysis-tenant).
-
-- [Configuring multiple targets of the same type](/docs/logs-router?topic=logs-router-multi-icl-config).
-
-- [Configuring multiple targets of different type](/docs/logs-router?topic=logs-router-config-2-targets).
 
 
 ## Fields that are included in platform logs

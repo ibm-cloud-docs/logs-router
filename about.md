@@ -28,30 +28,57 @@ For more information, see [About platform logs](/docs/logs-router?topic=logs-rou
 ## Tenants and targets
 {: #about_tenant_target}
 
-{{site.data.keyword.logs_routing_full_notm}} uses tenants and targets (destinations).
+To configure platform logs, you must configure tenants and targets (destinations) in your {{site.data.keyword.cloud_notm}} account.
 
 {{site.data.content.tenant_definition-paragraph}}
 
-You must create a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data. For more information, see [Creating a tenant](/docs/logs-router?topic=logs-router-tenant-create).
+You must create a tenant in your account in each region where you want to use {{site.data.keyword.logs_routing_full_notm}} to collect and route platform logs.
 
-{{site.data.keyword.logs_routing_full_notm}} supports the following {{site.data.keyword.cloud_notm}} services as targets:
-- {{site.data.keyword.logs_full_notm}}
+When you manage tenants, consider the following information:
+
+- Each region is independent.
+- Regions do not share data.
+- When you create a tenant, you must define 1 target destination. For more information, see [Creating a tenant](/docs/logs-router?topic=logs-router-tenant-create).
+- You can define up to 2 target destinations per target. The targets must be of different type.
+- When you update a tenant, you can modify the name of the tenant only.
+- When you delete a tenant, you also delete the target definitions. If you want to delete a target destination instance, you must delete the instance separately.
+- You can list all the tenants in an account by using the `v1/tenants` route.
+- To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
+
+
+{{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
+- {{site.data.keyword.logs_full_notm}} instances
 
     For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).
 
-- {{site.data.keyword.la_full_notm}}
+- {{site.data.keyword.la_full_notm}} instances
 
     For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-log-analysis-tenant).
 
+The {{site.data.keyword.logs_routing_full_notm}} target instance can be located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
+{: important}
 
-You can define a target destination to configure the details of an instance that is located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
+When you manage targets, consider the following information:
+
+- When you create a target, you can only add 1 target.
+
+    When tenant is created, at least one target has to be specified. You can only define 2 targets per tenant. Therefore, you can only add 1 target to an existing tenant. {: note}
+
+- You can update the target configuration details such as target host, target port, target name, target instance CRN, and more.
+
+- You can delete only 1 target from a tenant.
+
+- You can list all the targets in a tenant by using the `v1/tenants/tenantID/targets` route.
+
+- To get the details of a target, the route accepts a query parameter name to return details of the named target.
+
+Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done as follows:
 - For {{site.data.keyword.logs_full_notm}} targets, authorization is done through IAM.
 - For {{site.data.keyword.la_full_notm}} targets, you must provide ingestion details that include the credentials.
 
 The following figure shows a high level view of the components and how they relate to each other:
 
 ![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="Figure 2. High level view of the components" caption-side="bottom"}
-
 
 
 
