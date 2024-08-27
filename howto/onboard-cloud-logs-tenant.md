@@ -15,33 +15,31 @@ subcollection: logs-router
 # Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance
 {: #onboard-cloud-logs-tenant}
 
-You must create a tenant per region of your account for the {{site.data.keyword.logs_routing_full}} service to manage logs that are generated in that region of the {{site.data.keyword.cloud_notm}}.
+You must create tenants in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs that are generated in that region of the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
-You must create (onboard) a tenant in your account **in each region** where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
+You must create a tenant in your account **in each region** where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
 {: important}
 
 ## Before you begin
 {: #onboard-cloud-logs-tenant-before-you-begin}
 
-Be sure that you have completed the following steps:
+Complete the following steps:
 
 1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Review the [getting started](/docs/logs-router?topic=logs-router-getting-started) to understand configuration steps.
+2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-3. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-4. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
-
-5. To create a target by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Enabling connectivity to manage tenants in {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-tenant-enable-connectivity).
+4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 
 ## Retrieving the IAM bearer token
 {: #onboard-cloud-logs-tenant-retrieve-iam-token-cli}
-
+{: step}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -54,7 +52,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 ## Creating a service to service authorization
 {: #onboard-cloud-logs-tenant-s2s}
-
+{: step}
 
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your tenant.
 
@@ -65,11 +63,14 @@ ibmcloud iam authorization-policy-create logs-router logs Sender
 ```
 {: codeblock}
 
+For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 ## Retrieving your {{site.data.keyword.logs_full_notm}} information
 {: #onboard-cloud-logs-tenant-retrieve-information}
+{: cli}
+{: step}
 
-To onboard as an {{site.data.keyword.logs_full_notm}} tenant, you must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
+You must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
 - The ingress endpoint and port
 
@@ -163,9 +164,11 @@ The following sample shows some of the information that you can get:
 
 ## Creating a tenant by using the API
 {: #onboard-cloud-logs-tenant-api-create}
+{: api}
+{: step}
 
 
-Submit the create (onboard) request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+Submit the create request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
 
 ```sh
 curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
@@ -218,7 +221,7 @@ curl -X POST "https://management.private.eu-es.logs-router.cloud.ibm.com/v1/tena
 {: pre}
 
 
-If the creation (onboarding) request was successful, a response that contains your tenant metadata is returned. For example,
+If the creation request was successful, a response that contains your tenant metadata is returned. For example,
 
 ```json
 {
