@@ -23,11 +23,6 @@ You can use the {{site.data.keyword.logs_routing_full_notm}} service to route pl
 For more information, see [About platform logs](/docs/logs-router?topic=logs-router-about-platform-logs).
 
 
-
-
-## Tenants and targets
-{: #about_tenant_target}
-
 To configure platform logs, you must configure tenants and targets (destinations) in your {{site.data.keyword.cloud_notm}} account.
 
 {{site.data.content.tenant_definition-paragraph}}
@@ -39,7 +34,7 @@ The following figure shows a high level view of the components and how they rela
 
 
 
-### Tenants
+## Tenants
 {: #about_tenants}
 
 
@@ -58,7 +53,7 @@ When you manage tenants, consider the following information:
 - You can list all the tenants in an account by using the `v1/tenants` route.
 - To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
 
-### Targets
+## Targets
 {: #about_targets}
 
 {{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
