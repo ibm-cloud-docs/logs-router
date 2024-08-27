@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -61,7 +61,7 @@ These parameters only apply if the agent is configured without specifying the th
 |  Key   |  Description |  Default | Value Choices  | Required  |
 |--------|---|---|---|---|
 |  `Authentication_Mode` |  Specify the authentication mode |  `TrustedProfile` | `TrustedProfile`  \n `IAMAPIKey`  | false  |
-|  `IAM_Environment` |  Specify the IAM environment for authentication |  `Production` |  `Production` specifies the public endpoint `iam.cloud.ibm.com`  \n `PrivateProduction` specifies the private endpoint `private.iam.cloud.ibm.com`  \n `Staging` specifies the staging endpoint `iam.test.cloud.ibm.com`  \n `PrivateStaging` specifies the private staging endpoint`private.iam.test.cloud.ibm.com` | false  |
+|  `IAM_Environment` |  Specify the IAM environment for authentication |  `Production` |  `Production` specifies the public endpoint `iam.cloud.ibm.com`  \n `PrivateProduction` specifies the private endpoint `private.iam.cloud.ibm.com` | false  |
 |  `CR_Token_Mount_Path` |  Path where the CRToken is present |  `/var/run/secrets/tokens/vault-token` | any string  | false - Only used when Authentication_Mode is set to TrustedProfile  |
 |  `Trusted_Profile_ID` |  ID of the Trusted Profile to be used |  n/a |  any string	  | true - Only used when Authentication_Mode is set to TrustedProfile |
 {: caption="Table 4. Authentication parameters" caption-side="bottom"}
