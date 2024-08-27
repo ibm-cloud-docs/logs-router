@@ -37,8 +37,7 @@ Be sure that you have completed the following steps:
 
 4. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-5. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Enabling connectivity to manage tenants in {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-tenant-enable-connectivity).
-
+5. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 ## Retrieving the IAM bearer token
 {: #tenant-get-retrieve-iam-token}

@@ -56,12 +56,12 @@ Log data is routed to a destination such as an {{site.data.keyword.logs_full_not
 
 {{site.data.keyword.logs_routing_full_notm}} stores configuration data only.
 
-You can delete any tenant definition. To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a destination, see [Delete (offboard) the tenant](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui).
+To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a destination, you must delete the tenant. For more information, see [Delete the tenant](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui).
 
 
 To completely delete all the configuration data of the account, complete the following steps:
 
-1. [Delete (offboard) the tenant.](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui)
+1. [Delete the tenant.](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui)
 2. Open an IBM support ticket to request deletion of all your service metadata. For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Getting support](/docs/get-support).
 
 
@@ -69,4 +69,4 @@ To completely delete all the configuration data of the account, complete the fol
 ### Log data
 {: #mng-data-storage-delete-logs}
 
-The {{site.data.keyword.logs_routing_full_notm}} service routes data to 1 or more destinations. It does not store log data.
+The {{site.data.keyword.logs_routing_full_notm}} service routes data to 1 or more destinations. It does not store log data. You must follow the guidance that is provided by each destination type to delete log data.
