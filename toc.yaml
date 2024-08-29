@@ -25,11 +25,11 @@ toc:
           topics:
           - topic: target-cloud-logs.md
             navtitle: Configuring a Cloud Logs target
-          - topic: howto/onboard-log-analysis-tenant.md
+          - topic: onboard-log-analysis-tenant.md
             navtitle: Configuring 1 Log Analysis destination
-          - topic: howto/2-targets.md
+          - topic: 2-targets.md
             navtitle: Configuring destinations of different types
-          - topic: howto/agent-multiple-icl-targets.md
+          - topic: agent-multiple-icl-targets.md
             navtitle: Configuring multiple destinations of the same type
       - topicgroup:
           label: Release notes
@@ -88,6 +88,8 @@ toc:
             navtitle: Changing the name of a tenant
           - topic: tenant-update.md
             navtitle: Modifying the target associcated to a tenant
+          - topic: tenant-add-target
+            navtitle: Adding a target to a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
       - topicgroup:

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -15,10 +15,10 @@ subcollection: logs-router
 # Getting started with {{site.data.keyword.logs_routing_full}}
 {: #getting-started}
 
-Use the {{site.data.keyword.logs_routing_full_notm}} service to route logs from your {{site.data.keyword.cloud_notm}} account to your chosen target. You can route logs from your own {{site.data.keyword.cloud_notm}} workloads, such as, applications on your [{{site.data.keyword.containerlong_notm}}](/docs/containers) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift) clusters, and from selected {{site.data.keyword.cloud_notm}} service instances.
+Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to your chosen target destination.
 {: shortdesc}
 
-![Flow of routed logs](/images/get-started.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
+![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
 
 
 Complete the following steps to start using {{site.data.keyword.logs_routing_full}}:
@@ -27,109 +27,98 @@ Complete the following steps to start using {{site.data.keyword.logs_routing_ful
 {: #getting-started-before-you-begin}
 {: step}
 
-### Learn about {{site.data.keyword.logs_routing_full_notm}}
-{: #getting-started-before-you-begin-0}
+1. If you don't have an {{site.data.keyword.cloud_notm}} account, [register an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}. You need an IBMid to work in {{site.data.keyword.cloud_notm}}.
 
-[Learn more about {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about).
+2. To configure platform logs, you must configure tenants and targets (destinations) in your {{site.data.keyword.cloud_notm}} account.
 
-To use the {{site.data.keyword.logs_routing_full}} service, consider the following information:
-- You must create a tenant in a region in your account that defines the target destination of logs collected in that region and the rules on how they are routed.
+    {{site.data.content.tenant_definition-paragraph}}
 
-    You must create (onboard) an {{site.data.keyword.logs_routing_full_notm}} tenant in your {{site.data.keyword.cloud_notm}} account in at least one [supported {{site.data.keyword.cloud}} region](/docs/logs-router?topic=logs-router-locations).
+    For more information, see [Learn more about {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about).
 
-- You must install the {{site.data.keyword.logs_routing_full_notm}} agent on 1 or more log sources. You must configure the agent to send log events to the {{site.data.keyword.logs_routing_full_notm}} service in your account.
+3. [Check the regions where the {{site.data.keyword.logs_routing_full_notm}} service is available](/docs/logs-router?topic=logs-router-locations). Identify a region where you operate in {{site.data.keyword.cloud_notm}} and check is in the list of supported regions.
 
-- If you are connecting log sources through an {{site.data.keyword.vpc_short}}, you must configure an ingestion virtual private endpoint (VPE) to privately connect agents running on those log sources to the {{site.data.keyword.logs_routing_full_notm}} service.
+4. Check that the user who is configuring {{site.data.keyword.logs_routing_full_notm}} for the {{site.data.keyword.cloud}} account has sufficient permissions to manage the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
 
-### {{site.data.keyword.cloud_notm}} prerequisites
-{: #getting-started-before-you-begin-1}
+    You need service role **reader** to view tenants and targets.
 
-1. [Check the regions where the {{site.data.keyword.logs_routing_full_notm}} service is available](/docs/logs-router?topic=logs-router-locations).
+    You need service role **manager** to create, delete, update tenants and targets.
 
-2. If you don't have an {{site.data.keyword.cloud_notm}} account, [register an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}. You need an IBMid to work in {{site.data.keyword.cloud_notm}}.
+5. Install the following tools:
 
-3. Check that the user who is configuring {{site.data.keyword.logs_routing_full_notm}} for the {{site.data.keyword.cloud}} account has sufficient permissions to manage the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
+    - [Download and install the {{site.data.keyword.cloud}} CLI](/docs/cli).
 
-4. If you do not have a cluster, [create a cluster](/docs/containers?topic=containers-clusters) or use an existing {{site.data.keyword.containerlong_notm}} cluster.
+    - Provision an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
+
+    - [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
 
 
-### Install prerequisites
-{: #getting-started-before-you-begin-2}
-
-Install the following tools:
-- [Download and install the {{site.data.keyword.cloud}} CLI](/docs/cli).
-- If you are installing the agent on a Kubernetes cluster, [install the Kubernetes CLI (`kubectl`)](https://kubernetes.io/docs/tasks/tools/){: external} .
-- If you are installing the agent on an [{{site.data.keyword.openshiftlong_notm}}](https://cloud.ibm.com/docs/openshift) cluster, [install the Red Hat Openshift CLI (`oc`)](/docs/openshift?topic=openshift-cli-install).
-- Provision an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
-- If you are going to be running the agent in an {{site.data.keyword.vpc_full}} and will be using the {{site.data.keyword.cloud}} CLI to configure networking, [install the {{site.data.keyword.vpc_full}} CLI plugin](/docs/vpc?topic=vpc-set-up-environment&interface=cli).
-- [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
-- [Download and install yq](https://github.com/mikefarah/yq?tab=readme-ov-file#install){: external} to read, write, and manipulate YAML files in a similar way to using `jq` for JSON files.
-
-## Creating (onboarding) a tenant
-{: #getting-started-onboard-tenant}
+## Retrieving the IAM bearer token
+{: #getting-started-retrieve-iam-token}
 {: step}
 
-{{site.data.content.tenant_definition-paragraph}}
+You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
+For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
 
-### Enable connectivity
-{: #getting-started-onboard-tenant-1}
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
 
-You can manage {{site.data.keyword.logs_routing_full_notm}} by using the management API. The management API supports either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
-
-To create a tenant, you must use the {{site.data.keyword.logs_routing_full_notm}} management API.
-
-Using the public endpoint does not require additional work in this step. Use the public endpoint to complete the steps in this tutorial.
-
-For more information, see [Connecting to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about#about_connecting).
-
-
-### Collect information about the target destination
-{: #getting-started-onboard-tenant-2}
-
-{{site.data.keyword.logs_routing_full_notm}} supports the following targets:
-
-- {{site.data.keyword.logs_full_notm}}
-- {{site.data.keyword.la_full_notm}}
-
-
-### Create a tenant in a region
-{: #getting-started-onboard-tenant-3}
-
-Create a {{site.data.keyword.logs_full_notm}} tenant by following [Creating an {{site.data.keyword.logs_full_notm}} tenant in {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).
-
-
-
-## Installing the {{site.data.keyword.logs_routing_full_notm}} agent on your cluster
-{: #getting-started-deploy-agent}
+## Creating a service to service authorization
+{: #getting-started-create-s2s}
 {: step}
 
-The {{site.data.keyword.logs_routing_full_notm}} agent collects data from containerized workloads that run on a Kubernetes cluster.
+You must use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).
+
+Complete the following steps:
+
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
+
+2. Click **Create**.
+
+3. Configure the source account. Select **This account**.
+
+4. Select **Logs Routing** as the source service. Then, set the scope of the access to **All resources**.
+
+5. Select **Cloud Logs** as the target service. Then, set the scope of the access to **All resources**, which grants access to all {{site.data.keyword.logs_full_notm}} instances, or a single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**.
+
+    Other attributes are not supported for this type of authorization.
+
+6. In the *Service Access* section, select **Sender** to assign access to the source service that accesses the target service.
+
+7. Click **Authorize**.
 
 
-### Enable connectivity
-{: #getting-started-deploy-agent-1}
+For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
-You can send logs to {{site.data.keyword.logs_routing_full_notm}} by using the ingestion API.
+## Creating a tenant
+{: #getting-started-create-tenant}
+{: step}
 
-The ingestion API supports only private endpoints and is therefore not accessible from the public internet.
-{: important}
+When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
 
-The {{site.data.keyword.logs_routing_full}} supports the following types of endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}:
-- {{site.data.keyword.cloud_notm}} Cloud Service Endpoint (CSE)
-- {{site.data.keyword.vpe_full}}.
+If no target is configured for a region, the region displays the **Set target** option.
 
-Choose one of the following options to privately connect to {{site.data.keyword.logs_routing_full_notm}}:
-- [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-vpe-connection).
-- [Using service endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-service-endpoints).
+From the {{site.data.keyword.logs_routing_full_notm}} console, you can create a tenant and a target destination by configuring the option **Set target** for the region that you want to configure.
 
+Complete the following steps:
 
-### Deploy the agent
-{: #getting-started-deploy-agent-2}
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-- For {{site.data.keyword.containerlong_notm}} clusters:  Complete the steps in [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.containerlong_notm}} clusters](/docs/logs-router?topic=logs-router-agent-std-cluster&interface=api#agent-std-cluster-deploy).
+2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
 
-- For {{site.data.keyword.openshiftlong_notm}} clusters:  Complete the steps in [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/logs-router?topic=logs-router-agent-openshift&interface=api#agent-openshift-deploy).
+3. Click **Logging** > **Routing**.
+
+4. Click **Set target**.
+
+5. Click the tab **Cloud Logs** and select an {{site.data.keyword.logs_full_notm}} instance from the list. This is the instance where you want to receive logs that are routed by {{site.data.keyword.logs_routing_full_notm}}.
+
+   You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
+
+   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.{: note}
+
+6. Click **Save**.
 
 
 
@@ -139,4 +128,9 @@ Choose one of the following options to privately connect to {{site.data.keyword.
 
 Verify that the logs for your cluster are routed to your {{site.data.keyword.logs_full_notm}} instance.
 
-[Launch the {{site.data.keyword.logs_full_notm}} web UI](/docs/cloud-logs?topic=cloud-logs-instance-launch&interface=ui) for the target {{site.data.keyword.logs_full_notm}} instance and check that logs from your cluster are displayed.
+All platform logs are generated in JSON. You can filter platform logs in your instance be selecting the value of **ibm-platform-logs** as the `applicationName`.
+
+Complete the following steps:
+
+1. [Launch the {{site.data.keyword.logs_full_notm}} web UI](/docs/cloud-logs?topic=cloud-logs-instance-launch&interface=ui) for the {{site.data.keyword.logs_full_notm}} instance that is configured as the target to collect platform logs in a region. This is the instance that you selected in the step where you setup a target.
+2. View logs through custom views. For more information, see [Viewing logs](/docs/cloud-logs?topic=cloud-logs-custom_views).
