@@ -113,6 +113,10 @@ Where
 - `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
 - `TARGET_DATA` defines the information about the target destination.
 
+### {{site.data.keyword.logs_full_notm}} destination
+{: #tenant-create-api-logs}
+{: api}
+
 For a target that defines an {{site.data.keyword.logs_full_notm}} destination, the `TARGET_DATA` format is as follows:
 
 ``` text
@@ -138,8 +142,11 @@ Where
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
 - `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
-- `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use.
+- `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
 
+### {{site.data.keyword.la_full_notm}} destination
+{: #tenant-create-api-la}
+{: api}
 
 For a target that defines an {{site.data.keyword.la_full_notm}} destination, the `TARGET_DATA` format is as follows:
 
@@ -166,5 +173,74 @@ Where
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
-- `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use.
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `8080`.
+- `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
+
+
+## Creating a tenant and target by using Terraform
+{: #tenant-create-tf}
+{: terraform}
+
+### {{site.data.keyword.logs_full_notm}} destination
+{: #tenant-create-tf-logs}
+{: terraform}
+
+
+To create tenant with a target of type `logs`, use the following:
+
+```text
+resource "ibm_logs-router_tenant" "logs-router_tenant_instance_1" {
+	ibm_api_version = "API_VERSION_DATE"
+	name = "TENANT_NAME"
+	targets {
+	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
+	  name = "TARGET_NAME"
+	  parameters {
+		host = "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT"
+		port = CLOUD_LOGS_INSTANCE_TARGET_PORT
+	  }
+	}
+  }
+```
+{: codeblock}
+
+Where
+
+- `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
+- `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
+
+### {{site.data.keyword.la_full_notm}} destination
+{: #tenant-create-tf-la}
+{: terraform}
+
+
+To create tenant with a target of type `logdna`, use the following:
+
+```text
+resource "ibm_logs-router_tenant" "logs-router_tenant_instance_1" {
+	ibm_api_version = "API_VERSION_DATE"
+	name = "TENANT_NAME"
+	targets {
+	  log_sink_crn = "LOG_ANALYSIS_INSTANCE_CRN"
+	  name = "TARGET_NAME"
+	  parameters {
+		"host": "LOG_ANALYSIS_INGESTION_ENDPOINT",
+        "port": `LOG_ANALYSIS_INSTANCE_TARGET_PORT`,
+        "access_credential": "INGESTION_KEY_TO SEND_DATA_TO_INSTANCE"
+	  }
+	}
+  }
+```
+{: codeblock}
+
+
+Where
+
+- `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `8080`.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
