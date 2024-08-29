@@ -77,11 +77,12 @@ To create a tenant and a target for a region, complete the following steps:
 6. Click **Save**.
 
 
+When you set a target in the UI, you create a tenant in that region. The name of the tenant is set as `region-ID` where region is set to the region where you are located when you create the target.
+{: note}
+
 ## Creating a tenant and target by using the API
 {: #tenant-create-api}
 {: api}
-
-
 
 
 Run the following command to create a tenant for the {{site.data.keyword.logs_routing_full_notm}} service by using the **private endpoint**:
@@ -91,7 +92,7 @@ curl -X POST  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/
 -H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE" \
--data '{TARGET_DATA}'
+--data '{TARGET_DATA}'
 ```
 {: pre}
 
@@ -102,7 +103,7 @@ curl -X POST  https://management.${REGION}.logs-router.cloud.ibm.com/v1/tenants 
 --H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE" \
--data '{TARGET_DATA}'
+--data '{TARGET_DATA}'
 ```
 {: pre}
 

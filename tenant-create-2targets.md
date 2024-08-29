@@ -69,7 +69,7 @@ curl -X POST  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/
 -H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE" \
--data '{TARGET_DATA}'
+--data '{TARGET_DATA}'
 ```
 {: pre}
 
@@ -77,10 +77,10 @@ Run the following command to create a tenant for the {{site.data.keyword.logs_ro
 
 ```sh
 curl -X POST  https://management.${REGION}.logs-router.cloud.ibm.com/v1/tenants \
---H "Content-Type: application/json" \
+-H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE" \
--data '{
+--data '{
     "name": "TENANT_NAME",
     "targets": [
         {
@@ -118,3 +118,36 @@ Where
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
 - `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
+
+For example, you can run the following sample:
+
+```
+
+curl -X POST  https://management.us-south.logs-router.cloud.ibm.com/v1/tenants \
+--header 'Content-Type: application/json' \
+--header "Authorization: ${IAM_TOKEN}" \
+--header "IBM-API-Version: 2024-08-28" \
+--data '{
+    "name": "my dallas-tenant",
+    "targets": [
+        {
+            "log_sink_crn": "crn:v1:bluemix:public:logs:eu-es:a/1234567e6232019c6567c9c8de6dece:dafc3147-484f-4dee-b3c7-5555558e5c7::",
+            "name": "my-logs-target",
+            "parameters": {
+                "host": "dafc3147-484f-4dee-b3c7-5555558e5c7.ingress.private.eu-es.logs.cloud.ibm.com",
+                "port": 443
+            }
+        },
+        {
+            "log_sink_crn": "crn:v1:bluemix:public:logdna:au-syd:a/1234567e6232019c6567c9c8de6dece:88888888-08ed-49aa-b976-9380ad3d7aed::",
+            "name": "my-log-analysis-target",
+            "parameters": {
+                "host": "logs.us-south.logging.cloud.ibm.com",
+                "port": 8080,
+                "access_credential": "xxxxxxxxxx"
+            }
+        }
+    ]
+    }'
+```
+{: screen}

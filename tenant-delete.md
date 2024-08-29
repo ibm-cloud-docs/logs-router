@@ -95,8 +95,8 @@ Where:
 
 In the {{site.data.keyword.logs_routing_full_notm}} console, you can see if a target is configured for a region.
 
-Consider the following information when deleting a target through the UI:
-- When you delete a target, you also delete the account tenant definition in the region.
+When you delete a target, you also delete the account tenant definition in the region. Therefore, if you have a tenant with 2 targets, and you delete a target in the UI, you will delete the 2 targets and the tenant.
+{: important}
 
 To delete a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region, complete the following steps:
 
