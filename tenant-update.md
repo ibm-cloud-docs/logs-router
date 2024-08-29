@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Modifying the target associcated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI
+# Modifying the target associated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI
 {: #tenant-update}
 
 After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant.

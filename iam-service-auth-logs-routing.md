@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -18,6 +18,8 @@ subcollection: logs-router
 Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).
 {: shortdesc}
 
+The {{site.data.keyword.logs_full_notm}} instance that you plan to configure as a target must be located in the same account where you plan to configure {{site.data.keyword.logs_routing_full_notm}}.
+[: important]
 
 ## Before you begin
 {: #iam-service-auth-logs-routing-prereqs}
@@ -46,11 +48,7 @@ Complete the following steps:
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
 2. Click **Create**.
-3. Select a source account.
-
-    If the source service that needs access to the target service is in this account, select **This account**.
-
-    If the source service that needs access to the target service is in a different account, select **Other account**. Then, enter the account ID of the source account.
+3. Configure the source account. Select **This account**.
 
 4. Select **Logs Routing** as the source service. Then, set the scope of the access to **All resources**.
 
