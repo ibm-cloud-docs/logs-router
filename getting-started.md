@@ -102,6 +102,7 @@ If no target is configured for a region, the region displays the **Set target** 
 
 From the {{site.data.keyword.logs_routing_full_notm}} console, you can create a tenant and a target destination by configuring the option **Set target** for the region that you want to configure.
 
+
 Complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.

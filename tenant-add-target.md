@@ -12,28 +12,63 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Adding a target to a tenant
+# Adding a target to a tenant by using the API
 {: #tenant-add-target}
 
-You can list existing tenants in {{site.data.keyword.logs_routing_full}} that are defined in the account.
+You can create and add a second target to a tenant in {{site.data.keyword.logs_routing_full}}.
 {: shortdesc}
 
+If you are migrating from {{site.data.keyword.la_full_notm}} to {{site.data.keyword.logs_full_notm}}, you can add the second target to collect platform logs in both the {{site.data.keyword.la_full_notm}} instance and the {{site.data.keyword.logs_full_notm}} instance.
+{: tip}
+
+To add a target, you must supply information about the destination where you want your logs delivered. For more information, see [{{site.data.keyword.logs_full_notm}} target destination data](/docs/logs-router?topic=logs-router-tenant-create&interface=api#tenant-create-api-logs) or [{{site.data.keyword.la_full_notm}} target destination data](/docs/logs-router?topic=logs-router-tenant-create&interface=api#tenant-create-api-la).
 
 
 
 
 
+## Before you begin
+{: #tenant-add-target-prereqs}
 
-{: #migration-add-logs-target-api} {: api}
+Complete the following steps:
 
-To add a target, you must supply information about the destination where you want your logs delivered. Follow the instructions in: Retrieving your {{site.data.keyword.logs_full_notm}} information and creating a service to service authorization.
+- Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-Run the following command to add a target sending logs to {{site.data.keyword.logs_full_notm}} to a tenant which already has a target sending logs to {{site.data.keyword.la_full_notm}}:
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-curl -X POST https://<MANAGEMENT-API-ENDPOINT>:<PORT>/v1/tenants/<TENANT-ID>/targets \
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+
+- To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+
+## Retrieving the IAM bearer token
+{: #tenant-add-target-retrieve-iam-token-cli}
+
+You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
+
+For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
+
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
+
+## Getting the tenant ID
+{: #tenant-add-target-get-id}
+
+Deleting a target requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+{: important}
+
+
+## Add a target
+{: #tenant-add-target-1}
+
+Run the following command to create a target and add the target to a tenant by using the **private endpoint**:
+
+```sh
+curl -X POST  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/tenants/<TENANT-ID>/targets \
 -H "Content-Type: application/json" \
 -H "Authorization: ${IAM_TOKEN}" \
--H 'IBM-API-Version: CURRENT_DATE' \
+-H "IBM-API-Version: API_VERSION_DATE" \
 --data '{
         "log_sink_crn": "LOG_SINK_CRN",
         "name": "TARGET_NAME",
@@ -41,19 +76,38 @@ curl -X POST https://<MANAGEMENT-API-ENDPOINT>:<PORT>/v1/tenants/<TENANT-ID>/tar
             "host": "LOG_SINK_INGESTION_ENDPOINT",
             "port": LOG_SINK_PORT
         }'
+```
+{: pre}
 
-{: codeblock}
+Run the following command to create a target and add the target to a tenant by using the **public endpoint**:
+
+```sh
+curl -X POST  https://management.${REGION}.logs-router.cloud.ibm.com/v1/tenants<TENANT-ID>/targets \
+--H "Content-Type: application/json" \
+-H "Authorization: ${IAM_TOKEN}" \
+-H "IBM-API-Version: API_VERSION_DATE" \
+--data '{
+        "log_sink_crn": "LOG_SINK_CRN",
+        "name": "TARGET_NAME",
+        "parameters": {
+            "host": "LOG_SINK_INGESTION_ENDPOINT",
+            "port": LOG_SINK_PORT
+        }'
+```
+{: pre}
 
 Where
+- `REGION` defines the location where the tenant is configured.
+- `IAM_TOKEN` defines the credentials that you use to authenticate your requests.
+- `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
+- `TARGET_DATA` defines the information about the target destination.
+- `TENANT-ID`: The ID of your existing tenant where you want to add a target.
+- `LOG_SINK_CRN`: CRN of the target {{site.data.keyword.logs_full_notm}} instance.
+- `LOG_SINK_INGESTION_ENDPOINT`: Full qualified ingestion endpoint for the log-sink.
+- `LOG_SINK_PORT`: The corresponding port to the LOG_SINK_INGESTION_ENDPOINT.
 
-    <MANAGEMENT-API-ENDPOINT> is the {{site.data.keyword.logs_routing_full}} endpoint in the region where you plan to collect logs. For more information, see Endpoints. Make sure to use the corresponding port in <PORT>.
-    <TENANT-ID>: The ID of your existing tenant where you want to add a target.
-    LOG_SINK_CRN: CRN of the target {{site.data.keyword.logs_full_notm}} instance.
-    LOG_SINK_INGESTION_ENDPOINT: Full qualified ingestion endpoint for the log-sink.
-    LOG_SINK_PORT: The corresponding port to the LOG_SINK_INGESTION_ENDPOINT.
-    CURRENT_DATE: Specify the current date to request the latest version of the API. The valid format is YYYY-MM-DD. Any date up to the current date can be provided.
 
-The following shows an example of adding a target in us-east using the public endpoint and an existing tenant with ID 97543c-77b7-eg23-8114-999b31a2b3:
+The following shows an example of adding a target in us-east by using the public endpoint and an existing tenant with ID 97543c-77b7-eg23-8114-999b31a2b3:
 
 curl -X POST "https://management.us-east.logs-router.cloud.ibm.com/v1/tenants/97543c-77b7-eg23-8114-999b31a2b3/targets" \
 --header "Authorization: Bearer TOKEN" \

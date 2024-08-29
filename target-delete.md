@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deleting a tenant from {{site.data.keyword.logs_routing_full_notm}}
+# Deleting a target from a tenant in {{site.data.keyword.logs_routing_full_notm}}
 {: #target-delete}
 
-You can delete a tenant from {{site.data.keyword.logs_routing_full_notm}}.
+You can delete a target from a tenant in {{site.data.keyword.logs_routing_full_notm}}.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -26,20 +26,15 @@ You can delete a tenant from {{site.data.keyword.logs_routing_full_notm}}.
 
 Complete the following steps:
 
-1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
+- Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+- To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 
-### Getting the tenant ID
-{: #target-delete-get-id}
-
-Deleting a tenant requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
-{: important}
 
 ## Retrieving the IAM bearer token
 {: #target-delete-retrieve-iam-token-cli}
@@ -53,6 +48,13 @@ For example, you can retrieve your IAM bearer token and export it as an environm
 export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
+
+## Getting the tenant ID
+{: #target-delete-get-id}
+
+Deleting a target requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+{: important}
+
 
 ## Deleting a target by using the API
 {: #target-delete-api}
