@@ -72,7 +72,7 @@ toc:
       - topic: launch-ui.md
         navtitle: Launching the UI
       - topicgroup:
-          label: Managing tenant configurations
+          label: Managing tenants
           topics:
           - topic: tenants-list.md
             navtitle: Listing tenants
@@ -86,21 +86,19 @@ toc:
             navtitle: Creating a tenant with 2 targets
           - topic: tenant-update-name.md
             navtitle: Changing the name of a tenant
-          - topic: tenant-update.md
-            navtitle: Modifying the target associcated to a tenant
-          - topic: tenant-add-target.md
-            navtitle: Adding a target to a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
       - topicgroup:
-          label: Managing targets (destinations)
+          label: Managing targets
           topics:
-          - topic: target-create.md
-            navtitle: Creating a target
+          - topic: tenant-add-target.md
+            navtitle: Adding a target to a tenant by using the API
+          - topic: tenant-update.md
+            navtitle: Modifying the target associcated to a tenant in the UI
           - topic: target-update.md
-            navtitle: Updating the configuration details of a target
+            navtitle: Updating the configuration of a target
           - topic: target-delete.md
-            navtitle: Deleting a target
+            navtitle: Deleting a target by using the API
           - topic: target-get.md
             navtitle: Retrieving information on a target
           - topic: target-list.md
