@@ -88,7 +88,7 @@ toc:
             navtitle: Changing the name of a tenant
           - topic: tenant-update.md
             navtitle: Modifying the target associcated to a tenant
-          - topic: tenant-add-target
+          - topic: tenant-add-target.md
             navtitle: Adding a target to a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
