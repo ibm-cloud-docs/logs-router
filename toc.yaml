@@ -25,7 +25,7 @@ toc:
           topics:
           - topic: target-cloud-logs.md
             navtitle: Configuring a Cloud Logs target
-          - topic: onboard-log-analysis-tenant.md
+          - topic: target-log-analysis.md
             navtitle: Configuring 1 Log Analysis destination 
       - topicgroup:
           label: Release notes
@@ -133,20 +133,7 @@ toc:
           links:
             - link:
                 label: Terraform reference
-                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
-      - topicgroup:
-          label: Logs agent
-          topics:
-          - topic: reference/limits.md
-            navtitle: Considerations and limitations
-          - topic: agent/routing-plugin-parameters.md
-            navtitle: Logs Routing plug-in parameters
-          - topic: agent/logs-plugin-parameters.md
-            navtitle: Cloud Logs plug-in parameters
-          - topic: agent/fluentbit_support.md
-            navtitle: Agent plug-in support
-          - topic: agent/logger-agent-config.md
-            navtitle: Agent configuration files
+                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant 
   - navgroup:
         id: help
         topics:
