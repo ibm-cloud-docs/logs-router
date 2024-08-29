@@ -53,14 +53,29 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 {: pre}
 
 ## Getting the tenant ID
-{: #tenant-add-target-get-id}
+{: #tenant-add-details}
 
-Deleting a target requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+To get the tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+
+
+
+## Choosing the management endpoint
+{: #tenant-add-target-endpoint}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
 {: important}
+
+You can use private or public endpoints.
+
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
 
 ## Add a target
 {: #tenant-add-target-1}
+{: api}
 
 Run the following command to create a target and add the target to a tenant by using the **private endpoint**:
 

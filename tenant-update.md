@@ -15,7 +15,7 @@ subcollection: logs-router
 # Modifying the target associated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI
 {: #tenant-update}
 
-After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant.
+After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant through the UI.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -36,24 +36,6 @@ Complete the following steps:
 - To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 
-
-## Retrieving the IAM bearer token
-{: #tenant-update-retrieve-iam-token}
-
-You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
-
-For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
-
-```sh
-export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
-```
-{: pre}
-
-
-### Getting the tenant ID
-{: #tenant-update-get-id}
-
-To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
 
 
 ## Modifying the target associcated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI

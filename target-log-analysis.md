@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -81,6 +81,19 @@ To retrieve the ingestion key for your instance, follow [these steps](/docs/log-
 To determine the correct {{site.data.keyword.la_short}} endpoint information, including the hostname and port, see the list of [{{site.data.keyword.la_short}} endpoints](/docs/log-analysis?topic=log-analysis-endpoints).
 
 
+
+## Choosing the management endpoint
+{: #onboard-log-analysis-tenant-endpoint}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
+{: important}
+
+You can use private or public endpoints.
+
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
 ## Creating a tenant by using the API
 {: #onboard-log-analysis-tenant-api-create}

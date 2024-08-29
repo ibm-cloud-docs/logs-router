@@ -61,6 +61,22 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
 
 
+
+## Choosing the management endpoint
+{: #tenant-update-name-endpoint}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
+{: important}
+
+You can use private or public endpoints.
+
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
+
+
+
 ## Changing the name by using the API
 {: #tenant-update-name-change}
 

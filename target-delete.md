@@ -12,10 +12,10 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deleting a target from a tenant in {{site.data.keyword.logs_routing_full_notm}}
+# Deleting a target from a tenant in {{site.data.keyword.logs_routing_full_notm}} by using the target ID
 {: #target-delete}
 
-You can delete a target from a tenant in {{site.data.keyword.logs_routing_full_notm}}.
+You can delete a target from a tenant in {{site.data.keyword.logs_routing_full_notm}} that has 2 targets configured.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -37,8 +37,8 @@ Complete the following steps:
 
 
 ## Retrieving the IAM bearer token
-{: #target-delete-retrieve-iam-token-cli}
-{: step}
+{: #target-delete-retrieve-iam-token}
+{: api}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -49,28 +49,49 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
 
-## Getting the tenant ID
-{: #target-delete-get-id}
+## Getting the tenant ID and target details
+{: #target-delete-details}
+{: api}
 
-Deleting a target requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+Deleting a target requires the tenant ID and information about the targets. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+
+## Choosing the management endpoint
+{: #target-delete-endpoint}
+{: api}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
 {: important}
 
+You can use private or public endpoints.
 
-## Deleting a target by using the API
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
+
+
+## Deleting a target
 {: #target-delete-api}
 {: api}
 
-The management endpoint that you call to remove a tenant is only available by using VPE.
-{: important}
-
-Run the following command to delete a tenant from the {{site.data.keyword.logs_routing_full_notm}} service:
+Run the following command to delete a target from a tenant by using the **private endpoint**:
 
 ```sh
-curl -X DELETE  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID} \
--H "IBM-API-Version: 2024-03-01" \
+curl -X DELETE  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID}/targets/<TARGET_ID> \
+-H "IBM-API-Version: API_VERSION_DATE" \
 -H "Authorization: ${IAM_TOKEN}"
 ```
 {: pre}
+
+Run the following command to delete a target from a tenant by using the **public endpoint**:
+
+```sh
+curl -X DELETE  https://management.${REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID}/targets/<TARGET_ID> \
+-H "IBM-API-Version: API_VERSION_DATE" \
+-H "Authorization: ${IAM_TOKEN}"
+```
+{: pre}
+
 
 Where:
 
@@ -80,19 +101,6 @@ Where:
 
 - `REGION` defines the region where your tenant is located.
 
+- `TARGET_ID` is the ID of the target that you want to delete.
 
-
-
-## Deleting a target through the UI
-{: #target-delete-ui}
-{: ui}
-
-When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
-
-To delete a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region, complete the following steps:
-
-1. Click the ![Actions icon](../../icons/action-menu-icon.svg "Actions") next to the region that you want to change.
-
-2. Click **Delete target**.
-
-3. Confirm to delete the target.
+- `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`

@@ -15,22 +15,64 @@ subcollection: logs-router
 # Updating the configuration details of a target in {{site.data.keyword.logs_routing_full_notm}}
 {: #target-update}
 
-You can delete a tenant from {{site.data.keyword.logs_routing_full_notm}}.
+You can update the configuration details of a target in {{site.data.keyword.logs_routing_full_notm}}.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
 
+## Before you begin
+{: #target-update-prereqs}
+
+Complete the following steps:
+
+- Review [About {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
+
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+
+- To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 
 
+## Retrieving the IAM bearer token
+{: #target-update-retrieve-iam-token}
 
+
+You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
+
+For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
+
+```sh
+export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+```
+{: pre}
+
+
+
+## Getting the tenant ID
+{: #target-update-details}
+
+To get the tenant ID and target current details, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+
+
+## Choosing the management endpoint
+{: #target-update-endpoint}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
+{: important}
+
+You can use private or public endpoints.
+
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
 ## Updating a target by using the API
-{: #update-target-api}
+{: #target-update-api}
 {: api}
-
-Submit the update target request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
 
 In the request body, you are only required to supply the fields you are modifying. Any fields that are not included in the request body are not changed.
 {: note}
@@ -69,6 +111,8 @@ Where
 The following example shows updating an {{site.data.keyword.logs_routing_full_notm}} target in the `us-east` region by using a VPE.
 In this case, the request changes the target from one {{site.data.keyword.la_short}} instance to a different one, so the fields to be updated are `access_credential` and `log_sink_crn`.
 Both instances are in the same `us-east` region:
+
+
 
 ```sh
 curl -X PATCH  https://management.private.us-east.logs-router.cloud.ibm.com:443/v1/tenants/97543c-77b7-eg23-8114-999b31a2bc \

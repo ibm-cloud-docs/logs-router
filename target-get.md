@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -15,27 +15,26 @@ subcollection: logs-router
 # Retrieving target information
 {: #target-get}
 
-You can get information for an existing tenant in {{site.data.keyword.logs_routing_full}}.
+You can get information for a target that is configured for a tenant in {{site.data.keyword.logs_routing_full}} by using the tenant ID and the target ID.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
-After a tenant is [created](/docs/logs-router?topic=logs-router-onboarding) in your account, you can retrieve information about your tenant. You need this information if you want to:
-- Update a tenant. For example, if you want to modify the target information, such as the ingestion key or hostname.
-- Delete (offboard) a tenant from the service.
 
 ## Before you begin
 {: #target-get-prereqs}
 
 Complete the following steps:
 
-1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
+- Review [About {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+- To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+
+
 
 ## Retrieving the IAM bearer token
 {: #target-get-retrieve-iam-token}
@@ -51,16 +50,65 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 {: pre}
 
 
-## Getting tenant information by using the API
+
+## Getting the tenant ID
+{: #target-get-details}
+
+To get the tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
+
+## Choosing the management endpoint
+{: #target-get-endpoint}
+
+
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
+
+To get the details of a tenant in a region, you must use the management endpoint URL for the region where the tenant is configured.
+{: important}
+
+You can use private or public endpoints.
+
+For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
+
+
+
+## Getting target information by using the API
 {: #target-get-api}
 {: api}
 
-Submit the get tenant request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+Run the following command to get the details of a target from a tenant by using the **private endpoint**:
 
-You can use the tenant listing capability to retrieve tenant information if you do not know your tenant's ID. If you know the ID of the tenant, you can use {{site.data.keyword.logs_routing_full_notm}} to retrieve that tenant's specific information. For more information, see [Listing tenants that are defined in the account](/docs/logs-router?topic=logs-router-tenants-list&interface=ui).
-{: tip}
+```sh
+curl -X GET  https://management.private.${REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID}/targets/<TARGET_ID> \
+-H "IBM-API-Version: API_VERSION_DATE" \
+-H "Authorization: ${IAM_TOKEN}"
+```
+{: pre}
 
-The following example shows getting information about an {{site.data.keyword.logs_routing_full_notm}} tenant in the `us-east` region by using a VPE:
+
+Run the following command to get the details of a target from a tenant by using the **public endpoint**:
+
+```sh
+curl -X GET  https://management.${REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID}/targets/<TARGET_ID> \
+-H "IBM-API-Version: API_VERSION_DATE" \
+-H "Authorization: ${IAM_TOKEN}"
+```
+{: pre}
+
+Where:
+
+- `IAM_TOKEN` is the IAM token that you must use to authenticate the request.
+
+- `TENANT_ID` defines the ID of the tenant that you are removing which was returned when the service was created.
+
+- `REGION` defines the region where your tenant is located.
+
+- `TARGET_ID` is the ID of the target that you want to get the details.
+
+- `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
+
+
+For example, you can run the following sample to get the details of a target configured in a tenant located in `us-east`:
+
 
 ```sh
 curl -X GET https://management.private.us-east.logs-router.cloud.ibm.com:443/v1/tenants/97543c-77b7-eg23-8114-999b31a2b3 \
