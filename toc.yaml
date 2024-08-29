@@ -72,7 +72,9 @@ toc:
           - topic: tenant-get-id.md
             navtitle: Getting information on a tenant by using the tenant ID
           - topic: tenant-create.md
-            navtitle: Creating a tenant
+            navtitle: Creating a tenant with 1 target
+          - topic: tenant-create-2targets.md
+            navtitle: Creating a tenant with 2 targets
           - topic: tenant-update.md
             navtitle: Editing a tenant
           - topic: tenant-delete.md

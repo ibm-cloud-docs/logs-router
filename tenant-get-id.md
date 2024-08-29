@@ -15,7 +15,7 @@ subcollection: logs-router
 # Retrieving tenant information in {{site.data.keyword.logs_routing_full_notm}} by using the tenant ID
 {: #tenant-get-id}
 
-You can get information for an existing tenant that you define in {{site.data.keyword.logs_routing_full}} by using the API and the tenant ID.
+You can get information for an existing tenant that you define in {{site.data.keyword.logs_routing_full}} by using the tenant ID.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -68,19 +68,29 @@ For more information, see [Management endpoint URLs](/docs/logs-router?topic=log
 {: #tenant-get-id-api}
 {: step}
 
-Run the following command to get the details of a tenant in a region:
+Run the following command to get the details of a tenant in a region by using the **private endpoint**:
 
 ```sh
-curl -X GET https://management.private.{region}.logs-router.cloud.ibm.com/v1/tenants/TENANT_ID \
+curl -X GET https://management.private.{REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID} \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE"
 ```
 {: pre}
 
+Run the following command to get the details of a tenant in a region by using the **public endpoint**:
+
+```sh
+curl -X GET https://management.{REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID} \
+-H "Authorization: ${IAM_TOKEN}" \
+-H "IBM-API-Version: API_VERSION_DATE"
+```
+{: pre}
+
+
 Where
-- `{Region}` defines the location where the tenant is configured.
+- `REGION` defines the location where the tenant is configured.
 - `IAM_TOKEN` defines the credentials that you use to authenticate your requests.
-- `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
+- `API_VERSION_DATE` defines the current date to request the latest version of the API. The valid format is `YYYY-MM-DD`. Any date up to the current date can be provided.
 - `TENANT_ID` defines the ID of the tenant for which you want to get details.
 
 

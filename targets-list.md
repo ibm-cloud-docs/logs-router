@@ -110,8 +110,6 @@ To list the tenants that are configured in the account, you must launch the {{si
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
-	After you log in with your user ID and password, the {{site.data.keyword.cloud_notm}} dashboard opens.
-
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
 
 3. Click **Logging** > **Routing**.
