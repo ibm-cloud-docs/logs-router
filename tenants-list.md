@@ -15,7 +15,7 @@ subcollection: logs-router
 # Listing tenants that are defined in the account
 {: #tenants-list}
 
-You can view existing tenants that are configured in your {{site.data.keyword.cloud_full}} for {{site.data.keyword.logs_routing_full_notm}} through the UI.
+You can list the existing tenants that are configured in your {{site.data.keyword.cloud_notm}} account through the {{site.data.keyword.logs_routing_full_notm}} UI.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
