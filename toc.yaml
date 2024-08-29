@@ -35,9 +35,7 @@ toc:
           label: Release notes
           topics:
           - topic: learn/releasenotes.md
-            navtitle: Release notes
-          - topic: agent/releasenotes_agent.md
-            navtitle: Agent release notes
+            navtitle: Release notes 
   - navgroup:
       id: howto
       topics:
@@ -86,19 +84,19 @@ toc:
             navtitle: Creating a tenant with 1 target
           - topic: tenant-create-2targets.md
             navtitle: Creating a tenant with 2 targets
+          - topic: tenant-update-name.md
+            navtitle: Changing the name of a tenant
           - topic: tenant-update.md
-            navtitle: Editing a tenant
+            navtitle: Modifying the target associcated to a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
       - topicgroup:
           label: Managing targets (destinations)
           topics:
-          - topic: lr_ui.md
-            navtitle: Managing targets in the UI
           - topic: target-create.md
             navtitle: Creating a target
           - topic: target-update.md
-            navtitle: Editing a target
+            navtitle: Updating the configuration details of a target
           - topic: target-delete.md
             navtitle: Deleting a target
           - topic: target-get.md
@@ -158,7 +156,7 @@ toc:
   - navgroup:
         id: help
         topics:
-        - help/gettinghelp.md
+        - gettinghelp.md
         - topicgroup:
             label: Troubleshooting
             topics:

@@ -63,6 +63,13 @@ For more information, see [Management endpoint URLs](/docs/logs-router?topic=log
 
 
 
+## Retrieving the tenant ID
+{: #tenant-get-id-tenant-id}
+
+To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
+
+
+
 ## Getting tenant information by using the API
 {: #tenant-get-id-api}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Updating a tenant in {{site.data.keyword.logs_routing_full_notm}}
+# Modifying the target associcated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI
 {: #tenant-update}
 
 After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in your account, you can update information about your tenant.
@@ -27,33 +27,18 @@ After you [create a tenant](/docs/logs-router?topic=logs-router-onboarding) in y
 
 Complete the following steps:
 
-1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
+- Review [About {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+- To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
-
-### Getting the tenant ID
-{: #tenant-update-get-id}
-
-Updating a tenant requires the tenant ID. If you do not remember your tenant ID, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
-{: important}
-
-### Retrieving {{site.data.keyword.loganalysisfull_notm}} information
-{: #retrieve-log-analysis-information}
-
-You can modify only the target for an existing tenant.
-
-{{site.data.keyword.logs_routing_full_notm}} supports targets of type `logdna` ({{site.data.keyword.loganalysisfull_notm}}).
-
-To get the information you need, see [retrieving your {{site.data.keyword.la_full_notm}} information](/docs/logs-router?topic=logs-router-onboarding&interface=ui#onboarding-retrieve-log-analysis-information).
 
 
 ## Retrieving the IAM bearer token
-{: #tenant-update-retrieve-iam-token-cli}
+{: #tenant-update-retrieve-iam-token}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -63,6 +48,36 @@ For example, you can retrieve your IAM bearer token and export it as an environm
 export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
+
+
+### Getting the tenant ID
+{: #tenant-update-get-id}
+
+To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
+
+
+## Modifying the target associcated to a tenant through the {{site.data.keyword.logs_routing_full_notm}} UI
+{: #tenant-update-ui}
+{: ui}
+
+When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
+
+To edit a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region:
+
+1. Click the ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the region that you want to change.
+
+2. Click **Edit target**.
+
+3. Select an {{site.data.keyword.la_full_notm}} instance to receive logs routed by {{site.data.keyword.logs_routing_full_notm}}.
+
+   You can select an {{site.data.keyword.la_full_notm}} instance by selecting an instance from the list and providing the instance [ingestion key](/docs/log-analysis?topic=log-analysis-ingestion_key) or by specifying an {{site.data.keyword.la_full_notm}} CRN and [ingestion key](/docs/log-analysis?topic=log-analysis-ingestion_key).
+
+   Only {{site.data.keyword.la_full_notm}} instances in your account can be selected by name and ingestion key. If you want to route to an {{site.data.keyword.la_full_notm}} instance in another account, you must select the target by [CRN (Cloud Resource Name)](https://cloud.ibm.com/docs/account?topic=account-crn) and ingestion key. The CRN of an {{site.data.keyword.la_full_notm}} instance can be found by the account administrator of the {{site.data.keyword.la_full_notm}} instance by clicking ![Menu icon](../../icons/icon_hamburger.svg "Menu") > **Resource list** and clicking the {{site.data.keyword.la_full_notm}} instance. The CRN can be copied from the **Details** section.
+   {: note}
+
+4. Click **Save**.
+
+
 
 ## Updating a tenant by using the API
 {: #tenant-update-api}
@@ -203,25 +218,3 @@ A successful request returns a response that contains the updated target, for ex
 
 For security reasons, you cannot retrieve an {{site.data.keyword.la_full_notm}} ingestion key that is stored in {{site.data.keyword.logs_routing_full_notm}}. This field is always omitted from API responses, even if you change the ingestion key with an update request.
 {: important}
-
-
-## Editing a target through the UI
-{: #tenant-update-ui}
-{: ui}
-
-When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
-
-To edit a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region:
-
-1. Click the ![Actions icon](../icons/action-menu-icon.svg "Actions") next to the region that you want to change.
-
-2. Click **Edit target**.
-
-3. Select an {{site.data.keyword.la_full_notm}} instance to receive logs routed by {{site.data.keyword.logs_routing_full_notm}}.
-
-   You can select an {{site.data.keyword.la_full_notm}} instance by selecting an instance from the list and providing the instance [ingestion key](/docs/log-analysis?topic=log-analysis-ingestion_key) or by specifying an {{site.data.keyword.la_full_notm}} CRN and [ingestion key](/docs/log-analysis?topic=log-analysis-ingestion_key).
-
-   Only {{site.data.keyword.la_full_notm}} instances in your account can be selected by name and ingestion key. If you want to route to an {{site.data.keyword.la_full_notm}} instance in another account, you must select the target by [CRN (Cloud Resource Name)](https://cloud.ibm.com/docs/account?topic=account-crn) and ingestion key. The CRN of an {{site.data.keyword.la_full_notm}} instance can be found by the account administrator of the {{site.data.keyword.la_full_notm}} instance by clicking ![Menu icon](../../icons/icon_hamburger.svg "Menu") > **Resource list** and clicking the {{site.data.keyword.la_full_notm}} instance. The CRN can be copied from the **Details** section.
-   {: note}
-
-4. Click **Save**.

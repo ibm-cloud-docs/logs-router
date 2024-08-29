@@ -39,7 +39,7 @@ Complete the following steps:
 
 ## Retrieving the IAM bearer token
 {: #tenant-delete-retrieve-iam-token}
-{: step}
+
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -49,6 +49,14 @@ For example, you can retrieve your IAM bearer token and export it as an environm
 export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
+
+
+## Retrieving the tenant ID
+{: #tenant-delete-retrieve-tenantID}
+
+To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
+
+
 
 ## Deleting a tenant by using the API
 {: #tenant-delete-api}
