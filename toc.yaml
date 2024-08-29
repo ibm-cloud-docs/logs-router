@@ -65,16 +65,18 @@ toc:
       - topicgroup:
           label: Managing tenant configurations
           topics:
+          - topic: tenants-list.md
+            navtitle: Listing tenants
+          - topic: tenant-get.md
+            navtitle: Getting information on a tenant
+          - topic: tenant-get-id.md
+            navtitle: Getting information on a tenant by using the tenant ID
           - topic: tenant-create.md
             navtitle: Creating a tenant
           - topic: tenant-update.md
             navtitle: Editing a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
-          - topic: tenant-get.md
-            navtitle: Retrieving information on a tenant
-          - topic: tenants-list.md
-            navtitle: Listing tenants
       - topicgroup:
           label: Managing targets (destinations)
           topics:
@@ -106,6 +108,35 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - topic: endpoints.md
+        navtitle: Endpoints
+      - topic: reference/vpe-connection-crn.md
+        navtitle: Endpoints CRNs
+      - topicgroup:
+          label: High availability and disaster recovery
+          topics:
+          - topic: reference/ha.md
+            navtitle: Understand high availability
+          - topic: reference/bc-dr.md
+            navtitle: Understanding business continuity and disaster recovery
+      - topic: locations.md
+        navtitle: Locations
+      - topic: reference/retrieve-access-token.md
+        navtitle: Retrieving an access token
+      - topic: shared-responsibilities.md
+        navtitle: Understanding your responsibilities
+      - topicgroup:
+          label: API Reference
+          links:
+            - link:
+                label: Logs Routing API
+                href: https://{DomainName}/apidocs/logs-router-service-api
+      - topicgroup:
+          label: Terraform Reference
+          links:
+            - link:
+                label: Terraform reference
+                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
       - topicgroup:
           label: Logs agent
           topics:
@@ -119,29 +150,6 @@ toc:
             navtitle: Agent plug-in support
           - topic: agent/logger-agent-config.md
             navtitle: Agent configuration files
-      - topic: reference/endpoints.md
-        navtitle: Endpoints
-      - topic: reference/vpe-connection-crn.md
-        navtitle: Endpoints CRNs
-      - topicgroup:
-          label: High availability and disaster recovery
-          topics:
-          - topic: reference/ha.md
-            navtitle: Understand high availability
-          - topic: reference/bc-dr.md
-            navtitle: Understanding business continuity and disaster recovery
-      - topic: reference/locations.md
-        navtitle: Locations
-      - topic: reference/retrieve-access-token.md
-        navtitle: Retrieving an access token
-      - topic: reference/shared-responsibilities.md
-        navtitle: Understanding your responsibilities
-      - topicgroup:
-          label: API Reference
-          links:
-            - link:
-                label: Logs Routing API
-                href: https://{DomainName}/apidocs/logs-router-service-api
   - navgroup:
         id: help
         topics:

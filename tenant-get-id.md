@@ -12,17 +12,17 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Retrieving tenant information in {{site.data.keyword.logs_routing_full_notm}}
-{: #tenant-get}
+# Retrieving tenant information in {{site.data.keyword.logs_routing_full_notm}} by using the tenant ID
+{: #tenant-get-id}
 
-You can get information for an existing tenant that you define in {{site.data.keyword.logs_routing_full}} by using the API.
+You can get information for an existing tenant that you define in {{site.data.keyword.logs_routing_full}} by using the API and the tenant ID.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
 
 ## Before you begin
-{: #tenant-get-prereqs}
+{: #tenant-get-id-prereqs}
 
 Complete the following steps:
 
@@ -35,7 +35,7 @@ Complete the following steps:
 4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 ## Getting the IAM bearer token
-{: #tenant-get-iam-token}
+{: #tenant-get-id-iam-token}
 {: step}
 
 
@@ -50,7 +50,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 
 ## Choosing the management endpoint
-{: #tenant-get-endpoint}
+{: #tenant-get-id-endpoint}
 {: step}
 
 A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
@@ -65,13 +65,13 @@ For more information, see [Management endpoint URLs](/docs/logs-router?topic=log
 
 
 ## Getting tenant information by using the API
-{: #tenant-get-api}
+{: #tenant-get-id-api}
 {: step}
 
 Run the following command to get the details of a tenant in a region:
 
 ```sh
-curl -X GET https://management.private.{region}.logs-router.cloud.ibm.com/v1/tenants \
+curl -X GET https://management.private.{region}.logs-router.cloud.ibm.com/v1/tenants/TENANT_ID \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE"
 ```
@@ -81,12 +81,13 @@ Where
 - `{Region}` defines the location where the tenant is configured.
 - `IAM_TOKEN` defines the credentials that you use to authenticate your requests.
 - `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
+- `TENANT_ID` defines the ID of the tenant for which you want to get details.
 
 
 The following example shows how to get information about an {{site.data.keyword.logs_routing_full_notm}} tenant in the `us-east` region by using a VPE:
 
 ```sh
-curl -X GET https://management.private.us-east.logs-router.cloud.ibm.com/v1/tenants \
+curl -X GET https://management.private.us-east.logs-router.cloud.ibm.com/v1/tenants/97543c-77b7-eg23-8114-999b31a2b3 \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: 2024-03-01"
 ```
@@ -105,7 +106,7 @@ A successful request returns a response that contains a single tenant, for examp
   "targets": [
     {
       "id": "86432b-66a6-df12-7003-888a21a2b3",
-      "log_sink_crn": "crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f1234:48b580c-34ad-c985-1g2g-e1g75b71a2b3::",
+      "log_sink_crn": "rn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b71a2b3::",
       "name": "my-log-sink",
       "etag": "\"c3a43545a7f2675970671ac3a57b8db067a1866b2222e1b950ee8da612e347c6\"",
       "type": "logdna",

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -26,5 +26,5 @@ A tenant is the account-specific configuration of {{site.data.keyword.logs_routi
 {: note}
 {: #tenant_definition_note}
 
-A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. The tenant configuration includes a maximum of 2 target definitions. The target defines where the logs are routed.
+A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region. You can define up to 2 target destinations per tenant per region. Destinations must be of different type. The target defines where the logs are routed.
 {: #tenant_definition-paragraph}

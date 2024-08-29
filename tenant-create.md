@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -46,3 +46,45 @@ For example, you can retrieve your IAM bearer token and export it as an environm
 export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 ```
 {: pre}
+
+
+
+
+## Creating a tenant and target by using the API
+{: #tenant-create-api}
+{: step}
+
+
+Submit the create request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+
+The create requests creates the tenant in the region and the destination.{: important}
+
+```sh
+curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
+-H "Content-Type: application/json" \
+-H "Authorization: ${IAM_TOKEN}" \
+-H 'IBM-API-Version: DATE' \
+--data '{
+    "name": "TENANT_NAME",
+    "targets": [
+        {
+            "log_sink_crn": "CLOUD_LOGS_INSTANCE_CRN",
+            "name": "TARGET_NAME",
+            "parameters": {
+                "host": "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT",
+                "port": CLOUD_LOGS_INSTANCE_TARGET_PORT
+            }
+        }
+    ]
+}'
+```
+{: codeblock}
+
+Where
+
+- `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `MANAGEMENT-API-ENDPOINT` is the {{site.data.keyword.logs_routing_full}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+- `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
+- `DATE`: Specify the current date to request the latest version of the API. The valid format is `YYYY-MM-DD`. Any date up to the current date can be provided.
