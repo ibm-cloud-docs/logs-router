@@ -21,6 +21,17 @@ toc:
       - topic: cloud-services.md
         navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
+          label: Tutorials
+          topics:
+          - topic: target-cloud-logs.md
+            navtitle: Configuring a Cloud Logs target
+          - topic: howto/onboard-log-analysis-tenant.md
+            navtitle: Configuring 1 Log Analysis destination
+          - topic: howto/2-targets.md
+            navtitle: Configuring destinations of different types
+          - topic: howto/agent-multiple-icl-targets.md
+            navtitle: Configuring multiple destinations of the same type
+      - topicgroup:
           label: Release notes
           topics:
           - topic: learn/releasenotes.md
@@ -56,9 +67,9 @@ toc:
           - topicgroup:
               label: Privately connecting to Logs Routing
               topics:
-              - topic: howto/vpe-connection.md
+              - topic: vpe-connection.md
                 navtitle: Using virtual private endpoints for VPC
-              - topic: howto/service-endpoints.md
+              - topic: service-endpoints.md
                 navtitle: Using service endpoints
       - topic: launch-ui.md
         navtitle: Launching the UI
@@ -93,15 +104,7 @@ toc:
           - topic: target-get.md
             navtitle: Retrieving information on a target
           - topic: target-list.md
-            navtitle: Listing targets
-          - topic: target-cloud-logs.md
-            navtitle: Configuring a Cloud Logs target
-          - topic: howto/onboard-log-analysis-tenant.md
-            navtitle: Configuring 1 Log Analysis destination
-          - topic: howto/2-targets.md
-            navtitle: Configuring destinations of different types
-          - topic: howto/agent-multiple-icl-targets.md
-            navtitle: Configuring multiple destinations of the same type 
+            navtitle: Listing targets 
       - topicgroup:
            label: Observability
            topics:

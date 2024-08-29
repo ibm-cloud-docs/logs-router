@@ -173,7 +173,7 @@ Where
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
-- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `8080`.
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
 
 
@@ -242,5 +242,5 @@ Where
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
-- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `8080`.
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
