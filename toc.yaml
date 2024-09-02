@@ -90,7 +90,9 @@ toc:
           - topic: tenant-add-target.md
             navtitle: Adding a target to a tenant by using the API
           - topic: tenant-update.md
-            navtitle: Modifying the target associated to a tenant in the UI
+            navtitle: Modifying the target type associated to a tenant in the UI
+          - topic: target-update-type.md
+            navtitle: Modifying the target type associated to a tenant by using the API
           - topic: target-update.md
             navtitle: Updating the configuration of a target
           - topic: target-delete.md

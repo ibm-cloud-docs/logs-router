@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-02"
 
 keywords:
 
@@ -59,11 +59,11 @@ When you manage tenants, consider the following information:
 {{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
 - {{site.data.keyword.logs_full_notm}} instances
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).
+    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
 
 - {{site.data.keyword.la_full_notm}} instances
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-log-analysis-tenant).
+    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/logs-router?topic=logs-router-onboard-log-analysis-tenant).
 
 The {{site.data.keyword.logs_routing_full_notm}} target instance can be located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
 {: important}

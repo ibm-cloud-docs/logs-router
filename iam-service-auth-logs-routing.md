@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-02"
 
 keywords:
 
@@ -19,7 +19,7 @@ Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {
 {: shortdesc}
 
 The {{site.data.keyword.logs_full_notm}} instance that you plan to configure as a target must be located in the same account where you plan to configure {{site.data.keyword.logs_routing_full_notm}}.
-[: important]
+{: important}
 
 ## Before you begin
 {: #iam-service-auth-logs-routing-prereqs}
