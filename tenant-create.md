@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-02"
 
 keywords:
 
@@ -204,7 +204,7 @@ Where
 To create tenant with a target of type `logs`, use the following:
 
 ```text
-resource "ibm_logs-router_tenant" "logs-router_tenant_instance_1" {
+resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 	ibm_api_version = "API_VERSION_DATE"
 	name = "TENANT_NAME"
 	targets {
@@ -235,7 +235,7 @@ Where
 To create tenant with a target of type `logdna`, use the following:
 
 ```text
-resource "ibm_logs-router_tenant" "logs-router_tenant_instance_1" {
+resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 	ibm_api_version = "API_VERSION_DATE"
 	name = "TENANT_NAME"
 	targets {
