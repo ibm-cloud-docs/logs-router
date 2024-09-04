@@ -71,7 +71,7 @@ toc:
           label: Managing tenants
           topics:
           - topic: tenants-list.md
-            navtitle: Listing tenants
+            navtitle: Listing tenants through the UI
           - topic: tenant-get.md
             navtitle: Getting information on a tenant
           - topic: tenant-get-id.md
@@ -136,8 +136,6 @@ toc:
             - link:
                 label: Terraform reference
                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant 
-      - topic: reference/limits.md
-        navtitle: Considerations and limitations
   - navgroup:
         id: help
         topics:

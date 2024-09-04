@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords:
 
@@ -21,6 +21,7 @@ You can update the configuration details of a target in {{site.data.keyword.logs
 {{site.data.content.tenant_definition_note}}
 
 A change of the target type is only supported for tenants with a single target.
+{: important}
 
 ## Before you begin
 {: #target-update-prereqs}
