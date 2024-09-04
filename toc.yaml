@@ -30,7 +30,7 @@ toc:
       - topicgroup:
           label: Release notes
           topics:
-          - topic: learn/releasenotes.md
+          - topic: releasenotes.md
             navtitle: Release notes 
   - navgroup:
       id: howto
