@@ -27,11 +27,8 @@ toc:
             navtitle: Configuring a Cloud Logs target
           - topic: target-log-analysis.md
             navtitle: Configuring 1 Log Analysis destination 
-      - topicgroup:
-          label: Release notes
-          topics:
-          - topic: releasenotes.md
-            navtitle: Release notes 
+      - topic: releasenotes.md
+        navtitle: Release notes 
   - navgroup:
       id: howto
       topics:
