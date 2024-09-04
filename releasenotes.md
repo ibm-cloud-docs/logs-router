@@ -20,7 +20,7 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.logs_routing_full}}.
 {: shortdesc}
 
-For detailed release notes about the {{site.data.keyword.agent}}, see [Release notes for the {{site.data.keyword.logs_routing_full}} agent](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
+For detailed release notes about the {{site.data.keyword.agent}}, see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
 
 ## 4 September 2024
