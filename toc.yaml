@@ -12,127 +12,99 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - topic: learn/getting-started.md
+      - topic: getting-started.md
         navtitle: Getting started
+      - topic: about.md
+        navtitle: About Logs Routing
+      - topic: platform-logs-about.md
+        navtitle: Platform logs
+      - topic: cloud-services.md
+        navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
-          label: About
+          label: Tutorials
           topics:
-          - topic: learn/about.md
-            navtitle: About Logs Routing
-          - topic: learn/about-platform-logs.md
-            navtitle: About platform logs
-      - topic: learn/use-cases.md
-        navtitle: Use cases
-      - topicgroup:
-          label: Release notes
-          topics:
-          - topic: learn/releasenotes.md
-            navtitle: Release notes
-          - topic: learn/releasenotes_agent.md
-            navtitle: Agent release notes
-      - reference/cloud-services-locations.md
+          - topic: target-cloud-logs.md
+            navtitle: Configuring a Cloud Logs target
+          - topic: target-log-analysis.md
+            navtitle: Configuring 1 Log Analysis destination 
+      - topic: releasenotes.md
+        navtitle: Release notes 
   - navgroup:
       id: howto
       topics:
       - topicgroup:
-          label: Controlling access
+          label: Controlling access (IAM)
           topics:
-          - topic: howto/iam.md
+          - topic: iam.md
             navtitle: Managing IAM access
+          - topic: iam-permissions.md
+            navtitle: Granting IAM permissions
+          - topicgroup:
+              label: S2S authorizations
+              topics:
+               - topic: iam-service-auth.md
+                 navtitle: Managing authorizations
+               - topic: iam-service-auth-logs-routing.md
+                 navtitle: S2S for Logs Routing
+               - topic: iam-service-auth-remove-auth.md
+                 navtitle: Removing authorizations
       - topicgroup:
           label: Enhancing security
           topics:
-          - topic: howto/architecture-workload-isolation.md
+          - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
-          - topic: howto/mng-data.md
+          - topic: mng-data.md
             navtitle: Securing your data
           - topicgroup:
               label: Privately connecting to Logs Routing
               topics:
-              - topic: howto/vpe-connection.md
+              - topic: vpe-connection.md
                 navtitle: Using virtual private endpoints for VPC
-              - topic: howto/service-endpoints.md
+              - topic: service-endpoints.md
                 navtitle: Using service endpoints
-      - topic: howto/launch-ui.md
+      - topic: launch-ui.md
         navtitle: Launching the UI
       - topicgroup:
           label: Managing tenants
           topics:
-          - topic: howto/tenant-iam-permissions.md
-            navtitle: Setting IAM permissions for management
-          - topic: howto/tenant-enable-connectivity.md
-            navtitle: Enabling connectivity
-          - topicgroup:
-             label: Creating a tenant
-             topics:
-             - topic: howto/onboard-log-analysis-tenant.md
-               navtitle: Creating a Log Analysis tenant
-             - topic: howto/onboard-cloud-logs-tenant.md
-               navtitle: Creating a Cloud Logs tenant
-          - topic: howto/update-tenant.md
-            navtitle: Editing a tenant
-          - topic: howto/offboard-tenant.md
+          - topic: tenants-list.md
+            navtitle: Listing tenants through the UI
+          - topic: tenant-get.md
+            navtitle: Getting information on a tenant
+          - topic: tenant-get-id.md
+            navtitle: Getting information on a tenant by using the tenant ID
+          - topic: tenant-create.md
+            navtitle: Creating a tenant with 1 target
+          - topic: tenant-create-2targets.md
+            navtitle: Creating a tenant with 2 targets
+          - topic: tenant-update-name.md
+            navtitle: Changing the name of a tenant
+          - topic: tenant-delete.md
             navtitle: Deleting a tenant
-          - topic: howto/get-tenant.md
-            navtitle: Retrieving tenant information
-          - topic: howto/list-tenants.md
-            navtitle: Listing tenants
-          - topic: howto/2-targets.md
-            navtitle: Configuring targets of different types
-          - topic: howto/agent-multiple-icl-targets.md
-            navtitle: Configuring multiple IBM Cloud Logs targets
       - topicgroup:
-          label: Managing the agent
+          label: Managing targets
           topics:
-          - topic: howto/agent-about.md
-            navtitle: About the agent
-          - topic: howto/agent-fluentbit.md
-            navtitle: Understanding the agent configuration file
-          - topic: howto/agent-set-appsubname.md
-            navtitle: Configuring applicationName and subsystemName
-          - topic: howto/configure-agent.md
-            navtitle: Filtering logs
-          - topic: howto/agent-iam-permissions.md
-            navtitle: Setting up IAM permissions for ingestion
-          - topic: howto/api-key.md
-            navtitle: Generating an API Key for ingestion
-          - topic: howto/agent-rsyslog.md
-            navtitle: Routing (r)syslog messages
-          - topicgroup:
-             label: Orchestrated environments
-             topics:
-             - topic: howto/agent-version.md
-               navtitle: Checking the available agent versions
-             - topic: howto/download-agent-yaml.md
-               navtitle: Downloading the agent YAML file
-             - topic: howto/agent-openshift.md
-               navtitle: Managing the agent for Openshift clusters
-             - topic: howto/agent-std-cluster.md
-               navtitle: Managing the agent for Kubernetes clusters
-          - topicgroup:
-             label: Non-orchestrated environments
-             topics:
-             - topic: howto/agent-linux.md
-               navtitle: Managing the agent Linux environments
+          - topic: tenant-add-target.md
+            navtitle: Adding a target to a tenant by using the API
+          - topic: tenant-update.md
+            navtitle: Modifying the target type associated to a tenant in the UI
+          - topic: target-update-type.md
+            navtitle: Modifying the target type associated to a tenant by using the API
+          - topic: target-update.md
+            navtitle: Updating the configuration of a target
+          - topic: target-delete.md
+            navtitle: Deleting a target by using the API
+          - topic: target-get.md
+            navtitle: Retrieving information on a target 
       - topicgroup:
            label: Observability
            topics:
-            - topic: howto/activity-tracker.md
+            - topic: activity-tracker.md
               navtitle: Auditing events
   - navgroup:
       id: reference
       topics:
-      - topic: reference/limits.md
-        navtitle: Considerations and limitations
-      - topic: reference/routing-plugin-parameters.md
-        navtitle: Logs Routing plug-in parameters
-      - topic: reference/logs-plugin-parameters.md
-        navtitle: Cloud Logs plug-in parameters
-      - topic: reference/fluentbit_support.md
-        navtitle: Agent plug-in support
-      - topic: reference/logger-agent-config.md
-        navtitle: Agent configuration files
-      - topic: reference/endpoints.md
+      - topic: endpoints.md
         navtitle: Endpoints
       - topic: reference/vpe-connection-crn.md
         navtitle: Endpoints CRNs
@@ -143,11 +115,11 @@ toc:
             navtitle: Understand high availability
           - topic: reference/bc-dr.md
             navtitle: Understanding business continuity and disaster recovery
-      - topic: reference/locations.md
+      - topic: locations.md
         navtitle: Locations
       - topic: reference/retrieve-access-token.md
         navtitle: Retrieving an access token
-      - topic: reference/shared-responsibilities.md
+      - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topicgroup:
           label: API Reference
@@ -155,10 +127,16 @@ toc:
             - link:
                 label: Logs Routing API
                 href: https://{DomainName}/apidocs/logs-router-service-api
+      - topicgroup:
+          label: Terraform Reference
+          links:
+            - link:
+                label: Terraform reference
+                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant 
   - navgroup:
         id: help
         topics:
-        - help/gettinghelp.md
+        - gettinghelp.md
         - topicgroup:
             label: Troubleshooting
             topics:
