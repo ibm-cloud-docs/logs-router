@@ -28,7 +28,7 @@ toc:
           - topic: target-log-analysis.md
             navtitle: Configuring 1 Log Analysis destination 
       - topic: releasenotes.md
-        navtitle: Release notes 
+        navtitle: Release notes
   - navgroup:
       id: howto
       topics:
