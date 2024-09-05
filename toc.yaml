@@ -20,8 +20,6 @@ toc:
         navtitle: Platform logs
       - topic: cloud-services.md
         navtitle: IBM Cloud services that generate platform logs
-      - topic: releasenotes.md
-        navtitle: Release notes
       - topicgroup:
           label: Tutorials
           topics:
@@ -29,6 +27,8 @@ toc:
             navtitle: Configuring a Cloud Logs target
           - topic: target-log-analysis.md
             navtitle: Configuring 1 Log Analysis destination 
+      - topic: releasenotes.md
+        navtitle: Release notes
   - navgroup:
       id: howto
       topics:
