@@ -36,15 +36,6 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 
 
 
-## Compute services
-{: #compute}
-
-The following table lists services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
-
-| Service     | Description | More information |
-|-------------|-------------|-------------------|
-| {{site.data.keyword.vmwaresolutions_full_notm}} | Migrate, deploy, and run your VMware workloads with options for both managed and self-service offering. | [More information](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started) |
-{: caption="List of serverless compute services" caption-side="top"}
 
 ## Compute serverless services
 {: #serverless}
