@@ -70,6 +70,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | Service     | Description |  More information |
 |-------------|-------------|--------------------------------------------------------------------------------------------|
 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant_short_notm}} is a document-oriented database as a service (DBaaS). It stores data as documents in JSON format. | [More information](/docs/Cloudant?topic=Cloudant-log-analysis-integration) |
+| {{site.data.keyword.Db2_on_Cloud_long}} | {{site.data.keyword.Db2_on_Cloud_long}} is a managed Db2 service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [More information](/docs/Db2onCloud?topic=Db2onCloud-log_mon) |
 {: caption="List of database services" caption-side="top"}
 
 
@@ -147,7 +148,6 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 
 | Service     | Description | More information |
 |-------------|-------------|-------------------------------------------------------------------------|
-| {{site.data.keyword.dv_full_notm}} | Use {{site.data.keyword.dv_full_notm}} to break data silos across hybrid data sources and build a data fabric solution for data management. You can use {{site.data.keyword.dv_full_notm}} just as you would any data source, but without the time and expense of hardware setup or software installation and maintenance.| [More information](/docs/data-virtualization?topic=data-virtualization-getting-started) |
 | {{site.data.keyword.conversationshort}} | {{site.data.keyword.conversationshort}}, which focuses on actions to build customer conversations, is simple enough for anyone to build a virtual assistant.| [More information](/docs/watson-assistant?topic=watson-assistant-getting-started) |
 | {{site.data.keyword.discoveryfull}} | {{site.data.keyword.discoveryfull}} is an intelligent document processing engine that helps you to gain insights from complex business documents.| [More information](/docs/discovery-data?topic=discovery-data-getting-started) |
 | {{site.data.keyword.knowledgestudiofull}} | Use {{site.data.keyword.knowledgestudiofull}} to create a machine learning model that understands the linguistic nuances, meaning, and relationships specific to your industry, or to create a rule-based model that finds entities in documents based on rules that you define. | [More information](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_overview_full) |
