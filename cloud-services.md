@@ -137,3 +137,21 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 |-------------|-------------|-------------------------------------------------------------------------|
 | {{site.data.keyword.secrets-manager_full_notm}} | With {{site.data.keyword.secrets-manager_full_notm}}, you can create, lease, and centrally manage secrets that are used in {{site.data.keyword.cloud_notm}} services or your custom-built applications. | [More information](/docs/secrets-manager?topic=secrets-manager-service-logs) |
 {: caption="List of security Cloud services" caption-side="top"}
+
+
+## Watson services
+{: #watson}
+
+The following table lists Cloud services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
+
+
+| Service     | Description | More information |
+|-------------|-------------|-------------------------------------------------------------------------|
+| {{site.data.keyword.dv_full_notm}} | Use {{site.data.keyword.dv_full_notm}} to break data silos across hybrid data sources and build a data fabric solution for data management. You can use {{site.data.keyword.dv_full_notm}} just as you would any data source, but without the time and expense of hardware setup or software installation and maintenance.| [More information](/docs/data-virtualization?topic=data-virtualization-getting-started) |
+| {{site.data.keyword.conversationshort}} | {{site.data.keyword.conversationshort}}, which focuses on actions to build customer conversations, is simple enough for anyone to build a virtual assistant.| [More information](/docs/watson-assistant?topic=watson-assistant-getting-started) |
+| {{site.data.keyword.discoveryfull}} | {{site.data.keyword.discoveryfull}} is an intelligent document processing engine that helps you to gain insights from complex business documents.| [More information](/docs/discovery-data?topic=discovery-data-getting-started) |
+| {{site.data.keyword.knowledgestudiofull}} | Use {{site.data.keyword.knowledgestudiofull}} to create a machine learning model that understands the linguistic nuances, meaning, and relationships specific to your industry, or to create a rule-based model that finds entities in documents based on rules that you define. | [More information](/docs/watson-knowledge-studio?topic=watson-knowledge-studio-wks_overview_full) |
+| {{site.data.keyword.nlufull}} | With {{site.data.keyword.nlufull}}, developers can analyze semantic features of text input, including categories, concepts, emotion, entities, keywords, metadata, relations, semantic roles, and sentiment. | [More information](/docs/natural-language-understanding?topic=natural-language-understanding-about) |
+| {{site.data.keyword.speechtotextfull}} | The {{site.data.keyword.speechtotextfull}} service transcribes audio to text to enable speech transcription capabilities for applications. | [More information](/docs/speech-to-text?topic=speech-to-text-gettingStarted) |
+| {{site.data.keyword.texttospeechfull}} | The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. | [More information](/docs/text-to-speech?topic=text-to-speech-about) |
+{: caption="List of security Cloud services" caption-side="top"}
