@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -58,6 +58,9 @@ When you manage tenants, consider the following information:
 
 {{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
 - {{site.data.keyword.logs_full_notm}} instances
+
+    Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
+    {: restriction}
 
     For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
 
