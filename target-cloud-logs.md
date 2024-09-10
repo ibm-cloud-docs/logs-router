@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -78,6 +78,9 @@ For more information, see [Creating a S2S authorization to grant access to send 
 You must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
 - The ingress endpoint and port
+
+Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
+{: restriction}
 
 To obtain the instance CRN for the {{site.data.keyword.logs_full_notm}} instance, run this command:
 
