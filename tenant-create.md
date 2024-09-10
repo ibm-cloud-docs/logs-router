@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -154,7 +154,7 @@ For a target that defines an {{site.data.keyword.logs_full_notm}} destination, t
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
 - `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
 - `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
@@ -186,7 +186,7 @@ For a target that defines an {{site.data.keyword.la_full_notm}} destination, the
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
 - `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
@@ -222,7 +222,7 @@ resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
 - `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
 - `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
@@ -255,7 +255,7 @@ resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
 - `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
 - `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.

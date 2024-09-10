@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-10"
 
 keywords:
 
@@ -127,7 +127,7 @@ Where
 
 - `<MANAGEMENT-API-ENDPOINT>` is the {{site.data.keyword.logs_routing_full}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints). Make sure to use the corresponding port.
 - `TENANT_NAME`: Name of the tenant. The name must be unique across all tenants for this account and can be up to 35 characters long.
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets for this tenant and can be up to 35 characters long.
+- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
 - `LOG_SINK_INGESTION_KEY`: The ingestion key of the target {{site.data.keyword.la_full_notm}} instance.
 - `LOG_SINK_CRN`: CRN of the target {{site.data.keyword.la_full_notm}} instance.
 - `LOG_SINK_INGESTION_ENDPOINT`: Full qualified ingestion endpoint for the log-sink. You can choose a public or a private ingestion endpoint. For more information, see [{{site.data.keyword.la_full_notm}} ingestion endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion_public).

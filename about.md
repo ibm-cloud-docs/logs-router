@@ -77,6 +77,9 @@ When you manage targets, consider the following information:
 
     When tenant is created, at least one target has to be specified. You can only define 2 targets per tenant. Therefore, you can only add 1 target to an existing tenant. {: note}
 
+    The target name must be unique within the region and not exceed 35 characters in length. If you attempt to create a target with a name that already exists within the region or is too long, an error is returned and your target is not created.
+    {: note}
+
 - You can update the target configuration details such as target host, target port, target name, target instance CRN, and more.
 
 - You can delete only 1 target from a tenant.
