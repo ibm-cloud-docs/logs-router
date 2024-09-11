@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-11"
 
 keywords:
 
@@ -45,6 +45,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | Service     | Description | More information |
 |-------------|-------------|-------------------|
 | {{site.data.keyword.satellitelong_notm}} | With {{site.data.keyword.satellitelong_notm}}, you can bring your own compute infrastructure to run {{site.data.keyword.cloud_notm}} services and consistently deploy, manage, and control your app workloads. | [More information](/docs/satellite?topic=satellite-health) |
+| {{site.data.keyword.codeenginefull_notm}}  | {{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. | [More information](/docs/codeengine?topic=codeengine-view-logs&interface=ui) |
 {: caption="List of serverless compute services" caption-side="top"}
 
 
