@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -30,9 +30,9 @@ Complete the following steps:
 
 1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
 
 4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
@@ -267,7 +267,7 @@ The `applicationName` will be set to `namespace_name` if it is not set and inclu
 
 It is possible to add static values for the application and subsystem name.
 This can be done when installing the agent.
-See [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.containerlong_notm}} clusters](/docs/logs-router?topic=logs-router-agent-std-cluster&interface=api#agent-std-cluster-deploy) or [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/logs-router?topic=logs-router-agent-openshift&interface=api#agent-openshift-deploy) for more information.
+See [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.containerlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster) or [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift) for more information.
 
 In addition, a dynamic value for the application and subsystem name can be set depending on the log line.
 The config map of the agent has to be modified to create the custom application name.
@@ -277,7 +277,7 @@ For a JSON formatted message, do the following:
 
 1. Add the `applicationName` to the log line, for example `{"level":"info", "msg":"test message", "applicationName":"my-application"}`
 
-2. [Download the YAML configuration file for your environment.](/docs/logs-router?topic=logs-router-download-iclr-agent-configuration-file)
+2. [Download the YAML configuration file for your environment.](/docs/cloud-logs?topic=cloud-logs-download-iclr-agent-configuration-file)
 
 3. Open the downloaded YAML configuration file in a text editor.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -30,7 +30,7 @@ You can remove any authorization between services in the account if you are assi
 
 1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Authorizations**.
 2. Identify the row for the authorization that you want to remove from the account.
-3. Click the **Actions** icon ![Actions icon](/icons/action-menu-icon.svg "Actions") > **Remove**.
+3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") > **Remove**.
 4. Select **Remove**.
 
 If the source service is removed from the account, any policies that are created by that service for its dependent services are deleted automatically. Similarly, if the dependent service is removed from the account, any access policies that are delegated to that service are also deleted.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -21,7 +21,7 @@ So you can securely manage your data when you use {{site.data.keyword.logs_routi
 ## What data is stored in {{site.data.keyword.logs_routing_full_notm}}
 {: #mng-data-stored}
 
-{{site.data.keyword.logs_routing_full_notm}} stores configuration data only. Stored configuration data is limited to the information that you supply when a tenant is [created](/docs/logs-router?topic=logs-router-onboarding) or [updated](/docs/logs-router?topic=logs-router-update-tenant&interface=ui) in the service.
+{{site.data.keyword.logs_routing_full_notm}} stores configuration data only. Stored configuration data is limited to the information that you supply when a tenant is created or updated in the service.
 
 {{site.data.keyword.logs_routing_full_notm}} does not store any log data.
 
@@ -56,12 +56,12 @@ Log data is routed to a destination such as an {{site.data.keyword.logs_full_not
 
 {{site.data.keyword.logs_routing_full_notm}} stores configuration data only.
 
-To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a destination, you must delete the tenant. For more information, see [Delete the tenant](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui).
+To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a destination, you must delete the tenant. For more information, see [Delete the tenant](/docs/logs-router?topic=logs-router-tenant-delete&interface=ui).
 
 
 To completely delete all the configuration data of the account, complete the following steps:
 
-1. [Delete the tenant.](/docs/logs-router?topic=logs-router-offboarding-tenant&interface=ui)
+1. [Delete the tenant.](/docs/logs-router?topic=logs-router-tenant-delete&interface=ui)
 2. Open an IBM support ticket to request deletion of all your service metadata. For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Getting support](/docs/get-support).
 
 

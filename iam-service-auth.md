@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -54,9 +54,9 @@ The following table outlines the permissions that are needed on the target servi
 
 | Action              | Administrator | Operator | Editor | Viewer |
 |---------------------|---------------|----------|--------|--------|
-| View all authorizations that are configured in the account | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
-| Create authorizations | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
-| Delete authorizations | ![Checkmark icon](/icons/checkmark-icon.svg "checkmark") | | | |
+| View all authorizations that are configured in the account | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") | | | |
+| Create authorizations | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") | | | |
+| Delete authorizations | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") | | | |
 {: caption="Table 2. Actions on the target service that are required to manage authorizations" caption-side="top"}
 
 Users can only see authorizations that they configure in the account.

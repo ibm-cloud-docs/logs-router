@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -24,22 +24,22 @@ A change of the target type is only supported for tenants with a single target.
 {: important}
 
 ## Before you begin
-{: #target-update-prereqs}
+{: #target-update-type-prereqs}
 
 Complete the following steps:
 
 - Review [About {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+- Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
-- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+- Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
 
 - To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
 
 
 ## Retrieving the IAM bearer token
-{: #target-update-retrieve-iam-token}
+{: #target-update-type-retrieve-iam-token}
 
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
@@ -54,13 +54,13 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 
 ## Getting the tenant ID
-{: #target-update-details}
+{: #target-update-type-details}
 
 To get the tenant ID and target current details, see [Retrieving tenant information in IBM Cloud Logs Routing](/docs/logs-router?topic=logs-router-tenant-get).
 
 
 ## Choosing the management endpoint
-{: #target-update-endpoint}
+{: #target-update-type-endpoint}
 
 
 A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
@@ -73,7 +73,7 @@ You can use private or public endpoints.
 For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
 ## Updating a target by using the API
-{: #target-update-api}
+{: #target-update-type-api}
 {: api}
 
 In the request body, you are only required to supply the fields you are modifying. Any fields that are not included in the request body are not changed.

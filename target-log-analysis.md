@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -29,9 +29,9 @@ Complete the following steps:
 
 1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
+3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
 
 4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
@@ -196,7 +196,7 @@ If the creation (onboarding) request was successful, a response that contains yo
 
 When the {{site.data.keyword.logs_routing_full_notm}} console is first displayed, any existing target information is displayed.
 
-If no target is configured for a region, the region displays the **Set target** option. When the target is set for the first time, an {{site.data.keyword.logs_routing_full_notm}} tenant is [created (onboarded)](/docs/logs-router?topic=logs-router-onboarding) and the target configured.
+If no target is configured for a region, the region displays the **Set target** option. When the target is set for the first time, an {{site.data.keyword.logs_routing_full_notm}} tenant is [created (onboarded)](/docs/logs-router?topic=logs-router-about&interface=ui#about_tenants) and the target configured.
 
 To set a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a region, complete the following steps:
 
