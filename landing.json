@@ -23,12 +23,6 @@
         "description": "Read about the changes to IBM Cloud Logs Routing. ",
         "href": "/docs/logs-router?topic=logs-router-release-notes"
       }
-      ,
-          {
-        "title": "See what's new in the agent",
-        "description": "Read about the changes to IBM Cloud Logs Routing agent. ",
-        "href": "/docs/logs-router?topic=logs-router-release-notes-agent"
-      }
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/cloud/",

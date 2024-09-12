@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -26,7 +26,7 @@ Be sure that you have completed the following steps:
 
 1. Review [About {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about) to understand concepts.
 
-2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin-2).
+2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
 3. Set up permissions to manage platform logs in the account. For more information, see [Granting IAM permissions](/docs/logs-router?topic=logs-router-iam-permissions).
 

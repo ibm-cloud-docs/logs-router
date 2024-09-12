@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -26,7 +26,7 @@ The access policy that you assign users in your account determines what actions 
 
 When assigning roles, select the appropriate IAM role based on the actions you need to perform within {{site.data.keyword.logs_routing_full_notm}}. See [IAM actions by task](/docs/logs-router?topic=logs-router-iam&interface=cli#iam-bytask) for more information.
 
-For an example of how to assign the `Manager` role by using the IBM Cloud CLI, see [Setting up permissions for managing tenants by using the CLI](/docs/logs-router?topic=logs-router-tenant-iam-permissions&interface=cli).
+For information about how to assign roles by using the IBM Cloud CLI, see [Granting IAM permissions by using the CLI](/docs/logs-router?topic=logs-router-iam-permissions&interface=cli).
 
 
 If a specific role and its actions don't meet the needs of the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles&interface=ui) and pick the actions to include.
@@ -143,7 +143,7 @@ Platform roles enable users to perform tasks on service resources at the platfor
 
 Review the following tables that outline what types of tasks each role allows for when you're configuring {{site.data.keyword.logs_full_notm}} in your account.
 
-Use the following table to identify the **Account management** **{{site.data.keyword.logs_routing_notm}}** platform roles that you can grant in the {{site.data.keyword.cloud_notm}} to run any of the following platform actions:
+Use the following table to identify the **Account management** **{{site.data.keyword.logs_routing_full_notm}}** platform roles that you can grant in the {{site.data.keyword.cloud_notm}} to run any of the following platform actions:
 
 | Platform role            | Description of actions |
 |--------------------------|------------------------|
@@ -153,7 +153,7 @@ Use the following table to identify the **Account management** **{{site.data.key
 | Administrator            | As an administrator, you can perform all platform actions based on the resource where the role is being assigned, including assigning access policies to other users. |
 | Service Configuration Reader | As a service configuration reader you can read the service configuration for governance management |
 | Key Manager              | As a key manager you can manage resource keys, for example creating a new resource key for a resource instance |
-{: caption="Table 1. IAM platform roles for {{site.data.keyword.logs_routing_notm}}" caption-side="top"}
+{: caption="Table 1. IAM platform roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
 
 
 ## {{site.data.keyword.cloud_notm}} service roles
@@ -166,4 +166,4 @@ The following table lists the service roles that are available in {{site.data.ke
 | Manager            | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources.|
 | Writer             | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
 | Reader             | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
-{: caption="Table 2. IAM service roles for {{site.data.keyword.logs_routing_notm}}" caption-side="top"}
+{: caption="Table 2. IAM service roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}

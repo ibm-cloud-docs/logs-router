@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -36,14 +36,14 @@ Documentation updates affecting {{site.data.keyword.logs_full_notm}} and {{site.
 {: release-note}
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.4
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-aug0724)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-aug0724)
 
 ## 11 July 2024
 {: #logs-router-jul1124}
 {: release-note}
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-jul1124)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-jul1124)
 
 ## 24 June 2024
 {: #logs-router-jun2424}
@@ -57,7 +57,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.3
 {: release-note}
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.2
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-jun1024)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-jun1024)
 
 
 ## 29 May 2024
@@ -65,7 +65,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.2
 {: release-note}
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.0
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-may2924)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-may2924)
 
 
 ## 1 May 2024
@@ -73,7 +73,7 @@ Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.2.0
 {: release-note}
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.1
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-may0124)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-may0124)
 
 
 ## 29 April 2024
@@ -84,7 +84,7 @@ Availability in the Sydney, Sao Paulo, and Osaka regions
 :   {{site.data.keyword.logs_routing_full_notm}} is available in the Sydney (au-syd), Sao Paulo (br-sao), and Osaka (jp-osa) regions.
 
 Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.1.0
-:   For agent details see the [agent release notes](/docs/logs-router?topic=logs-router-release-notes-agent#logs-router-agent-apr2924)
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-apr2924)
 
 
 ## 12 April 2024
@@ -121,4 +121,3 @@ Availability in the Madrid region
 
 General availability
 :   {{site.data.keyword.logs_routing_full_notm}} is generally available in the Washington (us-east) region.
-

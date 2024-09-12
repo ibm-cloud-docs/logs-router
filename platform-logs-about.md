@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -60,7 +60,7 @@ The following destinations are supported as destinations where the {{site.data.k
 
 To configure the {{site.data.keyword.logs_routing_full_notm}} service, choose 1 of the following options:
 
-- [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant).
+- [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs&interface=ui).
 
 - [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-log-analysis-tenant).
 
