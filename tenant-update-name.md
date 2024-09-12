@@ -25,7 +25,7 @@ You cannot change the name of a tenant in the {{site.data.keyword.logs_routing_f
 
 
 ## Before you begin
-{: #tenant-update-prereqs}
+{: #tenant-update-name-prereqs}
 
 Complete the following steps:
 
