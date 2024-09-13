@@ -233,7 +233,7 @@ Where
 |`IAM_TOKEN`|The IAM Token you obtained previously. If you exported it in your environment as described above, it is replaced automatically. |
 |`DATE`| The current date. For example, `2024-03-01`|
 |`TENANT_NAME`| Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`  An example would be `eu-es-tenant`. |
-|`TARGET_NAME`| Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. The name must be unique across all targets in the region within an account tenant, and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`|
+|`TARGET_NAME`| Name of the target destination. The name must be unique across all targets within an account-tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. |
 |`LOG_ANALYSIS_INSTANCE_CRN`| The CRN of your {{site.data.keyword.la_full_notm}} instance. |
 |`LOG_ANALYSIS_INGESTION_ENDPOINT`| The endpoint of your {{site.data.keyword.la_full_notm}} instance. You can choose a public or a private ingestion endpoint. For more information, see [{{site.data.keyword.la_full_notm}} ingestion endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion_public).|
 |`LOG_ANALYSIS_INSTANCE_INGESTION_KEY` | The ingestion key of the target {{site.data.keyword.la_full_notm}} instance. |
@@ -327,3 +327,17 @@ To set a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in a r
     Option 2 **Specify CRN**: You can choose an instance that is available in the same {{site.data.keyword.cloud_notm}} account where you are configuring the tenant or an instance that is available in a different account. When you choose this option, you must enter the CRN of the target instance. If you want to route to an {{site.data.keyword.la_full_notm}} instance in another account, you must select the target by [CRN (Cloud Resource Name)](https://cloud.ibm.com/docs/account?topic=account-crn) and ingestion key. The CRN of an {{site.data.keyword.la_full_notm}} instance can be found by the account administrator of the {{site.data.keyword.la_full_notm}} instance by clicking ![Menu icon](../../icons/icon_hamburger.svg "Menu") > **Resource list** and clicking the {{site.data.keyword.la_full_notm}} instance. The CRN can be copied from the **Details** section.
 
 3. Click **Save**.
+
+
+
+## Verifying that logs are sent to the destination target
+{: #target-log-analysis-verify}
+{: step}
+
+To ensure that your platform logs are successfully flowing to {{site.data.keyword.la_full_notm}} instance, do the following steps:
+
+1. [Launch the web UI](/docs/log-analysis?topic=log-analysis-launch) for the {{site.data.keyword.la_full_notm}} instance that is configured as the target to collect platform logs in a region. This is the instance that you selected in the step where you setup a target.
+
+2. View logs through custom views. For more information, see [Viewing logs](/docs/log-analysis?topic=log-analysis-views).
+
+All platform logs are generated in JSON. You can filter platform logs in your instance be selecting the value of **ibm-platform-logs** as the `applicationName`.
