@@ -1,7 +1,7 @@
 ---
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-13"
 
 keywords:
 
@@ -11,10 +11,13 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance
+# Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance in a region
 {: #onboard-log-analysis-tenant}
+{: toc-content-type="tutorial"}
+{: toc-services="logs-router, logdna"}
+{: toc-completion-time="30m"}
 
-You must create (onboard) a tenant in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs in the {{site.data.keyword.cloud_notm}}.
+Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.la_full_notm}} instance target destination.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}

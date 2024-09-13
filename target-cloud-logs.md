@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-13"
 
 keywords:
 
@@ -12,16 +12,29 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance
+# Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region
 {: #target-cloud-logs}
+{: toc-content-type="tutorial"}
+{: toc-services="logs-router, cloud-logs"}
+{: toc-completion-time="30m"}
 
-You must create tenants in your account for the {{site.data.keyword.logs_routing_full}} service to manage logs that are generated in that region of the {{site.data.keyword.cloud_notm}}.
+Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.logs_full_notm}} instance target destination.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
 
 You must create a tenant in your account **in each region** where you want to use {{site.data.keyword.logs_routing_full_notm}}. Each region is independent and regions do not share data.
 {: important}
+
+
+## Goals
+{: #target-cloud-logs-goals}
+
+In this tutorial you will:
+- Configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region
+
+- Verify that platform logs are being routed to your {{site.data.keyword.logs_full_notm}} instance.
+
 
 ## Before you begin
 {: #target-cloud-logs-prereqs}
@@ -32,152 +45,175 @@ Complete the following steps:
 
 2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
+<<<<<<< HEAD
+3. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
+=======
 3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
+>>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
-4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
-
-5. Platform logs that are routed to {{site.data.keyword.logs_full_notm}} include metadata fields that you can use to manage the data and configure features in your {{site.data.keyword.logs_full_notm}} instance.
+4. Platform logs that are routed to {{site.data.keyword.logs_full_notm}} include metadata fields that you can use to manage the data and configure features in your {{site.data.keyword.logs_full_notm}} instance.
 
     The application name is the environment that produces and sends logs to {{site.data.keyword.logs_full_notm}}. Platform logs have the application name set to `ibm-platform-log`.
 
     The subsystem name is the service or application that produces and sends logs, or metrics to {{site.data.keyword.logs_full_notm}}. Platform logs have the subsystem name set to `CRNserviceName:instanceID`. For VPC platform logs, the fields is set to `is:resourceType`.
 
+5. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-tenant-iam-permissions).
 
-## Retrieving the IAM bearer token
-{: #target-cloud-logs-retrieve-iam-token-cli}
-{: step}
+    Before you can set up the {{site.data.keyword.logs_routing_full_notm}} service to route your platform logs, you need an {{site.data.keyword.iamlong}} (IAM) access token for authentication. The {{site.data.keyword.cloud_notm}} CLI is used to obtain this information.
 
-You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
+    1. Log in to your {{site.data.keyword.cloud_notm}} account. Include the `--sso` option if you are using a federated ID.
 
-For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
+       ```text
+       ibmcloud login [--sso]
+       ```
+       {: pre}
 
-```sh
-export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
-```
-{: pre}
+       The output will include your username similar to:
+
+       ```text
+       Targeted account Jane Doe\'s Account (111111111112a21af53a2aeed19a1542a44) <-> 11111156
+
+
+        API endpoint:     https://cloud.ibm.com
+        Region:           us-south
+        User:             Jane.Doe@ibm.com
+        Account:          Jane Doe\'s Account (111111111112a21af53a2aeed19a1542a44) <-> 11111156
+        Resource group:   No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
+        ```
+        {: screen}
+
+    2. To grant access for using {{site.data.keyword.logs_routing_full_notm}} to your user, collect the username from the above generated output. In our example, this would be Jane.Doe@ibm.com. Replace `<username>` with your username in the following command:
+
+        ```text
+        ibmcloud iam user-policy-create <username> --roles Manager --service-name logs-router
+        ```
+        {: codeblock}
+
+        Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
+        {: tip}
+
 
 ## Creating a service to service authorization
 {: #target-cloud-logs-s2s}
 {: step}
 
+You must use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}}.
+
+### Creating a service to service authorization through the UI
+{: #target-cloud-logs-s2s-ui}
+
+Complete the following steps:
+
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+
+2. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations**.
+
+3. Click **Create**.
+
+4. Configure the source account. Select **This account**.
+
+5. Select **Logs Routing** as the source service. Then, set the scope of the access to **All resources**.
+
+6. Select **Cloud Logs** as the target service. Then, set the scope of the access to **All resources**, which grants access to all {{site.data.keyword.logs_full_notm}} instances, or a single instance by configuring **Resources based on selected attributes** &gt; **Service Instance**.
+
+    Other attributes are not supported for this type of authorization.
+
+7. In the *Service Access* section, select **Sender** to assign access to the source service that accesses the target service.
+
+8. Click **Authorize**.
+
+### Creating a service to service authorization by using the CLI
+{: #target-cloud-logs-s2s-cli}
+
+
 You must define a service to service (S2S) authorization between {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full}} so the {{site.data.keyword.logs_routing_full}} service can send logs to your tenant.
 
-Run the following command:
+Complete the following steps:
 
-```text
-ibmcloud iam authorization-policy-create logs-router logs Sender
-```
-{: codeblock}
+1. Retrieving the IAM bearer token and export it as an environment variable. Run the following command:
+
+    You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
+
+    For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
+
+    ```sh
+    export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+    ```
+    {: pre}
+
+    Verify that your token has been correctly exported by displaying it in your terminal.
+
+    ```text
+    echo $IAM_TOKEN
+    ```
+    {: pre}
+
+    The output should start with `Bearer ` followed by a string containing letters, numbers, and symbols.
+
+2. Create an authorization policy.
+
+    ```text
+    ibmcloud iam authorization-policy-create logs-router logs Sender
+    ```
+    {: codeblock}
 
 For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 ## Retrieving your {{site.data.keyword.logs_full_notm}} information
-{: #target-cloud-logs-retrieve-information}
+{: #target-cloud-logs-retrieve-information-cli}
 {: step}
 
-You must supply information about the destination where you want logs delivered. You need to supply the following information for your {{site.data.keyword.la_full_notm}} instance:
+To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.la_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
-- The ingress endpoint and port
+- The ingestion (ingress) endpoint and port
 
 Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
 {: restriction}
 
-To obtain the instance CRN for the {{site.data.keyword.logs_full_notm}} instance, run this command:
+
+Use this command to retrieve the URL and ID:
 
 ```text
-ibmcloud resource service-instances --service-name logs --long --output JSON
+ibmcloud resource service-instances --service-name logs --long --output JSON | jq '[.[] | {name: .name, id: .id, region: .region_id, ingestion_endpoint: .extensions.external_ingress}]'
 ```
 {: pre}
 
-This command lists all of your {{site.data.keyword.logs_full_notm}} instances. You need the following fields:
-- `ID` field: Contains the instance's CRN.
-- `extensions.external_ingress`: Contains the ingress endpoint
-- `extensions.virtual_private_endpoints.endpoints.ports.port_max`: Contains the port value.
+If you have multiple instances, choose one you would like to use for receiving platform logs and save the information for later.
 
-The following sample shows some of the information that you can get:
+The endpoint is similar to:
 
 ```text
-{
-        "guid": "xxxxxxx",
-        "id": "crn:v1:bluemix:public:logs:eu-gb:a/xxxxxxx:b951ceb1-06a4-4a1d-93d5-eaf47cedb86d::",
-        "url": "/v2/resource_instances/b951ceb1-06a4-4a1d-93d5-eaf47cedb86d",
-        "created_at": "2024-03-08T04:58:17.137066137Z",
-        "updated_at": "2024-03-08T04:58:39.870280882Z",
-        "deleted_at": null,
-        "name": "My instance",
-        "region_id": "eu-gb",
-        "account_id": "xxxxxxx",
-        "resource_plan_id": "0c1a62c7-a433-44df-a63e-b3fe8e629a94",
-        "resource_group_id": "8f0e17c350d091415246eca5cd5239b1",
-        "crn": "crn:v1:bluemix:public:logs:eu-gb:a/xxxxxxx:b951ceb1-06a4-4a1d-93d5-eaf47cedb86d::",
-        "extensions": {
-            "external_api": "xxxxxxx.api.eu-gb.logs.cloud.ibm.com",
-            "external_dashboard": "https://dashboard.eu-gb.logs.appdomain.cloud/xxxxxxx/#/dashboard",
-            "external_ingress": "xxxxxxx.ingress.eu-gb.logs.cloud.ibm.com",
-            "virtual_private_endpoints": {
-                "dns_domain": "private.eu-gb.logs.cloud.ibm.com",
-                "dns_hosts": [
-                    "xxxxxxx.ingress",
-                    "xxxxxxx.api",
-                    "dashboard"
-                ],
-                "endpoints": [
-                    {
-                        "ip_address": "10.12.93.39",
-                        "zone": "eu-gb-1"
-                    },
-                    {
-                        "ip_address": "10.12.94.38",
-                        "zone": "eu-gb-2"
-                    },
-                    {
-                        "ip_address": "10.12.95.38",
-                        "zone": "eu-gb-3"
-                    }
-                ],
-                "origin_type": "vpc",
-                "ports": [
-                    {
-                        "port_max": 443,
-                        "port_min": 443
-                    }
-                ]
-            }
-        },
-        "create_time": 0,
-        "created_by": "IBMid-xxxxxxx",
-        "state": "active",
-        "type": "service_instance",
-        "resource_id": "cd515180-d78a-11ec-b396-db7d306c4f73",
-        "dashboard_url": "https://cloud.ibm.com/observe/logging/xxxxxxx/overview",
-        "allow_cleanup": false,
-        "locked": false,
-        "last_operation": {
-            "type": "create",
-            "state": "succeeded",
-            "description": "service instance Provision succeeded",
-            "updated_at": null,
-            "cancelable": false
-        },
-        "account_url": "",
-        "resource_plan_url": "",
-        "resource_bindings_url": "/v2/resource_instances/xxxxxxx/resource_bindings",
-        "resource_aliases_url": "/v2/resource_instances/xxxxxxx/resource_aliases",
-        "siblings_url": "",
-        "target_crn": "crn:v1:staging:public:globalcatalog::::deployment:0c1a62c7-a433-44df-a63e-b3fe8e629a94%3Aeu-xxx"
-    }
+ingestion_endpoint: 3a622101-7521-4002-bf91-8c26e17eedcf.ingress.eu-de.logs.cloud.ibm.com
+```
+{: screen}
+
+The ID is similar to:
+
+```text
+"crn:v1:bluemix:public:logs:eu-es:a/15ff25632a21af53a2aeed19a1542a44:3a622101-7521-4002-bf91-8c26e17eedcf::"
 ```
 {: screen}
 
 
-## Creating a tenant and target by using the API
+To get all the information about the instance, you can run `ibmcloud resource service-instances --service-name logs --long --output JSON`  This command lists all of your {{site.data.keyword.logs_full_notm}} instances. You need the following fields: `ID`that contains the instance's CRN, `extensions.external_ingress` that contains the ingress endpoint, and `extensions.virtual_private_endpoints.endpoints.ports.port_max` that contains the port value. {: tip}
+
+
+
+## Creating a tenant and target
 {: #target-cloud-logs-api-create}
 {: step}
 
+To receive your platform logs, you need to create a tenant with the {{site.data.keyword.logs_routing_full_notm}} service.
 
-Submit the create request to {{site.data.keyword.logs_routing_full_notm}} by using the appropriate [management endpoint URL for the correct region](/docs/logs-router?topic=logs-router-endpoints).
+You must create your tenant in the region where you want to collect and route platform logs to the {{site.data.keyword.logs_full_notm}} instance.
+{: important}
 
-The create requests creates the tenant in the region and the destination.{: important}
+### Creating a tenant and target by using the API
+{: #target-cloud-logs-api-create-api}
+
+Run the following cURL request from the command line:
+
+The create requests creates the tenant in the region and the destination.{: note}
 
 ```sh
 curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
@@ -202,32 +238,19 @@ curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
 
 Where
 
-- `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `MANAGEMENT-API-ENDPOINT` is the {{site.data.keyword.logs_routing_full}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
-- `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
-- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
-- `DATE`: Specify the current date to request the latest version of the API. The valid format is `YYYY-MM-DD`. Any date up to the current date can be provided.
+| Parameter  |  Description |
+| ------------ | ------------ |
+| `MANAGEMENT-API-ENDPOINT` | The endpoint of the {{site.data.keyword.logs_routing_full}} service. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints). For example, `https://management.eu-es.logs-router.cloud.ibm.com` |
+|`IAM_TOKEN`|The IAM Token you obtained previously. If you exported it in your environment as described above, it is replaced automatically. |
+|`DATE`| The current date. For example, `2024-03-01`|
+|`TENANT_NAME`| Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`  An example would be `eu-es-tenant`. |
+|`TARGET_NAME`| Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. The name must be unique across all targets in the region within an account tenant, and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`|
+|`CLOUD_LOGS_INSTANCE_ID`| The CRN of your {{site.data.keyword.logs_full_notm}} instance. |
+|`CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`| The endpoint of your {{site.data.keyword.logs_full_notm}} instance. |
 
 
-The following example shows the creation of a tenant to {{site.data.keyword.logs_routing_full_notm}} in the `eu-es` region by using a VPE, and specifying target information for a {{site.data.keyword.logs_full_notm}} instance that is also in `eu-es`:
-
-```sh
-curl -X POST "https://management.private.eu-es.logs-router.cloud.ibm.com/v1/tenants" --header 'Authorization: Bearer TOKEN' --header 'Content-Type: application/json' --header 'IBM-API-Version: 2024-03-01' --data '{
-    "name": "tenant",
-    "targets": [
-        {
-            "log_sink_crn": "crn:v1:bluemix:public:logs:eu-es:a/91d1d1e42f9b684df920bbd06461c222:743e3b4f-72bc-4669-9fa6-0e6621d0b232::",
-            "name": "my-log-sink",
-            "parameters": {
-                "host": "743e3b4f-72bc-4669-9fa6-0e6621d0b232.ingress.eu-es.logs.cloud.ibm.com",
-                "port": 443
-            }
-        }
-    ]
-}'
-```
-{: pre}
+Review your command carefully, since it contains values that were gathered previously. Be sure to make the necessary substitutions for the command to work as expected.
+{: important}
 
 
 If the creation request was successful, a response that contains your tenant metadata is returned. For example,
@@ -259,80 +282,46 @@ If the creation request was successful, a response that contains your tenant met
 ```
 {: screen}
 
-## Setting application and subsystem name
-{: #set-app-subsys}
+### Creating a tenant using the UI
+{: #target-cloud-logs-api-create-ui}
 
-If the `subsystemName` value is not specified, it is set to the `container name` if the `container name` is included in the metadata (for example, using the kubernetes filter).
-The `applicationName` will be set to `namespace_name` if it is not set and included in the metadata.
+Complete the following steps:
 
+<<<<<<< HEAD
+1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+=======
 It is possible to add static values for the application and subsystem name.
 This can be done when installing the agent.
 See [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.containerlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster) or [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift) for more information.
+>>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
-In addition, a dynamic value for the application and subsystem name can be set depending on the log line.
-The config map of the agent has to be modified to create the custom application name.
-The same steps can be used to create a custom subsystem name.
+2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
 
-For a JSON formatted message, do the following:
+3. Click **Logging** > **Routing**.
 
-1. Add the `applicationName` to the log line, for example `{"level":"info", "msg":"test message", "applicationName":"my-application"}`
+4. Click **Set target**.
 
+<<<<<<< HEAD
+5. Click the tab **Cloud Logs** and select an {{site.data.keyword.logs_full_notm}} instance from the list. This is the instance where you want to receive logs that are routed by {{site.data.keyword.logs_routing_full_notm}}.
+=======
 2. [Download the YAML configuration file for your environment.](/docs/cloud-logs?topic=cloud-logs-download-iclr-agent-configuration-file)
+>>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
-3. Open the downloaded YAML configuration file in a text editor.
+   You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
 
-4. Add a json parser to extract those fields:
+   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.{: important}
 
-   ```yaml
-   [PARSER]
-    Name json
-    Format json
-   ```
-   {: codeblock}
-
-3. Add the parser using a filter:
-
-   ```yaml
-   [FILTER]
-      Name parser
-      Match *
-      Key_Name message
-      Parser json
-   ```
-   {: codeblock}
-
-4. Extract the application name using the nest filter:
-
-   ```yaml
-   [FILTER]
-      Name nest
-      Match *
-      Operation lift
-      Nested_under message
-      Wildcard applicationName
-   ```
-   {: codeblock}
-
-   `__applicationName__` must be at the top level since nested fields will not be extracted.
-   {: note}
+6. Click **Save**.
 
 
-In this example, the `applicationName` for the log line would be `my-application`.
+## Verifying that logs are sent to the destination target
+{: #target-cloud-logs-verify}
+{: step}
 
-Add the following filters after the the configuration changes made in the previous steps. This filter will add default values for all log lines not containing an `applicationName` or `subsystemName`.
+To ensure that your platform logs are successfully flowing to {{site.data.keyword.logs_full_notm}}, do the following steps:
 
-```yaml
-  filter-add-ICL-meta-data.conf: |
-    [FILTER]
-        Name modify
-        Match *
-        Condition Key_Does_Not_Exist subsystemName
-        Add subsystemName REPLACE_SUBSYSTEM_NAME
+1. [Launch the {{site.data.keyword.logs_full_notm}} web UI](/docs/cloud-logs?topic=cloud-logs-instance-launch) for the {{site.data.keyword.logs_full_notm}} instance that is configured as the target to collect platform logs in a region. This is the instance that you selected in the step where you setup a target.
 
-    [FILTER]
-        Name modify
-        Match *
-        Condition Key_Does_Not_Exist applicationName
-        Add applicationName REPLACE_APPLICATION_NAME
-```
-{: codeblock}
+2. View logs through custom views. For more information, see [Viewing logs](/docs/cloud-logs?topic=cloud-logs-custom_views).
+
+All platform logs are generated in JSON. You can filter platform logs in your instance be selecting the value of **ibm-platform-logs** as the `applicationName`.
