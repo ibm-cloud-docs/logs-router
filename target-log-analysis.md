@@ -233,7 +233,7 @@ Where
 |`IAM_TOKEN`|The IAM Token you obtained previously. If you exported it in your environment as described above, it is replaced automatically. |
 |`DATE`| The current date. For example, `2024-03-01`|
 |`TENANT_NAME`| Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`  An example would be `eu-es-tenant`. |
-|`TARGET_NAME`| Name of the target destination. The name must be unique across all targets within an account-tenant and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. |
+|`TARGET_NAME`| Name of the target destination. The name must be unique across all targets within a region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. |
 |`LOG_ANALYSIS_INSTANCE_CRN`| The CRN of your {{site.data.keyword.la_full_notm}} instance. |
 |`LOG_ANALYSIS_INGESTION_ENDPOINT`| The endpoint of your {{site.data.keyword.la_full_notm}} instance. You can choose a public or a private ingestion endpoint. For more information, see [{{site.data.keyword.la_full_notm}} ingestion endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion_public).|
 |`LOG_ANALYSIS_INSTANCE_INGESTION_KEY` | The ingestion key of the target {{site.data.keyword.la_full_notm}} instance. |
