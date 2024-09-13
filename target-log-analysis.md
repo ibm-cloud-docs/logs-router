@@ -7,6 +7,11 @@ keywords:
 
 subcollection: logs-router
 
+content-type: tutorial
+services: logs-router, logdna
+account-plan: paid
+completion-time: 30m
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -146,7 +151,7 @@ Complete the following steps:
     ```
     {: pre}
 
-    The output should start with `Bearer ` followed by a string containing letters, numbers, and symbols.
+    The output should start with `Bearer` followed by a string containing letters, numbers, and symbols.
 
 2. Create an authorization policy.
 
@@ -238,6 +243,7 @@ Where
 |`LOG_ANALYSIS_INGESTION_ENDPOINT`| The endpoint of your {{site.data.keyword.la_full_notm}} instance. You can choose a public or a private ingestion endpoint. For more information, see [{{site.data.keyword.la_full_notm}} ingestion endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion_public).|
 |`LOG_ANALYSIS_INSTANCE_INGESTION_KEY` | The ingestion key of the target {{site.data.keyword.la_full_notm}} instance. |
 |`PORT` | Set to `443` |
+{: caption="Parameter descriptions" caption-side="bottom"}
 
 
 The following example shows the creation of a tenant to {{site.data.keyword.logs_routing_full_notm}} in the `us-east` region by using a VPE, and specifying target information for a {{site.data.keyword.la_full_notm}} instance that is also in `us-east`:

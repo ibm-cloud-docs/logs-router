@@ -8,6 +8,11 @@ keywords:
 
 subcollection: logs-router
 
+content-type: tutorial
+services: logs-router, cloud-logs
+account-plan: paid
+completion-time: 30m
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -144,7 +149,7 @@ Complete the following steps:
     ```
     {: pre}
 
-    The output should start with `Bearer ` followed by a string containing letters, numbers, and symbols.
+    The output should start with `Bearer` followed by a string containing letters, numbers, and symbols.
 
 2. Create an authorization policy.
 
@@ -244,6 +249,7 @@ Where
 |`CLOUD_LOGS_INSTANCE_ID`| The CRN of your {{site.data.keyword.logs_full_notm}} instance. |
 |`CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`| The endpoint of your {{site.data.keyword.logs_full_notm}} instance. |
 |`PORT` | Set to `443` |
+{: caption="Parameter descriptions" caption-side="bottom"}
 
 
 Review your command carefully, since it contains values that were gathered previously. Be sure to make the necessary substitutions for the command to work as expected.
