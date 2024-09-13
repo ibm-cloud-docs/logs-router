@@ -24,9 +24,9 @@ toc:
           label: Tutorials
           topics:
           - topic: target-cloud-logs.md
-            navtitle: Configuring a Cloud Logs target
+            navtitle: Routing platform logs to a Cloud Logs instance
           - topic: target-log-analysis.md
-            navtitle: Configuring 1 Log Analysis destination 
+            navtitle: Routing platform logs to a Log Analysis instance
       - topic: releasenotes.md
         navtitle: Release notes
   - navgroup:

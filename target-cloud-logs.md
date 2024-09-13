@@ -18,7 +18,7 @@ subcollection: logs-router
 {: toc-services="logs-router, cloud-logs"}
 {: toc-completion-time="30m"}
 
-Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.logs_full_notm}} instance target destination.
+Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to an {{site.data.keyword.logs_full_notm}} instance target destination. You must configure a tenant in the region and a target destination.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -209,7 +209,7 @@ You must create your tenant in the region where you want to collect and route pl
 
 Run the following cURL request from the command line:
 
-The create requests creates the tenant in the region and the destination.{: note}
+The create request creates the tenant in the region and the destination.{: note}
 
 ```sh
 curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
@@ -220,11 +220,11 @@ curl -X POST https://<MANAGEMENT-API-ENDPOINT>:443/v1/tenants \
     "name": "TENANT_NAME",
     "targets": [
         {
-            "log_sink_crn": "CLOUD_LOGS_INSTANCE_CRN",
+            "log_sink_crn": "CLOUD_LOGS_INSTANCE_ID",
             "name": "TARGET_NAME",
             "parameters": {
                 "host": "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT",
-                "port": CLOUD_LOGS_INSTANCE_TARGET_PORT
+                "port": PORT
             }
         }
     ]
@@ -243,6 +243,7 @@ Where
 |`TARGET_NAME`| Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./` You can for example choose the name of your {{site.data.keyword.logs_full_notm}} instance. An example would be `platformlogs-eu-es`. The name must be unique across all targets in the region within an account tenant, and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`|
 |`CLOUD_LOGS_INSTANCE_ID`| The CRN of your {{site.data.keyword.logs_full_notm}} instance. |
 |`CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`| The endpoint of your {{site.data.keyword.logs_full_notm}} instance. |
+|`PORT` | Set to `443` |
 
 
 Review your command carefully, since it contains values that were gathered previously. Be sure to make the necessary substitutions for the command to work as expected.
