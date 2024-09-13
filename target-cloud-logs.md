@@ -45,11 +45,7 @@ Complete the following steps:
 
 2. Install all prerequisite tools as described in the [getting started](/docs/logs-router?topic=logs-router-getting-started&interface=ui#getting-started-before-you-begin).
 
-<<<<<<< HEAD
 3. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
-=======
-3. Set up permissions to manage targets in the account. For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
->>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
 4. Platform logs that are routed to {{site.data.keyword.logs_full_notm}} include metadata fields that you can use to manage the data and configure features in your {{site.data.keyword.logs_full_notm}} instance.
 
@@ -287,13 +283,7 @@ If the creation request was successful, a response that contains your tenant met
 
 Complete the following steps:
 
-<<<<<<< HEAD
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
-=======
-It is possible to add static values for the application and subsystem name.
-This can be done when installing the agent.
-See [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.containerlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-std-cluster) or [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.keyword.openshiftlong_notm}} clusters](/docs/cloud-logs?topic=cloud-logs-agent-openshift) for more information.
->>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu") &gt; **Observability**.
 
@@ -301,11 +291,7 @@ See [Managing the {{site.data.keyword.logs_routing_full}} agent for {{site.data.
 
 4. Click **Set target**.
 
-<<<<<<< HEAD
 5. Click the tab **Cloud Logs** and select an {{site.data.keyword.logs_full_notm}} instance from the list. This is the instance where you want to receive logs that are routed by {{site.data.keyword.logs_routing_full_notm}}.
-=======
-2. [Download the YAML configuration file for your environment.](/docs/cloud-logs?topic=cloud-logs-download-iclr-agent-configuration-file)
->>>>>>> 6daeb536a5012e9053066d0c59d1499bbca87a28
 
    You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
 
