@@ -19,7 +19,7 @@ content-type: troubleshoot
 {: troubleshoot}
 {: support}
 
-When searching for logs routed by {{site.data.keyword.logs_routing_full_notm}} to {{site.data.keyword.la_full_notm}}, the logs aren't found in the {{site.data.keyword.la_routing_full_notm}} UI.
+When searching for logs routed by {{site.data.keyword.logs_routing_full_notm}} to {{site.data.keyword.la_full_notm}}, the logs aren't found in the {{site.data.keyword.la_full_notm}} UI.
 {: shortdesc}
 
 Users searching in the {{site.data.keyword.la_full_notm}} UI by the host value can not find routed logs.
@@ -44,4 +44,3 @@ to:
 serviceName:codeengine label.Project:'ce-project-d6'
 ```
 {: codeblock}
-
