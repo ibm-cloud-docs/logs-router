@@ -143,3 +143,4 @@ toc:
             - troubleshooting/ts-iam-issues.md
             - troubleshooting/ts-cse-proxy.md
             - troubleshooting/ts-vpe-gateway.md
+            - troubleshooting/ts-hostvalue.md
