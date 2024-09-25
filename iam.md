@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-25"
 
 keywords:
 
@@ -28,6 +28,8 @@ When assigning roles, select the appropriate IAM role based on the actions you n
 
 For information about how to assign roles by using the IBM Cloud CLI, see [Granting IAM permissions by using the CLI](/docs/logs-router?topic=logs-router-iam-permissions&interface=cli).
 
+If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
+{: important}
 
 If a specific role and its actions don't meet the needs of the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles&interface=ui) and pick the actions to include.
 {: tip}
