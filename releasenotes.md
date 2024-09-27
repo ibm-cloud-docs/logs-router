@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-27"
 
 keywords:
 
@@ -30,6 +30,13 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 
 Documentation updates affecting {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full_notm}}
 :   Significant documentation updates have been made to the {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.logs_routing_full_notm}} documentation sets with information related to using agents to send data to {{site.data.keyword.logs_full_notm}} moved from the [{{site.data.keyword.logs_routing_full_notm}} documentation](/docs/logs-router) to the [{{site.data.keyword.logs_full_notm}} documentation](/docs/cloud-logs).
+
+## 2 September 2024
+{: #logs-router-sep0224}
+{: release-note}
+
+Release of the {{site.data.keyword.logs_routing_full_notm}} Agent version 1.3.0
+:   For agent details see the [agent release notes](/docs/cloud-logs?topic=cloud-logs-release-notes-agent#logs-router-agent-sep0224)
 
 ## 7 August 2024
 {: #logs-router-aug0724}
