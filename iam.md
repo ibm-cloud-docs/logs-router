@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-09-30"
 
 keywords:
 
@@ -14,9 +14,6 @@ subcollection: logs-router
 
 # Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}
 {: #iam}
-
-{{site.data.keyword.logs_routing_full_notm}} permissions cannot be assigned using the IAM UI. Use the [CLI](/docs/account?topic=account-ibmcloud_commands_iam) or [API](/apidocs/iam-policy-management#introduction) to assign permissions.
-{: restriction}
 
 Access to {{site.data.keyword.logs_routing_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.logs_routing_full_notm}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.logs_routing_full_notm}}.
 {: shortdesc}
