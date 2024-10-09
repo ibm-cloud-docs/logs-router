@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -52,7 +52,7 @@ Use the appropriate command for the type of identity:
 | Service ID        | `ibmcloud iam service-policy-create <serviceID> --roles Manager --service-name logs-router` |
 | Trusted profile   | `ibmcloud iam tp-policy-create <trustedProfile> --roles Manager --service-name logs-router` |
 | Access group      | `ibmcloud iam access-group-policy-create ACCESS_GROUP --roles Manager --service-name logs-router` |
-{: caption="Table 1. Command to grant IAM permissions by type of identity" caption-side="top"}
+{: caption="Command to grant IAM permissions by type of identity" caption-side="top"}
 
 Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
 {: tip}
@@ -76,7 +76,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Operator               | `crn:v1:bluemix:public:logs-router::::serviceRole:Operator`      |
 | Editor                 | `crn:v1:bluemix:public:logs-router::::serviceRole:Editor`        |
 | Administrator          | `crn:v1:bluemix:public:logs-router::::serviceRole:Administrator` |
-{: caption="Table 2. Role ID values for API use" caption-side="bottom"}
+{: caption="Role ID values for API use" caption-side="bottom"}
 
 The following example is for assigning the `Viewer` role for {{site.data.keyword.logs_routing_full_notm}}:
 

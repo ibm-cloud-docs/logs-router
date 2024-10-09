@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -35,7 +35,7 @@ Only the management API supports public endpoints, which can be accessed from th
 | North America  | Toronto (`ca-tor`) | `management.ca-tor.logs-router.cloud.ibm.com` | NA |
 | North America  | Washington, D.C (`us-east`) | `management.us-east.logs-router.cloud.ibm.com` | NA |
 | South America  | Sao Paulo (`br-sao`) | `management.br-sao.logs-router.cloud.ibm.com` | NA |
-{: caption="Table 1. List of {{site.data.keyword.logs_routing_full_notm}} public endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_routing_full_notm}} public endpoints" caption-side="top"}
 
 ## Private Endpoints
 {: #private-endpoints}
@@ -54,11 +54,10 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 | North America  | Toronto (`ca-tor`) | `management.private.ca-tor.logs-router.cloud.ibm.com` | `ingester.private.ca-tor.logs-router.cloud.ibm.com` |
 | North America  | Washington, D.C (`us-east`) | `management.private.us-east.logs-router.cloud.ibm.com` | `ingester.private.us-east.logs-router.cloud.ibm.com` |
 | South America  | Sao Paulo (`br-sao`) | `management.private.br-sao.logs-router.cloud.ibm.com` | `ingester.private.br-sao.logs-router.cloud.ibm.com` |
-{: caption="Table 2. List of {{site.data.keyword.logs_routing_full_notm}} private endpoints" caption-side="top"}
+{: caption="List of {{site.data.keyword.logs_routing_full_notm}} private endpoints" caption-side="top"}
 
 
 When you connect by using a [VPE](/docs/vpc?topic=vpc-about-vpe), use port 443 with both management and ingestion endpoints. When you connect by using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443 for both endpoints.
 {: important}
 
 For example, to access the `us-east` management endpoint over a CSE, connect to `https://management.private.us-east.logs-router.cloud.ibm.com:3443`. To access the `us-east` ingestion endpoint over a VPE, you would configure the agent to use `https://ingester.private.us-east.logs-router.cloud.ibm.com:443`.
-

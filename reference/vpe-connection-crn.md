@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-04-29"
+  years:  2023, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -35,7 +35,7 @@ The following table lists the CRNs that you can select when you create a VPE gat
 | `jp-tok` (Tokyo) | `crn:v1:bluemix:public:logs-router:jp-tok:::endpoint:management.private.jp-tok.logs-router.cloud.ibm.com` |
 | `us-east` (Washington) | `crn:v1:bluemix:public:logs-router:us-east:::endpoint:management.private.us-east.logs-router.cloud.ibm.com` |
 | `us-south` (Dallas) | `crn:v1:bluemix:public:logs-router:us-south:::endpoint:management.private.us-south.logs-router.cloud.ibm.com` |
-{: caption="Table 1. Region availability and Cloud Resource Names for connecting {{site.data.keyword.logs_routing_full_notm}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
+{: caption="Region availability and Cloud Resource Names for connecting {{site.data.keyword.logs_routing_full_notm}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
 
 ## Ingestion CRNs
 {: #vpe-connection-crn-ingestion}
@@ -54,4 +54,4 @@ The following table lists the CRNs that you can select when you create a VPE gat
 | `jp-tok` (Tokyo) | `crn:v1:bluemix:public:logs-router:jp-tok:::endpoint:ingester.private.jp-tok.logs-router.cloud.ibm.com` |
 | `us-east` (Washington) | `crn:v1:bluemix:public:logs-router:us-east:::endpoint:ingester.private.us-east.logs-router.cloud.ibm.com` |
 | `us-south` (Dallas) | `crn:v1:bluemix:public:logs-router:us-south:::endpoint:ingester.private.us-south.logs-router.cloud.ibm.com` |
-{: caption="Table 2. Region availability and Cloud Resource Names for connecting {{site.data.keyword.logs_routing_full_notm}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
+{: caption="Region availability and Cloud Resource Names for connecting {{site.data.keyword.logs_routing_full_notm}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}

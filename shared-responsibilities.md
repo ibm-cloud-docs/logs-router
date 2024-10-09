@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -32,7 +32,7 @@ Agent management includes all tasks related to the installation, configuration, 
 | Configuration | Provide list of included plug-ins and links to documentation. | Read and understand documentation for any plug-ins used with agent. |
 | Upgrade | Provide installation packages and documentation which can be used to upgrade the deployed agents. | Upgrade the agent following documented instructions. |
 {: row-headers}
-{: caption="Table 1. Responsibilities for agent management" caption-side="bottom"}
+{: caption="Responsibilities for agent management" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Incident and operations management
@@ -46,7 +46,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 | Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/account?topic=account-email-prefs).   \n  \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | Maintain {{site.data.keyword.cloud_notm}} high availability SLA for {{site.data.keyword.logs_routing_full_notm}}   | Provide {{site.data.keyword.logs_routing_full_notm}} functionality across availability zones in a Multi-Zone Region (MZR).    \n  \n Provide replication, fail-over features, and infrastructure maintenance and updates. | Keep your {{site.data.keyword.logs_routing_full_notm}} agent configuration in a version control system so that you can reconfigure a log source if needed.   \n  \n Monitor agent availability and ensure availability of resources for agent. |
 {: row-headers}
-{: caption="Table 1. Responsibilities for incident and operations" caption-side="bottom"}
+{: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -60,7 +60,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 |----------|-----------------------|--------|
 | Updates to {{site.data.keyword.logs_routing_full_notm}} | Provide major, minor, and patch version updates for {{site.data.keyword.logs_routing_full_notm}} interfaces.   \n  \n Provide major, minor, and patch version updates for the {{site.data.keyword.logs_routing_full_notm}} agent.  \n  \n Provide notification of updates to the agent in product release notes.  \n  \n Document changes in the [IBM Cloud Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter) | Download and install agent updates as they become available. |
 {: row-headers}
-{: caption="Table 2. Responsibilities for change management" caption-side="bottom"}
+{: caption="Responsibilities for change management" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -74,7 +74,7 @@ Identity and access management includes tasks such as authentication, authorizat
 | Manage permissions for {{site.data.keyword.logs_routing_full_notm}} | Lets you restrict access to the service.   \n  \n {{site.data.keyword.IBM_notm}} is responsible for the security and compliance of the {{site.data.keyword.logs_routing_full_notm}} service. | Restrict access to {{site.data.keyword.logs_routing_full_notm}} by using Cloud IAM access policies. Define IAM policies to control which users within your account have access to manage the service and related resources in your account.    \n  \n [Learn more about controlling access through IAM](/docs/logs-router?topic=logs-router-iam).  \n  \n Define and implement a process to [rotate {{site.data.keyword.la_full_notm}} ingestion keys.](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui#ingestion_key_rotate_ui) |
 | Validate connections to target destinations by {{site.data.keyword.logs_routing_full_notm}} agents | Validate the {{site.data.keyword.logs_routing_full_notm}} agent configuration data that is used to send logs to a target destination. | Configure the {{site.data.keyword.logs_routing_full_notm}} agent with valid data and credentials for authorization and authentication. |
 {: row-headers}
-{: caption="Table 3. Responsibilities for identity and access management" caption-side="bottom"}
+{: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The first column describes the task that a customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Security and regulation compliance
@@ -86,7 +86,7 @@ Security and regulation compliance includes tasks such as security controls impl
 |----------|-----------------------|--------|
 | Meet security and compliance objectives  | Maintain controls that are commensurate with supported compliance standards, which might include standards such as SOC2, PCI, HIPAA, and Privacy Shield. \n  \n For more information see [Securing your data.](/docs/logs-router?topic=logs-router-mng-data) | Set up and maintain security and regulation compliance for your apps and data.   |
 {: row-headers}
-{: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="bottom"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Disaster recovery
@@ -106,7 +106,7 @@ Disaster recovery includes tasks such as:
 | Restore functionality for {{site.data.keyword.logs_routing_full_notm}}  | Automatically recover and restart {{site.data.keyword.logs_routing_full_notm}} components after any disaster event. | [Complete the disaster recovery (DR) steps for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-bc-dr). |
 | Backup {{site.data.keyword.logs_routing_full_notm}} components   | Daily backup of any data required to restore {{site.data.keyword.logs_routing_full_notm}} to full service. | `N/A` |
 {: row-headers}
-{: caption="Table 5. Responsibilities for disaster recovery" caption-side="bottom"}
+{: caption="Responsibilities for disaster recovery" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 Recovered and restarted service components will not reload customer log data.

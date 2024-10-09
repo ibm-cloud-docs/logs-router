@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-10-09"
 
 
 keywords: 
@@ -34,7 +34,7 @@ For more information, see [{{site.data.keyword.at_full_notm}} Getting Started](/
 | `logs-router.tenant.delete` | This event is generated whenever a tenant is deleted (offboarded).                                       |
 | `logs-router.tenant.read`   | This event is generated whenever data about an existing tenant is viewed.                        |
 | `logs-router.tenant.update` | This event is generated whenever the target data for a target of the tenant is edited (updated).        |
-{: caption="Table 1. Actions that generate management events" caption-side="bottom"}
+{: caption="Actions that generate management events" caption-side="bottom"}
 
 
 ## Data events
@@ -43,7 +43,7 @@ For more information, see [{{site.data.keyword.at_full_notm}} Getting Started](/
 | Action                      | Description                                                                                  |
 |-----------------------------|----------------------------------------------------------------------------------------------|
 | `logs-router.event.send`    | This event is generated whenever the ingester receives a new connection request from an agent. |
-{: caption="Table 2. Actions that generate data events" caption-side="bottom"}
+{: caption="Actions that generate data events" caption-side="bottom"}
 
 
 ## Viewing events
@@ -68,4 +68,4 @@ The following table lists custom fields that are included in these events:
 | `requestData.targetCRN`     | A valid CRN                                      | Defines the CRN of the target.  | create, update |
 | `requestData.tenantID`             | For example, `XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX`   | Defines the tenant ID. For example, the tenant ID to delete (offboard).                 | read, delete, update |
 | `responseData.tenantCRN`           | For example, `crn:v1:staging:public:logs-router:eu-gb:a/XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX:XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX::` | Defines the CRN of the onboarded tenant. | create, read, update |
-{: caption="Table 3. Custom fields for events" caption-side="bottom"}
+{: caption="Custom fields for events" caption-side="bottom"}
