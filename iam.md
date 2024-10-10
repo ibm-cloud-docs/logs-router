@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -118,7 +118,7 @@ Review the available platform and service roles that are available, and the acti
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
 | View console      | `logs-router.dashboard.view` | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
-{: caption="Table 1. IAM platform roles for {{site.data.keyword.logs_routing_full}}" caption-side="top"}
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full}}" caption-side="top"}
 
 
 | Action | IAM action | Manager | Writer | Reader |
@@ -128,7 +128,7 @@ Review the available platform and service roles that are available, and the acti
 | Edit (update) the platform logs configuration          | `logs-router.tenant.update`  | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 | View the platform logs configuration             | `logs-router.tenant.read`    | [No]{: tag-red} | [No]{: tag-red} | [Yes]{: tag-green} |
 | Send log data to a destination                            | `logs-router.event.send`     | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
-{: caption="Table 2. IAM service roles for {{site.data.keyword.logs_routing_full}}" caption-side="top"}
+{: caption="IAM service roles for {{site.data.keyword.logs_routing_full}}" caption-side="top"}
 
 
 
@@ -152,7 +152,7 @@ Use the following table to identify the **Account management** **{{site.data.key
 | Administrator            | As an administrator, you can perform all platform actions based on the resource where the role is being assigned, including assigning access policies to other users. |
 | Service Configuration Reader | As a service configuration reader you can read the service configuration for governance management |
 | Key Manager              | As a key manager you can manage resource keys, for example creating a new resource key for a resource instance |
-{: caption="Table 1. IAM platform roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
 
 
 ## {{site.data.keyword.cloud_notm}} service roles
@@ -165,4 +165,4 @@ The following table lists the service roles that are available in {{site.data.ke
 | Manager            | As a manager, you have permissions beyond the writer role to complete privileged actions as defined by the service. In addition, you can create and edit service-specific resources.|
 | Writer             | As a writer, you have permissions beyond the reader role, including creating and editing service-specific resources. |
 | Reader             | As a reader, you can perform read-only actions within a service such as viewing service-specific resources. |
-{: caption="Table 2. IAM service roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
+{: caption="IAM service roles for {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}

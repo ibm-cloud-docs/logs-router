@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -56,6 +56,6 @@ Access to the management endpoints that are provided by the control plane is usi
 
 Logs are ingested by the data plane through a shared endpoint through either a [Virtual Private Endpoint (VPE)](/docs/vpc?topic=vpc-about-vpe) or a [Cloud Service Endpoint (CSE)](/docs/account?topic=account-service-endpoints-overview). Neither endpoint can be reached from the public internet.
 
-![Example routing scenario](/images/Logs-Router-04--1.svg "Example routing scenario"){: caption="Figure 1. Example routing scenario" caption-side="bottom"}
+![Example routing scenario](/images/Logs-Router-04--1.svg "Example routing scenario"){: caption="Example routing scenario" caption-side="bottom"}
 
 Logs are delivered to user-specified targets by using tenant-specific output clients. This client usage means that the output client that delivers logs belonging to tenant A is authorized to connect _only_ to the endpoint specified by tenant A and not to any other endpoint. Output clients are tenant-specific and are not reused across different tenants.

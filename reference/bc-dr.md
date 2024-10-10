@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-29"
+  years:  2023, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -34,7 +34,7 @@ For more information about your responsibilities when you are using {{site.data.
 |---|---|
 |  RPO |  Within 24 hours |
 |  RTO |  Within 24 hours |
-{: caption="Table 1. RPO and RTO for {{site.data.keyword.logs_router_notm}}" caption-side="bottom"}
+{: caption="RPO and RTO for {{site.data.keyword.logs_router_notm}}" caption-side="bottom"}
 
 {{site.data.keyword.logs_routing_full_notm}} data includes information about the targets where logging events are delivered for tenants that are onboarded to the region. A target is a resource where logging events are collected.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -18,7 +18,7 @@ subcollection: logs-router
 Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to your chosen target destination.
 {: shortdesc}
 
-![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Figure 1. Flow of routed logs" caption-side="bottom"}
+![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Flow of routed logs" caption-side="bottom"}
 
 
 Complete the following steps to start using {{site.data.keyword.logs_routing_full}}:

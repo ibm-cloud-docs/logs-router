@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-04-29"
+  years:  2023, 2024
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -63,7 +63,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | North America  | Toronto (`ca-tor`) | N/A | MZR       |
 | North America  | Washington, D.C (`us-east`) | N/A | MZR       |
 | South America  | Sao Paulo (`br-sao`) | N/A | MZR       |
-{: caption="Table 1. List of locations where the service is available" caption-side="top"}
+{: caption="List of locations where the service is available" caption-side="top"}
 
 Where
 * A *geography* is a geographic area or larger political body that contains one or more regions.
