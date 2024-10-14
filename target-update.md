@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-14"
 
 keywords:
 
@@ -71,8 +71,8 @@ You can use private or public endpoints.
 
 For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
-## Updating a target by using the API
-{: #target-update-api}
+## Updating a Log Analysis target by using the API
+{: #target-update-api-la}
 {: api}
 
 In the request body, you are only required to supply the fields you are modifying. Any fields that are not included in the request body are not changed.
@@ -106,7 +106,10 @@ Where
 - `TENANT_ID` is the ID of the tenant that you need to modify.
 - `TARGET_ID` is the ID of the target log sink that you need to modify.
 - `CURRENT_DATE` is the current date in format YYYY-MM-DD.
-- `E_TAG` of target is provided by GET, POST or PATCH.
+- `E_TAG` of target. You must [retrieve the tenant information](/docs/logs-router?topic=logs-router-tenant-get) to get the latest `e_tag` associated with a target before making an update to the target.
+
+    Every time that you update a target, the `e_tag` of the target changes.{: note}
+
 - `LOG_SINK_NAME` is the new name of the target log sink.
 
 The following example shows updating an {{site.data.keyword.logs_routing_full_notm}} target in the `us-east` region by using a VPE.
@@ -138,7 +141,7 @@ A successful request returns a response that contains the updated target, for ex
   "log_sink_crn": "crn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:37a479b-23gc-b874-0f1f-d0f64a61a2bc::",
   "created_at": "2020-09-28T17:49+0000",
   "updated_at": "2023-10-23T12:26+0000",
-  "etag": "\"8f331e16860324d04ed5c7c90fa076b725a1f440fd19e2885cdc930ff8366f2a\"",
+  "etag": "\"45761e16860324d04ed5c7c90fa076b725a1f440fd19e2885cdc930ff8355555\"",
   "parameters": {
       "host": "logs.us-east.logging.cloud.ibm.com",
       "port": 443
@@ -149,3 +152,43 @@ A successful request returns a response that contains the updated target, for ex
 
 For security reasons, you cannot retrieve an {{site.data.keyword.la_full_notm}} ingestion key that is stored in {{site.data.keyword.logs_routing_full_notm}}. This field is always omitted from API responses, even if you change the ingestion key with an update request.
 {: important}
+
+
+## Updating a {{site.data.keyword.logs_short}} target by using the API
+{: #target-update-api-cl}
+{: api}
+
+In the request body, you are only required to supply the fields you are modifying. Any fields that are not included in the request body are not changed.
+{: note}
+
+```shell
+curl -X PATCH "https://<MANAGEMENT-API-ENDPOINT>/v1/tenants/TENANT_ID/targets/TARGET_ID" \
+--header 'Authorization: ${IAM_TOKEN}' \
+--header 'Content-Type: application/merge-patch+json' \
+--header 'IBM-API-Version: CURRENT_DATE' \
+--header 'If-Match: E_TAG' \
+--data '{
+  "log_sink_crn":"LOG_SINK_CRN",
+  "name": "LOG_SINK_NAME",
+  "parameters": {
+    "host": "LOG_SINK_INGESTION_HOST",
+    "port": LOG_SINK_INGESTION_PORT
+    }
+  }'
+```
+{: codeblock}
+
+Where
+
+- `<MANAGEMENT-API-ENDPOINT>` is the {{site.data.keyword.logs_routing_full}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+- `LOG_SINK_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `LOG_SINK_INGESTION_HOST` is the host of the ingestion endpoint for the log-sink. You can choose a public or a private ingestion endpoint. For more information, see [Ingress endpoints](/docs/cloud-logs?topic=cloud-logs-endpoints_ingress).
+- `LOG_SINK_INGESTION_PORT` is the port of the ingestion endpoint for the log-sink.
+- `TENANT_ID` is the ID of the tenant that you need to modify.
+- `TARGET_ID` is the ID of the target log sink that you need to modify.
+- `CURRENT_DATE` is the current date in format YYYY-MM-DD.
+- `E_TAG` of target. You must [retrieve the tenant information](/docs/logs-router?topic=logs-router-tenant-get) to get the latest `e_tag` associated with a target before making an update to the target.
+
+    Every time that you update a target, the `e_tag` of the target changes.{: note}
+
+- `LOG_SINK_NAME` is the new name of the target log sink.

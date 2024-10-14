@@ -18,7 +18,7 @@ toc:
         navtitle: About Logs Routing
       - topic: platform-logs-about.md
         navtitle: Platform logs
-      - topic: cloud-services.md
+      - topic: cloud-services.mds
         navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
           label: Tutorials
