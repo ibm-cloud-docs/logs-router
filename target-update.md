@@ -21,6 +21,7 @@ You can update the configuration details of a target in {{site.data.keyword.logs
 {{site.data.content.tenant_definition_note}}
 
 A change of the target type is only supported for tenants with a single target.
+{: important}
 
 ## Before you begin
 {: #target-update-prereqs}
@@ -154,7 +155,7 @@ For security reasons, you cannot retrieve an {{site.data.keyword.la_full_notm}} 
 {: important}
 
 
-## Updating a {{site.data.keyword.logs_short}} target by using the API
+## Updating an {{site.data.keyword.logs_full_notm}} target by using the API
 {: #target-update-api-cl}
 {: api}
 
