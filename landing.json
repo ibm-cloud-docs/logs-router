@@ -1,34 +1,36 @@
-
 {
-    "title": "IBM Cloud Logs Routing",
-    "lastupdated": "2023-11-29",
-    "introduction": "You can use IBM Cloud Logs Routing to collect and route IBM Cloud logs from your account to a configured target. You can also route logs from applications on your IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud clusters.",
-    "section_devtools": {
-      "api": "/apidocs/logs-router-service-api",
-      "cli": "",
-      "terraform": ""
-    },
-    "section_recommended": [
+  "version": 2,
+  "title": "IBM Cloud Logs Routing",
+  "introduction": "You can use IBM Cloud Logs Routing to collect and route IBM Cloud logs from your account to a configured target.",
+  "section_topics": {
+    "links": [
       {
-        "title": "Understanding IBM Cloud Logs Routing",
-        "description": "Learn about how to route logs by using IBM Cloud Logs Routing",
+        "title": "Getting started with IBM Cloud Logs Routing",
+        "href": "/docs/logs-router?topic=logs-router-getting-started"
+      },
+      {
+        "title": "About IBM Cloud Logs Routing",
         "href": "/docs/logs-router?topic=logs-router-about"
       },
       {
-        "title": "Getting started with IBM Cloud Logs Routing",
-        "description": "Use IBM Cloud Logs Routing to configure your account to route logs.",
-        "href": "/docs/logs-router?topic=logs-router-getting-started"
+        "title": "Managing access with IAM",
+        "href": "/docs/logs-router?topic=logs-router-iam"
       },
-          {
-        "title": "See what's new",
-        "description": "Read about the changes to IBM Cloud Logs Routing. ",
-        "href": "/docs/logs-router?topic=logs-router-release-notes"
+      {
+        "title": "Auditing events for IBM Cloud Logs Routing",
+        "href": "/docs/logs-router?topic=logs-router-activity-tracker"
+      },
+      {
+        "title": "Understanding your responsibilities when using IBM Cloud Logs Routing",
+        "href": "/docs/logs-router?topic=logs-router-shared-responsibilities"
       }
-    ],
-    "section_learn": {
-      "developer": "https://developer.ibm.com/depmodels/cloud/",
-      "architecture": "https://www.ibm.com/architectures/hybrid",
-      "training": "https://www.ibm.com/training/cloud",
-      "community": "https://community.ibm.com/community/user/cloud/home"
-    }
+    ]
+  },
+  "section_devtools": {
+    "api": "/apidocs/logs-router-service-api",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant"
+  },
+  "section_updates": {
+    "view_more": "/docs/logs-router?topic=logs-router-release-notes"
+  }
 }
