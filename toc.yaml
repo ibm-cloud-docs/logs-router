@@ -81,6 +81,8 @@ toc:
             navtitle: Changing the name of a tenant
           - topic: tenant-delete.md
             navtitle: Deleting a tenant
+          - topic: terraform-setup.md
+            navtitle: Using Terraform
       - topicgroup:
           label: Managing targets
           topics:
@@ -144,3 +146,4 @@ toc:
             - troubleshooting/ts-cse-proxy.md
             - troubleshooting/ts-vpe-gateway.md
             - troubleshooting/ts-hostvalue.md
+            - troubleshooting/ts-terraform.md

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-23"
 
 keywords:
 
@@ -104,3 +104,67 @@ Where:
 - `TARGET_ID` is the ID of the target that you want to delete.
 
 - `API_VERSION_DATE` defines the date of the API version that you want to use to query your tenant definition. The format must be as follows: `YYYY-MM-DD`
+
+## Deleting a target by using Terraform
+{: #target-delete-tf}
+{: terraform}
+
+To delete a specific target in a tenant that is managed by Terraform, remove the target from the tenant resource and run the following Terraform commands.
+
+1. Identify a tenant resource definition containing the target definition to be deleted. The following example shows a tenant with {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.la_full_notm}} targets configured.
+
+```text
+resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
+	name = "TENANT_NAME"
+  region = "TENANT_REGION"
+	targets {
+	  log_sink_crn = "LOG_ANALYSIS_INSTANCE_CRN"
+	  name = "LOG_ANALYSIS_TARGET_NAME"
+	  parameters {
+		host: "LOG_ANALYSIS_INGESTION_ENDPOINT",
+    port: "LOG_ANALYSIS_INSTANCE_TARGET_PORT",
+    access_credential: "INGESTION_KEY_TO SEND_DATA_TO_INSTANCE"
+	  }
+	}
+  targets {
+	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
+	  name = "CLOUD_LOGS_TARGET_NAME"
+	  parameters {
+		host = "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT"
+		port = CLOUD_LOGS_INSTANCE_TARGET_PORT
+	  }
+	}
+  }
+```
+
+2. Remove the desired target from the tenant resource definition.
+
+```text
+resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
+	name = "TENANT_NAME"
+  region = "TENANT_REGION"
+  targets {
+	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
+	  name = "CLOUD_LOGS_TARGET_NAME"
+	  parameters {
+		host = "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT"
+		port = CLOUD_LOGS_INSTANCE_TARGET_PORT
+	  }
+	}
+  }
+```
+
+3. Run `terraform apply` to delete a particular target while maintining the original tenant.
+
+Where
+
+- `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TENANT_REGION`: Region to create the tenant. The value must be in the format of a two-letter code for the region followed by a dash and the three-letter code for the zone (for example, `us-south`). For a list of regions, see [Locations](/docs/logs-router?topic=logs-router-locations).
+- `CLOUD_LOGS_TARGET_NAME`: Name of the target for the {{site.data.keyword.logs_full_notm}} destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `CLOUD_LOGS_INSTANCE_CRN`: The CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`: The full qualified ingress endpoint for the destination of logs.
+- `CLOUD_LOGS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
+- `LOG_ANALYSIS_TARGET_NAME`: Name of the target for the {{site.data.keyword.la_full_notm}} destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `LOG_ANALYSIS_INGESTION_ENDPOINT`: The {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
+- `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE`: Defines the ingestion key to use to route the data to this destination.

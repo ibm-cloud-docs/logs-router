@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-23"
 
 keywords:
 
@@ -204,9 +204,14 @@ Where
 To create tenant with a target of type `logs`, use the following:
 
 ```text
+provider "ibm" {
+  ibmcloud_api_key = "IBMCLOUD_API_KEY"
+  region = "some-region"
+}
+
 resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
-	ibm_api_version = "API_VERSION_DATE"
 	name = "TENANT_NAME"
+  region = "TENANT_REGION"
 	targets {
 	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
 	  name = "TARGET_NAME"
@@ -222,10 +227,12 @@ resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TENANT_REGION`: Region to create the tenant. The value must be in the format of a two-letter code for the region followed by a dash and the three-letter code for the zone (for example, `us-south`). For a list of regions, see [Locations](/docs/logs-router?topic=logs-router-locations).
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `CLOUD_LOGS_INSTANCE_CRN` is the CRN of the {{site.data.keyword.logs_full_notm}} instance.
-- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT` is the full qualified ingress endpoint for the destination of logs.
-- `CLOUD_LOGS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
+- `CLOUD_LOGS_INSTANCE_CRN`: The CRN of the {{site.data.keyword.logs_full_notm}} instance.
+- `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`: The full qualified ingress endpoint for the destination of logs.
+- `CLOUD_LOGS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
+- `IBMCLOUD_API_KEY`: This is used to obtain an IAM token to create the tenant. The tenant will be created for the account that issued this API key.
 
 ### {{site.data.keyword.la_full_notm}} destination
 {: #tenant-create-tf-la}
@@ -235,16 +242,21 @@ Where
 To create tenant with a target of type `logdna`, use the following:
 
 ```text
+provider "ibm" {
+  ibmcloud_api_key = "IBMCLOUD_API_KEY"
+  region = "some-region"
+}
+
 resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
-	ibm_api_version = "API_VERSION_DATE"
 	name = "TENANT_NAME"
+  region = "TENANT_REGION"
 	targets {
 	  log_sink_crn = "LOG_ANALYSIS_INSTANCE_CRN"
 	  name = "TARGET_NAME"
 	  parameters {
-		"host": "LOG_ANALYSIS_INGESTION_ENDPOINT",
-        "port": `LOG_ANALYSIS_INSTANCE_TARGET_PORT`,
-        "access_credential": "INGESTION_KEY_TO SEND_DATA_TO_INSTANCE"
+		host: "LOG_ANALYSIS_INGESTION_ENDPOINT",
+    port: "LOG_ANALYSIS_INSTANCE_TARGET_PORT",
+    access_credential: "INGESTION_KEY_TO SEND_DATA_TO_INSTANCE"
 	  }
 	}
   }
@@ -255,7 +267,9 @@ resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 Where
 
 - `TENANT_NAME`: Name of the tenant. The name must be unique across tenants for this account and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
+- `TENANT_REGION`: Region to create the tenant. The value must be in the format of a two-letter code for the region followed by a dash and the three-letter code for the zone (for example, `us-south`). For a list of regions, see [Locations](/docs/logs-router?topic=logs-router-locations).
 - `TARGET_NAME`: Name of the target destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `LOG_ANALYSIS_INGESTION_ENDPOINT` is the {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
-- `LOG_ANALYSIS_INSTANCE_TARGET_PORT` defines the port to use. For example, `443`.
-- `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE` defines the ingestion key to use to route the data to this destination.
+- `LOG_ANALYSIS_INGESTION_ENDPOINT`: The {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
+- `LOG_ANALYSIS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
+- `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE`: Defines the ingestion key to use to route the data to this destination.
+- `IBMCLOUD_API_KEY`: This is used to obtain an IAM token to create the tenant. The tenant will be created for the account that issued this API key.

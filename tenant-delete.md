@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-23"
 
 keywords:
 
@@ -134,3 +134,11 @@ To delete a target for a {{site.data.keyword.logs_routing_full_notm}} tenant in 
 5. Click **Delete target**.
 
 6. Confirm to delete the target.
+
+## Deleting a tenant by using Terraform
+{: #tenant-delete-tf}
+{: terraform}
+
+To delete a tenant that is managed by Terraform regardless of what targets may be configured, run the following Terraform command.
+
+1. Run `terraform destroy` to delete a tenant and all its targets.
