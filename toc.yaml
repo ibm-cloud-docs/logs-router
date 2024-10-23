@@ -95,7 +95,7 @@ toc:
           - topic: target-update.md
             navtitle: Updating the configuration of a target
           - topic: target-delete.md
-            navtitle: Deleting a target by using the API
+            navtitle: Deleting a target
           - topic: target-get.md
             navtitle: Retrieving information on a target 
       - topicgroup:
