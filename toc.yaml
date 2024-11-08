@@ -110,6 +110,8 @@ toc:
         navtitle: Endpoints
       - topic: reference/vpe-connection-crn.md
         navtitle: Endpoints CRNs
+      - topic: data-portability.md
+        navtitle: Data portability
       - topicgroup:
           label: High availability and disaster recovery
           topics:
