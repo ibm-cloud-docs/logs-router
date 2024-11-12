@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -42,6 +42,9 @@ Only the management API supports public endpoints, which can be accessed from th
 
 Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} private network.  Both the management and ingestion APIs support private endpoints.
 
+
+
+
 | Geography | Region                           | Management Endpoint | Ingestion Endpint |
 |-----------|----------------------------------|---------------------|--------------------|
 | Asia Pacific  | Osaka (`jp-osa`) | `management.private.jp-osa.logs-router.cloud.ibm.com` | `ingester.private.jp-osa.logs-router.cloud.ibm.com` |
@@ -57,7 +60,9 @@ Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} privat
 {: caption="List of {{site.data.keyword.logs_routing_full_notm}} private endpoints" caption-side="top"}
 
 
-When you connect by using a [VPE](/docs/vpc?topic=vpc-about-vpe), use port 443 with both management and ingestion endpoints. When you connect by using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443 for both endpoints.
+
+
+When you connect by using a [VPE](/docs/vpc?topic=vpc-about-vpe), use port 443. When you connect by using a [CSE](/docs/account?topic=account-service-endpoints-overview), use port 3443.
 {: important}
 
 For example, to access the `us-east` management endpoint over a CSE, connect to `https://management.private.us-east.logs-router.cloud.ibm.com:3443`. To access the `us-east` ingestion endpoint over a VPE, you would configure the agent to use `https://ingester.private.us-east.logs-router.cloud.ibm.com:443`.

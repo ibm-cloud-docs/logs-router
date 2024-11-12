@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -20,6 +20,8 @@ Learn about the management responsibilities and terms and conditions that you ha
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.logs_routing_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview?topic=overview-terms).
 
+
+
 ## Agent management
 {: #agent-mgmt}
 
@@ -34,6 +36,8 @@ Agent management includes all tasks related to the installation, configuration, 
 {: row-headers}
 {: caption="Responsibilities for agent management" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
+
+
 
 ## Incident and operations management
 {: #incident-and-ops}

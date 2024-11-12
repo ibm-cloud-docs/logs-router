@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -117,7 +117,8 @@ Complete the following steps:
 
    You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
 
-   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.{: note}
+   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.
+   {: note}
 
 6. Click **Save**.
 

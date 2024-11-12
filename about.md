@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -98,11 +98,13 @@ Authorization between the {{site.data.keyword.logs_routing_full_notm}} service a
 ## Connecting to {{site.data.keyword.logs_routing_full_notm}}
 {: #about_connecting}
 
-{{site.data.keyword.logs_routing_full}} provides API endpoints for both management functions, such as creating (onboarding) as a tenant, and ingestion of logs. These API endpoints are separate endpoints that are accessed by using specific URLs in each supported region. You can find the endpoints for each supported region [here](/docs/logs-router?topic=logs-router-endpoints).
+{{site.data.keyword.logs_routing_full}} provides API endpoints for both  management functions, such as creating (onboarding) as a tenant, and ingestion of logs. These API endpoints are separate endpoints that are accessed by using specific URLs in each supported region. You can find the endpoints for each supported region [here](/docs/logs-router?topic=logs-router-endpoints).
 
 You can manage {{site.data.keyword.logs_routing_full_notm}} by using the management API. The management API supports either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
 
+
 You can send logs to a target destination by using the ingestion API. The ingestion API supports only private endpoints and is therefore not accessible from the public internet.
+
 
 Through the {{site.data.keyword.logs_routing_full_notm}} UI, you can create a tenant in a region by using the public network.
 
