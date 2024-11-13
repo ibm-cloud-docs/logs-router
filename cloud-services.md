@@ -155,6 +155,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 {: caption="List of security Cloud services" caption-side="top"}
 
 
+
 ## Watson services
 {: #watson}
 
@@ -169,4 +170,4 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | {{site.data.keyword.nlufull}} | With {{site.data.keyword.nlufull}}, developers can analyze semantic features of text input, including categories, concepts, emotion, entities, keywords, metadata, relations, semantic roles, and sentiment. | [More information](/docs/natural-language-understanding?topic=natural-language-understanding-about) |
 | {{site.data.keyword.speechtotextfull}} | The {{site.data.keyword.speechtotextfull}} service transcribes audio to text to enable speech transcription capabilities for applications. | [More information](/docs/speech-to-text?topic=speech-to-text-gettingStarted) |
 | {{site.data.keyword.texttospeechfull}} | The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. | [More information](/docs/text-to-speech?topic=text-to-speech-about) |
-{: caption="List of security Cloud services" caption-side="top"}
+{: caption="List of Watson services" caption-side="top"}
