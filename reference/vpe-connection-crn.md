@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -36,6 +36,7 @@ The following table lists the CRNs that you can select when you create a VPE gat
 | Toronto (`ca-tor`) | `crn:v1:bluemix:public:logs-router:ca-tor:::endpoint:management.private.ca-tor.logs-router.cloud.ibm.com` |
 | Washington DC (`us-east`) | `crn:v1:bluemix:public:logs-router:us-east:::endpoint:management.private.us-east.logs-router.cloud.ibm.com` |
 {: caption="Region availability and Cloud Resource Names for connecting {{site.data.keyword.logs_routing_full_notm}} over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
+
 
 ## Ingestion CRNs
 {: #vpe-connection-crn-ingestion}

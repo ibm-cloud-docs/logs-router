@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-11"
 
 keywords:
 
@@ -68,10 +68,11 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 
 The following table lists services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
 
+
+
 | Service     | Description |  More information |
 |-------------|-------------|--------------------------------------------------------------------------------------------|
 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant_short_notm}} is a document-oriented database as a service (DBaaS). It stores data as documents in JSON format. | [More information](/docs/Cloudant?topic=Cloudant-log-analysis-integration) |
-| {{site.data.keyword.Db2_on_Cloud_long}} | {{site.data.keyword.Db2_on_Cloud_long}} is a managed Db2 service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [More information](/docs/Db2onCloud?topic=Db2onCloud-log_mon) |
 {: caption="List of database services" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 
 keywords: 
@@ -36,7 +36,7 @@ For more information, see [{{site.data.keyword.at_full_notm}} Getting Started](/
 | `logs-router.tenant.update` | This event is generated whenever the target data for a target of the tenant is edited (updated).        |
 {: caption="Actions that generate management events" caption-side="bottom"}
 
-
+ 
 ## Data events
 {: #at_actions_data}
 

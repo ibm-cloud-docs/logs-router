@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-12"
 
 keywords:
 
@@ -52,7 +52,7 @@ The data and control planes are shared between all tenants within the region. Wi
 
 All data within the control plane is associated with the owning {{site.data.keyword.cloud_notm}} account and can be accessed only by members of that account with the appropriate {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) [permissions](/docs/logs-router?topic=logs-router-iam).
 
-Access to the management endpoints that are provided by the control plane is using either a [Virtual Private Endpoint (VPE)](/docs/vpc?topic=vpc-about-vpe) or a [Cloud Service Endpoint (CSE)](/docs/account?topic=account-service-endpoints-overview). Neither endpoint can be reached from the public internet.
+Access to the management endpoints that are provided by the control plane is using either a [Virtual Private Endpoint (VPE)](/docs/vpc?topic=vpc-about-vpe) or a [Cloud Service Endpoint (CSE)](/docs/account?topic=account-service-endpoints-overview). 
 
 Logs are ingested by the data plane through a shared endpoint through either a [Virtual Private Endpoint (VPE)](/docs/vpc?topic=vpc-about-vpe) or a [Cloud Service Endpoint (CSE)](/docs/account?topic=account-service-endpoints-overview). Neither endpoint can be reached from the public internet.
 
