@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -117,6 +117,17 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | Snapshots for VPC| This offering is used to create a point-in-time copy of your boot or data volume. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-snapshots) |
 | {{site.data.keyword.filestorage_vpc_short}}| {{site.data.keyword.filestorage_vpc_short}} provides NFS-based file storage services within the VPC Infrastructure. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-file-share-replication) |
 {: caption="List of IBM Cloud VPC services" caption-side="top"}
+
+
+
+## Classic Infrastructure services
+{: #classic_services}
+
+The following table lists Classic Infrastructure services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
+
+| Service          | Description | More information         |
+|------------------|-------------|-------------------|
+| IBM Cloud Load Balancer | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [More information](/docs/loadbalancer-service?topic=loadbalancer-service-data-logging) |
 
 ## Networking services
 {: #networking}
