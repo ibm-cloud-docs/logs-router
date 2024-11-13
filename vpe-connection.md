@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -47,7 +47,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.logs_routin
 
 To configure a virtual private endpoint in a region to enable connectivity to the {{site.data.keyword.logs_routing_full_notm}} service, follow these steps:
 
-1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and click **VPC Infrastructure > Virtual private endpoint gateways** in the Network section. Then, click **Create**.
+1. Select the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg "Menu"), and click **Infrastructure > VPC Layout > Network > Virtual private endpoint gateways**. Then, click **Create**.
 
     The **New virtual private endpoint gateway for VPC** page is displayed.
 
