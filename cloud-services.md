@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -118,6 +118,17 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | {{site.data.keyword.filestorage_vpc_short}}| {{site.data.keyword.filestorage_vpc_short}} provides NFS-based file storage services within the VPC Infrastructure. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-file-share-replication) |
 {: caption="List of IBM Cloud VPC services" caption-side="top"}
 
+
+
+## Classic Infrastructure services
+{: #classic_services}
+
+The following table lists Classic Infrastructure services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
+
+| Service          | Description | More information         |
+|------------------|-------------|-------------------|
+| IBM Cloud Load Balancer | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [More information](/docs/loadbalancer-service?topic=loadbalancer-service-data-logging) |
+
 ## Networking services
 {: #networking}
 
@@ -144,6 +155,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 {: caption="List of security Cloud services" caption-side="top"}
 
 
+
 ## Watson services
 {: #watson}
 
@@ -158,4 +170,4 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | {{site.data.keyword.nlufull}} | With {{site.data.keyword.nlufull}}, developers can analyze semantic features of text input, including categories, concepts, emotion, entities, keywords, metadata, relations, semantic roles, and sentiment. | [More information](/docs/natural-language-understanding?topic=natural-language-understanding-about) |
 | {{site.data.keyword.speechtotextfull}} | The {{site.data.keyword.speechtotextfull}} service transcribes audio to text to enable speech transcription capabilities for applications. | [More information](/docs/speech-to-text?topic=speech-to-text-gettingStarted) |
 | {{site.data.keyword.texttospeechfull}} | The {{site.data.keyword.texttospeechfull}} service converts written text to natural-sounding speech to provide speech-synthesis capabilities for applications. | [More information](/docs/text-to-speech?topic=text-to-speech-about) |
-{: caption="List of security Cloud services" caption-side="top"}
+{: caption="List of Watson services" caption-side="top"}
