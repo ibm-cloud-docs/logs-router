@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-14"
+lastupdated: "2024-11-18"
 
 keywords:
 
@@ -98,19 +98,14 @@ Authorization between the {{site.data.keyword.logs_routing_full_notm}} service a
 ## Connecting to {{site.data.keyword.logs_routing_full_notm}}
 {: #about_connecting}
 
-{{site.data.keyword.logs_routing_full}} provides API endpoints for both  management functions, such as creating or managing a tenant configuration, and ingestion of logs. These API endpoints are separate endpoints are accessed by using region-specific URLs. You can find the endpoints for each supported region [here](/docs/logs-router?topic=logs-router-endpoints).
+{{site.data.keyword.logs_routing_full}} provides API endpoints for  management functions, such as creating or managing a tenant configuration. These API endpoints are endpoints are accessed by using region-specific URLs. You can find the endpoints for each supported region [here](/docs/logs-router?topic=logs-router-endpoints).
 
 You can manage {{site.data.keyword.logs_routing_full_notm}} by using the management API. The management API supports either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
 
 
-You can send logs to a target destination by using the ingestion API. The ingestion API supports only private endpoints and is therefore not accessible from the public internet.
-
 
 Through the {{site.data.keyword.logs_routing_full_notm}} UI, you can create a tenant in a region by using the public network.
 
-
-You must ensure that you can connect to both the management and ingestion  endpoints.
-{: note}
 
 
 ![Flow of routed logs](/images/Logs-Router-04--1.svg "Resources"){: caption="Resources" caption-side="bottom"}
@@ -133,20 +128,3 @@ You can manage {{site.data.keyword.logs_routing_full_notm}} by using the managem
 - To see the list of management endpoints, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 Using the public endpoint does not require additional work.
-
-
-## Common use cases configuring {{site.data.keyword.logs_routing_full_notm}}
-{: #about_use_cases}
-
-- Consolidate log data: You might want to configure {{site.data.keyword.logs_routing_full_notm}} to send logs to a single target destination.
-- Data residency posture: You might want to keep log data within a designated location or country. Logs that are generated in {{site.data.keyword.cloud_notm}} can be routed to a destination in the location of your choice.
-
-
-
-## Determining the origin of {{site.data.keyword.cloud_notm}} log data
-{: #about_data_origin}
-
-You can determine the details of the {{site.data.keyword.cloud_notm}} service that generates the log data by looking into the `logSourceCRN` value that is included in the log line.
-
-The `logSourceCRN` value is the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the originating {{site.data.keyword.cloud_notm}} service. This value includes location, service name, and service instance ID.
-{: note}
