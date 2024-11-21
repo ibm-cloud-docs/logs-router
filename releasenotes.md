@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-21"
 
 keywords:
 
@@ -14,7 +14,7 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for {{site.data.keyword.logs_routing_full}}
+# Release notes for {{site.data.keyword.logs_routing_full_notm}}
 {: #release-notes}
 
 Use these release notes to learn about updates to {{site.data.keyword.logs_routing_full}}.
@@ -23,6 +23,13 @@ Use these release notes to learn about updates to {{site.data.keyword.logs_routi
 For detailed release notes about the {{site.data.keyword.agent}}, 
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+## 21 November 2024
+{: #logs-router-nov2124}
+{: release-note}
+
+Agent documentation
+:   All release note documentation related to the {{site.data.keyword.agent}} will no longer be referenced in the {{site.data.keyword.logs_routing_full_notm}} release notes. See the [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent) for this information.
 
 ## 24 October 2024
 {: #logs-router-oct2424}
