@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-11-26"
 
 keywords:
 
@@ -33,7 +33,7 @@ In the UI, you can only see 1 target configuration.
 
     To see information about the tenants that are configured in an account, you must use an ID that has the service role **reader** or the service role **manager**.
 
-    For more information, see [Setting up IAM permissions for managing tenants]/docs/logs-router?topic=logs-router-iam&interface=ui).
+    For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
 
 - To get details of the targets that are configured for a tenant, you can use the API. For more information, see [Retrieving information on a tenant](/docs/logs-router?topic=logs-router-tenant-get).
 
