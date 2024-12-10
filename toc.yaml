@@ -112,19 +112,14 @@ toc:
         navtitle: Endpoints CRNs
       - topic: data-portability.md
         navtitle: Data portability
-      - topicgroup:
-          label: High availability and disaster recovery
-          topics:
-          - topic: reference/ha.md
-            navtitle: Understand high availability
-          - topic: reference/bc-dr.md
-            navtitle: Understanding business continuity and disaster recovery
+      - topic: reference/ha-dr.md
+        navtitle: Understanding high availability and disaster recovery
       - topic: locations.md
         navtitle: Locations
       - topic: reference/retrieve-access-token.md
         navtitle: Retrieving an access token
       - topic: shared-responsibilities.md
-        navtitle: Understanding your responsibilities
+        navtitle: Understanding your responsibilities   
       - topicgroup:
           label: API Reference
           links:
