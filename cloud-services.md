@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-11-19"
+lastupdated: "2024-12-17"
 
 keywords:
 
@@ -137,6 +137,7 @@ The following table lists Classic Infrastructure services that send logs to {{si
 | Service          | Description | More information         |
 |------------------|-------------|-------------------|
 | IBM Cloud Load Balancer | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [More information](/docs/loadbalancer-service?topic=loadbalancer-service-data-logging) |
+{: caption="List of Classic Infrastructure services" caption-side="top"}
 
 ## Networking services
 {: #networking}
@@ -148,7 +149,6 @@ The following table lists Cloud Networking services that send logs to {{site.dat
 |------------------|-------------|-------------------|
 | {{site.data.keyword.dns_full_notm}} | With DNS Services you can create private DNS zones that are collections for holding domain names, create DNS resource records under these DNS zones, and specify access controls that are used for the DNS resolution of resource records on a zone-wide level.| [More information](/docs/dns-svcs?topic=dns-svcs-health-check-events) |
 {: caption="List of IBM Cloud Networking services" caption-side="top"}
-
 
 
 ## Security services
@@ -163,6 +163,15 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | {{site.data.keyword.compliance_short}} | With {{site.data.keyword.compliance_short}}, you can continuously evaluate your resource configurations for compliance. | [More information](/docs/security-compliance?topic=security-compliance-logging) |
 {: caption="List of security Cloud services" caption-side="top"}
 
+## VMware Solutions services
+{: #vmware-solutions}
+
+The following table lists VMware Solutions services that send logs to {{site.data.keyword.logs_routing_full_notm}}:
+
+| Service     | Description | More information |
+|-------------|-------------|------------------|
+| {{site.data.keyword.vmwaresolutions_full}} | {{site.data.keyword.vmwaresolutions_short}} is a group of offerings that provide deployment and management of VMware® by Broadcom virtualized environments. | [More information](/docs/vmwaresolutions?topic=vmwaresolutions-logging) |
+{: caption="List of VMware Solutions services" caption-side="top"}
 
 
 ## Watson services
