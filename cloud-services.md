@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2024-12-19"
 
 keywords:
 
@@ -147,7 +147,7 @@ The following table lists Cloud Networking services that send logs to {{site.dat
 
 | Service          | Description | More information         |
 |------------------|-------------|-------------------|
-| {{site.data.keyword.dns_full_notm}} | With DNS Services you can create private DNS zones that are collections for holding domain names, create DNS resource records under these DNS zones, and specify access controls that are used for the DNS resolution of resource records on a zone-wide level.| [More information](/docs/dns-svcs?topic=dns-svcs-health-check-events) |
+| {{site.data.keyword.dns_full_notm}} | With DNS Services you can create private DNS zones that are collections for holding domain names, create DNS resource records under these DNS zones, and specify access controls that are used for the DNS resolution of resource records on a zone-wide level.| [More information](/docs/dns-svcs?topic=dns-svcs-logging) |
 {: caption="List of IBM Cloud Networking services" caption-side="top"}
 
 
