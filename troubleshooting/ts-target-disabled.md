@@ -28,7 +28,7 @@ content-type: troubleshoot
 Your target is set up incorrectly.
 {: tsCauses}
 
-To see the reason why your ingestion is disabled, follow the [instructions](/docs/logs-router?topic=logs-router-get-tenant) to get details about your tenant.
+To see the reason why your ingestion is disabled, follow the [instructions](/docs/logs-router?topic=logs-router-tenant-get-id) to get details about your tenant.
 The details will include a `write_status` field in the response.
 If the tenant is in the state `failed`, the response will contain the reason.
 Use this information to enable your tenant.
@@ -46,5 +46,5 @@ For example, the following write status indicates that the service to service au
 ```
 {: codeblock}
 
-Follow the instructions to [create a service to service authorization](/docs/logs-router?topic=logs-router-onboard-cloud-logs-tenant#onboard-cloud-logs-tenant-s2s) to enable your tenant.
+Follow the instructions to [create a service to service authorization](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=ui) to enable your tenant.
 {: tsResolve}
