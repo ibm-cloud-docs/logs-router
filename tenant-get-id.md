@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-12"
+  years:  2023, 2025
+lastupdated: "2025-01-23"
 
 keywords:
 
@@ -133,7 +133,14 @@ A successful request returns a response that contains a single tenant, for examp
         "port": 443
       }
     }
-  ]
+  ],
+  "write_status": {
+    "status": "success"
+  }
 }
 ```
 {: screen}
+
+The `write_status` describes if your tenant is allowed to send logs.
+This status is set to `failed`, if the target endpoint provided cannot be reached or ingestion is rejected.
+You can find information on how to resolve a failed write status in the [troubleshooting guide for blocked ingestion](/docs/logs-router?topic=logs-router-ts-target-disabled).

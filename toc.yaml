@@ -145,4 +145,5 @@ toc:
             - troubleshooting/ts-cse-proxy.md
             - troubleshooting/ts-vpe-gateway.md
             - troubleshooting/ts-hostvalue.md
+            - troubleshooting/ts-target-disabled.md
             - troubleshooting/ts-terraform.md
