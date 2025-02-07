@@ -112,7 +112,7 @@ toc:
         navtitle: Endpoints CRNs
       - topic: data-portability.md
         navtitle: Data portability
-      - topic: reference/ha-dr.md
+      - topic: reference/ha-dr-new.md
         navtitle: Understanding high availability and disaster recovery
       - topic: locations.md
         navtitle: Locations
