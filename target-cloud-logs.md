@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-13"
+  years:  2023, 2025
+lastupdated: "2025-02-12"
 
 keywords:
 
@@ -167,9 +167,6 @@ For more information, see [Creating a S2S authorization to grant access to send 
 To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.la_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
 - The ingestion (ingress) endpoint and port
-
-Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
-{: restriction}
 
 
 Use this command to retrieve the URL and ID:
