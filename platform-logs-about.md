@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-09"
+  years:  2023, 2025
+lastupdated: "2025-02-23"
 
 keywords:
 
@@ -58,11 +58,7 @@ The following destinations are supported as destinations where the {{site.data.k
 ## Configuring the {{site.data.keyword.logs_routing_full_notm}} service
 {: #about-platform-logs-config}
 
-To configure the {{site.data.keyword.logs_routing_full_notm}} service, choose 1 of the following options:
-
-- [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs&interface=ui).
-
-- [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/docs/logs-router?topic=logs-router-onboard-log-analysis-tenant).
+To configure the {{site.data.keyword.logs_routing_full_notm}} service, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs&interface=ui).
 
 
 ## Fields that are included in platform logs

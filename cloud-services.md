@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-12-19"
+  years:  2023, 2025
+lastupdated: "2025-02-23"
 
 keywords:
 
@@ -45,7 +45,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | Service     | Description | More information |
 |-------------|-------------|-------------------|
 | {{site.data.keyword.satellitelong_notm}} | With {{site.data.keyword.satellitelong_notm}}, you can bring your own compute infrastructure to run {{site.data.keyword.cloud_notm}} services and consistently deploy, manage, and control your app workloads. | [More information](/docs/satellite?topic=satellite-health) |
-| {{site.data.keyword.codeenginefull_notm}}  | {{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. | [More information](/docs/codeengine?topic=codeengine-view-logs&interface=ui) |
+| {{site.data.keyword.codeenginefull_notm}}  | {{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. | [More information](/docs/codeengine?topic=codeengine-logging&interface=ui) |
 {: caption="List of serverless compute services" caption-side="top"}
 
 
@@ -104,7 +104,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 
 | Service     | Description | More information |
 |-------------|-------------|-------------------------------------------------------------------------|
-| {{site.data.keyword.mq_short}} | MQ on IBM Cloud enables you to quickly and easily deploy queue managers in the cloud and connect your applications to them, for reliable data transfer between different parts of your enterprise application landscape. | [More information](/docs/mqcloud?topic=mqcloud-logdna_logs) |
+| {{site.data.keyword.mq_short}} | MQ on IBM Cloud enables you to quickly and easily deploy queue managers in the cloud and connect your applications to them, for reliable data transfer between different parts of your enterprise application landscape. | [More information](/docs/mqcloud?topic=mqcloud-logging) |
 | {{site.data.keyword.apiconnect_full}} | {{site.data.keyword.apiconnect_full}} makes it easy to create, securely expose, manage, and monetize APIs so that you and your customers can power digital applications and spur innovation. | [More information](/docs/apiconnect?topic=apiconnect-logging) |
 {: caption="List of integration Cloud services" caption-side="top"}
 
@@ -136,7 +136,7 @@ The following table lists Classic Infrastructure services that send logs to {{si
 
 | Service          | Description | More information         |
 |------------------|-------------|-------------------|
-| IBM Cloud Load Balancer | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [More information](/docs/loadbalancer-service?topic=loadbalancer-service-data-logging) |
+| IBM Cloud Load Balancer | Use this service to improve availability of business-critical applications by distributing traffic among multiple application server instances, and by forwarding traffic to healthy instances only. | [More information](/docs/loadbalancer-service?topic=loadbalancer-service-ibm-cloud-logging) |
 {: caption="List of Classic Infrastructure services" caption-side="top"}
 
 ## Networking services
@@ -159,7 +159,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 
 | Service     | Description | More information |
 |-------------|-------------|-------------------------------------------------------------------------|
-| {{site.data.keyword.secrets-manager_full_notm}} | With {{site.data.keyword.secrets-manager_full_notm}}, you can create, lease, and centrally manage secrets that are used in {{site.data.keyword.cloud_notm}} services or your custom-built applications. | [More information](/docs/secrets-manager?topic=secrets-manager-service-logs) |
+| {{site.data.keyword.secrets-manager_full_notm}} | With {{site.data.keyword.secrets-manager_full_notm}}, you can create, lease, and centrally manage secrets that are used in {{site.data.keyword.cloud_notm}} services or your custom-built applications. | [More information](/docs/secrets-manager?topic=secrets-manager-logging) |
 | {{site.data.keyword.compliance_short}} | With {{site.data.keyword.compliance_short}}, you can continuously evaluate your resource configurations for compliance. | [More information](/docs/security-compliance?topic=security-compliance-logging) |
 {: caption="List of security Cloud services" caption-side="top"}
 
