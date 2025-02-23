@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-09"
+  years:  2023, 2025
+lastupdated: "2025-02-23"
 
 keywords:
 
@@ -67,7 +67,7 @@ Choose any of the following actions to manage trusted profiles in the {{site.dat
 
 - To create a trusted profile, see [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile).
 - To update a trusted profile, see [Updating trusted profiles](/docs/account?topic=account-trusted-profile-update).
-- To delete a trusted profile, see [Removing a trusted profile](/docs/account?topic=account-trusted-profile-remove).
+- To delete a trusted profile, see [Removing a trusted profile](/docs/account?topic=account-trusted-profile-update&interface=ui#remove-tp-console).
 
 When using Trusted Profiles for authentication, it's important that the `Compute Resource` is configured with the correct values. If necessary, follow the steps below to add or update the 'Compute Resource' in your Trusted Profile:
 
@@ -106,7 +106,7 @@ For more information, see [Creating and working with service IDs](/docs/account?
 
 - [Creating a service ID](/docs/account?topic=account-serviceids&interface=ui#create_serviceid).
 - [Updating a service ID](/docs/account?topic=account-serviceids&interface=ui#update_serviceid).
-- [Deleting a service ID](/docs/account?topic=account-serviceids&interface=ui#delete_serviceid).
+- [Deleting a service ID](/docs/account?topic=account-serviceids&interface=ui#delete-group-ui).
 - To avoid a situation where your service ID is deleted causing an outage or disruption for the users of your service, you have the option to lock your service ID. Locking a service ID also prevents any policies from being changed, deleted, or assigned. For more information, see [Locking a service ID](/docs/account?topic=account-serviceids).
 
 

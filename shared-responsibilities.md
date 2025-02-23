@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-18"
+  years:  2023, 2025
+lastupdated: "2025-02-23"
 
 keywords:
 
@@ -89,7 +89,7 @@ Disaster recovery includes tasks such as:
 
 |  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Restore functionality for {{site.data.keyword.logs_routing_full_notm}}  | Automatically recover and restart {{site.data.keyword.logs_routing_full_notm}} components after any disaster event. | [Complete the disaster recovery (DR) steps for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-bc-dr). |
+| Restore functionality for {{site.data.keyword.logs_routing_full_notm}}  | Automatically recover and restart {{site.data.keyword.logs_routing_full_notm}} components after any disaster event. | [Complete the disaster recovery (DR) steps for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-logs-router-ha-dr). |
 | Backup {{site.data.keyword.logs_routing_full_notm}} components   | Daily backup of any data required to restore {{site.data.keyword.logs_routing_full_notm}} to full service. | `N/A` |
 {: row-headers}
 {: caption="Responsibilities for disaster recovery" caption-side="bottom"}
