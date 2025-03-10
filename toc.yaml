@@ -119,7 +119,9 @@ toc:
       - topic: reference/retrieve-access-token.md
         navtitle: Retrieving an access token
       - topic: shared-responsibilities.md
-        navtitle: Understanding your responsibilities   
+        navtitle: Understanding your responsibilities
+      - topic: service-dependency.md
+        navtitle: Service dependencies   
       - topicgroup:
           label: API Reference
           links:
