@@ -116,6 +116,9 @@ toc:
         navtitle: Understanding high availability and disaster recovery
       - topic: locations.md
         navtitle: Locations
+      - link:
+          label: Considerations for Montreal
+          href: /cloud-logs/cloud-logs-montreal-temp
       - topic: reference/retrieve-access-token.md
         navtitle: Retrieving an access token
       - topic: shared-responsibilities.md
