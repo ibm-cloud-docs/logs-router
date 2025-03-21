@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-12"
+  years:  2023, 2025
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -20,6 +20,11 @@ Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform l
 
 ![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Flow of routed logs" caption-side="bottom"}
 
+As of 28 March 2024 the {{site.data.keyword.la_full_notm}} service is deprecated and will no longer be supported as of 30 March 2025.
+{{site.data.keyword.logs_routing_full_notm}} will stop supporting `logdna` targets at the same time and no logs will be routed to these type of targets after that date.
+You should make sure that you have configured {{site.data.keyword.logs_routing_full_notm}} to direct your logs to another destination before 30 March 2025.
+Any `logdna` targets still configured after 30 April 2025 will be removed automatically from your {{site.data.keyword.logs_routing_full_notm}} configuration.
+{: important}
 
 Complete the following steps to start using {{site.data.keyword.logs_routing_full}}:
 
