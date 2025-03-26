@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-10"
+  years: 2024, 2025
+lastupdated: "2025-03-26"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Service dependency map for IBM Cloud Logs Routing
+# Service dependency map for IBM Cloud Log Routing
 {: #service-dependencies}
 
 If a service depends on other {{site.data.keyword.cloud_notm}} services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
@@ -40,10 +40,10 @@ The following table provides the dependency listing of this service following a 
 |:---|:---|:---|:---|:---|
 | IBM Log Analysis and IBM Cloud Activity Tracker | Access management, Availability, Operations, Security compliance | Yes | Both |  Same region  |
 | IBM Cloud Secrets Manager | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
-| IBM Cloud Internet Services | Availability, Change management, Disaster recovery, Security compliance | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Internet Services | Availability, Change management, Disaster recovery, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Classic DNS Servers | Availability, Change management | No | Both |  Same data center  |
-| IBM Cloud Classic Infrastructure Resource Management | Availability, Change management | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
-| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Classic Infrastructure Resource Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud Log Routing service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -54,7 +54,7 @@ The following table provides the dependency listing of this service following a 
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Cloud Identity and Access Management | Availability, Change management, Security compliance | No | Both |  [Global](https://cloud.ibm.com/docs/overview?topic=overview-zero-downtime#global-platform)  |
+| IBM Cloud Identity and Access Management | Availability, Change management, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Key Protect for IBM Cloud | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud - containers-kubernetes | Availability, Change management, Disaster recovery | No | Both |  Same data center  |
 | IBM Cloud Classic NTP Servers | Availability, Change management | No | Both |  Same data center  |
