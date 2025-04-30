@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: logs-router
 # About platform logs
 {: #about-platform-logs}
 
-Selected {{site.data.keyword.cloud}} services can generate logging data about their services. You can use the {{site.data.keyword.logs_routing_full_notm}} service to collect the data and route it to a destination of your choice. You can configure an {{site.data.keyword.logs_full_notm}} instance as a destination, or an {{site.data.keyword.la_full_notm}} instance.
+Selected {{site.data.keyword.cloud}} services can generate logging data about their services. You can use the {{site.data.keyword.logs_routing_full_notm}} service to collect the data and route it to an {{site.data.keyword.logs_full_notm}} destination of your choice.
 {: shortdesc}
 
 For example, the following diagram shows the high level view when the destination is an {{site.data.keyword.logs_full_notm}} instance:
@@ -50,10 +50,9 @@ To collect platform logs that are generated in a region where you operate in {{s
 ## Where can you route platform logs
 {: #about-platform-logs-route}
 
-The following destinations are supported as destinations where the {{site.data.keyword.logs_routing_full_notm}} service can route platform logs:
-- An {{site.data.keyword.logs_full_notm}} instance
-- An {{site.data.keyword.la_full_notm}} instance
 
+
+{{site.data.keyword.logs_full_notm}} instances are supported destinations where the {{site.data.keyword.logs_routing_full_notm}} service can route platform logs.
 
 ## Configuring the {{site.data.keyword.logs_routing_full_notm}} service
 {: #about-platform-logs-config}

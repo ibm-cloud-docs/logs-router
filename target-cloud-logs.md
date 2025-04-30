@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -164,7 +164,7 @@ For more information, see [Creating a S2S authorization to grant access to send 
 {: #target-cloud-logs-retrieve-information-cli}
 {: step}
 
-To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.la_full_notm}} instance:
+To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.logs_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
 - The ingestion (ingress) endpoint and port
 

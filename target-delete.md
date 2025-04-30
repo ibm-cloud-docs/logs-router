@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-23"
+  years:  2023, 2025
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -111,21 +111,12 @@ Where:
 
 To delete a specific target in a tenant that is managed by Terraform, remove the target from the tenant resource and run the following Terraform commands.
 
-1. Identify a tenant resource definition containing the target definition to be deleted. The following example shows a tenant with {{site.data.keyword.logs_full_notm}} and {{site.data.keyword.la_full_notm}} targets configured.
+1. Identify a tenant resource definition containing the target definition to be deleted. The following example shows a tenant with an {{site.data.keyword.logs_full_notm}} target configured.
 
 ```text
 resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 	name = "TENANT_NAME"
   region = "TENANT_REGION"
-	targets {
-	  log_sink_crn = "LOG_ANALYSIS_INSTANCE_CRN"
-	  name = "LOG_ANALYSIS_TARGET_NAME"
-	  parameters {
-		host: "LOG_ANALYSIS_INGESTION_ENDPOINT",
-    port: "LOG_ANALYSIS_INSTANCE_TARGET_PORT",
-    access_credential: "INGESTION_KEY_TO SEND_DATA_TO_INSTANCE"
-	  }
-	}
   targets {
 	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
 	  name = "CLOUD_LOGS_TARGET_NAME"
@@ -143,14 +134,6 @@ resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 resource "ibm_logs_router_tenant" "logs_router_tenant_instance_1" {
 	name = "TENANT_NAME"
   region = "TENANT_REGION"
-  targets {
-	  log_sink_crn = "CLOUD_LOGS_INSTANCE_CRN"
-	  name = "CLOUD_LOGS_TARGET_NAME"
-	  parameters {
-		host = "CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT"
-		port = CLOUD_LOGS_INSTANCE_TARGET_PORT
-	  }
-	}
   }
 ```
 
@@ -164,7 +147,3 @@ Where
 - `CLOUD_LOGS_INSTANCE_CRN`: The CRN of the {{site.data.keyword.logs_full_notm}} instance.
 - `CLOUD_LOGS_INSTANCE_INGRESS_ENDPOINT`: The full qualified ingress endpoint for the destination of logs.
 - `CLOUD_LOGS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
-- `LOG_ANALYSIS_TARGET_NAME`: Name of the target for the {{site.data.keyword.la_full_notm}} destination. The name must be unique across all targets in the region and can be up to 35 characters long. The value can only contain these characters: `a-z,0-9,-./`
-- `LOG_ANALYSIS_INGESTION_ENDPOINT`: The {{site.data.keyword.la_full_notm}} endpoint in the region where you plan to collect logs. For more information, see [Endpoints](/docs/log-analysis?topic=log-analysis-endpoints#endpoints_ingestion).
-- `LOG_ANALYSIS_INSTANCE_TARGET_PORT`: Defines the port to use. For example, `443`.
-- `INGESTION_KEY_TO SEND_DATA_TO_INSTANCE`: Defines the ingestion key to use to route the data to this destination.

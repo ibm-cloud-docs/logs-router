@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-29"
+  years:  2023, 2025
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -37,14 +37,14 @@ So you can securely manage your data when you use {{site.data.keyword.logs_routi
 
 The storage where the configuration is stored is encrypted with LUKS by using AES-256.
 
-Any stored credentials (such as {{site.data.keyword.la_short}} ingestion keys) are individually secured with envelope encryption by using AES-256 and an encryption key that is owned and managed by {{site.data.keyword.logs_routing_full_notm}}.
+Any stored credentials are individually secured with envelope encryption by using AES-256 and an encryption key that is owned and managed by {{site.data.keyword.logs_routing_full_notm}}.
 
 ### Log data
 {: #mng-data-storage-logs}
 
 Log data that is routed by {{site.data.keyword.logs_routing_full_notm}} is secured by using a private connection. The connection supports TLS 1.2.
 
-Log data is routed to a destination such as an {{site.data.keyword.logs_full_notm}} instance or an {{site.data.keyword.la_full_notm}} instance. You manage the instance and the data that is collected in the instance. For example, for more information about {{site.data.keyword.la_full_notm}} data security, see [Data security](/docs/log-analysis?topic=log-analysis-mng-data).
+ Log data is routed to an {{site.data.keyword.logs_full_notm}} instance.You manage the instance and the data that is collected in the instance. 
 {: note}
 
 

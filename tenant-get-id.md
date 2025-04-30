@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -122,10 +122,10 @@ A successful request returns a response that contains a single tenant, for examp
   "targets": [
     {
       "id": "86432b-66a6-df12-7003-888a21a2b3",
-      "log_sink_crn": "rn:v1:bluemix:public:logdna:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b71a2b3::",
+      "log_sink_crn": "rn:v1:bluemix:public:logs:us-east:a/473958g47b35f95747:48b580c-34ad-c985-1g2g-e1g75b71a2b3::",
       "name": "my-log-sink",
       "etag": "\"c3a43545a7f2675970671ac3a57b8db067a1866b2222e1b950ee8da612e347c6\"",
-      "type": "logdna",
+      "type": "logs",
       "created_at": "2023-10-20T18:30:00.143156Z",
       "updated_at": "2023-10-20T18:30:00.143156Z",
       "parameters": {

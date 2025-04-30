@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-18"
+  years:  2023, 2025
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -56,17 +56,14 @@ When you manage tenants, consider the following information:
 ## Targets
 {: #about_targets}
 
-{{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
-- {{site.data.keyword.logs_full_notm}} instances
+{{site.data.keyword.logs_routing_full_notm}} supports {{site.data.keyword.logs_full_notm}} instances targets.
 
-    Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
-    {: restriction}
+Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
+{: restriction}
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
+For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
 
-- {{site.data.keyword.la_full_notm}} instances
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/logs-router?topic=logs-router-onboard-log-analysis-tenant).
 
 The {{site.data.keyword.logs_routing_full_notm}} target instance can be located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
 {: important}
@@ -90,9 +87,9 @@ When you manage targets, consider the following information:
 
 
 
-Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done as follows:
-- For {{site.data.keyword.logs_full_notm}} targets, authorization is done through IAM.
-- For {{site.data.keyword.la_full_notm}} targets, you must provide ingestion details that include the credentials.
+Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done through IAM.
+
+
 
 
 ## Connecting to {{site.data.keyword.logs_routing_full_notm}}
