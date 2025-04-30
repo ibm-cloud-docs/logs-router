@@ -69,4 +69,4 @@ To completely delete all the configuration data of the account, complete the fol
 ### Log data
 {: #mng-data-storage-delete-logs}
 
-The {{site.data.keyword.logs_routing_full_notm}} service routes data to 1 or more destinations. It does not store log data. You must follow the guidance that is provided by each destination type to delete log data.
+The {{site.data.keyword.logs_routing_full_notm}} service routes data to destinations. It does not store log data. You must follow the guidance that is provided by the destination to delete log data.

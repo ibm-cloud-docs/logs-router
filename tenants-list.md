@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-26"
+  years:  2023, 2025
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -20,8 +20,7 @@ You can list the existing tenants that are configured in your {{site.data.keywor
 
 {{site.data.content.tenant_definition_note}}
 
-In the UI, you can only see 1 target configuration.
-{: note}
+
 
 
 ## Prereqs

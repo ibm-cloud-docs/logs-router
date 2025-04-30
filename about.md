@@ -28,10 +28,6 @@ To configure platform logs, you must configure tenants and targets (destinations
 {{site.data.content.tenant_definition-paragraph}}
 
 
-The following figure shows a high level view of the components and how they relate to each other:
-
-![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="High level view of the components" caption-side="bottom"}
-
 
 
 ## Tenants

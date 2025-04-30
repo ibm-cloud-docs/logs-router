@@ -72,7 +72,7 @@ toc:
           - topic: tenant-get-id.md
             navtitle: Getting information on a tenant by using the tenant ID
           - topic: tenant-create.md
-            navtitle: Creating a tenant with 1 target
+            navtitle: Creating a tenant and a target destination
           - topic: tenant-update-name.md
             navtitle: Changing the name of a tenant
           - topic: tenant-delete.md
@@ -87,7 +87,7 @@ toc:
           - topic: target-delete.md
             navtitle: Deleting a target
           - topic: target-get.md
-            navtitle: Retrieving information on a target
+            navtitle: Retrieving information about a target
       - topicgroup:
            label: Observability
            topics:
