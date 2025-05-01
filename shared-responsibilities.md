@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -58,7 +58,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Manage permissions for {{site.data.keyword.logs_routing_full_notm}} | Lets you restrict access to the service.   \n  \n {{site.data.keyword.IBM_notm}} is responsible for the security and compliance of the {{site.data.keyword.logs_routing_full_notm}} service. | Restrict access to {{site.data.keyword.logs_routing_full_notm}} by using Cloud IAM access policies. Define IAM policies to control which users within your account have access to manage the service and related resources in your account.    \n  \n [Learn more about controlling access through IAM](/docs/logs-router?topic=logs-router-iam).  \n  \n Define and implement a process to [rotate {{site.data.keyword.la_full_notm}} ingestion keys.](/docs/log-analysis?topic=log-analysis-ingestion_key&interface=ui#ingestion_key_rotate_ui) |
+| Manage permissions for {{site.data.keyword.logs_routing_full_notm}} | Lets you restrict access to the service.   \n  \n {{site.data.keyword.IBM_notm}} is responsible for the security and compliance of the {{site.data.keyword.logs_routing_full_notm}} service. | Restrict access to {{site.data.keyword.logs_routing_full_notm}} by using Cloud IAM access policies. Define IAM policies to control which users within your account have access to manage the service and related resources in your account.    \n  \n [Learn more about controlling access through IAM](/docs/logs-router?topic=logs-router-iam). |
 {: row-headers}
 {: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The first column describes the task that a customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

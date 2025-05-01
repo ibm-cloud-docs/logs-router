@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-18"
+  years:  2023, 2025
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -28,10 +28,6 @@ To configure platform logs, you must configure tenants and targets (destinations
 {{site.data.content.tenant_definition-paragraph}}
 
 
-The following figure shows a high level view of the components and how they relate to each other:
-
-![High level view of the components](/images/components-ov.png "High level view of the components"){: caption="High level view of the components" caption-side="bottom"}
-
 
 
 ## Tenants
@@ -47,8 +43,8 @@ When you manage tenants, consider the following information:
     Regions do not share data.
 
 - When you create a tenant, you must define 1 target destination. For more information, see [Creating a tenant](/docs/logs-router?topic=logs-router-tenant-create).
-- You can define up to 2 target destinations per target. The targets must be of different type.
-- When you update a tenant, you can modify the name of the tenant only.
+
+- When you update a tenant, you can only modify the name of the tenant.
 - When you delete a tenant, you also delete the target definitions. If you want to delete a target destination instance, you must delete the instance separately.
 - You can list all the tenants in an account by using the `v1/tenants` route.
 - To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
@@ -56,33 +52,25 @@ When you manage tenants, consider the following information:
 ## Targets
 {: #about_targets}
 
-{{site.data.keyword.logs_routing_full_notm}} supports the following types of targets:
-- {{site.data.keyword.logs_full_notm}} instances
+{{site.data.keyword.logs_routing_full_notm}} supports {{site.data.keyword.logs_full_notm}} instances targets.
 
-    Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
-    {: restriction}
+Only public ingress endpoints are supported when configuring a target to an {{site.data.keyword.logs_full_notm}} instance.
+{: restriction}
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
+For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs).
 
-- {{site.data.keyword.la_full_notm}} instances
 
-    For more information, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.la_full_notm}} instance](/logs-router?topic=logs-router-onboard-log-analysis-tenant).
 
 The {{site.data.keyword.logs_routing_full_notm}} target instance can be located in the same account, a different account, and the same or different region as the {{site.data.keyword.logs_routing_full_notm}} tenant.
 {: important}
 
 When you manage targets, consider the following information:
 
-- When you create a target, you can only add 1 target.
 
-    When tenant is created, at least one target has to be specified. You can only define 2 targets per tenant. Therefore, you can only add 1 target to an existing tenant. {: note}
-
-    The target name must be unique within the region and not exceed 35 characters in length. If you attempt to create a target with a name that already exists within the region or is too long, an error is returned and your target is not created.
-    {: note}
 
 - You can update the target configuration details such as target host, target port, target name, target instance CRN, and more.
 
-- You can delete only 1 target from a tenant.
+
 
 - You can list all the targets in a tenant by using the `v1/tenants/tenantID/targets` route.
 
@@ -90,9 +78,9 @@ When you manage targets, consider the following information:
 
 
 
-Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done as follows:
-- For {{site.data.keyword.logs_full_notm}} targets, authorization is done through IAM.
-- For {{site.data.keyword.la_full_notm}} targets, you must provide ingestion details that include the credentials.
+Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done through IAM.
+
+
 
 
 ## Connecting to {{site.data.keyword.logs_routing_full_notm}}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -36,7 +36,7 @@ You must create a tenant in your account **in each region** where you want to us
 {: #target-cloud-logs-goals}
 
 In this tutorial you will:
-- Configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region
+- Configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region.
 
 - Verify that platform logs are being routed to your {{site.data.keyword.logs_full_notm}} instance.
 
@@ -164,7 +164,7 @@ For more information, see [Creating a S2S authorization to grant access to send 
 {: #target-cloud-logs-retrieve-information-cli}
 {: step}
 
-To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.la_full_notm}} instance:
+To route data to an {{site.data.keyword.logs_full_notm}} instance, you need information about the destination where you want logs delivered. You need the following information for your {{site.data.keyword.logs_full_notm}} instance:
 - The instance [CRN](/docs/account?topic=account-crn)
 - The ingestion (ingress) endpoint and port
 
@@ -299,7 +299,8 @@ Complete the following steps:
 
    You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
 
-   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.{: important}
+   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.
+   {: important}
 
 6. Click **Save**.
 
