@@ -24,8 +24,8 @@ For detailed release notes about the {{site.data.keyword.agent}},
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
 
-## 30 March 2025
-{: #logs-router-mar3025}
+## 30 April 2025
+{: #logs-router-apr3025}
 {: release-note}
 
 Removal of `logdna` target type and multiple targets per tenant
