@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -74,7 +74,7 @@ Platform logs include the following fields in addition to the log information:
 :   The [CRN](/docs/account?topic=account-crn) of the {{site.data.keyword.cloud_notm}} service generating the log.
 
 `saveServiceCopy`
-:   A field indicating if the {{site.data.keyword.cloud_notm}} service generating the log receives a copy of the log back from {{site.data.keyword.logs_routing_full_notm}}
+:   A field indicating if the {{site.data.keyword.cloud_notm}} service generating the log receives a copy of the log back from {{site.data.keyword.logs_routing_full_notm}}.
 
 `tag`
-:   A value for IBM only use.
+:   A value for IBM-only use.

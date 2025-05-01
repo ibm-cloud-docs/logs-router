@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-21"
+  years:  2023, 2025
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -23,6 +23,13 @@ Use these release notes to learn about updates to {{site.data.keyword.logs_routi
 For detailed release notes about the {{site.data.keyword.agent}}, 
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+## 30 March 2025
+{: #logs-router-mar3025}
+{: release-note}
+
+Removal of `logdna` target type and multiple targets per tenant
+:   With the end of support of {{site.data.keyword.la_full_notm}}, the {{site.data.keyword.logs_routing_full_notm}} `logdna` target type is removed and {{site.data.keyword.logs_routing_full_notm}} now only supports a single {{site.data.keyword.logs_full_notm}} target for each tenant.
 
 ## 21 November 2024
 {: #logs-router-nov2124}

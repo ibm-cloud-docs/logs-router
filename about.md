@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -43,8 +43,8 @@ When you manage tenants, consider the following information:
     Regions do not share data.
 
 - When you create a tenant, you must define 1 target destination. For more information, see [Creating a tenant](/docs/logs-router?topic=logs-router-tenant-create).
-- You can define up to 2 target destinations per target. The targets must be of different type.
-- When you update a tenant, you can modify the name of the tenant only.
+
+- When you update a tenant, you can only modify the name of the tenant.
 - When you delete a tenant, you also delete the target definitions. If you want to delete a target destination instance, you must delete the instance separately.
 - You can list all the tenants in an account by using the `v1/tenants` route.
 - To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
@@ -66,16 +66,11 @@ The {{site.data.keyword.logs_routing_full_notm}} target instance can be located 
 
 When you manage targets, consider the following information:
 
-- When you create a target, you can only add 1 target.
 
-    When tenant is created, at least one target has to be specified. You can only define 2 targets per tenant. Therefore, you can only add 1 target to an existing tenant. {: note}
-
-    The target name must be unique within the region and not exceed 35 characters in length. If you attempt to create a target with a name that already exists within the region or is too long, an error is returned and your target is not created.
-    {: note}
 
 - You can update the target configuration details such as target host, target port, target name, target instance CRN, and more.
 
-- You can delete only 1 target from a tenant.
+
 
 - You can list all the targets in a tenant by using the `v1/tenants/tenantID/targets` route.
 

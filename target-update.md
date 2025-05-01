@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -109,6 +109,7 @@ Where
 - `CURRENT_DATE` is the current date in format YYYY-MM-DD.
 - `E_TAG` of target. You must [retrieve the tenant information](/docs/logs-router?topic=logs-router-tenant-get) to get the latest `e_tag` associated with a target before making an update to the target.
 
-    Every time that you update a target, the `e_tag` of the target changes.{: note}
+    Every time that you update a target, the `e_tag` of the target changes.
+    {: note}
 
 - `LOG_SINK_NAME` is the new name of the target log sink.

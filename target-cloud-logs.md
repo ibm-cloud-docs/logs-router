@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -36,7 +36,7 @@ You must create a tenant in your account **in each region** where you want to us
 {: #target-cloud-logs-goals}
 
 In this tutorial you will:
-- Configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region
+- Configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs to an {{site.data.keyword.logs_full_notm}} instance in a region.
 
 - Verify that platform logs are being routed to your {{site.data.keyword.logs_full_notm}} instance.
 
@@ -299,7 +299,8 @@ Complete the following steps:
 
    You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
 
-   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.{: important}
+   The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.
+   {: important}
 
 6. Click **Save**.
 

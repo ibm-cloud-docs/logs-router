@@ -68,9 +68,9 @@ toc:
           - topic: tenants-list.md
             navtitle: Listing tenants through the UI
           - topic: tenant-get.md
-            navtitle: Getting information on a tenant
+            navtitle: Getting information about a tenant
           - topic: tenant-get-id.md
-            navtitle: Getting information on a tenant by using the tenant ID
+            navtitle: Getting information about a tenant by using the tenant ID
           - topic: tenant-create.md
             navtitle: Creating a tenant and a target destination
           - topic: tenant-update-name.md
@@ -84,8 +84,6 @@ toc:
           topics:
           - topic: target-update.md
             navtitle: Updating the configuration of a target
-          - topic: target-delete.md
-            navtitle: Deleting a target
           - topic: target-get.md
             navtitle: Retrieving information about a target
       - topicgroup:
