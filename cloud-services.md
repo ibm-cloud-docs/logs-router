@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-23"
+lastupdated: "2025-05-01"
 
 keywords:
 
@@ -120,7 +120,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 |------------------|-------------|-------------------|
 | Load Balancer for VPC | Use IBM Cloud Load Balancer for VPC to distribute traffic among multiple server instances within the same region of your VPC. | [More information](/docs/vpc?topic=vpc-datapath-logging) |
 | VPN | Use this service to connect private networks in a secure fashion. You can use VPN to set up an IPsec site-to-site tunnel between your VPC and your on-premise private network or another VPC. | [More information](/docs/vpc?topic=vpc-using-log-analysis-to-view-vpn-logs&interface=ui) |
-| Client VPN for VPC | Set up and configure your clients' VPN environment to connect to the VPN server. | [More information](/docs/vpc?topic=vpc-client-vpn-log-analysis-c2s&interface=ui) |
+| Client VPN for VPC | Set up and configure your clients' VPN environment to connect to the VPN server. | [More information](/docs/vpc?topic=vpc-logging#logging-c2s) |
 | Dedicated Host for VPC | You can create a dedicated host to carve out a single-tenant compute node, free from users outside of your organization.  | [More information](/docs/vpc?topic=vpc-logging#logging-dedicated-host) |
 | Flow Log Collector| This service is used to collect and store information regarding the Internet Protocol (IP) traffic going to and from network interfaces within your Virtual Private Cloud (VPC) |[More information](/docs/vpc?topic=vpc-logging#logging-flow-log-collector_msgs) |
 | Snapshots for VPC| This offering is used to create a point-in-time copy of your boot or data volume. |[More information](/docs/vpc?topic=vpc-logging&interface=ui#logging-snapshots) |
