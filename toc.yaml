@@ -138,3 +138,4 @@ toc:
             - troubleshooting/ts-vpe-gateway.md
             - troubleshooting/ts-target-disabled.md
             - troubleshooting/ts-terraform.md
+            - troubleshooting/ts-target-email.md
