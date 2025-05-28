@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-05-28"
 
 keywords: HA for IBM Cloud Logs Routing, DR for IBM Cloud Logs Routing, IBM Cloud Logs Routing recovery time objective, IBM Cloud Logs Routing recovery point objective
 
@@ -146,7 +146,7 @@ Major, minor, and patch version updates for {{site.data.keyword.logs_routing_ful
 
 
 
-## How {{site.data.keyword.IBM}} helps ensure disaster recovery
+## How {{site.data.keyword.IBM}} supports disaster recovery planning
 {: #ibm-disaster-recovery}
 
 {{site.data.keyword.logs_routing_full_notm}} is a highly available, regional, service.
