@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-07-03"
 
 keywords:
 
@@ -39,6 +39,7 @@ Complete the following steps:
 
 ## Retrieving the IAM bearer token
 {: #tenant-create-retrieve-iam-token-cli}
+{: api}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -53,6 +54,7 @@ export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
 
 ## Choosing the management endpoint
 {: #tenant-create-endpoint}
+{: api}
 
 
 A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.

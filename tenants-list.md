@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-07-03"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Listing tenants that are defined in the account
+# Listing targets that are defined in the account
 {: #tenants-list}
 
-You can list the existing tenants that are configured in your {{site.data.keyword.cloud_notm}} account through the {{site.data.keyword.logs_routing_full_notm}} UI.
+You can list the existing target instances that are configured in your {{site.data.keyword.cloud_notm}} account through the {{site.data.keyword.logs_routing_full_notm}} UI.
 {: shortdesc}
 
 {{site.data.content.tenant_definition_note}}
@@ -34,15 +34,15 @@ You can list the existing tenants that are configured in your {{site.data.keywor
 
     For more information, see [Setting up IAM permissions for managing tenants](/docs/logs-router?topic=logs-router-iam&interface=ui).
 
-- To get details of the targets that are configured for a tenant, you can use the API. For more information, see [Retrieving information on a tenant](/docs/logs-router?topic=logs-router-tenant-get).
 
 
-## Listing tenants through the UI
+
+## Listing targets through the UI
 {: #tenants-list-ui}
 
-To list the tenants that are configured in the account, you must launch the {{site.data.keyword.logs_routing_full_notm}} console.
+To list the targets that are configured in the account, you must launch the {{site.data.keyword.logs_routing_full_notm}} console.
 
-Complete the following steps to list the tenants in an account:
+Complete the following steps to list the targets in an account:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 

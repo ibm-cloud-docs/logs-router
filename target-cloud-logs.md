@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-07-03"
 
 keywords:
 
@@ -295,9 +295,9 @@ Complete the following steps:
 
 4. Click **Set target**.
 
-5. Click the tab **Cloud Logs** and select an {{site.data.keyword.logs_full_notm}} instance from the list. This is the instance where you want to receive logs that are routed by {{site.data.keyword.logs_routing_full_notm}}.
+5. Select an {{site.data.keyword.logs_full_notm}} instance from the list. This is the instance where you want to receive logs that are routed by {{site.data.keyword.logs_routing_full_notm}}.
 
-   You can select a {{site.data.keyword.logs_full_notm}} instance from the list.
+   You can select a {{site.data.keyword.logs_full_notm}} instance from the list or specify a specific CRN.
 
    The {{site.data.keyword.logs_full_notm}} instance must be located in the same account that you are configuring.
    {: important}
