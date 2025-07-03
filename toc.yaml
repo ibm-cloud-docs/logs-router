@@ -65,8 +65,6 @@ toc:
       - topicgroup:
           label: Managing tenants
           topics:
-          - topic: tenants-list.md
-            navtitle: Listing tenants through the UI
           - topic: tenant-get.md
             navtitle: Getting information about a tenant
           - topic: tenant-get-id.md
@@ -82,6 +80,8 @@ toc:
       - topicgroup:
           label: Managing targets
           topics:
+          - topic: tenants-list.md
+            navtitle: Listing targets through the UI
           - topic: target-update.md
             navtitle: Updating the configuration of a target
           - topic: target-get.md

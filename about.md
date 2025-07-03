@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-07-03"
 
 keywords:
 
@@ -46,8 +46,11 @@ When you manage tenants, consider the following information:
 
 - When you update a tenant, you can only modify the name of the tenant.
 - When you delete a tenant, you also delete the target definitions. If you want to delete a target destination instance, you must delete the instance separately.
-- You can list all the tenants in an account by using the `v1/tenants` route.
-- To get the details of a tenant, the route accepts a query parameter name to return details of the named tenant.
+- You can list all the tenants in an account by using the `GET /tenants` API method.
+- To get the details about a tenant, you can use the `GET /tenants/{tenant_id}` API method specifying the tenant ID returned when listing the tenants in an account.
+
+You can also see the configured tenants and target destinations using the [routing configuration UI](/docs/logs-router?topic=logs-router-launch-ui).
+{: tip}
 
 ## Targets
 {: #about_targets}
@@ -72,11 +75,12 @@ When you manage targets, consider the following information:
 
 
 
-- You can list all the targets in a tenant by using the `v1/tenants/tenantID/targets` route.
+- You can list all the targets in a tenant by using the `GET /tenants/{tenant_id}/targets` API method.
 
-- To get the details of a target, the route accepts a query parameter name to return details of the named target.
+- To get the details about a target by using the `GET /tenants/{tenant_id}/targets/{target_id}` API method.
 
-
+You can also see the configured tenants and target destinations using the [routing configuration UI](/docs/logs-router?topic=logs-router-launch-ui).
+{: tip}
 
 Authorization between the {{site.data.keyword.logs_routing_full_notm}} service and the target destination instances is done through IAM.
 
@@ -101,18 +105,18 @@ Through the {{site.data.keyword.logs_routing_full_notm}} UI, you can create a te
 
 The {{site.data.keyword.logs_routing_full}} supports the following types of endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}:
 - {{site.data.keyword.cloud_notm}} Cloud Service Endpoint (CSE)
-- {{site.data.keyword.vpe_full}} for VPC.
+- {{site.data.keyword.vpe_full}}.
 
 If you are connecting from an {{site.data.keyword.vpc_short}}, you can connect by using either a CSE or {{site.data.keyword.vpe_short}}. For more information, see [Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-vpe-connection&interface=api).
 
 If you are connecting from a system that is not contained in an {{site.data.keyword.vpc_short}}, your only private endpoint option is to connect by using a CSE. Connecting to {{site.data.keyword.logs_routing_full_notm}} by using a CSE might not require any additional work on your part. Access to CSEs is only available from within the {{site.data.keyword.cloud_notm}} private network. For more information, see [Using service endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-service-endpoints).
 
-You can only access the {{site.data.keyword.logs_routing_full_notm}} UI through the public network.
+You can only access the [{{site.data.keyword.logs_routing_full_notm}} UI](/docs/logs-router?topic=logs-router-launch-ui) through the public network.
 
 
 You can manage {{site.data.keyword.logs_routing_full_notm}} by using the management API. The management API supports either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
 
-- To create, update, or delete a configuration, you must use the {{site.data.keyword.logs_routing_full_notm}} management API.
+- To create, update, or delete a configuration, you can use the [{{site.data.keyword.logs_routing_full_notm}} management API](/apidocs/logs-router-service-api) or the [{{site.data.keyword.logs_routing_full_notm}} UI](/docs/logs-router?topic=logs-router-launch-ui).
 - To see the list of management endpoints, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 Using the public endpoint does not require additional work.
