@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-05-01"
+lastupdated: "2025-07-09"
 
 keywords:
 
@@ -23,6 +23,13 @@ Use these release notes to learn about updates to {{site.data.keyword.logs_routi
 For detailed release notes about the {{site.data.keyword.agent}}, 
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+## 9 July 2025
+{: #logs-router-jul0925}
+
+Updated Montreal considerations
+:   As {{site.data.keyword.cloud_notm}} provides support for the Montreal (`ca-mon`) region, you need to understand how {{site.data.keyword.cloud_notm}} Observability services are made available and the actions you need to take to operate in Montreal. For more information, see the [Considerations for workloads in the Montreal region](/docs/cloud-logs?topic=cloud-logs-montreal-temp) for updated considerations for all {{site.data.keyword.cloud_notm}} Observability services.
+
 
 ## 30 April 2025
 {: #logs-router-apr3025}
