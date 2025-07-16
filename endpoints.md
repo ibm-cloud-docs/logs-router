@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-18"
+  years:  2023, 2025
+lastupdated: "2025-07-16"
 
 keywords:
 
@@ -23,7 +23,7 @@ Access {{site.data.keyword.logs_routing_full_notm}} by using the listed endpoint
 
 The management API supports public endpoints, which can be accessed from the public internet. 
 
-| Geography | Region                           | Management Endpoint | Ingestion Endpint |
+| Geography | Region                           | Management Endpoint | Ingestion Endpoint |
 |-----------|----------------------------------|---------------------|--------------------|
 | Asia Pacific | Osaka (`jp-osa`) | `management.jp-osa.logs-router.cloud.ibm.com` | NA |
 | Asia Pacific | Sydney (`au-syd`) | `management.au-syd.logs-router.cloud.ibm.com` | NA |
