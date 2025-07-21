@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-07-21"
 
 keywords: HA for IBM Cloud Logs Routing, DR for IBM Cloud Logs Routing, IBM Cloud Logs Routing recovery time objective, IBM Cloud Logs Routing recovery point objective
 
@@ -131,7 +131,7 @@ For more information about your responsibilities when you are using {{site.data.
 |---|---|
 |  RPO |  Within 24 hours |
 |  RTO |  Within 24 hours |
-{: caption="RPO and RTO for {{site.data.keyword.logs_router_notm}}" caption-side="bottom"}
+{: caption="RPO and RTO for {{site.data.keyword.logs_routing_full_notm}}" caption-side="bottom"}
 
 ## Change management
 {: #change-management}
