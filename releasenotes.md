@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-23"
 
 keywords:
 
@@ -23,6 +23,8 @@ Use these release notes to learn about updates to {{site.data.keyword.logs_routi
 For detailed release notes about the {{site.data.keyword.agent}}, 
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+
 
 ## 9 July 2025
 {: #logs-router-jul0925}
