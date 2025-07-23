@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-10-09"
+  years:  2023, 2025
+lastupdated: "2025-07-23"
 
 keywords:
 
@@ -20,6 +20,9 @@ subcollection: logs-router
 
 
 ![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/Logs-Router-03-Locations.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
+
+
+
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
 {: note}
