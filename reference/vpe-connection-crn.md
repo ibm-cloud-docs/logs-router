@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-18"
+  years:  2023, 2025
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -29,6 +29,7 @@ The following table lists the CRNs that you can select when you create a VPE gat
 | Frankfurt (`eu-de`) | `crn:v1:bluemix:public:logs-router:eu-de:::endpoint:management.private.eu-de.logs-router.cloud.ibm.com` |
 | London (`eu-gb`) | `crn:v1:bluemix:public:logs-router:eu-gb:::endpoint:management.private.eu-gb.logs-router.cloud.ibm.com` |
 | Madrid (`eu-es`) | `crn:v1:bluemix:public:logs-router:eu-es:::endpoint:management.private.eu-es.logs-router.cloud.ibm.com` |
+| Montreal (`ca-mon`) | `crn:v1:bluemix:public:logs-router:ca-mon:::endpoint:management.private.ca-mon.logs-router.cloud.ibm.com` |
 | Osaka (`jp-osa`) | `crn:v1:bluemix:public:logs-router:jp-osa:::endpoint:management.private.jp-osa.logs-router.cloud.ibm.com` |
 | Sao Paulo (`br-sao`) | `crn:v1:bluemix:public:logs-router:br-sao:::endpoint:management.private.br-sao.logs-router.cloud.ibm.com` |
 | Sydney (`au-syd`) | `crn:v1:bluemix:public:logs-router:au-syd:::endpoint:management.private.au-syd.logs-router.cloud.ibm.com` |

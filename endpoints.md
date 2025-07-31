@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-16"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -32,6 +32,7 @@ The management API supports public endpoints, which can be accessed from the pub
 | Europe  | London (`eu-gb`) | `management.eu-gb.logs-router.cloud.ibm.com` | NA |
 | Europe  | Madrid (`eu-es`) | `management.eu-es.logs-router.cloud.ibm.com` | NA |
 | North America  | Dallas (`us-south`) | `management.us-south.logs-router.cloud.ibm.com` | NA |
+| North America  | Montreal (`ca-mon`) | `management.ca-mon.logs-router.cloud.ibm.com` | NA |
 | North America  | Toronto (`ca-tor`) | `management.ca-tor.logs-router.cloud.ibm.com` | NA |
 | North America  | Washington, D.C (`us-east`) | `management.us-east.logs-router.cloud.ibm.com` | NA |
 | South America  | Sao Paulo (`br-sao`) | `management.br-sao.logs-router.cloud.ibm.com` | NA |
