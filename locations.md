@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -19,9 +19,7 @@ subcollection: logs-router
 {: shortdesc}
 
 
-![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/Logs-Router-03-Locations.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
-
-
+![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/locations_without_chennai.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
 
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
@@ -40,6 +38,7 @@ The following table lists the locations where the service is available:
 | Europe  | London (`eu-gb`) | NO | MZR       |
 | Europe  | Madrid (`eu-es`) | NO | MZR       |
 | North America  | Dallas (`us-south`) | N/A | MZR       |
+| North America  | Montreal (`ca-mon`) | N/A | MZR       |
 | North America  | Toronto (`ca-tor`) | N/A | MZR       |
 | North America  | Washington, D.C (`us-east`) | N/A | MZR       |
 | South America  | Sao Paulo (`br-sao`) | N/A | MZR       |

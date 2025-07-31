@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-31"
 
 keywords: HA for IBM Cloud Logs Routing, DR for IBM Cloud Logs Routing, IBM Cloud Logs Routing recovery time objective, IBM Cloud Logs Routing recovery point objective
 
@@ -173,6 +173,7 @@ The following table lists the high-availability (HA) status for the regions (loc
 | Europe  | London (`eu-gb`) | NO | MZR       |
 | Europe  | Madrid (`eu-es`) | YES | MZR       |
 | North America  | Dallas (`us-south`) | N/A | MZR       |
+| North America  | Montreal (`ca-mon`) | N/A | MZR       |
 | North America  | Toronto (`ca-tor`) | N/A | MZR       |
 | North America  | Washington, D.C (`us-east`) | N/A | MZR       |
 | South America  | Sao Paulo (`br-sao`) | N/A | MZR       |
