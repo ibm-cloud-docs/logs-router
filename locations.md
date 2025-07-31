@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-07-31"
 
 keywords:
 
@@ -17,10 +17,6 @@ subcollection: logs-router
 
 {{site.data.keyword.logs_routing_full_notm}} is available in the following locations.
 {: shortdesc}
-
-
-![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/Logs-Router-03-Locations.svg){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
-
 
 
 
