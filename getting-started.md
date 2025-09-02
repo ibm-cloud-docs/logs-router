@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-09-02"
 
 keywords:
 
@@ -53,24 +53,14 @@ Complete the following steps to start using {{site.data.keyword.logs_routing_ful
     - [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
 
 
-## Retrieving the IAM bearer token
-{: #getting-started-retrieve-iam-token}
-{: step}
-
-You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
-
-For example, you can retrieve your IAM bearer token and export it as an environment variable by running the following CLI command:
-
-```sh
-export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
-```
-{: pre}
-
 ## Creating a service to service authorization
 {: #getting-started-create-s2s}
 {: step}
 
 You must use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).
+
+You must have the **sender** role for {{site.data.keyword.logs_full_notm}} before you configure the service to service authorization.
+{: important}
 
 Complete the following steps:
 
