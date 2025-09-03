@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-07-31"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -36,7 +36,7 @@ Montreal support
 {: #logs-router-jul0925}
 
 Updated Montreal considerations
-:   As {{site.data.keyword.cloud_notm}} provides support for the Montreal (`ca-mon`) region, you need to understand how {{site.data.keyword.cloud_notm}} Observability services are made available and the actions you need to take to operate in Montreal. For more information, see the [Considerations for workloads in the Montreal region](/docs/cloud-logs?topic=cloud-logs-montreal-temp) for updated considerations for all {{site.data.keyword.cloud_notm}} Observability services.
+:   As {{site.data.keyword.cloud_notm}} provides support for the Montreal (`ca-mon`) region, you need to understand how {{site.data.keyword.cloud_notm}} Observability services are made available and the actions you need to take to operate in Montreal. 
 
 
 ## 30 April 2025

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-09-03"
 
 keywords:
 
@@ -37,7 +37,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.logs_routin
 * Ensure that a [Virtual Private Cloud is created](/docs/vpc?topic=vpc-getting-started).
 * Make a plan for your [virtual private endpoints](/docs/vpc?topic=vpc-planning-considerations).
 * Ensure that [correct access controls](/docs/vpc?topic=vpc-configure-acls-sgs-endpoint-gateways) are set for your virtual private endpoint.
-* Understand the [limitations](/docs/vpc?topic=vpc-limitations-vpe) of having a virtual private endpoint.
+* Understand the [limitations](/docs/vpc?topic=vpc-limitations) of VPC.
 * Understand how to [view details](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) about a virtual private endpoint.
 
 
