@@ -40,12 +40,12 @@ toc:
           - topicgroup:
               label: S2S authorizations
               topics:
-               - topic: iam-service-auth.md
-                 navtitle: Managing authorizations
-               - topic: iam-service-auth-logs-routing.md
-                 navtitle: S2S for Logs Routing
-               - topic: iam-service-auth-remove-auth.md
-                 navtitle: Removing authorizations
+              - topic: iam-service-auth.md
+                navtitle: Managing authorizations
+              - topic: iam-service-auth-logs-routing.md
+                navtitle: S2S for Logs Routing
+              - topic: iam-service-auth-remove-auth.md
+                navtitle: Removing authorizations
       - topicgroup:
           label: Enhancing security
           topics:
@@ -87,10 +87,10 @@ toc:
           - topic: target-get.md
             navtitle: Retrieving information about a target
       - topicgroup:
-           label: Observability
-           topics:
-            - topic: activity-tracker.md
-              navtitle: Auditing events
+          label: Observability
+          topics:
+          - topic: activity-tracker.md
+            navtitle: Auditing events
   - navgroup:
       id: reference
       topics:
@@ -109,30 +109,29 @@ toc:
       - topic: shared-responsibilities.md
         navtitle: Understanding your responsibilities
       - topic: service-dependency.md
-        navtitle: Service dependencies   
+        navtitle: Service dependencies
       - topicgroup:
           label: API Reference
           links:
-            - link:
-                label: Logs Routing API
-                href: https://{DomainName}/apidocs/logs-router-service-api
+          - link:
+              label: Logs Routing API
+              href: https://{DomainName}/apidocs/logs-router-service-api
       - topicgroup:
           label: Terraform Reference
           links:
-            - link:
-                label: Terraform reference
-                href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant 
-
+          - link:
+              label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
   - navgroup:
-        id: help
-        topics:
-        - gettinghelp.md
-        - topicgroup:
-            label: Troubleshooting
-            topics:
-            - troubleshooting/ts-iam-issues.md
-            - troubleshooting/ts-cse-proxy.md
-            - troubleshooting/ts-vpe-gateway.md
-            - troubleshooting/ts-target-disabled.md
-            - troubleshooting/ts-terraform.md
-            - troubleshooting/ts-target-email.md
+      id: help
+      topics:
+      - gettinghelp.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - troubleshooting/ts-iam-issues.md
+          - troubleshooting/ts-cse-proxy.md
+          - troubleshooting/ts-vpe-gateway.md
+          - troubleshooting/ts-target-disabled.md
+          - troubleshooting/ts-terraform.md
+          - troubleshooting/ts-target-email.md

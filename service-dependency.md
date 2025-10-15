@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-10-15"
 
 keywords:
 
@@ -39,11 +39,11 @@ The following table provides the dependency listing of this service following a 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
 | IBM Log Analysis and IBM Cloud Activity Tracker | Access management, Availability, Operations, Security compliance | Yes | Both |  Same region  |
+| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Secrets Manager | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | IBM Cloud Internet Services | Availability, Change management, Disaster recovery, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | IBM Cloud Classic DNS Servers | Availability, Change management | No | Both |  Same data center  |
 | IBM Cloud Classic Infrastructure Resource Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 {: row-headers}
 {: caption="IBM Cloud Log Routing service dependency information - Critical dependencies" caption-side="top"}
 {: tab-title="Critical dependencies"}
@@ -55,10 +55,10 @@ The following table provides the dependency listing of this service following a 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
 | IBM Cloud Identity and Access Management | Availability, Change management, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud Databases - databases-for-postgresql | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | IBM Key Protect for IBM Cloud | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud - containers-kubernetes | Availability, Change management, Disaster recovery | No | Both |  Same data center  |
 | IBM Cloud Classic NTP Servers | Availability, Change management | No | Both |  Same data center  |
-| IBM Cloud Databases - databases-for-postgresql | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Log Routing service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
