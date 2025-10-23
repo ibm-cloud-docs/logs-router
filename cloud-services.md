@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-06-19"
+lastupdated: "2025-10-23"
 
 keywords:
 
@@ -81,7 +81,6 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | {{site.data.keyword.messages-for-rabbitmq_full}} | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is an open source multi-protocol messaging broker. | [More information](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-logging) |
 | {{site.data.keyword.databases-for-mongodb_full_notm}} | {{site.data.keyword.databases-for-mongodb_full_notm}} is a JSON document store with a rich query and aggregation framework. | [More information](/docs/databases-for-mongodb?topic=databases-for-mongodb-logging) |
 | {{site.data.keyword.databases-for-mysql_full}} | {{site.data.keyword.databases-for-mysql_fullnotm}} is a serverless, cloud database service that is fully integrated into the IBM Cloud environment. Use IBM Cloud® Databases for MySQL to use a cloud database system without purchasing and setting up your own hardware, installing your own database software, or managing the database yourself. | [More information](/docs/databases-for-mysql?topic=databases-for-mysql-logging) |
-| {{site.data.keyword.databases-for-enterprisedb_full}} | {{site.data.keyword.databases-for-enterprisedb_full_notm}} is a PostgreSQL-based database engine optimized for performance, developer productivity, and compatibility with Oracle. | [More information](/docs/databases-for-enterprisedb?topic=databases-for-enterprisedb-logging) |
 {: caption="List of database services" caption-side="top"}
 
 
