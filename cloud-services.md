@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-10-23"
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -76,7 +76,6 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | {{site.data.keyword.Db2_on_Cloud_long}} | {{site.data.keyword.Db2_on_Cloud_long}} is a managed Db2 service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [More information](/docs/Db2onCloud?topic=Db2onCloud-log_mon) |
 | {{site.data.keyword.databases-for-postgresql_full}} | {{site.data.keyword.databases-for-postgresql_full_notm}} is a powerful, open source object-relational database that is highly customizable. | [More information](/docs/databases-for-postgresql?topic=databases-for-postgresql-logging) |
 | {{site.data.keyword.databases-for-redis_full}} | {{site.data.keyword.databases-for-redis_full_notm}} is a blazingly fast, in-memory data structure store. | [More information](/docs/databases-for-redis?topic=databases-for-redis-logging) |
-| {{site.data.keyword.databases-for-etcd_full}} | {{site.data.keyword.databases-for-etcd_full_notm}} is a distributed, reliable key-value store for the most critical data of a distributed system. | [More information](/docs/databases-for-etcd?topic=databases-for-etcd-logging) |
 | {{site.data.keyword.databases-for-elasticsearch_full}} | {{site.data.keyword.databases-for-elasticsearch_full_notm}} combines the power of a full text search engine with the indexing strengths of a JSON document database. | [More information](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-logging) |
 | {{site.data.keyword.messages-for-rabbitmq_full}} | {{site.data.keyword.messages-for-rabbitmq_full_notm}} is an open source multi-protocol messaging broker. | [More information](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-logging) |
 | {{site.data.keyword.databases-for-mongodb_full_notm}} | {{site.data.keyword.databases-for-mongodb_full_notm}} is a JSON document store with a rich query and aggregation framework. | [More information](/docs/databases-for-mongodb?topic=databases-for-mongodb-logging) |
