@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-11-17"
 
 keywords:
 
@@ -106,7 +106,7 @@ curl -X GET -H "Authorization: Bearer ${IAM_TOKEN}" https://management.private.u
 ### More resources
 {: #vpe-connection-other-resources}
 
-- [Planning for virtual private endpoint gateways](/docs/vpc?topic=vpc-planning-considerations)
+- [Planning for virtual private endpoint gateways](/docs/vpc?topic=vpc-vpe-planning-considerations)
 - [VPE connectivity patterns](/docs/vpc?topic=vpc-about-vpe#vpe-connectivity-patterns)
 - [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway)
 - For further assistance, see the [FAQ for virtual private endpoints](/docs/vpc?topic=vpc-faqs-vpe).
