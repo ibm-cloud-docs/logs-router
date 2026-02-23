@@ -20,6 +20,8 @@ toc:
         navtitle: Platform logs
       - topic: cloud-services.md
         navtitle: IBM Cloud services that generate platform logs
+      - topic: migration.md
+        navtitle: Migration guide to API v3 (Select availability)
       - topicgroup:
           label: Tutorials
           topics:
