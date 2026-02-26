@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-26"
 
 keywords:
 
@@ -15,6 +15,7 @@ subcollection: logs-router
 # Migration Guide: Transitioning from v1 to v3
 {: #v3-migration}
 
+This feature is available to select customers.
 {: preview}
 
 This guide provides step-by-step instructions for migrating your {{site.data.keyword.logs_routing_full_notm}} service from version 1 (v1) to version 3 (v3). While v1 provides a regional concept, v3 offers a global approach with routes and filters to adjust routing of platform logs to your needs. The migration process involves configuring your new v3 environment and then switching from v1 to v3.
@@ -34,27 +35,27 @@ Before beginning your migration, it is important to understand which scenario be
 ### Scenario 1: Centralized Logging
 {: #v3-migration-scenarios-1}
 
-In a centralized logging configuration, all platform logs for your entire account are consolidated into a single {{site.data.keyword.logs_full_notm}} instance. 
+In a centralized logging configuration, all platform logs for your entire account are consolidated into a single {{site.data.keyword.logs_full_notm}} instance.
 
-This approach simplifies log management by providing a unified view of all platform activities across your account. 
+This approach simplifies log management by providing a unified view of all platform activities across your account.
 
 To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and configure one route with a wildcard rule to capture all platform logs regardless of their source region.
 
 ### Scenario 2: Geographic Logging
 {: #v3-migration-scenarios-2}
 
-The geographic logging scenario is designed for organizations that maintain multiple logging instances distributed across different geographic locations. 
+The geographic logging scenario is designed for organizations that maintain multiple logging instances distributed across different geographic locations.
 
-In this configuration, platform logs from various regions are routed to their nearest or designated regional {{site.data.keyword.logs_full_notm}} instance based on geographic proximity or data residency requirements. This approach balances centralized visibility with geographic distribution, allowing you to route logs from multiple regions to a smaller number of strategically located {{site.data.keyword.logs_full_notm}} instances. 
+In this configuration, platform logs from various regions are routed to their nearest or designated regional {{site.data.keyword.logs_full_notm}} instance based on geographic proximity or data residency requirements. This approach balances centralized visibility with geographic distribution, allowing you to route logs from multiple regions to a smaller number of strategically located {{site.data.keyword.logs_full_notm}} instances.
 
 To implement this scenario, you will need to create multiple targets (one for each geographic {{site.data.keyword.logs_full_notm}} instance) and configure routes with appropriate region-based filters to direct logs to the correct geographic destination.
 
 ### Scenario 3: Regional Logging
 {: #v3-migration-scenarios-3}
 
-Regional logging represents the most distributed approach, where each {{site.data.keyword.cloud_notm}} region has its own dedicated {{site.data.keyword.logs_full_notm}} instance. 
+Regional logging represents the most distributed approach, where each {{site.data.keyword.cloud_notm}} region has its own dedicated {{site.data.keyword.logs_full_notm}} instance.
 
-This configuration ensures complete regional isolation of log data and is often used to meet strict data residency or compliance requirements. In this scenario, platform logs generated in a specific region are routed exclusively to the {{site.data.keyword.logs_full_notm}} instance deployed in that same region. 
+This configuration ensures complete regional isolation of log data and is often used to meet strict data residency or compliance requirements. In this scenario, platform logs generated in a specific region are routed exclusively to the {{site.data.keyword.logs_full_notm}} instance deployed in that same region.
 
 To implement this scenario in v3, you will need to create a separate target and route for each region where you operate, ensuring that each regional route includes filters that restrict log routing to only that region's {{site.data.keyword.logs_full_notm}} instance.
 
@@ -105,7 +106,7 @@ curl -X POST \
 ```
 {: codeblock}
 
-Where  
+Where
 - `<NAME>` is a descriptive name for your target
 - `<CRN>` is the Cloud Resource Name of your destination {{site.data.keyword.logs_full_notm}} instance
 
@@ -142,7 +143,7 @@ curl -X POST \
 ```
 {: codeblock}
 
-Where 
+Where
 - `<NAME>` is a descriptive name for your route
 - `<ID FROM PREV STEP>` is the target ID that defines the {{site.data.keyword.logs_full_notm}} instance where platform logs are routed.
 

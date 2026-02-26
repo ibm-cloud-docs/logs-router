@@ -12,18 +12,18 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enterprise-managed routing
+# Enterprise-managed platform logs routing
 {: #enterprise-routing-scenario}
 
 
-Use {{site.data.keyword.logs_routing_full}} to configure the routing of platform logs from your enterprise child accounts to your enterprise parent account, then use {{site.data.keyword.iamshort}} (IAM) Action Control to restrict changes to the enterprise-managed routing.
+Use {{site.data.keyword.logs_routing_full}} to configure the routing of platform logs from your enterprise child accounts to your enterprise parent account. Use {{site.data.keyword.iamshort}} (IAM) Action Control to restrict changes to the enterprise-managed routing.
 {: shortdesc}
 
 You can configure your enterprise child accounts to route all or a subset of platform logs to an enterprise parent account. The child accounts contain Cloud resources that generate platform logs. The parent account owns the enterprise and has {{site.data.keyword.logs_full_notm}} instances that will contain the platform logs from the child accounts.
 
 The enterprise-managed routing configurations, from child accounts to parent account, can be locked by restricting the {{site.data.keyword.logs_routing_full}} enterprise actions with IAM Action Control. The child accounts can continue to manage their own account-managed {{site.data.keyword.logs_routing_full}} configurations, while the enterprise-managed configurations are restricted.
 
-This example uses terraform automation to facilitate consistent routing configurations and Action Control restrictions across many child accounts. However, other configuration methods can be used as well.
+This example uses terraform automation to facilitate consistent routing configurations and action control restrictions across many child accounts. However, other configuration methods can be used as well.
 {: tip}
 
 ![A diagram that shows a sample {{site.data.keyword.logs_routing_full}} enterprise configuration.](/images/logs-router-enterprise-routing.svg "{{site.data.keyword.logs_routing_full}} enterprise configuration."){: caption="{{site.data.keyword.logs_routing_full}} enterprise configuration" caption-side="bottom"}
