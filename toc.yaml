@@ -27,6 +27,8 @@ toc:
           topics:
           - topic: target-cloud-logs.md
             navtitle: Routing platform logs to a Cloud Logs instance
+          - topic: enterprise-routing-scenario.md
+            navtitle: Enterprise routing
       - topic: releasenotes.md
         navtitle: Release notes
   - navgroup:
