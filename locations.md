@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-10-21"
+  years:  2023, 2026
+lastupdated: "2026-02-23"
 
 keywords:
 
@@ -34,6 +34,7 @@ The following table lists the locations where the service is available:
 | Asia Pacific  | Osaka (`jp-osa`) | NO | MZR       |
 | Asia Pacific  | Sydney (`au-syd`) | NO | MZR       |
 | Asia Pacific  | Tokyo (`jp-tok`) | NO | MZR       |
+| Asia Pacific  | Chennai (`in-che`) | NO | MZR       |
 | Europe  | Frankfurt (`eu-de`) | NO | MZR       |
 | Europe  | London (`eu-gb`) | NO | MZR       |
 | Europe  | Madrid (`eu-es`) | NO | MZR       |

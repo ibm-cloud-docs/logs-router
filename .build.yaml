@@ -1,5 +1,5 @@
 includes:
-  - https://github.ibm.com/cloud-docs/cloud-logs
+- https://github.ibm.com/cloud-docs/cloud-logs
 translation:
   exclude:
-    byFilePath:
+    byFilePath: null
