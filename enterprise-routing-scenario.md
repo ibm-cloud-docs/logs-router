@@ -31,7 +31,7 @@ This example uses terraform automation to facilitate consistent routing configur
 ## Before you begin
 {: #enterprise-routing-before-begin}
 
-- This document only supports version 3 of the {{site.data.keyword.logs_routing_full}} API, see [Transitioning from v1 to v3](/docs/logs-router?topic=v3-migration) to migrate your child accounts.
+- This document only supports version 3 of the {{site.data.keyword.logs_routing_full}} API, see [Transitioning from v1 to v3](/docs/logs-router?topic=logs-router-v3-migration&interface=terraform) to migrate your child accounts.
 
 - To learn about how enterprise-manged IAM templates make your enterprise more secure, see [How enterprise-managed IAM access works](/docs/enterprise-management?topic=enterprise-management-access-enterprises&interface=ui#how-enterprise-iam).
 
