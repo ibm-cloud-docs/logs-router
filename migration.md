@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-02-26"
+lastupdated: "2026-04-26"
 
 keywords:
 
@@ -22,7 +22,7 @@ This guide provides step-by-step instructions for migrating your {{site.data.key
 {: shortdesc}
 
 Note that there will be a brief service interruption (approximately a few minutes) during the final migration step where platform logs are not received.
-{: important}
+{: attention}
 
 **WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
 {: important}
@@ -65,7 +65,7 @@ To implement this scenario in v3, you will need to create a separate target and 
 Before migrating from v1 to v3, you must configure your new v3 environment. This section guides you through the required manual setup steps.
 
 ### Step 1.1: Set the Primary Metadata Region
-{: #v3-migration-s1-configure-v3-step-1}
+{: #v3-migration-s1-configure-v3-metadata-region}
 
 The first step is to configure the primary metadata region for your v3 setup. This setting determines in which region your routing metadata will be stored. Select the region that best meets your data residency or compliance requirements.
 
@@ -86,9 +86,22 @@ Set `<region>` to your desired region such as `us-south`, or `eu-de`.
 
 For detailed information about this API endpoint and available parameters, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
 
+### Step 1.2: Generate a V3 configuration from your existing V1 configuration
+{: #v3-migration-s1-configure-v3-generate}
 
-### Step 1.2: Create a Target for Platform Logs
-{: #v3-migration-s1-configure-v3-step-2}
+The current migration process requires that you being the migration by generating a configuration from the existing V1 setup.  This step will create routes and targets based on the V1 targets.
+
+```sh
+curl -X POST \
+  https://api.<region>.logs-router.cloud.ibm.com/v3/migrate?action=generate \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json'
+```
+
+ Once the routes and targets are generated, you can review the generated configurations and either proceed with steps 1.3 and 1.4 or move ahead to Section 2 to complete the migration.  Refer to the [{{site.data.keyword.logs_routing_full_notm}} v3 API documentation](/apidocs/logs-router-service-api/logs-router-v3){: external} for more details.
+
+### Step 1.3: Create a Target for Platform Logs
+{: #v3-migration-s1-configure-v3-create-target}
 
 Next, you need to create a target destination where your platform logs will be delivered. A target represents the endpoint that will receive your log data.
 
@@ -115,8 +128,8 @@ The API response will include a target ID. Make sure to save this ID, as you wil
 For more information about creating targets and available configuration options, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external}
 
 
-### Step 1.3: Create a Route to the Target
-{: #v3-migration-s1-configure-v3-step-3}
+### Step 1.4: Create a Route to the Target
+{: #v3-migration-s1-configure-v3-create-route}
 
 After creating your target, you must create a route that defines how logs should be directed to that target. Routes contain rules that determine which logs are sent to which targets.
 
