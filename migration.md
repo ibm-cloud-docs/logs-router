@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-26"
+lastupdated: "2026-04-27"
 
 keywords:
 
@@ -89,7 +89,7 @@ For detailed information about this API endpoint and available parameters, see [
 ### Step 1.2: Generate a V3 configuration from your existing V1 configuration
 {: #v3-migration-s1-configure-v3-generate}
 
-The current migration process requires that you being the migration by generating a configuration from the existing V1 setup.  This step will create routes and targets based on the V1 targets.
+The current migration process requires that you begin the migration by generating a configuration from the existing V1 setup.  This step will create routes and targets based on the V1 targets.
 
 ```sh
 curl -X POST \
