@@ -106,16 +106,16 @@ toc:
           - topicgroup:
               label: Example routing scenarios
               topics:
-              - topic: route-rule-all-metrics.md
-                navtitle: Routing all metrics
+              - topic: route-rule-all-logs.md
+                navtitle: Routing all platform logs
               - topic: route-from-1-location.md
-                navtitle: Routing metrics from 1 location
+                navtitle: Routing platform logs from 1 location
               - topic: route-drop.md
-                navtitle: Excluding metrics by using the drop action
+                navtitle: Excluding platform logs by using the drop action
               - topic: route-drop-all.md
-                navtitle: Excluding all metrics by using the drop action
+                navtitle: Excluding all platform logs by using the drop action
               - topic: cross-account-scenario.md
-                navtitle: Routing platform metrics across accounts
+                navtitle: Routing platform logs across accounts
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
       - topicgroup:
