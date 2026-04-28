@@ -15,7 +15,7 @@ subcollection: logs-router
 # Configuring account settings
 {: #settings}
 
-You can configure your account settings for {{site.data.keyword.logs_routing_full_notm}} by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. Set these settings to define where and how platform logs are collected, routed, and managed in your account.
+You can configure {{site.data.keyword.logs_routing_full_notm}} account settings to define where and how platform logs are collected, routed, and managed in your account. You can do it through the UI, or by using the CLI, the REST API V3, or Terraform scripts.
 {: shortdesc}
 
 Before you disable public endpoints by setting `--private-api-endpoint-only TRUE`, make sure your account has access to the private endpoint.  You can do this by running the command `ibmcloud account show`.  If `VRF Enabled` is `true` and `Service Endpoint Enabled` is `true` then you have access to the private endpoint. If you do not have access to the private endpoint, you will be unable to re-enable the public endpoint since private endpoint access is required to re-enable the public endpoint.

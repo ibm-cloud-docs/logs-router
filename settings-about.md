@@ -16,7 +16,7 @@ subcollection: logs-router
 # Configuring account settings
 {: #settings-about}
 
-You can configure your account settings for {{site.data.keyword.logs_routing_full_notm}} by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. Set these settings to define where and how logs are collected, routed, and managed in your account.
+You can configure {{site.data.keyword.logs_routing_full_notm}} account settings to define where and how platform logs are collected, routed, and managed in your account. You can do it through the UI, or by using the CLI, the REST API V3, or Terraform scripts.
 {: shortdesc}
 
 When you configure or modify the {{site.data.keyword.logs_routing_full_notm}} account settings, consider the following information:
@@ -27,11 +27,11 @@ Every time you modify the {{site.data.keyword.logs_routing_full_notm}} account s
 Before you disable public endpoints by setting `--private-api-endpoint-only TRUE`, make sure your account has access to the private endpoint.  You can do this by running the command `ibmcloud account show`.  If `VRF Enabled` is `true` and `Service Endpoint Enabled` is `true` then you have access to the private endpoint.  If you do not have access to the private endpoint, you will be unable to re-enable the public endpoint since private endpoint access is required to re-enable the public endpoint.
 {: important}
 
-You can use private and public endpoints to manage settings. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+You can use private and public endpoints to manage settings. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-locations).
 
-- Through the private network, you must use an API endpoint with the following format: `https://private.<region>.logs-router.cloud.ibm.com`
+- Through the private network, you must use an API endpoint with the following format: `https://api.private.<region>.logs-router.cloud.ibm.com`
 
-- Through the public network, you must use an API endpoint with the following format: `https://<region>.logs-router.cloud.ibm.com`
+- Through the public network, you must use an API endpoint with the following format: `https://api.<region>.logs-router.cloud.ibm.com`
 
 
 ## What data can you configure through the {{site.data.keyword.logs_routing_full_notm}} account settings?
@@ -43,7 +43,7 @@ You can define any of the following information:
 
     By metadata, we refer to the target/route/settings data that is available across the account in any region.
 
-    You can choose any of the supported locations where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Locations](/docs/logs-router?topic=logs-router-regions&interface=cli).
+    You can choose any of the supported locations where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Locations](/docs/logs-router?topic=logs-router-locations).
 
     You can choose a location where the data is stored. You can also configure a backup location where the metadata is stored for recovery purposes.
 
@@ -68,6 +68,7 @@ You can define any of the following information:
    If you define more than 1 target, all default targets get a copy of logs that do not have a routing rule to indicate where to collect them in the account. You can define up to 2 default targets per account.
    {: note}
 
+* The API version that is enabled in the account for {{site.data.keyword.logs_routing_full_notm}}. Valid values are: `V1` or `V3`.
 
 
 ## IAM permissions
@@ -113,12 +114,12 @@ The following table lists the actions that you can run to manage settings:
 
 | Action                     | REST API Method  | API_URL                                          |
 |----------------------------|------------------|--------------------------------------------------|
-| Get settings information   | `GET`            | `<ENDPOINT>/api/v3/settings`              |
-| Update settings            | `PATCH`            | `<ENDPOINT>/api/v3/settings`  |
+| Get settings information   | `GET`            | `<ENDPOINT>/v3/settings`              |
+| Update settings            | `PATCH`            | `<ENDPOINT>/v3/settings`  |
 {: caption="Settings actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
 
-For more information about the REST API, see [the settings API](https://{DomainName}/apidocs/logs-router/logs-router-v3#get-settings){: external}.
+For more information about the REST API, see [the settings API](https://{DomainName}/apidocs/logs-router-service-api/logs-router-v3#get-settings){: external}.
 {: note}
 
 
