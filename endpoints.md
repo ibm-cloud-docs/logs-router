@@ -72,18 +72,18 @@ The following table shows the private API endpoints. The port for all endpoints 
 
 | Region                   | ATracker Private endpoint                         | IPs |
 |--------------------------|---------------------------------------------------|-------|
-| Chennai (`in-che`)      | `https://private.in-che.logs-router.cloud.ibm.com` | 166.9.249.118  \n 166.9.249.147  \n 166.9.249.183 |
-| Dallas (`us-south`)      | `https://private.us-south.logs-router.cloud.ibm.com` | 166.9.228.73   \n 166.9.229.64   \n 166.9.230.57  |
-| Frankfurt (`eu-de`)      | `https://private.eu-de.logs-router.cloud.ibm.com`  |  166.9.209.204   \n 166.9.209.236   \n 166.9.210.2  |
-| London (`eu-gb`)         | `https://private.eu-gb.logs-router.cloud.ibm.com`  |  166.9.245.170   \n 166.9.245.202   \n 166.9.245.234  |
-| Madrid (`eu-es`)         | `https://private.eu-es.logs-router.cloud.ibm.com`  | 166.9.225.11  \n 166.9.226.12  \n 166.9.227.11 |
-| Montreal (`ca-mon`)         | `https://private.ca-mon.logs-router.cloud.ibm.com`  | 166.9.232.49  \n 166.9.231.29  \n 166.9.233.49  |
-| Osaka (`jp-osa`)         | `https://private.jp-osa.logs-router.cloud.ibm.com`  | 166.9.247.46  \n 166.9.247.71  \n 166.9.247.110 |
-| Sao Paulo (`br-sao`)        | `https://private.br-sao.logs-router.cloud.ibm.com` | 166.9.246.76  \n 166.9.246.109  \n 166.9.246.157 |
-| Sydney (`au-syd`)        | `https://private.au-syd.logs-router.cloud.ibm.com` |  166.9.244.119   \n 166.9.244.151   \n 166.9.244.183  |
-| Tokyo  (`jp-tok`)         | `https://private.jp-tok.logs-router.cloud.ibm.com`  | 166.9.249.115   \n 166.9.249.144  \n 166.9.249.180 |
-| Toronto  (`ca-tor`)         | `https://private.ca-tor.logs-router.cloud.ibm.com`  | 166.9.247.154   \n 166.9.247.183  \n 166.9.247.216 |
-| Washington (`us-east`)   | `https://private.us-east.logs-router.cloud.ibm.com`  |  166.9.231.252   \n 166.9.251.89   \n 166.9.233.28  |
+| Chennai (`in-che`)      | `https://api.private.in-che.logs-router.cloud.ibm.com` | 166.9.249.118  \n 166.9.249.147  \n 166.9.249.183 |
+| Dallas (`us-south`)      | `https://api.private.us-south.logs-router.cloud.ibm.com` | 166.9.228.73   \n 166.9.229.64   \n 166.9.230.57  |
+| Frankfurt (`eu-de`)      | `https://api.private.eu-de.logs-router.cloud.ibm.com`  |  166.9.209.204   \n 166.9.209.236   \n 166.9.210.2  |
+| London (`eu-gb`)         | `https://api.private.eu-gb.logs-router.cloud.ibm.com`  |  166.9.245.170   \n 166.9.245.202   \n 166.9.245.234  |
+| Madrid (`eu-es`)         | `https://api.private.eu-es.logs-router.cloud.ibm.com`  | 166.9.225.11  \n 166.9.226.12  \n 166.9.227.11 |
+| Montreal (`ca-mon`)         | `https://api.private.ca-mon.logs-router.cloud.ibm.com`  | 166.9.232.49  \n 166.9.231.29  \n 166.9.233.49  |
+| Osaka (`jp-osa`)         | `https://api.private.jp-osa.logs-router.cloud.ibm.com`  | 166.9.247.46  \n 166.9.247.71  \n 166.9.247.110 |
+| Sao Paulo (`br-sao`)        | `https://api.private.br-sao.logs-router.cloud.ibm.com` | 166.9.246.76  \n 166.9.246.109  \n 166.9.246.157 |
+| Sydney (`au-syd`)        | `https://api.private.au-syd.logs-router.cloud.ibm.com` |  166.9.244.119   \n 166.9.244.151   \n 166.9.244.183  |
+| Tokyo  (`jp-tok`)         | `https://api.private.jp-tok.logs-router.cloud.ibm.com`  | 166.9.249.115   \n 166.9.249.144  \n 166.9.249.180 |
+| Toronto  (`ca-tor`)         | `https://api.private.ca-tor.logs-router.cloud.ibm.com`  | 166.9.247.154   \n 166.9.247.183  \n 166.9.247.216 |
+| Washington (`us-east`)   | `https://api.private.us-east.logs-router.cloud.ibm.com`  |  166.9.231.252   \n 166.9.251.89   \n 166.9.233.28  |
 {: caption="Lists of private API endpoints for interacting with {{site.data.keyword.logs-router_full_notm}}" caption-side="top"}
 
 
@@ -94,16 +94,16 @@ The following table shows the public API endpoints:
 
 | Region                   | ATracker Public endpoint                         | Port         |
 |--------------------------|---------------------------------------------------|--------------|
-| Chennai (`in-che`)       | `https://in-che.logs-router.cloud.ibm.com`         | `https/443`  |
-| Dallas (`us-south`)      | `https://us-south.logs-router.cloud.ibm.com`         | `https/443`  |
-| Frankfurt (`eu-de`)      | `https://eu-de.logs-router.cloud.ibm.com`          | `https/443`  |
-| London (`eu-gb`)         | `https://eu-gb.logs-router.cloud.ibm.com`          | `https/443`  |
-| Madrid (`eu-es`)         | `https://eu-es.logs-router.cloud.ibm.com`          | `https/443`  |
-| Montreal (`ca-mon`)      | `https://ca-mon.logs-router.cloud.ibm.com`          | `https/443`  |
-| Osaka (`jp-osa`)         | `https://jp-osa.logs-router.cloud.ibm.com`          | `https/443`  |
-| Sao Paulo (`br-sao`)     | `https://br-sao.logs-router.cloud.ibm.com`          | `https/443`  |
-| Sydney (`au-syd`)        | `https://au-syd.logs-router.cloud.ibm.com`          | `https/443`  |
-| Tokyo (`jp-tok`)         | `https://jp-tok.logs-router.cloud.ibm.com`          | `https/443`  |
-| Toronto (`ca-tor`)       | `https://ca-tor.logs-router.cloud.ibm.com`          | `https/443`  |
-| Washington (`us-east`)   | `https://us-east.logs-router.cloud.ibm.com`          | `https/443`  |
+| Chennai (`in-che`)       | `https://api.in-che.logs-router.cloud.ibm.com`         | `https/443`  |
+| Dallas (`us-south`)      | `https://api.us-south.logs-router.cloud.ibm.com`         | `https/443`  |
+| Frankfurt (`eu-de`)      | `https://api.eu-de.logs-router.cloud.ibm.com`          | `https/443`  |
+| London (`eu-gb`)         | `https://api.eu-gb.logs-router.cloud.ibm.com`          | `https/443`  |
+| Madrid (`eu-es`)         | `https://api.eu-es.logs-router.cloud.ibm.com`          | `https/443`  |
+| Montreal (`ca-mon`)      | `https://api.ca-mon.logs-router.cloud.ibm.com`          | `https/443`  |
+| Osaka (`jp-osa`)         | `https://api.jp-osa.logs-router.cloud.ibm.com`          | `https/443`  |
+| Sao Paulo (`br-sao`)     | `https://api.br-sao.logs-router.cloud.ibm.com`          | `https/443`  |
+| Sydney (`au-syd`)        | `https://api.au-syd.logs-router.cloud.ibm.com`          | `https/443`  |
+| Tokyo (`jp-tok`)         | `https://api.jp-tok.logs-router.cloud.ibm.com`          | `https/443`  |
+| Toronto (`ca-tor`)       | `https://api.ca-tor.logs-router.cloud.ibm.com`          | `https/443`  |
+| Washington (`us-east`)   | `https://api.us-east.logs-router.cloud.ibm.com`          | `https/443`  |
 {: caption="Lists of public API endpoints for interacting with {{site.data.keyword.logs-router_full_notm}}" caption-side="top"}
