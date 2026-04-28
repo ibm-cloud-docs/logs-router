@@ -24,9 +24,9 @@ toc:
           label: Tutorials
           topics:
           - topic: target-cloud-logs.md
-            navtitle: Routing platform logs to a Cloud Logs instance
+            navtitle: Routing platform logs to a Cloud Logs instance (V1)
           - topic: enterprise-routing-scenario.md
-            navtitle: Enterprise routing
+            navtitle: Enterprise routing (V3)
       - topic: releasenotes.md
         navtitle: Release notes
   - navgroup:
@@ -139,6 +139,8 @@ toc:
             navtitle: Updating the configuration of a target
           - topic: target-get.md
             navtitle: Retrieving information about a target
+      - topic: migration.md
+        navtitle: Migration guide to API v3
       - topicgroup:
           label: Observability
           topics:
@@ -184,8 +186,6 @@ toc:
           - link:
               label: Terraform reference
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
-      - topic: migration.md
-        navtitle: Migration guide to API v3 (Select availability)
   - navgroup:
       id: help
       topics:
