@@ -15,7 +15,9 @@ toc:
       - topic: getting-started.md
         navtitle: Getting started
       - topic: about.md
-        navtitle: About Logs Routing
+        navtitle: About Logs Routing (V1)
+      - topic: about-v3.md
+        navtitle: About Logs Routing (V3)
       - topic: platform-logs-about.md
         navtitle: Platform logs
       - topic: cloud-services.md
@@ -67,54 +69,49 @@ toc:
       - topicgroup:
           label: Managing account settings (v3)
           topics:
+          - topic: settings-about.md
+            navtitle: About account settings
           - topic: settings.md
             navtitle: Configuring account settings
-            tag: staging
           - topic: config_report.md
             navtitle: Generating a report
-            tag: staging
       - topicgroup:
           label: Managing targets (v3)
           topics:
           - topic: target-manage.md
             navtitle: Managing targets
-            tag: staging
           - topic: target-default.md
             navtitle: Configuring default targets
-            tag: staging
           - topic: target-locations.md
             navtitle: Enforcing target locations
-            tag: staging
           - topic: target-default-reset.md
             navtitle: Reseting default targets
-            tag: staging
           - topic: target-default-locations-reset.md
             navtitle: Reseting permitted target locations
-            tag: staging
       - topicgroup:
           label: Managing routes (v3)
           topics:
+          - topic: route-manage.md
+            navtitle: Managing routes
+          - topic: route_precedence.md
+            navtitle: Routing precedence
+          - topic: route_rules_definitions.md
+            navtitle: Defining a rule
           - topicgroup:
               label: Example routing scenarios
               topics:
               - topic: route-rule-all-metrics.md
                 navtitle: Routing all metrics
-                tag: staging
               - topic: route-from-1-location.md
                 navtitle: Routing metrics from 1 location
-                tag: staging
               - topic: route-drop.md
                 navtitle: Excluding metrics by using the drop action
-                tag: staging
               - topic: route-drop-all.md
                 navtitle: Excluding all metrics by using the drop action
-                tag: staging
               - topic: cross-account-scenario.md
                 navtitle: Routing platform metrics across accounts
-                tag: staging
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
-                tag: staging
       - topicgroup:
           label: Managing tenants (v1)
           topics:
@@ -176,10 +173,8 @@ toc:
           topics:
           - topic: logs-router-cli-config.md
             navtitle: Configuring the CLI
-            tag: staging
           - topic: logs-router-cli.md
             navtitle: Logs Routing CLI
-            tag: staging
       - topicgroup:
           label: Terraform Reference
           links:
