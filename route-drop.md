@@ -81,8 +81,32 @@ For example, to define an inclusion filter that defines the condition where only
 Run the following command to exclude all metrics received by {{site.data.keyword.logs_routing_full_notm}} from the `us-south` region.
 
 ```text
-ibmcloud logs-router route create --name drop-route --rules '[{"action": "drop", "inclusion_filters":[{"operand": "location","operator": "is","values": "us-south"}]}]'
+ibmcloud logs-router route create --name drop-route --rules '[{"action": "drop", "inclusion_filters":[{"operand": "location","operator": "is","values": ["us-south"]}]}]' --managed-by account
 ```
 {: pre}
 
 Where `inclusion_filters` specifies the filters.
+
+You cannot specify targets when you define a rule of action `drop`.
+{: note}
+
+The output of the command looks as follows:
+
+```text
+Id           33e92253-2990-4e95-aa83-3edbfc186625
+Name         drop-route
+Rules
+             action              drop
+             inclusion_filters
+                                 operand    location
+                                 operator   is
+                                 values     [us-south]
+
+             targets             -
+
+Created At   2026-04-28T21:43:28.481Z
+Updated At   2026-04-28T21:43:28.481Z
+Managed By   account
+
+```
+{: screen}

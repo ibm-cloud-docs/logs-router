@@ -47,17 +47,15 @@ ibmcloud logs-router route create --name drop-all-route --rules '[{"action":"dro
 The output of the command looks as follows:
 
 ```text
-Your request includes a drop rule. Do you want to continue? [y/N]> y
-OK
-Id           1ee150fc-1cc3-4660-9845-235e196c8bf2
+Id           4f000bc5-5f0d-411c-ab2d-6ee9a9a4141c
 Name         drop-all-route
 Rules
              action              drop
              inclusion_filters   -
              targets             -
 
-Created At   2026-04-28T17:56:58.484Z
-Updated At   2026-04-28T17:56:58.484Z
+Created At   2026-04-28T21:38:24.689Z
+Updated At   2026-04-28T21:38:24.689Z
 Managed By   account
 ```
 {: screen}

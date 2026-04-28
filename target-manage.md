@@ -139,17 +139,17 @@ This example shows an example successful target creation.
 {: note}
 
 ```text
-OK
-Target
-Name:                    my-target
-ID:                      000000000-00000000-0000-0000-00000000
-CRN:                     crn:v1:bluemix:public:logs-router:us-south:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx
-Region:                  us-south
-Type:                    cloud_logs
-Cloud Logs Target CRN:   crn:v1:bluemix:public:logs:global:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx:
-Write Status:            success
-CreatedAt:               2026-04-12T19:03:35.427Z
-UpdatedAt:               2026-04-12T19:03:35.427Z
+Id                6f9137b3-2bb9-4724-851b-153e23c82d80
+Name              my-target
+Destination Crn   crn:v1:bluemix:public:logs:au-syd:a/xxxxxxxxxx:619801ea-7cd8-4792-80cf-49a8359b4357::
+Target Type       cloud_logs
+Region            eu-gb
+Write Status
+                  status   success
+
+Created At        2026-04-28T21:33:18.632Z
+Updated At        2026-04-28T21:33:18.632Z
+Managed By        account
 ```
 {: screen}
 
@@ -196,20 +196,20 @@ where
 ### Example
 {: #target_icl_update_cli_sample}
 
-The following is an example using the `ibmcloud logs-router target update --target my-target --name new-target-name` command.
+The following is an example using the `ibmcloud logs-router target update --id 6f9137b3-2bb9-4724-851b-153e23c82d80 --name cl-platform-logs-sydney-113` command.
 
 ```text
-OK
-Target
-Name:                    new-target-name
-ID:                      000000000-00000000-0000-0000-00000000
-CRN:                     crn:v1:bluemix:public:logs-router:us-south:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx
-Region:                  us-south
-Type:                    cloud_logs
-Cloud Logs Target CRN:   crn:v1:bluemix:public:logs:global:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx:
-Write Status:            success
-Created:                 2024-05-31T19:03:35.427Z
-Updated:                 2024-05-31T19:03:35.427Z
+Id                6f9137b3-2bb9-4724-851b-153e23c82d80
+Name              cl-platform-logs-sydney-113
+Destination Crn   crn:v1:bluemix:public:logs:au-syd:a/xxxxxxxxxx:619801ea-7cd8-4792-80cf-49a8359b4357::
+Target Type       cloud_logs
+Region            eu-gb
+Write Status
+                  status   success
+
+Created At        2026-04-28T21:33:18.632Z
+Updated At        2026-04-28T21:35:22.184Z
+Managed By        account
 ```
 {: screen}
 
@@ -304,7 +304,7 @@ The following is an example using the `ibmcloud logs-router target get --id new-
 Target
 Name:                       new-target-name
 ID:                         xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-CRN:                        crn:v1:bluemix:public:atracker:us-south:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx
+CRN:                        crn:v1:bluemix:public:atracker:us-south:a/xxxxxxxxxx
 Type:                       cloud_logs
 Cloud Logs Target CRN:      crn:v1:bluemix:public:logs:global:a/xxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx:
 Service to Service Enabled: true
