@@ -26,7 +26,7 @@ You can configure up to two default targets for collecting logs data that is not
 {: #default_targets_ui}
 {: ui}
 
-You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-create-ui) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-update-ui).
+You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_create) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_update).
 
 
 

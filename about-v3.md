@@ -13,8 +13,6 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-
 # About {{site.data.keyword.logs_routing_full_notm}} V3
 {: #about-v3}
 
@@ -22,59 +20,100 @@ Use {{site.data.keyword.logs_routing_full_notm}} to configure how to route platf
 {: shortdesc}
 
 
-## Auditing events
-{: #about-events}
+## Features
+{: #about-v3-features}
 
-platform logs are critical data for security operations and a key element for meeting compliance requirements.
-{: note}
+By default, you can use {{site.data.keyword.logs_routing_full_notm}} that is based on the REST API V1 to route platform logs to a single destination per region.
 
-- Auditing events increase your visibility to {{site.data.keyword.cloud_notm}} configuration changes so you can manage the risk of incorrectly configured services more effectively.
+With the release of {{site.data.keyword.logs_routing_full_notm}} REST API V3, you can migrate your account to use the V3 API so that you can route platform logs to multiple destinations and manage the service at the Enterprise account level by using enterprise IAM action controls. For more information on migration, see [Migrating to use {{site.data.keyword.logs_routing_full_notm}} REST API V3](/docs/logs-router?topic=logs-router-v3-migration){: external}.
 
-- Auditing events simplify your understanding of IT complexity and agile development actions in the cloud. The combination of events provides a holistic view of what happened.
+The following table lists core features that the {{site.data.keyword.logs_routing_full_notm}} offers:
 
-- Insights from the auditing event data help accelerate identification of abnormal activities. For example, you can track the frequency and volume of access management events or multi-factor authentication configuration changes.
-
-The auditing data that is collected and routed complies with the Cloud Auditing Data Federation (CADF) standard.
-{: note}
-
-The CADF standard defines a full event model that includes the information that is needed to certify, manage, and auditing security of applications and services in cloud environments. The CADF event model includes the following components:
--	Action: The action is the operation or activity that an initiator performs, attempts to perform, or is waiting to complete.
--	Initiator: The initiator is the resource that makes an API call and generates a CADF event. The event that is triggered depends on the action that is requested by the API call.
--	Observer: The observer is the resource that creates and stores a CADF record from information available in a CADF event
--	Outcome: The outcome is the status of the action against the target.
--	Target: The target is the resource against which the action is performed, attempted to perform, or is pending to complete.
+| Feature                                                                  | V1      |  V3      | More information |
+|--------------------------------------------------------------------------|---------|----------|------------------|
+| Consolidate platform logs to the region of your primary operations       | Yes     | Yes      | [Route platform logs to a single destination per region](/docs/logs-router?topic=logs-router-target-cloud-logs) |
+| Improve your data residency compliance stature, keeping data at-rest within certain regions |  Yes     | Yes      | [About account settings](/docs/logs-router?topic=logs-router-settings-about)  |
+| Route platform logs to multiple destinations adding flexibility at scale     | No      | Yes      | [Configuring multiple destinations](/docs/logs-router?topic=logs-router-route-manage) |
+| Enterprise account management by using enterprise IAM action controls    | No      | Yes      | [Enterprise routing](/docs/logs-router?topic=logs-router-enterprise-routing-scenario&interface=terraform) |
+{: caption="{{site.data.keyword.logs_routing_full_notm}} features" caption-side="top"}
 
 
 
-## Target locations
-{: #about-locations}
+## Advantages of migrating to {{site.data.keyword.logs_routing_full_notm}} V3
+{: #about-v3-advantages}
 
-Control of the storage location is critical to building enterprise-grade solutions on the {{site.data.keyword.cloud_notm}}.
-{: note}
+`Add flexibility at scale with the multiple target routing capability.`
+:   You can configure up to 16 different {{site.data.keyword.logs_full_notm}} target destinations. The location of the {{site.data.keyword.logs_full_notm}} instances can be in the same accoount or in different accounts.
 
-In {{site.data.keyword.atracker_full_notm}}, a target defines where platform logs are collected.  For more information, see [Targets](/docs/atracker?topic=atracker-atracker-resources#atracker-resources-targets).
+`Send platform logs to multiple instances simultaneously, supporting both centralized compliance repositories and distributed operational logging ones.`
+:   You can define intelligent routing rules that allow you to configure a central or distributed model for logging.
 
-You can configure different types of targets:
+`Control data flow based on regional requirements, ensuring logs from specific locations reach appropriate destinations.`
+:   You can configure with precision routing rules that define where to route data based on location.
+
+`Design sophisticated segmentation strategies for your logs to enforce compliance and internal corporate requirements and regulations.`
+:   You can define multiple targets and routing rules that allow you to send different types of logs to different destinations based on compliance and internal corporate requirements and regulations.
+
+`Ensure no log is lost due to a misconfiguration or oversight.`
+:   You can catch all logs generated in your account to ensure no logs are lost when they do not match specific routing rules.
+
+`Support for Enterprise account management by using IAM Action Controls to protect your audit trail.`
+:   Control at the enterprise account level how platform logs are routed across your Enterprise so account administrators that have full privileges within their accounts cannot modify or delete enterprise managed routes. You can meet compliance requirements while development teams maintain the flexibility they need for day to day operations.
+
+## Concepts
+{: #about-v3-concepts}
+
+Before you can start configuring and using the {{site.data.keyword.logs_routing_full_notm}} service, you must configure the primary metadata location, and optionally the backup metadata location in the account settings. Next, you can define the destinations and rules that define how platform logs are routed in your the {{site.data.keyword.cloud_full_notm}} account.
+
+The {{site.data.keyword.logs_routing_full_notm}} service uses two core concepts:
+- `Target`
+
+    A target defines where platform logs are collected.
+
+    Targets represent your {{site.data.keyword.logs_full_notm}} destinations.
+
+    Each target points to a specific {{site.data.keyword.logs_full_notm}} instance where data will be sent.
+
+    For more information, see [Targets](/docs/logs-router?topic=logs-router-target_icl).
+
+- `Route`
+
+    A route defines the rules that indicate where platform logs that are generated in an account are routed.
+
+    Routes define the logic for directing logs to targets.
+
+    Routes evaluate the log source CRN (Cloud Resource Name) to determine the appropriate destination that you specify in a routing rule based on location.
+
+    For more information, see [Routes](/docs/logs-router?topic=logs-router-route-manage).
+
+You can configure the following type of target:
 
 | Target                                      | Type                     | When to use |
 |---------------------------------------------|--------------------------|------------|
-| {{site.data.keyword.cos_full_notm}} (COS)   | `cloud_object_storage`   | To comply with Financial Services regulations. |
-| {{site.data.keyword.logs_full_notm}}| `cloud_logs`   | To view, search, and manage auditing data through the UI. |
-| {{site.data.keyword.messagehub_full}} | `event_streams`   | To send auditing data to data lakes, other analysis tools, and to other corporate tools such as Security Information and Event Management (SIEM) tools. |
+| {{site.data.keyword.logs_full_notm}} | `cloud_logs`   | To view, search, and manage platform logs through the UI.
 {: caption="List of targets" caption-side="top"}
 
-In {{site.data.keyword.atracker_full_notm}}, a route defines the rules that indicate where platform logs that are generated in an account are routed. For more information, see [Routes](/docs/atracker?topic=atracker-atracker-resources#atracker-resources-routes).
 
+## Enterprise account management
+{: #about-v3-enterprise}
 
-## Features
-{: #about-features}
+You can use {{site.data.keyword.logs_routing_full}} Enterprise routing to configure:
+- Routing of platform logs from your enterprise child accounts to your enterprise parent account.
+- Routing of platform logs from your enterprise child accounts to an {{site.data.keyword.logs_full_notm}} instance in another account of your choice.
 
-- Consolidate platform logs to the region of your primary operations
+You must use {{site.data.keyword.iamshort}} (IAM) Action Control to restrict changes to the enterprise-managed routing.
+{: important}
 
-- Route platform logs to one or multiple locations
+Your child account administrators can separately define destinations to keep a copy of the platform logs in their account.
+{: note}
 
-- Improve your data residency compliance stature, keeping data at-rest within certain regions
+You can configure Enterprise managed routing with IAM action controls to:
+- Lock down compliance critical routes.
+- Apply IAM restrictions that prevent child account administrators from modifying enterprise mandated routing configurations. Enterprise administrators control which targets and routes are immutable across all accounts.
+- Maintain centralized governance while keeping operational autonomy in child accounts. Individual accounts can still create and manage their own additional routes for operational needs.
 
-- Feed a data lake for analytics
+You can configure your enterprise child accounts to route all or a subset of platform logs to an enterprise parent account. The child accounts contain Cloud resources that generate platform logs. The parent account owns the enterprise and has {{site.data.keyword.logs_full_notm}} instances that will contain the platform logs from the child accounts.
 
-- Forward your activity event data to {{site.data.keyword.cos_full_notm}} (COS) for {{site.data.keyword.cloud_notm}} for Financial Services compliance
+The enterprise-managed routing configurations, from child accounts to parent account, can be locked by restricting the {{site.data.keyword.logs_routing_full}} enterprise actions with IAM Action Control. The child accounts can continue to manage their own account-managed {{site.data.keyword.logs_routing_full}} configurations, while the enterprise-managed configurations are restricted.
+
+![A diagram that shows a sample {{site.data.keyword.logs_routing_full}} enterprise configuration.](/images/logs-router-enterprise-routing.svg "{{site.data.keyword.logs_routing_full}} enterprise configuration."){: caption="{{site.data.keyword.logs_routing_full}} enterprise configuration" caption-side="bottom"}

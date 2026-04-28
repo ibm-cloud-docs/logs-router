@@ -646,7 +646,7 @@ See the following table for some HTTP response codes:
 Only resources in your account are listed and selectable. To specify a resource in a different account, select **Specify CRN** under **Choose destination**.
 {: important}
 
-Complete the followinf steps to create a target:
+Complete the following steps to create a target:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
@@ -658,9 +658,9 @@ Complete the followinf steps to create a target:
 
     Select **Specify CRN** to add the {{site.data.keyword.logs_full_notm}} instance CRN of an instance that is located in a different account.
 
-    A service authorization is required to allow {{site.data.keyword.logs_routing_full_notm}} to communicate with {{site.data.keyword.logs_full_notm}}.{: note}
+    A service authorization is required to allow {{site.data.keyword.logs_routing_full_notm}} to communicate with {{site.data.keyword.logs_full_notm}}.
 
-6. In the *target deatils* section, complete the following tasks:
+6. In the *target details* section, complete the following tasks:
 
     Enter the target name.
 

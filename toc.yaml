@@ -13,7 +13,9 @@ toc:
       id: learn
       topics:
       - topic: getting-started.md
-        navtitle: Getting started
+        navtitle: Getting started (V1)
+      - topic: getting-started-v3.md
+        navtitle: Getting started (V3)
       - topic: about.md
         navtitle: About Logs Routing (V1)
       - topic: about-v3.md
@@ -78,8 +80,10 @@ toc:
           - topic: getting-started-mng-endpoints.md
             navtitle: Enforcing private endpoints
       - topicgroup:
-          label: Managing targets (v3)
+          label: Managing targets (V3)
           topics:
+          - topic: target.md
+            navtitle: About targets
           - topic: target-manage.md
             navtitle: Managing targets
           - topic: target-default.md
@@ -91,7 +95,7 @@ toc:
           - topic: target-default-locations-reset.md
             navtitle: Reseting permitted target locations
       - topicgroup:
-          label: Managing routes (v3)
+          label: Managing routes (V3)
           topics:
           - topic: route-manage.md
             navtitle: Managing routes
@@ -115,7 +119,7 @@ toc:
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
       - topicgroup:
-          label: Managing tenants (v1)
+          label: Managing tenants (V1)
           topics:
           - topic: tenant-get.md
             navtitle: Getting information about a tenant
@@ -130,7 +134,7 @@ toc:
           - topic: terraform-setup.md
             navtitle: Using Terraform
       - topicgroup:
-          label: Managing targets (v1)
+          label: Managing targets (V1)
           topics:
           - topic: tenants-list.md
             navtitle: Listing targets through the UI
@@ -139,12 +143,14 @@ toc:
           - topic: target-get.md
             navtitle: Retrieving information about a target
       - topic: migration.md
-        navtitle: Migration guide to API v3
+        navtitle: Migration guide to API V3
       - topicgroup:
           label: Observability
           topics:
           - topic: activity-tracker.md
-            navtitle: Auditing events
+            navtitle: Auditing events (V1)
+          - topic: at_events_v3.md
+            navtitle: Auditing events (V3)
   - navgroup:
       id: reference
       topics:
