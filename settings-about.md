@@ -102,7 +102,7 @@ The following table lists the actions that you can run to manage settings:
 {: caption="Settings actions by using the {{site.data.keyword.logs_routing_full_notm}} CLI" caption-side="top"}
 
 
-For more information, see [{{site.data.keyword.logs_routing_full_notm}} CLI](docs/logs-router?topic=logs-router-logs-router-cli).
+For more information, see [{{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
 
 
 ## API methods
