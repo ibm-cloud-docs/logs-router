@@ -16,10 +16,10 @@ subcollection: logs-router
 # Managing {{site.data.keyword.logs_full_notm}} targets
 {: #target_icl}
 
-You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_router_full_notm}} UI, the {{site.data.keyword.logs_router_full_notm}} CLI, the {{site.data.keyword.logs_router_full_notm}} REST API, and Terraform scripts. A target is a resource where you can collect platform logs.
+You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. A target is a resource where you can collect platform logs.
 {: shortdesc}
 
-For more information on {{site.data.keyword.logs_router_full_notm}} targets, see [Targets](/docs/logs-router?topic=logs-router-target).
+For more information on {{site.data.keyword.logs_routing_full_notm}} targets, see [Targets](/docs/logs-router?topic=logs-router-target).
 
 
 ## IAM Access
@@ -48,7 +48,7 @@ Users with regional scope will be limited to access targets in their authorized 
 ## Authentication
 {: #target_icl_auth_opts}
 
-When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_router_full_notm}} and {{site.data.keyword. logs_full_notm}}.
+When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword. logs_full_notm}}.
 {: note}
 
 Choose 1 of the following options:
@@ -72,7 +72,7 @@ Before you use the CLI to manage targets, complete the following steps:
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_router_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
 3. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
@@ -158,7 +158,7 @@ UpdatedAt:               2026-04-12T19:03:35.427Z
 {: #target_icl_update_cli}
 {: cli}
 
-Use this command to update an {{site.data.keyword.logs_full_notm}} target for an {{site.data.keyword.logs_router_full_notm}} region.
+Use this command to update an {{site.data.keyword.logs_full_notm}} target for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 Any specified value that is different from when the target was originally created will be updated to the value specified in the command.
 
@@ -270,7 +270,7 @@ Something went wrong. Error:
 {: #target_icl_get_cli}
 {: cli}
 
-Use this command to get information about a target for an {{site.data.keyword.logs_router_full_notm}} region.
+Use this command to get information about a target for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
 ibmcloud logs-router target get --id TARGET [--output FORMAT]
@@ -313,7 +313,7 @@ Updated:                    2024-06-05T17:49:56.452Z
 {: #target_icl_list_cli}
 {: cli}
 
-Use this command to list the configured targets for an {{site.data.keyword.logs_router_full_notm}} region.
+Use this command to list the configured targets for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
 ibmcloud logs-router target list [--output FORMAT]
@@ -353,7 +353,7 @@ The following table lists the actions that you can run to manage targets:
 | Delete a target            | `DELETE`         | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
 | Read a target              | `GET`            | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
 | List all targets           | `GET`            | `<ENDPOINT>/v3/targets`              |
-{: caption="Target actions by using the {{site.data.keyword.logs_router_full_notm}} REST API" caption-side="top"}
+{: caption="Target actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
 You can use private and public endpoints to manage targets. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
@@ -362,7 +362,7 @@ You can use private and public endpoints to manage targets. For more information
 
 - You can disable the public endpoints by updating the account settings. For more information, see [Configuring target and region settings](/docs/logs-router?topic=logs-router-settings).
 
-For more information about the REST API, see [{{site.data.keyword.logs_router_full_notm}} REST API v3](/apidocs/logs-router-service-api/logs-router-v3).
+For more information about the REST API, see [{{site.data.keyword.logs_routing_full_notm}} REST API v3](/apidocs/logs-router-service-api/logs-router-v3).
 {: note}
 
 
@@ -588,7 +588,7 @@ curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/targets -H "Au
 {: #target_icl_api_rc}
 {: api}
 
-When you use the {{site.data.keyword.logs_router_full_notm}} REST API, you can get standard HTTP response codes to indicate whether a method completed successfully.
+When you use the {{site.data.keyword.logs_routing_full_notm}} REST API, you can get standard HTTP response codes to indicate whether a method completed successfully.
 
 - A 200 response always indicates success.
 - A 4xx response indicates a failure.
@@ -629,13 +629,13 @@ Complete the followinf steps to create a target:
 
     Select **Specify CRN** to add the {{site.data.keyword.logs_full_notm}} instance CRN of an instance that is located in a different account.
 
-    A service authorization is required to allow {{site.data.keyword.logs_router_full_notm}} to communicate with {{site.data.keyword.logs_full_notm}}.{: note}
+    A service authorization is required to allow {{site.data.keyword.logs_routing_full_notm}} to communicate with {{site.data.keyword.logs_full_notm}}.{: note}
 
 6. In the *target deatils* section, complete the following tasks:
 
     Enter the target name.
 
-    Enable the toggle from **Not set** to automatically set your new target as a default target in your {{site.data.keyword.logs_router_full_notm}} settings.
+    Enable the toggle from **Not set** to automatically set your new target as a default target in your {{site.data.keyword.logs_routing_full_notm}} settings.
 
 7. Click **Create target**.
 
@@ -654,7 +654,7 @@ Complete the following steps:
 3. Select **Logging > Routing**.
 4. In the *Targets* section, determine which target to update and click the ![Actions icon](../icons/action-menu-icon.svg "Actions").
 5. Click **Edit** to open the update panel.
-6. In the Update panel, click **Edit** to update your target's name, CRN to change the {{site.data.keyword.logs_full_notm}} instance associated with your target, or both. You can also toggle **Default target** to add or remove your target as a default target in your {{site.data.keyword.logs_router_full_notm}} settings.
+6. In the Update panel, click **Edit** to update your target's name, CRN to change the {{site.data.keyword.logs_full_notm}} instance associated with your target, or both. You can also toggle **Default target** to add or remove your target as a default target in your {{site.data.keyword.logs_routing_full_notm}} settings.
 7. Click **Save** to update your target.
 
 
@@ -663,7 +663,7 @@ Complete the following steps:
 {: #target_icl_ui_delete}
 {: ui}
 
-You cannot delete an {{site.data.keyword.logs_router_full_notm}} target if it is used in a route or as a default target setting.
+You cannot delete an {{site.data.keyword.logs_routing_full_notm}} target if it is used in a route or as a default target setting.
 {: important}
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.

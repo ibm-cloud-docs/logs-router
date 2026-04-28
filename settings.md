@@ -15,7 +15,7 @@ subcollection: logs-router
 # Configuring account settings
 {: #settings}
 
-You can configure your account settings for {{site.data.keyword.logs_routing_full_notm}} by using the {{site.data.keyword.logs_router_full_notm}} UI, the {{site.data.keyword.logs_router_full_notm}} CLI, the {{site.data.keyword.logs_router_full_notm}} REST API, and Terraform scripts. Set these settings to define where and how platform logs are collected, routed, and managed in your account.
+You can configure your account settings for {{site.data.keyword.logs_routing_full_notm}} by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. Set these settings to define where and how platform logs are collected, routed, and managed in your account.
 {: shortdesc}
 
 Before you disable public endpoints by setting `--private-api-endpoint-only TRUE`, make sure your account has access to the private endpoint.  You can do this by running the command `ibmcloud account show`.  If `VRF Enabled` is `true` and `Service Endpoint Enabled` is `true` then you have access to the private endpoint. If you do not have access to the private endpoint, you will be unable to re-enable the public endpoint since private endpoint access is required to re-enable the public endpoint.
@@ -27,13 +27,13 @@ For more information, see [About account settings](/docs/logs-router?topic=logs-
 ## IAM permissions
 {: #settings-access}
 
-Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_router_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
+Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
 
 ## Getting account settings using the UI
 {: #settings-get-ui}
 {: ui}
 
-Do the following to view the account settings for {{site.data.keyword.logs_router_full_notm}} by using the UI.
+Do the following to view the account settings for {{site.data.keyword.logs_routing_full_notm}} by using the UI.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
@@ -53,7 +53,7 @@ On this page you can view the following settings:
 
 - **Default targets**: Displays the configured default targets.
 
-- **Public endpoints**: Displays if public endpoints are enabled. When disabled, the {{site.data.keyword.logs_router_full_notm}} UI cannot be accessed.
+- **Public endpoints**: Displays if public endpoints are enabled. When disabled, the {{site.data.keyword.logs_routing_full_notm}} UI cannot be accessed.
 
 - **Reports**: Displays the configurations in JSON format.
 
@@ -84,16 +84,16 @@ On this page you can view the following settings:
 {: #settings-prereqs-cli}
 {: cli}
 
-Before you use the the CLI to manage {{site.data.keyword.logs_router_full_notm}} account settings, [Install the {{site.data.keyword.logs_router_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
+Before you use the the CLI to manage {{site.data.keyword.logs_routing_full_notm}} account settings, [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
-Check that you have IAM permissions to read, update, or both the {{site.data.keyword.logs_router_full_notm}} account settings.
+Check that you have IAM permissions to read, update, or both the {{site.data.keyword.logs_routing_full_notm}} account settings.
 
 
 ## Getting account settings using the CLI
 {: #settings-get-using-cli}
 {: cli}
 
-Use this command to get the settings for the {{site.data.keyword.logs_router_full_notm}} account configurations.
+Use this command to get the settings for the {{site.data.keyword.logs_routing_full_notm}} account configurations.
 
 ```sh
 ibmcloud logs-router setting get [--output FORMAT]

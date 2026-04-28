@@ -150,7 +150,7 @@ toc:
       - topic: endpoints.md
         navtitle: Endpoints
       - topic: reference/vpe-connection-crn.md
-        navtitle: Endpoints CRNs
+        navtitle: Endpoints CRNs (V1)
       - topic: data-portability.md
         navtitle: Data portability
       - topic: reference/ha-dr-new.md

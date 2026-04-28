@@ -17,7 +17,7 @@ subcollection: logs-router
 # Reseting the default targets in the account
 {: #target-default-reset}
 
-To reset the {{site.data.keyword.logs_router_full_notm}} account's default targets, you must delete any default targets from the account configuration.
+To reset the {{site.data.keyword.logs_routing_full_notm}} account's default targets, you must delete any default targets from the account configuration.
 {: shortdesc}
 
 
@@ -26,7 +26,7 @@ To reset the {{site.data.keyword.logs_router_full_notm}} account's default targe
 {: #remove_default_targets_ui}
 {: ui}
 
-You can remove all default targets using the {{site.data.keyword.logs_router_full_notm}} UI by updating your account settings and deleting the default targets. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).
+You can remove all default targets using the {{site.data.keyword.logs_routing_full_notm}} UI by updating your account settings and deleting the default targets. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).
 
 
 ## Prereqs
@@ -36,9 +36,9 @@ You can remove all default targets using the {{site.data.keyword.logs_router_ful
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_router_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
-3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_router_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
+3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
 
 4. Log in to {{site.data.keyword.cloud_notm}} by running the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 

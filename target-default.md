@@ -16,7 +16,7 @@ subcollection: logs-router
 # Enforcing default targets
 {: #target-default}
 
-You can configure up to two default targets for collecting logs data that is not explicitly managed in the {{site.data.keyword.logs_router_full_notm}} account's routing rules.
+You can configure up to two default targets for collecting logs data that is not explicitly managed in the {{site.data.keyword.logs_routing_full_notm}} account's routing rules.
 {: shortdesc}
 
 
@@ -26,7 +26,7 @@ You can configure up to two default targets for collecting logs data that is not
 {: #default_targets_ui}
 {: ui}
 
-You can manage your default targets using the {{site.data.keyword.logs_router_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-create-ui) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-update-ui).
+You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-create-ui) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target-manage&interface=ui#target-update-ui).
 
 
 
@@ -37,9 +37,9 @@ You can manage your default targets using the {{site.data.keyword.logs_router_fu
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_router_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
-3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_router_full_notm}} settings](/docs/logs-router?topic=logs-router-iam).
+3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settings](/docs/logs-router?topic=logs-router-iam).
 
 4. Log in to {{site.data.keyword.cloud_notm}} by running the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
