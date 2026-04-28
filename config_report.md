@@ -28,13 +28,13 @@ Before you use the CLI to save your {{site.data.keyword.logs_routing_full_notm}}
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
 
 3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} routes.](/docs/logs-router?topic=logs-router-iam)
 
 4. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login).
 
-5. Make sure you have configured your [settings](/docs/logs-router?topic=logs-router-settings), [targets](/docs/logs-router?topic=logs-router-target-manage&interface=cli) and [routes](/docs/logs-router?topic=logs-router-route_rules_definitions).
+5. Make sure you have configured your [settings](/docs/logs-router?topic=logs-router-settings), [targets](/docs/logs-router?topic=logs-router-target_icl) and [routes](/docs/logs-router?topic=logs-router-route-manage).
 
 
 ## Saving a copy of your account settings
@@ -57,7 +57,7 @@ Where `ACCOUNT` is a unique indicator for your account.
 Run the following command to save a copy of your route configuration to a file.
 
 ```text
-ibmcloud logs-router route ls --output JSON > ACCOUNT_routes.json
+ibmcloud logs-router route list --output JSON > ACCOUNT_routes.json
 ```
 {: pre}
 
@@ -70,7 +70,7 @@ Where `ACCOUNT` is a unique indicator for your account.
 Run the following command to save a copy of your target configuration to a file.
 
 ```text
-ibmcloud logs-router target ls --output JSON > ACCOUNT_targets.json
+ibmcloud logs-router target list --output JSON > ACCOUNT_targets.json
 ```
 {: pre}
 
@@ -85,7 +85,7 @@ Where `ACCOUNT` is a unique indicator for your account.
 You can use the following cURL command to get existing settings information:
 
 ```shell
-curl -X GET  ENDPOINT/api/v3/settings   -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_settings.json
+curl -X GET  ENDPOINT/v3/settings   -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_settings.json
 ```
 {: codeblock}
 
