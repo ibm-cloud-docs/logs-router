@@ -19,7 +19,7 @@ subcollection: logs-router
 To define a routing rule, you must specify 1 or more targets as the destinations for metrics. You can also define 1 or more inclusion filters that define the conditions of how those metrics are routed to those destinations.
 {: shortdesc}
 
-For each route that you define in the account, you can configure up to 10 rules. The rules specify what metrics are routed in a region and where to route them. For more information, see [Understanding how routes work in your account](/docs/metrics-router?topic=metrics-router-routes&interface=cli#route_behaviour).
+For each route that you define in the account, you can configure up to 10 rules. The rules specify what metrics are routed in a region and where to route them. For more information, see [Understanding how routes work in your account](/docs/logs-router?topic=logs-router-routes&interface=cli#route_behaviour).
 
 A rule consists of 1 action, 1 or more targets, and 0 or more inclusion filters.
 
@@ -88,13 +88,13 @@ Inclusion filters are composed of an `operand`, `operator`, and `value`:
     Valid values depend on the `operand`.
 
     `location`
-    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/metrics-router?topic=metrics-router-regions)
+    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-regions)
 
     `service_name`
-    :   The CRN service name of an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/metrics-router?topic=metrics-router-cloud-services-mr)
+    :   The CRN service name of an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-cloud-services-mr)
 
     `service_instance`, `resource_type`, and `resource`
-    :   Values appropriate to an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/metrics-router?topic=metrics-router-cloud-services-mr)
+    :   Values appropriate to an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-cloud-services-mr)
 
 Note these limitations when configuring inclusion filters.
 
@@ -107,7 +107,7 @@ Note these limitations when configuring inclusion filters.
 ## IAM Access
 {: #rules_iam}
 
-Users must have the appropriate IAM roles to work with routing rules. For information on IAM roles, see [Managing IAM access.](/docs/metrics-router?topic=metrics-router-iam)
+Users must have the appropriate IAM roles to work with routing rules. For information on IAM roles, see [Managing IAM access.](/docs/logs-router?topic=logs-router-iam)
 
 <ui>
 
@@ -115,7 +115,7 @@ Users must have the appropriate IAM roles to work with routing rules. For inform
 {: #define_rule_ui}
 {: ui}
 
-You can configure action and inclusion filter routing rules in the UI. for more information, see [Managing routes](/docs/metrics-router?topic=metrics-router-route-manage&interface=ui).
+You can configure action and inclusion filter routing rules in the UI. for more information, see [Managing routes](/docs/logs-router?topic=logs-router-route-manage&interface=ui).
 
 </ui>
 
@@ -200,7 +200,7 @@ Targets and inclusion filters are defined in API calls by using `rules`. The `ru
 For example, the following example creates a route that is named `my-route` and sends metrics from `codeengine`, and `container-registry` in the `us-east` region to targets `11111111-1111-1111-1111-111111111111` and `22222222-2222-2222-2222-222222222222`.
 
 ```sh
-curl -X POST https://private.<REGION>.metrics-router.cloud.ibm.com/api/v3/routes -H "Authorization: Bearer <IAM_TOKEN>" -H 'content-type: application/json' -d '{
+curl -X POST https://private.<REGION>.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: Bearer <IAM_TOKEN>" -H 'content-type: application/json' -d '{
     "name": "my-route",
     "rules": [
       {
@@ -225,4 +225,4 @@ curl -X POST https://private.<REGION>.metrics-router.cloud.ibm.com/api/v3/routes
 {: codeblock}
 
 
-For more information, see the [API reference.](https://{DomainName}/apidocs/metrics-router/metrics-router-v3)
+For more information, see the [API reference.](https://{DomainName}/apidocs/logs-router/logs-router-v3)

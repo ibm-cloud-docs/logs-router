@@ -23,6 +23,6 @@ You can configure exactly where {{site.data.keyword.logs_routing_full_notm}} rou
 
     If a matched route rule uses the `drop` action, the data point will be dropped and no destinations will receive it.
 
-2. If the data point does not match any route rules, the [default targets setting](/docs/metrics-router?topic=metrics-router-target-default) is used to route the data point to the default targets.
+2. If the data point does not match any route rules, the [default targets setting](/docs/logs-router?topic=logs-router-target-default) is used to route the data point to the default targets.
 
 3. If the data point does not match any route rules, and no default target is defined, the metric is routed to the {{site.data.keyword.mon_full_notm}} instance defined in the region as the receiver of platform metrics. [The {{site.data.keyword.mon_full_notm}} instance enabled to receive platform metrics must exist in the region to receive the metrics.](/docs/monitoring?topic=monitoring-platform_metrics_enabling)

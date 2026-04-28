@@ -20,7 +20,7 @@ subcollection: logs-router
 You can manage routes in your account by using <ui>the {{site.data.keyword.logs_routing_full_notm}} UI, </ui>the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what metrics are routed in a region and where to route them.
 {: shortdesc}
 
-For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see [routes](/docs/metrics-router?topic=metrics-router-routes&interface=cli).
+For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see [routes](/docs/logs-router?topic=logs-router-routes&interface=cli).
 
 
 
@@ -29,7 +29,7 @@ For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see
 
 You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform metrics that are generated in different regions where the service is supported to a target destination.
 
--  You can only route platform metrics that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/metrics-router?topic=metrics-router-regions).
+-  You can only route platform metrics that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-regions).
 
 - If you have regulatory and compliance requirements, check the route rules comply with them.
 
@@ -38,7 +38,7 @@ You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform
 ## IAM Access
 {: #route-manage-iam}
 
-You must have the correct IAM permissions to manage routes. For information, see [Managing IAM access.](/docs/metrics-router?topic=metrics-router-iam)
+You must have the correct IAM permissions to manage routes. For information, see [Managing IAM access.](/docs/logs-router?topic=logs-router-iam)
 
 <ui>
 
@@ -70,13 +70,13 @@ Do the following to create a route using the UI.
 
     - Select `Drop` for the rule to drop metrics matching this rule.
 
-10. Add the [inclusion filters](/docs/metrics-router?topic=metrics-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
+10. Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
 
    Select the desired filter and condition and specify the value to be matched by the inclusion filter.
 
    To add multiple inclusion filters, click **Add filter** to add additional filters.
 
-11. Add the [target](/docs/metrics-router?topic=metrics-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
+11. Add the [target](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
 
 12. Click **Add rule** to add additional rules to the route.
 
@@ -124,13 +124,13 @@ Do the following to update a route using the UI.
 
     - Select `Drop` for the rule to drop metrics matching this rule.
 
-10. Add or modify the [inclusion filters](/docs/metrics-router?topic=metrics-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
+10. Add or modify the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
 
    Select the desired filter and condition and specify the value to be matched by the inclusion filter.
 
    To add multiple inclusion filters, click **Add filter** to add additional filters.
 
-11. Modify the [target](/docs/metrics-router?topic=metrics-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
+11. Modify the [target](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
 
 12. Click **Add rule** to add additional rules to the route.
 
@@ -200,7 +200,7 @@ Before you use the CLI to manage routes, complete the following steps:
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/metrics-router?topic=metrics-router-metrics-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
 3. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
@@ -215,7 +215,7 @@ Route names are unique in the account.
 {: note}
 
 ```sh
-ibmcloud metrics-router route create --name ROUTE_NAME ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
+ibmcloud logs-router route create --name ROUTE_NAME ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
 ```
 {: pre}
 
@@ -229,10 +229,10 @@ ibmcloud metrics-router route create --name ROUTE_NAME ( --rules RULES |  --file
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -243,7 +243,7 @@ ibmcloud metrics-router route create --name ROUTE_NAME ( --rules RULES |  --file
 ### Example
 {: #route-manage-cli-create-sample}
 
-The following is an example using the **`ibmcloud metrics-router route create`** command.
+The following is an example using the **`ibmcloud logs-router route create`** command.
 
 This example shows an example successful route creation.
 {: note}
@@ -254,7 +254,7 @@ OK
 Route
 Name:         target1
 ID:           06a29ca2-40f5-4371-ae3c-76a896577bd3
-CRN:          crn:v1:bluemix:public:metrics-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
+CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
 Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
 Created At:   2023-05-30T21:14:21.460Z
 Updated At:   2023-05-30T21:14:21.460Z
@@ -271,7 +271,7 @@ Updated At:   2023-05-30T21:14:21.460Z
 Use this command to update a route. Any specified value that is different from when the route was originally created will be updated to the value specified in the command.
 
 ```sh
-ibmcloud metrics-router route update --route ROUTE [--name ROUTE_NAME] ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
+ibmcloud logs-router route update --route ROUTE [--name ROUTE_NAME] ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
 ```
 {: pre}
 
@@ -288,10 +288,10 @@ ibmcloud metrics-router route update --route ROUTE [--name ROUTE_NAME] ( --rules
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -302,7 +302,7 @@ ibmcloud metrics-router route update --route ROUTE [--name ROUTE_NAME] ( --rules
 ### Example
 {: #route-manage-cli-update-sample}
 
-The following is an example using the **`ibmcloud metrics-router route update --route my-route --name my-new-route-name`** command.
+The following is an example using the **`ibmcloud logs-router route update --route my-route --name my-new-route-name`** command.
 
 ```text
 ibmcloud mr route update --route target1 --name target2
@@ -310,7 +310,7 @@ OK
 Route
 Name:         target2
 ID:           06a29ca2-40f5-4371-ae3c-76a896577bd3
-CRN:          crn:v1:bluemix:public:metrics-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
+CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
 Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
 Created At:   2023-05-30T21:14:21.460Z
 Updated At:   2023-05-30T21:19:40.953Z
@@ -325,7 +325,7 @@ Updated At:   2023-05-30T21:19:40.953Z
 Use this command to delete a route.
 
 ```sh
-ibmcloud metrics-router ROUTE rm --route route [--force]
+ibmcloud logs-router ROUTE rm --route route [--force]
 ```
 {: pre}
 
@@ -344,7 +344,7 @@ ibmcloud metrics-router ROUTE rm --route route [--force]
 ### Example
 {: #route-manage-cli-delete-sample}
 
-The following is an example using the **`ibmcloud metrics-router route rm --route xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`** command.
+The following is an example using the **`ibmcloud logs-router route rm --route xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`** command.
 
 ```text
 Are you sure you want to remove the route with route ID xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx? [y/N]>y
@@ -361,7 +361,7 @@ Route with name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx was successfully removed.
 Use this command to get information about a route for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
-ibmcloud metrics-router ROUTE get --route route [--output FORMAT]
+ibmcloud logs-router ROUTE get --route route [--output FORMAT]
 ```
 {: pre}
 
@@ -380,7 +380,7 @@ ibmcloud metrics-router ROUTE get --route route [--output FORMAT]
 ### Example
 {: #route-manage-cli-read-sample}
 
-The following is an example using the **`ibmcloud metrics-router route get --route new-route-name`** command showing a route.
+The following is an example using the **`ibmcloud logs-router route get --route new-route-name`** command showing a route.
 
 ```text
 ibmcloud mr route get --route route-all
@@ -388,7 +388,7 @@ OK
 Route
 Name:         route-all
 ID:           f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-CRN:          crn:v1:bluemix:public:metrics-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
+CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
 Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
 Created At:   2023-05-30T08:04:53.183Z
 Updated At:   2023-05-30T08:53:22.824Z
@@ -403,7 +403,7 @@ Updated At:   2023-05-30T08:53:22.824Z
 Use this command to list the configured routes for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
-ibmcloud metrics-router route ls [--output FORMAT]
+ibmcloud logs-router route ls [--output FORMAT]
 ```
 {: pre}
 
@@ -419,7 +419,7 @@ ibmcloud metrics-router route ls [--output FORMAT]
 ### Example
 {: #route-manage-cli-list-sample}
 
-The following is an example using the **`ibmcloud metrics-router route ls`** command.
+The following is an example using the **`ibmcloud logs-router route ls`** command.
 
 ```text
 ibmcloud mr route ls
@@ -427,7 +427,7 @@ OK
 Routes
 Name:         route-all
 ID:           f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-CRN:          crn:v1:bluemix:public:metrics-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
+CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
 Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
 Created At:   2023-05-30T08:04:53.183Z
 Updated At:   2023-05-30T08:53:22.824Z
@@ -450,15 +450,15 @@ The following table lists the actions that you can run to manage routes:
 | List all routes           | `GET`            | `<ENDPOINT>/api/v3/routes`             |
 {: caption="route actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
-You can use private and public endpoints to manage routes. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+You can use private and public endpoints to manage routes. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
-* You can manage routes from the private network using an API endpoint with the following format: `https://private.REGION.metrics-router.cloud.ibm.com`
-* You can manage routes from the public network using an API endpoint with the following format: `https://REGION.metrics-router.cloud.ibm.com`
+* You can manage routes from the private network using an API endpoint with the following format: `https://private.REGION.logs-router.cloud.ibm.com`
+* You can manage routes from the public network using an API endpoint with the following format: `https://REGION.logs-router.cloud.ibm.com`
 
-* You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/metrics-router?topic=metrics-router-settings).
+* You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/logs-router?topic=logs-router-settings).
 
-For more information about the REST API, see [routes](https://{DomainName}/apidocs/metrics-router/metrics-router-v3#create-route){: external}.
+For more information about the REST API, see [routes](https://{DomainName}/apidocs/logs-router/logs-router-v3#create-route){: external}.
 {: note}
 
 
@@ -467,8 +467,8 @@ For more information about the REST API, see [routes](https://{DomainName}/apido
 {: api}
 
 To make API calls to manage routes, complete the following steps:
-1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/metrics-router?topic=metrics-router-iam-retrieve-token&interface=cli).
-2. Identify the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-iam-retrieve-token&interface=cli).
+2. Identify the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
 
@@ -495,7 +495,7 @@ curl -X POST <ENDPOINT>/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "cont
 Where
 
 `<ENDPOINT>`
-:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 `ROUTE_NAME`
 :   The name to be given to the route.
@@ -504,13 +504,13 @@ Where
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 
 For example, you can use the following cURL request to create a route:
 
 ```shell
-curl -X POST https://private.us-south.metrics-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X POST https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "My-route",
     "rules": [
       {
@@ -570,7 +570,7 @@ curl -X PATCH <ENDPOINT>/api/v3/routes/ROUTE_ID -H "Authorization: $ACCESS_TOKEN
 Where
 
 `<ENDPOINT>`
-:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 `ROUTE_ID`
 :   ID of the route.
@@ -582,12 +582,12 @@ Where
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/metrics-router?topic=metrics-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 For example, you can use the following cURL request to create a route in Dallas:
 
 ```shell
-curl -X PATCH https://private.us-south.metrics-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "My route",
     "rules": [
       {
@@ -635,7 +635,7 @@ curl -X DELETE <ENDPOINT>/api/v3/routes/<route_ID> -H "Authorization: $ACCESS_TO
 Where
 
 `<ENDPOINT>`
-:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 `<route_ID>`
 :   ID of the route.
@@ -643,7 +643,7 @@ Where
 For example, you can use the following cURL request to delete a route with the ID `00000000-0000-0000-0000-000000000000`:
 
 ```shell
-curl -X DELETE https://private.us-south.metrics-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X DELETE https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -662,7 +662,7 @@ curl -X GET <ENDPOINT>/api/v3/routes/<route_ID> -H "Authorization: $ACCESS_TOKEN
 Where
 
 `<ENDPOINT>`
-:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+:   API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 `<route_ID>`
 :   ID of the route.
@@ -670,7 +670,7 @@ Where
 For example, you can run the following cURL request to get information about a route with the ID `00000000-0000-0000-0000-000000000000`:
 
 ```shell
-curl -X GET https://private.us-south.metrics-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -689,13 +689,13 @@ curl -X GET <ENDPOINT>/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "conte
 
 Where
 
-- `<ENDPOINT>` is the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/metrics-router?topic=metrics-router-endpoints).
+- `<ENDPOINT>` is the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
 For example, you can run the following cURL request to get information about the routes that are defined in Dallas:
 
 ```shell
-curl -X GET https://private.us-south.metrics-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 

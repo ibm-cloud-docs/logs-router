@@ -26,9 +26,9 @@ To route metrics that are generated in 1 {{site.data.keyword.logs_routing_full_n
 
 1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/metrics-router?topic=metrics-router-metrics-router-cli-config).
+2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
-3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} routes.](/docs/metrics-router?topic=metrics-router-iam)
+3. Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} routes.](/docs/logs-router?topic=logs-router-iam)
 
 4. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login).
 
@@ -42,14 +42,14 @@ Complete the following steps:
 1. Run the following command to list all targets. Copy the target ID of the one where you want to route the metrics.
 
     ```text
-    ibmcloud metrics-router target ls
+    ibmcloud logs-router target ls
     ```
     {: pre}
 
 2. Run the following command to get the target details:
 
     ```text
-    ibmcloud metrics-router target get --target <TARGET_ID>
+    ibmcloud logs-router target get --target <TARGET_ID>
     ```
     {: pre}
 
@@ -85,13 +85,13 @@ Inclusion filters are comprised of an `operand`, `operator`, and `values`:
     Valid values depend on the `operand`.
 
     `location`
-    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/metrics-router?topic=metrics-router-regions)
+    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-regions)
 
     `service_name`
-    :   The CRN service name of an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/metrics-router?topic=metrics-router-cloud-services-mr)
+    :   The CRN service name of an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-cloud-services-mr)
 
     `service_instance`, `resource_type`, and `resource`
-    :   Values appropriate to an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/metrics-router?topic=metrics-router-cloud-services-mr)
+    :   Values appropriate to an [{{site.data.keyword.cloud_notm}} service that generates metrics managed through [{{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-cloud-services-mr)
 
 
 For example, to define an inclusion filter that defines the condition where only metrics that are generated in the us-south region are routed, looks as follows:
@@ -110,7 +110,7 @@ For example, to define an inclusion filter that defines the condition where only
 Run the following command to route metrics from us-south to the target identified in previous steps.
 
 ```text
-ibmcloud metrics-router route create --name new-route --rules '[{"action": "send", "targets":[{"id":"11111111-1111-1111-1111-1111111111111"}], "inclusion_filters":[{"operand": "location","operator": "is","values": "us-south"}]}]'
+ibmcloud logs-router route create --name new-route --rules '[{"action": "send", "targets":[{"id":"11111111-1111-1111-1111-1111111111111"}], "inclusion_filters":[{"operand": "location","operator": "is","values": "us-south"}]}]'
 ```
 {: pre}
 
