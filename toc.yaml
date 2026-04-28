@@ -65,7 +65,58 @@ toc:
       - topic: launch-ui.md
         navtitle: Launching the UI
       - topicgroup:
-          label: Managing tenants
+          label: Managing account settings (v3)
+          topics:
+          - topic: settings.md
+            navtitle: Configuring account settings
+            tag: staging
+          - topic: config_report.md
+            navtitle: Generating a report
+            tag: staging
+      - topicgroup:
+          label: Managing targets (v3)
+          topics:
+          - topic: target-manage.md
+            navtitle: Managing targets
+            tag: staging
+          - topic: target-default.md
+            navtitle: Configuring default targets
+            tag: staging
+          - topic: target-locations.md
+            navtitle: Enforcing target locations
+            tag: staging
+          - topic: target-default-reset.md
+            navtitle: Reseting default targets
+            tag: staging
+          - topic: target-default-locations-reset.md
+            navtitle: Reseting permitted target locations
+            tag: staging
+      - topicgroup:
+          label: Managing routes (v3)
+          topics:
+          - topicgroup:
+              label: Example routing scenarios
+              topics:
+              - topic: route-rule-all-metrics.md
+                navtitle: Routing all metrics
+                tag: staging
+              - topic: route-from-1-location.md
+                navtitle: Routing metrics from 1 location
+                tag: staging
+              - topic: route-drop.md
+                navtitle: Excluding metrics by using the drop action
+                tag: staging
+              - topic: route-drop-all.md
+                navtitle: Excluding all metrics by using the drop action
+                tag: staging
+              - topic: cross-account-scenario.md
+                navtitle: Routing platform metrics across accounts
+                tag: staging
+              - topic: enterprise-routing-scenario.md
+                navtitle: Enterprise routing
+                tag: staging
+      - topicgroup:
+          label: Managing tenants (v1)
           topics:
           - topic: tenant-get.md
             navtitle: Getting information about a tenant
@@ -80,7 +131,7 @@ toc:
           - topic: terraform-setup.md
             navtitle: Using Terraform
       - topicgroup:
-          label: Managing targets
+          label: Managing targets (v1)
           topics:
           - topic: tenants-list.md
             navtitle: Listing targets through the UI
@@ -118,6 +169,15 @@ toc:
           - link:
               label: Logs Routing API
               href: https://{DomainName}/apidocs/logs-router-service-api
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - topic: logs-router-cli-config.md
+            navtitle: Configuring the CLI
+            tag: staging
+          - topic: logs-router-cli.md
+            navtitle: Logs Routing CLI
+            tag: staging
       - topicgroup:
           label: Terraform Reference
           links:
