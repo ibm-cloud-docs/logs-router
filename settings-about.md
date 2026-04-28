@@ -118,6 +118,10 @@ The following table lists the actions that you can run to manage settings:
 | Update settings            | `PATCH`            | `<ENDPOINT>/v3/settings`  |
 {: caption="Settings actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
+You can use private and public endpoints to manage targets. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+
+- You can manage targets from the private network using an API endpoint with the following format: `https://api.private.REGION.logs-router.cloud.ibm.com`
+- You can manage targets from the public network using an API endpoint with the following format: `https://api.REGION.logs-router.cloud.ibm.com`
 
 For more information about the REST API, see [the settings API](https://{DomainName}/apidocs/logs-router-service-api/logs-router-v3#get-settings){: external}.
 {: note}

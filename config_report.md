@@ -131,3 +131,6 @@ Where:
 
 `private_api_endpoint_only`
 :   Specifies whether nor not a private endpoint can be used.  If `true` only a private endpoint can be used.
+
+`api_version`
+:   Specifies the {{site.data.keyword.logs_routing_full_notm}} API version.

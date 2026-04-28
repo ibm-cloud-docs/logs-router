@@ -29,21 +29,19 @@ For more information, see [About account settings](/docs/logs-router?topic=logs-
 
 Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
 
-## Getting account settings using the UI
+## Getting details of the account settings by using the UI
 {: #settings-get-ui}
 {: ui}
 
-Do the following to view the account settings for {{site.data.keyword.logs_routing_full_notm}} by using the UI.
+Complete the following steps to view the account settings for {{site.data.keyword.logs_routing_full_notm}} by using the UI:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Logging**.
+3. Click **Logging > Routing**.
 
-4. Click **Routing**.
-
-5. Click the **Settings** tab.
+4. Click the **Settings** tab.
 
 On this page you can view the following settings:
 
@@ -57,7 +55,9 @@ On this page you can view the following settings:
 
 - **Reports**: Displays the configurations in JSON format.
 
-## Updating settings using the UI
+- **API version**
+
+## Updating the account settings using the UI
 {: #settings-update-ui}
 {: ui}
 
@@ -65,13 +65,11 @@ On this page you can view the following settings:
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Logging**.
+3. Click **Logging >Routing**.
 
-4. Click **Routing**.
+4. Click the **Settings** tab.
 
-5. Click the **Settings** tab.
-
-6. Click **Edit** next to the setting to be changed. You can modify the following settings:
+5. Click **Edit** next to the setting to be changed. You can modify the following settings:
 
 - **Metadata location**: Select your desired primary metadata region and backup metadata region.
 
@@ -89,7 +87,7 @@ Before you use the the CLI to manage {{site.data.keyword.logs_routing_full_notm}
 Check that you have IAM permissions to read, update, or both the {{site.data.keyword.logs_routing_full_notm}} account settings.
 
 
-## Getting account settings using the CLI
+## Getting details of the account settings by using the CLI
 {: #settings-get-using-cli}
 {: cli}
 
@@ -125,7 +123,7 @@ Api Version                 3
 ```
 {: codeblock}
 
-## Updating settings using the CLI
+## Updating the account settings using the CLI
 {: #settings-update-using-cli}
 {: cli}
 
@@ -140,19 +138,27 @@ ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS | @DEFAUL
 {: #settings-update-options-cli}
 
 `primary-metadata-region`
-:   Specify the REGION where the metadata associated with route and target definitions is stored. The maximum length is 256 characters. The minimum length is 3 characters.
+:   Specify the REGION where the metadata associated with route and target definitions is stored.
+
+    The maximum length is 256 characters. The minimum length is 3 characters.
 
 `backup-metadata-region`
-:   Specify the REGION where the metadata associated with route and target definitions is stored as a backup. The maximum length is 256 characters. The minimum length is 3 characters.
+:   Specify the REGION where the metadata associated with route and target definitions is stored as a backup.
+
+    The maximum length is 256 characters. The minimum length is 3 characters.
 
 `private-api-endpoint-only`
 :   Specifies whether nor not a private endpoint can be used. If `TRUE` only a private endpoint can be used.
 
 `default-targets`
-:   Is a list of target IDs.  If no routing rules cause platform logs to be sent to other targets, these targets will received the platform logs. TARGETS is a comma-separated list of target IDs. The maximum length is 2 items. The minimum length is 0 items.
+:   Is a list of target IDs.  If no routing rules cause platform logs to be sent to other targets, these targets will received the platform logs. TARGETS is a comma-separated list of target IDs.
+
+    The maximum length is 2 items. The minimum length is 0 items.
 
 `permitted-target-regions`
-:   Is the list of regions that can be used to define a target. REGIONS is a comma-separated list of regions. The maximum length is 16 items. The minimum length is 0 items.
+:   Is the list of regions that can be used to define a target. REGIONS is a comma-separated list of regions.
+
+    The maximum length is 16 items. The minimum length is 0 items.
 
 `--output FORMAT`
 :   If `JSON` specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -173,7 +179,7 @@ To make API calls to manage settings, complete the following steps:
 2. Identify the API endpoint in the region where you plan to configure or manage settings. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
-## Getting settings using the API
+## Getting details of the account settings by using the API
 {: #settings-get-api}
 {: api}
 
@@ -228,7 +234,7 @@ Where:
 :   Specifies whether nor not a private endpoint can be used.  If `true` only a private endpoint can be used.
 
 
-## Updating settings using the API
+## Updating the account settings using the API
 {: #settings-update-api}
 {: api}
 
