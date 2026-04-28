@@ -266,7 +266,7 @@ Something went wrong. Error:
 {: screen}
 
 
-## Getting information about a target using the CLI
+## Validating and viewing details of a target by using the CLI
 {: #target_icl_get_cli}
 {: cli}
 
@@ -289,6 +289,11 @@ Where
 
 `help` | `--help` | `-h`
 :   List options available for the command.
+
+The response includes information about the status of the target in the `write_status` response object. This object includes the following information:
+- `Write Status` information. Valid values are: `success` or `failed`.
+- `Last Failure` date-time information of the timestamp of the last failure.
+- `Reason for last failure` information with a detailed description of the cause of the failure.
 
 ### Example
 {: #target_icl_get_cli_sample}
@@ -353,6 +358,7 @@ The following table lists the actions that you can run to manage targets:
 | Delete a target            | `DELETE`         | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
 | Read a target              | `GET`            | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
 | List all targets           | `GET`            | `<ENDPOINT>/v3/targets`              |
+| Validate a target          | `GET`            | `<ENDPOINT>/v3/targets`              |
 {: caption="Target actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
 You can use private and public endpoints to manage targets. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
@@ -534,7 +540,7 @@ In the response, you get an empty result if the deletion was successful:
 
 
 
-## Viewing a target using the API
+## Validating and viewing details of a target by using the API
 {: #target_icl_api_view}
 {: api}
 
@@ -550,6 +556,11 @@ Where
 - `<ENDPOINT>` is the API endpoint in the region where you plan to configure or manage a target. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 - `<TARGET_ID>` is the v4 UUID that uniquely identifies the target.
 
+The response includes information about the status of the target in the `write_status` response object. This object includes the following information:
+- `status` information. Valid values are: `success` or `failed`.
+- `last_failure` date-time information of the timestamp of the last failure.
+- `reason_for_last_failure` information with a detailed description of the cause of the failure.
+
 
 For example, you can run the following cURL request to get information about a target with the ID `00000000-0000-0000-0000-000000000000`:
 
@@ -558,6 +569,24 @@ curl -X GET https://api.us-south.logs-router.cloud.ibm.com/v3/targets/00000000-0
 ```
 {: screen}
 
+The response looks as follows:
+
+```text
+{
+  "name": "cloud-logs-target",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "crn": "crn:v1:bluemix:public:logs-router:us-south:a/4329073d16d2f3663f74bfa955259139::target:00000000-0000-0000-0000-000000000000",
+  "destination_crn": "crn:v1:bluemix:public:logs:us-south:a/0be5ad401ae913d8ff665d92680664ed:22222222-2222-2222-2222-222222222222::",
+  "target_type": "cloud_logs",
+  "write_status": {
+    "status": "success"
+  },
+  "created_at": "2026-02-01T19:39:38.174Z",
+  "updated_at": "2026-02-01T19:39:38.174Z",
+  "managed_by": "enterprise"
+}
+```
+{: screen}
 
 ## Listing all targets using the API
 {: #target_icl_api_list}
