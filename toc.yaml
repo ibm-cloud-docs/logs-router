@@ -75,6 +75,8 @@ toc:
             navtitle: Configuring account settings
           - topic: config_report.md
             navtitle: Generating a report
+          - topic: getting-started-mng-endpoints.md
+            navtitle: Enforcing private endpoints
       - topicgroup:
           label: Managing targets (v3)
           topics:
