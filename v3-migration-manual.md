@@ -17,6 +17,18 @@ subcollection: logs-router
 
 If you prefer to manually configure your v3 environment, the process differs depending on whether you have an existing v1 setup or are starting fresh with a new account.
 
+
+## Before you begin
+{: #v3-migration-manual-prereqs}
+
+1. You must have the **administrator** platform role to migrate from V1 to V3. For more information about IAM roles and permissions, see [IAM roles](/docs/logs-router?topic=logs-router-iam#iam-bytask).
+
+2. Read about migration scenarios. For more information, see [Common Migration Scenarios](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-scenarios).
+
+3. Choose a migration approach. For more information, see [Migration Approaches](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-approaches).
+
+4. Learn about the migration states. For more information, see [Migration states](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-states).
+
 ### For New Accounts (No V1 Setup)
 {: #v3-migration-manual-new}
 

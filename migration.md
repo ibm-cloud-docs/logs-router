@@ -66,11 +66,15 @@ There are two approaches to migrate from v1 to v3. Choose the approach that best
     The automated migration approach is recommended for most users as it simplifies the migration process and reduces the risk of configuration errors.
     {: note}
 
-    Use the migration APIs to automatically generate v3 targets and routes based on your existing v1 tenants. This approach is covered in the Automated Migration section. For more information, see [Automated Migration](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-automated).
+    Use the migration APIs to automatically generate v3 targets and routes based on your existing v1 tenants. This approach is covered in the Automated Migration section.
+
+    For more information, see [Automated Migration](/docs/logs-router?topic=logs-router-v3-migration-automated).
 
 2. **Manual Configuration**:
 
-    Manually configure your v3 environment from scratch before completing the migration. This approach is covered in the Manual Migration section. For more information, see [Manual Migration](docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-manual).
+    Manually configure your v3 environment from scratch before completing the migration. This approach is covered in the Manual Migration section.
+
+    For more information, see [Manual Migration](/docs/logs-router?topic=logs-router-v3-migration-manual).
 
 
 ## Understanding Migration States
