@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -79,7 +79,7 @@ Users with regional scope will be limited to access targets in their authorized 
 ## Authentication
 {: #target_auth_opts}
 
-When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword. logs_full_notm}}.
+When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}}.
 {: note}
 
 Choose 1 of the following options:
