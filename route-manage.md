@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: logs-router
 # Managing routes
 {: #route-manage}
 
-You can manage routes in your account by using <ui>the {{site.data.keyword.logs_routing_full_notm}} UI, </ui>the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what metrics are routed in a region and where to route them.
+You can manage routes in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API V3, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what platform logs are routed in a region and where to route them.
 {: shortdesc}
 
 For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see [routes](/docs/logs-router?topic=logs-router-routes&interface=cli).
@@ -27,9 +27,9 @@ For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see
 ## About routes
 {: #route-manage-about}
 
-You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform metrics that are generated in different regions where the service is supported to a target destination.
+You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs that are generated in different regions where the service is supported to a target destination.
 
--  You can only route platform metrics that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-regions).
+-  You can only route platform logs that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-regions).
 
 - If you have regulatory and compliance requirements, check the route rules comply with them.
 
@@ -40,7 +40,7 @@ You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform
 
 You must have the correct IAM permissions to manage routes. For information, see [Managing IAM access.](/docs/logs-router?topic=logs-router-iam)
 
-<ui>
+
 
 ## Creating a route using the UI
 {: #route-create-ui}
@@ -52,7 +52,7 @@ Do the following to create a route using the UI.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Monitoring**.
+3. Click **Logging**.
 
 4. Click **Routing**.
 
@@ -66,11 +66,11 @@ Do the following to create a route using the UI.
 
 9. In **Routing rules**, modify the **Action** for **Rule 1**:
 
-    - Select `Send` for the rule to route metrics to the associated targets.
+    - Select `Send` for the rule to route platform logs to the associated targets.
 
-    - Select `Drop` for the rule to drop metrics matching this rule.
+    - Select `Drop` for the rule to drop platform logs matching this rule.
 
-10. Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
+10. Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
 
    Select the desired filter and condition and specify the value to be matched by the inclusion filter.
 
@@ -120,11 +120,11 @@ Do the following to update a route using the UI.
 
 9. In **Routing rules**, modify the **Action** for the rule:
 
-    - Select `Send` for the rule to route metrics to the associated targets.
+    - Select `Send` for the rule to route platform logs to the associated targets.
 
-    - Select `Drop` for the rule to drop metrics matching this rule.
+    - Select `Drop` for the rule to drop platform logs matching this rule.
 
-10. Add or modify the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the metrics routed to the targets specified in the rule.
+10. Add or modify the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
 
    Select the desired filter and condition and specify the value to be matched by the inclusion filter.
 
@@ -190,7 +190,7 @@ Do the following to delete a route using the UI.
 
 7. Click **Delete** to delete the entire route. You must enter the route name before the route is deleted.
 
-</ui>
+
 
 ## CLI prerequisites
 {: #route-manage-cli-prereqs}
@@ -229,10 +229,10 @@ ibmcloud logs-router route create --name ROUTE_NAME ( --rules RULES |  --file RU
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:    JSON file that includes the routing rules that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -288,10 +288,10 @@ ibmcloud logs-router route update --route ROUTE [--name ROUTE_NAME] ( --rules RU
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:    JSON file that includes the routing rules that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -504,7 +504,7 @@ Where
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 
 For example, you can use the following cURL request to create a route:
@@ -582,7 +582,7 @@ Where
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how metrics are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 For example, you can use the following cURL request to create a route in Dallas:
 

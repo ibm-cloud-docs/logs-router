@@ -55,8 +55,10 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
+          - topic: compute-isolation-v3.md
+            navtitle: Architecture and workload isolation (V3)
           - topic: architecture-workload-isolation.md
-            navtitle: Architecture and workload isolation
+            navtitle: Architecture and workload isolation (V1)
           - topic: mng-data.md
             navtitle: Securing your data
           - topicgroup:
