@@ -20,6 +20,8 @@ toc:
         navtitle: About Logs Routing (V1)
       - topic: about-v3.md
         navtitle: About Logs Routing (V3)
+      - topic: scenarios.md
+        navtitle: Configuration scenarios (V3)
       - topic: platform-logs-about.md
         navtitle: Platform logs
       - topic: cloud-services.md
@@ -148,8 +150,15 @@ toc:
             navtitle: Updating the configuration of a target
           - topic: target-get.md
             navtitle: Retrieving information about a target
-      - topic: migration.md
-        navtitle: Migration guide to API V3
+      - topicgroup:
+          label: Migration to API V3
+          topics:
+          - topic: migration.md
+            navtitle: Migration guide to API V3
+          - topic: v3-migration-automated.md
+            navtitle: Automated Migration
+          - topic: v3-migration-manual.md
+            navtitle: Manual migration
       - topicgroup:
           label: Observability
           topics:

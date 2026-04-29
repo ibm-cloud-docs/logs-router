@@ -15,9 +15,6 @@ subcollection: logs-router
 # Migration Guide: Transitioning from v1 to v3
 {: #v3-migration}
 
-This feature is available to select customers.
-{: preview}
-
 This guide provides step-by-step instructions for migrating your {{site.data.keyword.logs_routing_full_notm}} service from version 1 (v1) to version 3 (v3). While v1 provides a regional concept, v3 offers a global approach with routes and filters to adjust routing of platform logs to your needs. The migration process involves configuring your new v3 environment and then switching from v1 to v3.
 {: shortdesc}
 
@@ -39,7 +36,7 @@ In a centralized logging configuration, all platform logs for your entire accoun
 
 This approach simplifies log management by providing a unified view of all platform activities across your account.
 
-To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and configure one route with a wildcard rule to capture all platform logs regardless of their source region.
+To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and [configure one route with a wildcard rule](/docs/logs-router?topic=logs-router-route-rule-all-logs) to capture all platform logs regardless of their source region.
 
 ### Scenario 2: Geographic Logging
 {: #v3-migration-scenarios-2}
@@ -62,19 +59,21 @@ To implement this scenario in v3, you will need to create a separate target and 
 ## Migration Approaches
 {: #v3-migration-approaches}
 
-There are two approaches to migrate from v1 to v3:
-1. **Automated Migration (Recommended)**: Use the migration APIs to automatically generate v3 targets and routes based on your existing v1 tenants. This approach is covered in the Automated Migration section.
-2. **Manual Configuration**: Manually configure your v3 environment from scratch before completing the migration. This approach is covered in the Manual Migration section.
+There are two approaches to migrate from v1 to v3. Choose the approach that best fits your needs.
+
+1. **Automated Migration (Recommended)**:
+
+    The automated migration approach is recommended for most users as it simplifies the migration process and reduces the risk of configuration errors.
+    {: note}
+
+    Use the migration APIs to automatically generate v3 targets and routes based on your existing v1 tenants. This approach is covered in the Automated Migration section. For more information, see [Automated Migration](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-automated).
+
+2. **Manual Configuration**:
+
+    Manually configure your v3 environment from scratch before completing the migration. This approach is covered in the Manual Migration section. For more information, see [Manual Migration](docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-manual).
 
 
-Choose the approach that best fits your needs. The automated migration approach is recommended for most users as it simplifies the migration process and reduces the risk of configuration errors.
-
-## Automated Migration
-{: #v3-migration-automated}
-
-The automated migration process uses the migration APIs to generate v3 targets and routes based on your existing v1 tenant configuration. This approach streamlines the migration by automatically creating the necessary v3 resources.
-
-### Understanding Migration States
+## Understanding Migration States
 {: #v3-migration-states}
 
 The migration process progresses through several states:
@@ -83,6 +82,13 @@ The migration process progresses through several states:
 - **IN_PROGRESS**: The migration process is actively running. This may take several minutes depending on your configuration.
 - **PENDING_COMPLETION**: Your v3 routes and targets have been created successfully. You should verify the configuration before completing the migration.
 - **COMPLETE**: The migration has been completed successfully, and your account is now using the v3 configuration.
+
+## Automated Migration
+{: #v3-migration-automated}
+
+The automated migration process uses the migration APIs to generate v3 targets and routes based on your existing v1 tenant configuration.
+
+This approach streamlines the migration by automatically creating the necessary v3 resources.
 
 ### Step 1: Generate the Migration Plan
 {: #v3-migration-generate}
