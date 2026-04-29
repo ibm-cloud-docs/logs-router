@@ -144,9 +144,9 @@ For {{site.data.keyword.logs_routing_full_notm}}, the IAM actions and Activity T
 
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| Create a target managed by the enterprise   | `logs-router.enterprise-target.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-| Update a target managed by the enterprise   | `logs-router.enterprise-target.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-| Delete a target managed by the enterprise   | `logs-router.enterprise-target.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Create a target managed by the enterprise   | `logs-router.enterprise-target.create` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a target managed by the enterprise   | `logs-router.enterprise-target.update` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a target managed by the enterprise   | `logs-router.enterprise-target.delete` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} target actions managed by the enterprise" caption-side="top"}
 
 
@@ -168,9 +168,9 @@ For {{site.data.keyword.logs_routing_full_notm}}, the IAM actions and Activity T
 
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| Create a route managed by the enterprise | `logs-router.enterprise-route.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-| Update a route managed by the enterprise | `logs-router.enterprise-route.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-| Delete a route managed by the enterprise | `logs-router.enterprise-route.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Create a route managed by the enterprise | `logs-router.enterprise-route.create` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a route managed by the enterprise | `logs-router.enterprise-route.update` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a route managed by the enterprise | `logs-router.enterprise-route.delete` |[Yes]{: tag-green} |[No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} route actions managed by the enterprise" caption-side="top"}
 
 
