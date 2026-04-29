@@ -39,8 +39,10 @@ toc:
       - topicgroup:
           label: Controlling access (IAM)
           topics:
+          - topic: iam-v3.md
+            navtitle: Managing IAM access (V3)
           - topic: iam.md
-            navtitle: Managing IAM access
+            navtitle: Managing IAM access (V1)
           - topic: iam-permissions.md
             navtitle: Granting IAM permissions
           - topicgroup:
