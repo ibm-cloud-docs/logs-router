@@ -29,7 +29,7 @@ This approach simplifies log management by providing a unified view of all platf
 
 To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and [configure one route with a wildcard rule](/docs/logs-router?topic=logs-router-route-rule-all-logs) to capture all platform logs regardless of their source region.
 
-### Scenario 2: Geographic Logging
+## Scenario 2: Geographic Logging
 {: #scenarios-2}
 
 The geographic logging scenario is designed for organizations that maintain multiple logging instances distributed across different geographic locations.
@@ -38,7 +38,7 @@ In this configuration, platform logs from various regions are routed to their ne
 
 To implement this scenario, you will need to create multiple targets (one for each geographic {{site.data.keyword.logs_full_notm}} instance) and configure routes with appropriate region-based filters to direct logs to the correct geographic destination.
 
-### Scenario 3: Regional Logging
+## Scenario 3: Regional Logging
 {: #scenarios-3}
 
 Regional logging represents the most distributed approach, where each {{site.data.keyword.cloud_notm}} region has its own dedicated {{site.data.keyword.logs_full_notm}} instance.

@@ -38,7 +38,7 @@ The following table shows the private API endpoints. The port for all endpoints 
 | Tokyo  (`jp-tok`)         | `https://api.private.jp-tok.logs-router.cloud.ibm.com`  | 166.9.212.12 \n 166.9.216.10 \n 166.9.214.14 |
 | Toronto  (`ca-tor`)         | `https://api.private.ca-tor.logs-router.cloud.ibm.com`  | 166.9.209.24 \n 166.9.209.52 \n 166.9.209.80 |
 | Washington (`us-east`)   | `https://api.private.us-east.logs-router.cloud.ibm.com`  |  166.9.251.58 \n 166.9.232.68 \n 166.9.233.65  |
-{: caption="Lists of private API endpoints for interacting with {{site.data.keyword.logs-router_full_notm}}" caption-side="top"}
+{: caption="Lists of private API endpoints for interacting with {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
 
 
 ## Public API endpoints
@@ -60,4 +60,4 @@ The following table shows the public API endpoints:
 | Tokyo (`jp-tok`)         | `https://api.jp-tok.logs-router.cloud.ibm.com`          | `https/443`  |
 | Toronto (`ca-tor`)       | `https://api.ca-tor.logs-router.cloud.ibm.com`          | `https/443`  |
 | Washington (`us-east`)   | `https://api.us-east.logs-router.cloud.ibm.com`          | `https/443`  |
-{: caption="Lists of public API endpoints for interacting with {{site.data.keyword.logs-router_full_notm}}" caption-side="top"}
+{: caption="Lists of public API endpoints for interacting with {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
