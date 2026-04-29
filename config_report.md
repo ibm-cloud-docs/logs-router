@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -50,7 +50,7 @@ ibmcloud logs-router setting get --output JSON > ACCOUNT_settings.json
 
 Where `ACCOUNT` is a unique indicator for your account.
 
-## Saving a copy of your route configuration
+## Saving a copy of your route configurations
 {: #config_report_save_route_cli}
 {: cli}
 
@@ -63,7 +63,7 @@ ibmcloud logs-router route list --output JSON > ACCOUNT_routes.json
 
 Where `ACCOUNT` is a unique indicator for your account.
 
-## Saving a copy of your target configuration
+## Saving a copy of your target configurations
 {: #config_report_save_target_cli}
 {: cli}
 
@@ -77,60 +77,51 @@ ibmcloud logs-router target list --output JSON > ACCOUNT_targets.json
 Where `ACCOUNT` is a unique indicator for your account.
 
 
-
-## Getting settings using the API
+## Saving a copy of your account settings
 {: #config_report_save_settings_api}
 {: api}
 
-You can use the following cURL command to get existing settings information:
+You can use the following cURL command to save a copy of your account settings to a file.
 
 ```shell
-curl -X GET  ENDPOINT/v3/settings   -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_settings.json
+curl -X GET https://api.<REGION>.logs-router.cloud.ibm.com/v3/settings -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_settings.json
 ```
 {: codeblock}
 
 Where:
 
-`ENDPOINT`
-:   Is the API endpoint in the region where you plan to configure or manage a target. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+`REGION`
+:   Is the primary metadata region for your account.
 
-For example, you can use the following cURL request to get the account settings information:
+## Saving a copy of your route configurations
+{: #config_report_save_route_api}
+{: api}
+
+You can use the following cURL command to save a copy of your route configurations to a file.
 
 ```shell
-curl -X GET   https://api.<region>.logs-router.cloud.ibm.com/v3/settings   -H "Authorization:  $ACCESS_TOKEN"
+curl -X GET https://api.<REGION>.logs-router.cloud.ibm.com/v3/routes -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_routes.json
 ```
-{: screen}
-
-A response similar to the following is returned:
-
-```json
-{
-  "default_targets":[],
-  "permitted_target_regions":[],
-  "primary_metadata_region":"",
-  "backup_metadata_region":"",
-  "private_api_endpoint_only":false,
-  "api_version":3
-}
-```
-{: screen}
+{: codeblock}
 
 Where:
 
-`default_targets`
-:   Is a list of target IDs.  If no routing rules cause platform logs to be sent to other targets, these targets will received the platform logs.
+`REGION`
+:   Is the primary metadata region for your account.
 
-`permitted_target_regions`
-:   Is the list of regions that can be used to define a target. A maximum of two permitted target regions are allowed.
+## Saving a copy of your target configurations
 
-`primary_metadata_region`
-:   Is the region where the metadata associated with route and target definitions is stored.
+{: #config_report_save_target_api}
+{: api}
 
-`backup_metadata_region`
-:   Is the region where the metadata associated with route and target definitions is stored as a backup.
+You can use the following cURL command to save a copy of your target configurations to a file.
 
-`private_api_endpoint_only`
-:   Specifies whether nor not a private endpoint can be used.  If `true` only a private endpoint can be used.
+```shell
+curl -X GET https://api.<REGION>.logs-router.cloud.ibm.com/v3/targets -H "Authorization:  $ACCESS_TOKEN" > ACCOUNT_targets.json
+```
+{: codeblock}
 
-`api_version`
-:   Specifies the {{site.data.keyword.logs_routing_full_notm}} API version.
+Where:
+
+`REGION`
+:   Is the primary metadata region for your account.

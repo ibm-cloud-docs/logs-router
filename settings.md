@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -54,8 +54,6 @@ On this page you can view the following settings:
 - **Public endpoints**: Displays if public endpoints are enabled. When disabled, the {{site.data.keyword.logs_routing_full_notm}} UI cannot be accessed.
 
 - **Reports**: Displays the configurations in JSON format.
-
-- **API version**
 
 ## Updating the account settings using the UI
 {: #settings-update-ui}
@@ -119,7 +117,7 @@ Permitted Target Regions    -
 Primary Metadata Region
 Backup Metadata Region
 Private Api Endpoint Only   false
-Api Version                 3
+Api Version                 1
 ```
 {: codeblock}
 
@@ -211,7 +209,7 @@ A response similar to the following is returned:
   "primary_metadata_region":"",
   "backup_metadata_region":"",
   "private_api_endpoint_only":false,
-  "api_version":3
+  "api_version":1
 }
 ```
 {: screen}
@@ -233,6 +231,8 @@ Where:
 `private_api_endpoint_only`
 :   Specifies whether nor not a private endpoint can be used.  If `true` only a private endpoint can be used.
 
+`api_version`
+:   Is the version of the API configured for this account.
 
 ## Updating the account settings using the API
 {: #settings-update-api}
@@ -246,6 +246,7 @@ When you update settings, consider the following information:
     {: important}
 
 - Update the data for the fields that need changing.
+- Changing the API version is only permitted as part of the migration process from V1 to V3.  See [Transitioning from v1 to v3](/docs/logs-router?topic=logs-router-v3-migration&interface=api).
 
 You can use the following cURL command to update settings:
 
