@@ -29,7 +29,7 @@ For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see
 
 You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs that are generated in different regions where the service is supported to a target destination.
 
--  You can only route platform logs that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-regions).
+-  You can only route platform logs that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-locations).
 
 - If you have regulatory and compliance requirements, check the route rules comply with them.
 

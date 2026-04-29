@@ -99,6 +99,8 @@ toc:
       - topicgroup:
           label: Managing routes (V3)
           topics:
+          - topic: route.md
+            navtitle: About routes
           - topic: route-manage.md
             navtitle: Managing routes
           - topic: route_precedence.md
