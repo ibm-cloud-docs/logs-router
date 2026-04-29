@@ -606,17 +606,31 @@ Where
 `ROUTE_NAME`
 :   The name to be given to the route.
 
+    The name to be given to the route.
+
+    The maximum length is 1000 characters.
+
+    The minimum length is 1 character.
+
+    The name cannot include any special characters other than empty space, `-`, `.`, `_`, `:`.
+
     Do not include any personal identifying information (PII) in any resource names.
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON string or a path to a JSON file prefix with `@` that define how platform logs are routed.
+
+    Rules are evaluated in the order in which they are configured.
+
+    The maximum length is 10 rules.
+
+    For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 
 For example, you can use the following cURL request to create a route:
 
 ```shell
-curl -X POST https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X POST https://api.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "My-route",
     "rules": [
       {
@@ -673,7 +687,21 @@ You can use the following cURL command to update a route:
 curl -X PATCH <ENDPOINT>/v3/routes/ROUTE_ID -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "ROUTE_NAME",
     "rules": [
-      RULES
+      {
+        "action": "send",
+        "targets": [
+          {
+            "id": "d3ebcda8-953d-45ea-a4a7-b47f8c4a9742"
+          }
+        ],
+        "inclusion_filters": [
+          {
+            "operand": "location",
+            "operator": "is",
+            "values": ["eu-de"]
+          }
+        ]
+      }
     ]
   }'
 ```
@@ -688,28 +716,43 @@ Where
 :   ID of the route.
 
 `ROUTE_NAME`
-:   Name of the route. The maximum length of the name is 256 characters.
+:   The name to be given to the route.
+
+    The name to be given to the route.
+
+    The maximum length is 1000 characters.
+
+    The minimum length is 1 character.
+
+    The name cannot include any special characters other than empty space, `-`, `.`, `_`, `:`.
 
     Do not include any personal identifying information (PII) in any resource names.
     {: important}
 
 `RULES`
-:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON string or a path to a JSON file prefix with `@` that define how platform logs are routed.
+
+    Rules are evaluated in the order in which they are configured.
+
+    The maximum length is 10 rules.
+
+    For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+
 
 For example, you can use the following cURL request to create a route in Dallas:
 
 ```shell
-curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
-    "name": "My route",
+curl -X PATCH https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63-1260-4f86-bc1a-aaedb89391d8 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+    "name": "My new route name",
     "rules": [
       {
         "action": "send",
         "targets": [
           {
-            "id": "50375218-7cff-4234-bbb4-171bebab8408"
+            "id": "0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7"
           },
           {
-            "id": "c7519d8a-5f97-498b-a229-8542f60955cd"
+            "id": "6f9137b3-2bb9-4724-851b-153e23c82d80"
           }
         ],
         "inclusion_filters": [
@@ -717,11 +760,6 @@ curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "A
             "operand": "location",
             "operator": "is",
             "values": ["us-east"]
-          },
-          {
-            "operand": "service_name",
-            "operator": "in",
-            "values": ["codeengine","container-registry"]
           }
         ]
       }
@@ -730,7 +768,6 @@ curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "A
   }'
 ```
 {: screen}
-
 
 
 ## Deleting a route using the API
@@ -752,10 +789,10 @@ Where
 `<route_ID>`
 :   ID of the route.
 
-For example, you can use the following cURL request to delete a route with the ID `00000000-0000-0000-0000-000000000000`:
+For example, you can use the following cURL request to delete a route with the ID `c7673f63-1260-4f86-bc1a-aaedb89391d8`:
 
 ```shell
-curl -X DELETE https://private.us-south.logs-router.cloud.ibm.com/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X DELETE https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63-1260-4f86-bc1a-aaedb89391d8 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -782,7 +819,7 @@ Where
 For example, you can run the following cURL request to get information about a route with the ID `00000000-0000-0000-0000-000000000000`:
 
 ```shell
-curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63-1260-4f86-bc1a-aaedb89391d8 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -807,7 +844,7 @@ Where
 For example, you can run the following cURL request to get information about the routes that are defined in Dallas:
 
 ```shell
-curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://api.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -834,6 +871,7 @@ See the following table for some HTTP response codes:
 | `401` |	Unauthorized | The IAM token that is used in the API request is invalid or expired. |
 | `403` |	Forbidden | The operation is forbidden due to insufficient permissions. |
 | `404` | Not Found |	The requested resource doesn't exist or is already deleted. |
+| `409` | Conflict | There is a conflict with the request data and the state of resources in system. |
 | `429` |	Too Many Requests |	Too many requests hit the API too quickly. |
 | `500` |	Internal Server Error |	Something went wrong in {{site.data.keyword.logs_routing_full_notm}} processing. |
 {: caption="List of HTTP response codes" caption-side="top"}
