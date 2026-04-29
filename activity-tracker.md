@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-07-31"
+  years:  2023, 2026
+lastupdated: "2026-04-29"
 
 
-keywords: 
+keywords:
 
 subcollection: logs-router
 
@@ -44,7 +44,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
 {: tab-title="Asia Pacific"}

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -23,9 +23,9 @@ subcollection: logs-router
 
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use {{site.data.keyword.logs_routing_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About auditing events](/docs/atracker?topic=atracker-about).
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About auditing events](/docs/atracker?topic=atracker-about).
 
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.logs_routing_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
 
 ## Locations where activity tracking events are sent by {{site.data.keyword.logs_routing_full_notm}}
@@ -50,7 +50,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 | Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
 |---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at_events_v3-table-2}
 {: tab-title="Asia Pacific"}
@@ -83,7 +83,7 @@ To view events, you must access the target and download the object.
 ## Viewing activity tracking events for {{site.data.keyword.logs_routing_full_notm}}
 {: #at-viewing}
 
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.logs_routing_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
 {: #log-launch-standalone}
@@ -100,7 +100,7 @@ The following table lists the auditing events that are generated when you manage
 
 | Action                                            | Description                |
 |---------------------------------------------------|----------------------------|
-| `logs-router.target.create`       | This event is generated when an administrator creates a new {{site.data.keyword.mon_short}} target.  |
+| `logs-router.target.create`       | This event is generated when an administrator creates a new target.  |
 | `logs-router.target.list` | This event is generated when an administrator lists all targets defined under a region. |
 | `logs-router.target.read` | This event is generated when an administrator retrieves a target and its details by specifying the ID of the target.|
 | `logs-router.target.update` | This event is generated when an administrator updates a target details by specifying the ID of the target. |
@@ -115,10 +115,10 @@ The following table lists the auditing events that are generated when you manage
 
 | Action                                            | Description                |
 |---------------------------------------------------|----------------------------|
-| `logs-router.route.create` | This event is generated when an administrator creates a route with rules that define how to route metrics data to targets. |
+| `logs-router.route.create` | This event is generated when an administrator creates routing rules to direct log data to designated targets. |
 | `logs-router.route.list` | This event is generated when an administrator lists routes.  |
 | `logs-router.route.read` | This event is generated when an administrator retrieves a route and its details by specifying the ID of the route. |
-| `logs-router.route.update` | This event is generated when an administrator replaces a route details by specifying the ID of the route. You can also get this event when you validate a target by checking the credentials to the destination target. |
+| `logs-router.route.update` | This event is generated when an administrator replaces route details by specifying the ID of the route. You can also get this event when you validate a target by checking the credentials to the destination target. |
 | `logs-router.route.delete` | This event is generated when an administrator deletes a route by specifying the ID of the route. |
 {: caption="Events for managing routes" caption-side="top"}
 
@@ -151,11 +151,11 @@ The following table lists the auditing events that are generated when you work w
 ### Migration to V3
 {: #at_events_migration}
 
-The following table lists the auditing events that are generated when you migrate from REST API V1 to REST API V3:
+The following table lists the auditing events that are generated when you migrate from {{site.data.keyword.logs_routing_full_notm}} V1 to V3:
 
 | Action                                            | Description                |
 |---------------------------------------------------|----------------------------|
-| `logs-router.migration.post` | This event is generated when an administrator initiates or completes the migration from API version 1 to version 3. |
+| `logs-router.migration.post` | This event is generated when an administrator initiates or completes the migration from {{site.data.keyword.logs_routing_full_notm}} version 1 to version 3. |
 | `logs-router.migration.get` | This event is generated when an administrator retrieves the current migration state and version information. |
 | `logs-router.migration.delete` | This event is generated when an administrator deletes all v3 routes and targets configurations and resets the migration state to BEFORE. |
 {: caption="Events for managing settings" caption-side="top"}
