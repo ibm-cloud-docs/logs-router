@@ -28,9 +28,7 @@ Review the following sample architecture for {{site.data.keyword.atracker_full}}
 
 {{site.data.keyword.logs_routing_full_notm}} is a multi-tenant, regional service that is available in {{site.data.keyword.cloud_notm}}. With {{site.data.keyword.logs_routing_full_notm}}, you can manage collection and storage of platform logs to monitor {{site.data.keyword.cloud_notm}} services in your account.
 
-The following figure shows the high level architecture for {{site.data.keyword.logs_routing_full_notm}}:
 
-![A diagram that shows a sample {{site.data.keyword.logs_routing_full_notm}} architecture.](/images/logs_router_arch.svg "{{site.data.keyword.logs_routing_full_notm}} architecture sample."){: caption="{{site.data.keyword.logs_routing_full_notm}} sample architecture" caption-side="bottom"}
 
 {{site.data.keyword.logs_routing_full_notm}} is deployed and managed per region. See [List of supported regions](/docs/atracker?topic=atracker-regions). In each region, the service runs in three physically separate data centers to ensure availability.
 
