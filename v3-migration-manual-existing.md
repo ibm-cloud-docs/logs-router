@@ -30,6 +30,12 @@ If you have an existing v1 configuration and want to manually migrate to v3, fol
 
 4. Learn about the migration states. For more information, see [Migration states](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-states).
 
+During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
+{: important}
+
+**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
+{: important}
+
 
 ## Step 1: Set Primary Metadata Region
 {: #v3-migration-manual-existing-metadata}
@@ -63,13 +69,81 @@ curl -X POST \
   -H 'content-type: application/json'
 ```
 
- Once the routes and targets are generated, you can review the generated configurations and either proceed with steps 1.3 and 1.4 or move ahead to Section 2 to complete the migration.  Refer to the [{{site.data.keyword.logs_routing_full_notm}} v3 API documentation](/apidocs/logs-router-service-api/logs-router-v3){: external} for more details.
+ Once the routes and targets are generated, review the generated configurations.
+
+ ## Step 3: Check Migration Status
+{: #v3-migration-manual-existing-status}
+
+After initiating the migration plan generation, you need to monitor its progress. Continue checking the status until the state changes to `PENDING_COMPLETION`.
+
+Use the following API call to check the status:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/migrate" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+The authorization bearer token must have the `logs-router.migration.get` permission. The following roles have this permission: Administrator, Editor, Operator, or Viewer role.
+
+The API will return one of the following responses based on the current state:
+
+- **COMPLETE state** (HTTP 200 OK):
+
+    ```json
+    {
+      "version": "3",
+      "state": "COMPLETE",
+      "message": "Migration complete"
+    }
+    ```
+    {: codeblock}
+
+- **BEFORE state** (HTTP 200 OK):
+
+    ```json
+    {
+      "version": "1",
+      "state": "BEFORE",
+      "message": "Error message with reason for previous failure"
+    }
+    ```
+    {: codeblock}
+
+    If the message is empty, no previous migration attempt has been made or failed.{: note}
+
+- **IN_PROGRESS state** (HTTP 200 OK):
+
+    ```json
+    {
+      "version": "1",
+      "state": "IN_PROGRESS",
+      "message": "The migration process is still running - check back in a few minutes"
+    }
+    ```
+    {: codeblock}
+
+- **PENDING_COMPLETION state** (HTTP 200 OK):
+
+    ```json
+    {
+      "version": "1",
+      "state": "PENDING_COMPLETION",
+      "message": "Your v3 routes and targets have been created - verify the content and then use action=complete to switch your account permanently to the v3 configuration."
+    }
+    ```
+    {: codeblock}
 
 
-## Step 3: Create Targets
+
+## Step 4: Create Targets
 {: #v3-migration-manual-existing-targets}
 
 Create target destinations for your v3 configuration:
+
+For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external} and [Creating a target](/docs/logs-router?topic=logs-router-target_icl&interface=api#target_icl_api_create).
+
 
 ```sh
 curl -X POST \
@@ -89,12 +163,13 @@ Where:
 
 Save the target ID from the response for use in the next step. Repeat this step for each target you need based on your migration scenario.
 
-For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external}
 
-## Step 4: Create Routes
+## Step 5: Create Routes
 {: #v3-migration-manual-existing-routes}
 
 Create routes to define how logs should be directed to your targets:
+
+For detailed information about route configuration options, including filtering capabilities, see [Create route](/apidocs/logs-router-service-api/logs-router-v3#create-route){: external} and [Creating a route](/docs/logs-router?topic=logs-router-route-manage&interface=api#route-manage-api-create).
 
 ```sh
 curl -X POST \
@@ -151,12 +226,47 @@ curl -X POST \
 ```
 {: codeblock}
 
-For detailed information about route configuration options, see [Create route](/apidocs/logs-router-service-api/logs-router-v3#create-route){: external}
+## Step 6: Review Generated Targets and Routes
+{: #v3-migration-manual-existing-review}
 
-## Step 5: Switch to V3
+Once the migration reaches the `PENDING_COMPLETION` state, you should review the automatically generated v3 targets and routes to ensure they match your requirements.
+
+### Review targets
+{: #v3-migration-manual-existing-review-targets}
+
+To list all targets, use the following API call:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/targets" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+For more information, see [List targets](/apidocs/logs-router-service-api/logs-router-v3#list-targets){: external}.
+
+### Review routes
+{: #v3-migration-manual-existing-review-routes}
+
+To list all routes, use the following API call:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+For more information, see [List routes](/apidocs/logs-router-service-api/logs-router-v3#list-routes){: external}.
+
+
+## Step 7: Complete the migration by switching to V3
 {: #v3-migration-manual-existing-switch}
 
-Once you have configured all your v3 targets and routes, switch your account to use the v3 API version. This action is irreversible and will migrate your account from v1 to v3.
+Once you have configured all your v3 targets and routes, switch your account to use the v3 API version.
+
+This action is irreversible and will migrate your account from v1 to v3.
+{: attention}
 
 ```sh
 curl -X PATCH \
@@ -169,32 +279,16 @@ curl -X PATCH \
 ```
 {: codeblock}
 
-After executing this command:
+After running this command:
 
 1. The v1 service will shut down and stop processing logs.
 2. The v3 service will become active and begin routing logs according to your new configuration.
 
-During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
-{: important}
-
-**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
-{: important}
-
-For additional information about the settings API, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
-
-2. The v3 service will become active and begin routing logs according to your new configuration.
-
-During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
-{: important}
-
-**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
-{: important}
-
-For additional information about the migration API and available actions, see [Migrate from old API version to version 3](/apidocs/logs-router-service-api/logs-router-v3#migrate-actions){: external}.
 
 
+## Next
+{: #v3-migration-manual-existing-next}
 
-## Conclusion
-{: #v3-migration-manual-existing-conclusion}
+You have successfully migrated from {{site.data.keyword.logs_routing_full_notm}} v1 to v3. Your platform logs are now being routed according to your v3 configuration.
 
-You have successfully migrated from {{site.data.keyword.logs_routing_full_notm}} v1 to v3. Your platform logs are now being routed according to your v3 configuration. If you encounter any issues or need to make changes to your routing configuration, refer to the [{{site.data.keyword.logs_routing_full_notm}} v3 API documentation](/apidocs/logs-router-service-api/logs-router-v3){: external} for guidance on updating settings, targets, and routes.
+If you encounter any issues or need to make changes to your routing configuration, refer to the [{{site.data.keyword.logs_routing_full_notm}} v3 API documentation](/apidocs/logs-router-service-api/logs-router-v3){: external} for guidance on updating settings, targets, and routes.

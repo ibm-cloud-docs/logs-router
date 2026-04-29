@@ -30,6 +30,12 @@ This approach streamlines the migration by automatically creating the necessary 
 
 4. Learn about the migration states. For more information, see [Migration states](/docs/logs-router?topic=logs-router-v3-migration&interface=cli#v3-migration-states).
 
+During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
+{: important}
+
+**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
+{: important}
+
 
 ## Step 1: Generate the Migration Plan
 {: #v3-migration-automated-generate}
@@ -213,7 +219,7 @@ The authorization bearer token must have the `logs-router.migration.delete` perm
 
 After deleting the migration plan, you can start the process again from Step 1.
 
-## Step 6: Complete the Migration
+## Step 6: Complete the migration by switching to V3
 {: #v3-migration-automated-complete}
 
 Once you have reviewed the generated v3 configuration, you can complete the migration. This action is irreversible and will switch your account from v1 to v3.
@@ -230,7 +236,11 @@ curl -X POST \
 
 The authorization bearer token must have the `logs-router.migration.post` permission. The Administrator role for the {{site.data.keyword.logs_routing_full_notm}} service has this permission. For more information, see [IAM roles](/docs/logs-router?topic=logs-router-iam#iam-bytask).
 
-After running this command, the v1 service will shut down and stop processing logs.
+After running this command:
+
+1. The v1 service will shut down and stop processing logs.
+2. The v3 service will become active and begin routing logs according to your new configuration.
+
 
 
 

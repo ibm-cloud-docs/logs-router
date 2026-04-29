@@ -58,6 +58,9 @@ Where `<region>` is your desired region such as `us-south`, or `eu-de`.
 
 Create target destinations where your platform logs will be delivered:
 
+For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external} and [Creating a target](/docs/logs-router?topic=logs-router-target_icl&interface=api#target_icl_api_create).
+
+
 ```sh
 curl -X POST \
   "https://api.<region>.logs-router.cloud.ibm.com/v3/targets" \
@@ -76,7 +79,6 @@ Where:
 
 Save the target ID from the response for use in the next step.
 
-For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external} and [Creating a target](/docs/logs-router?topic=logs-router-target_icl&interface=api#target_icl_api_create).
 
 
 ## Step 3: Create Routes
