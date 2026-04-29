@@ -171,7 +171,7 @@ toc:
               label: Terraform reference
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
       - topicgroup:
-          label: Logs Routing
+          label: Logs Routing single destination
           topics:
           - topic: getting-started.md
             navtitle: Getting started
