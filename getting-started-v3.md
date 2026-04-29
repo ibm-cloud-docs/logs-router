@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -131,9 +131,49 @@ Complete the following steps to create a target:
 Complete the following steps to create a target:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
-3. Select **Logging > Routing**.
-4. In the *Routes* section, click **Create** to open the create panel.
+
+3. Click **Logging > Routing**.
+
+4. In the *Routes* tab, click **Create**.
+
+5. In *Routing rules* section, modify the *Action* for *Rule 1*:
+
+    Select an *Action* for *Rule 1*:
+
+    - Select **Send logs from** for the rule to route platform logs to the associated targets.
+
+    - Select **Drop logs from** for the rule to drop platform logs matching this rule.
+
+    Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
+
+    - Select a condition, and specify the location values to be matched by the inclusion filter.
+
+    - To add multiple inclusion filters, click **Add filter** to add additional filters.
+
+    Add the [targets](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new one.
+
+6. Click **Add rule** to add additional rules to the route.
+
+    The order of route rules affects the routing behavior. Rules are processed in order and once a rule is matched, the subsequent rules are not processed.
+
+    The order of the routing rules can be changed by clicking the up and down arrows to the right of each rule definition.
+
+    If you need to remove a rule or filter, click the **Remove** icon associated with the rule or filter.
+
+    You can configure up to 10 rules per route.
+    {: note}
+
+7. Click **Next**.
+
+8. Enter a name for the route.
+
+9. Review the route definition ensuring the order of the rules is as intended.
+
+    For more information, see [Understanding routing precedence](/docs/logs-router?topic=logs-router-routes_precedence).
+
+10. Click **Create**.
 
 ## Verifying that logs are sent to the destination target
 {: #getting-started-v3-verify-logs}
@@ -144,6 +184,7 @@ Verify that the logs are routed to your {{site.data.keyword.logs_full_notm}} ins
 Complete the following steps:
 
 1. [Launch the {{site.data.keyword.logs_full_notm}} web UI](/docs/cloud-logs?topic=cloud-logs-instance-launch&interface=ui) for the {{site.data.keyword.logs_full_notm}} instance that is configured as the target to collect platform logs in a region. This is the instance that you selected in the step where you setup a target.
+
 2. View logs through custom views. For more information, see [Viewing logs](/docs/cloud-logs?topic=cloud-logs-custom_views).
 
     All platform logs are generated in JSON. You can filter platform logs in your instance be selecting the value of **ibm-platform-logs** as the `applicationName` or by running the Lucene query: `coralogix.metadata.applicationName:"ibm-platform-logs"`
