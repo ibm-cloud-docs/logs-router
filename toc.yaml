@@ -157,8 +157,10 @@ toc:
             navtitle: Migration guide to API V3
           - topic: v3-migration-automated.md
             navtitle: Automated Migration
-          - topic: v3-migration-manual.md
-            navtitle: Manual migration
+          - topic: v3-migration-manual-new-acc.md
+            navtitle: Manual migration for new accounts (No V1 setup)
+          - topic: v3-migration-manual-existing.md
+            navtitle: Manual migration for existing accounts with V1 setup
       - topicgroup:
           label: Observability
           topics:
