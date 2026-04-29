@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -69,7 +69,7 @@ The following table lists core features that the {{site.data.keyword.logs_routin
 ## Concepts
 {: #about-v3-concepts}
 
-Before you can start configuring and using the {{site.data.keyword.logs_routing_full_notm}} service, you must configure the primary metadata location, and optionally the backup metadata location in the account settings. Next, you can define the destinations and rules that define how platform logs are routed in your the {{site.data.keyword.cloud_notm}} account.
+Before you can start configuring and using the {{site.data.keyword.logs_routing_full_notm}} service, you must configure the primary metadata location, and optionally the backup metadata location in the account settings. Next, you can define the destinations and rules that define how platform logs are routed in your {{site.data.keyword.cloud_notm}} account.
 
 The {{site.data.keyword.logs_routing_full_notm}} service uses two core concepts:
 - `Target`
