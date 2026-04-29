@@ -13,15 +13,13 @@ toc:
       id: learn
       topics:
       - topic: getting-started.md
-        navtitle: Getting started (V1)
+        navtitle: Getting started
       - topic: getting-started-v3.md
-        navtitle: Getting started (V3)
-      - topic: about.md
-        navtitle: About Logs Routing (V1)
-      - topic: about-v3.md
-        navtitle: About Logs Routing (V3)
+        navtitle: Getting started with multiple destinations
       - topic: scenarios.md
-        navtitle: Configuration scenarios (V3)
+        navtitle: Configuration scenarios
+      - topic: about-v3.md
+        navtitle: About Logs Routing
       - topic: platform-logs-about.md
         navtitle: Platform logs
       - topic: cloud-services.md
@@ -29,10 +27,8 @@ toc:
       - topicgroup:
           label: Tutorials
           topics:
-          - topic: target-cloud-logs.md
-            navtitle: Routing platform logs to a Cloud Logs instance (V1)
           - topic: enterprise-routing-scenario.md
-            navtitle: Enterprise routing (V3)
+            navtitle: Enterprise routing
       - topic: releasenotes.md
         navtitle: Release notes
   - navgroup:
@@ -42,9 +38,7 @@ toc:
           label: Controlling access (IAM)
           topics:
           - topic: iam-v3.md
-            navtitle: Managing IAM access (V3)
-          - topic: iam.md
-            navtitle: Managing IAM access (V1)
+            navtitle: Managing IAM access
           - topic: iam-permissions.md
             navtitle: Granting IAM permissions
           - topicgroup:
@@ -60,9 +54,7 @@ toc:
           label: Enhancing security
           topics:
           - topic: compute-isolation-v3.md
-            navtitle: Architecture and workload isolation (V3)
-          - topic: architecture-workload-isolation.md
-            navtitle: Architecture and workload isolation (V1)
+            navtitle: Architecture and workload isolation
           - topic: mng-data.md
             navtitle: Securing your data
           - topicgroup:
@@ -75,7 +67,7 @@ toc:
       - topic: launch-ui.md
         navtitle: Launching the UI
       - topicgroup:
-          label: Managing account settings (v3)
+          label: Managing account settings
           topics:
           - topic: settings-about.md
             navtitle: About account settings
@@ -86,7 +78,7 @@ toc:
           - topic: getting-started-mng-endpoints.md
             navtitle: Enforcing private endpoints
       - topicgroup:
-          label: Managing targets (V3)
+          label: Managing targets
           topics:
           - topic: target.md
             navtitle: About targets
@@ -101,7 +93,7 @@ toc:
           - topic: target-default-locations-reset.md
             navtitle: Reseting permitted target locations
       - topicgroup:
-          label: Managing routes (V3)
+          label: Managing routes
           topics:
           - topic: route.md
             navtitle: About routes
@@ -127,30 +119,6 @@ toc:
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
       - topicgroup:
-          label: Managing tenants (V1)
-          topics:
-          - topic: tenant-get.md
-            navtitle: Getting information about a tenant
-          - topic: tenant-get-id.md
-            navtitle: Getting information about a tenant by using the tenant ID
-          - topic: tenant-create.md
-            navtitle: Creating a tenant and a target destination
-          - topic: tenant-update-name.md
-            navtitle: Changing the name of a tenant
-          - topic: tenant-delete.md
-            navtitle: Deleting a tenant
-          - topic: terraform-setup.md
-            navtitle: Using Terraform
-      - topicgroup:
-          label: Managing targets (V1)
-          topics:
-          - topic: tenants-list.md
-            navtitle: Listing targets through the UI
-          - topic: target-update.md
-            navtitle: Updating the configuration of a target
-          - topic: target-get.md
-            navtitle: Retrieving information about a target
-      - topicgroup:
           label: Migration to API V3
           topics:
           - topic: migration.md
@@ -164,17 +132,13 @@ toc:
       - topicgroup:
           label: Observability
           topics:
-          - topic: activity-tracker.md
-            navtitle: Auditing events (V1)
           - topic: at_events_v3.md
-            navtitle: Auditing events (V3)
+            navtitle: Auditing events
   - navgroup:
       id: reference
       topics:
-      - topic: endpoints.md
+      - topic: endpoints-v3.md
         navtitle: Endpoints
-      - topic: reference/vpe-connection-crn.md
-        navtitle: Endpoints CRNs (V1)
       - topic: data-portability.md
         navtitle: Data portability
       - topic: reference/ha-dr-new.md
@@ -206,6 +170,49 @@ toc:
           - link:
               label: Terraform reference
               href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
+      - topicgroup:
+          label: Logs Routing
+          topics:
+          - topic: getting-started.md
+            navtitle: Getting started
+          - topic: about.md
+            navtitle: About Logs Routing
+          - topic: target-cloud-logs.md
+            navtitle: Routing platform logs to a Cloud Logs instance
+          - topic: iam.md
+            navtitle: Managing IAM access
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+          - topicgroup:
+              label: Managing tenants
+              topics:
+              - topic: tenant-get.md
+                navtitle: Getting information about a tenant
+              - topic: tenant-get-id.md
+                navtitle: Getting information about a tenant by using the tenant ID
+              - topic: tenant-create.md
+                navtitle: Creating a tenant and a target destination
+              - topic: tenant-update-name.md
+                navtitle: Changing the name of a tenant
+              - topic: tenant-delete.md
+                navtitle: Deleting a tenant
+              - topic: terraform-setup.md
+                navtitle: Using Terraform
+          - topicgroup:
+              label: Managing targets
+              topics:
+              - topic: tenants-list.md
+                navtitle: Listing targets through the UI
+              - topic: target-update.md
+                navtitle: Updating the configuration of a target
+              - topic: target-get.md
+                navtitle: Retrieving information about a target
+          - topic: activity-tracker.md
+            navtitle: Auditing events
+          - topic: endpoints.md
+            navtitle: Endpoints
+          - topic: reference/vpe-connection-crn.md
+            navtitle: Endpoints CRNs (V1)
   - navgroup:
       id: help
       topics:

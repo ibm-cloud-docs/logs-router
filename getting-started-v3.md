@@ -28,28 +28,19 @@ Complete the following steps to start using {{site.data.keyword.logs_routing_ful
 
 1. If you don't have an {{site.data.keyword.cloud_notm}} account, [register an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}. You need an IBMid to work in {{site.data.keyword.cloud_notm}}.
 
-2. To configure platform logs, you must configure tenants and targets (destinations) in your {{site.data.keyword.cloud_notm}} account.
+2. [Check the regions where the {{site.data.keyword.logs_routing_full_notm}} service is available](/docs/logs-router?topic=logs-router-locations).
 
-    {{site.data.content.tenant_definition-paragraph}}
+3. Check that the user who is configuring {{site.data.keyword.logs_routing_full_notm}} for the {{site.data.keyword.cloud}} account has sufficient permissions to manage the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
 
-    For more information, see [Learn more about {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-about).
+    You need platform role **Adminsitrator** to manage resources.
 
-3. [Check the regions where the {{site.data.keyword.logs_routing_full_notm}} service is available](/docs/logs-router?topic=logs-router-locations). Identify a region where you operate in {{site.data.keyword.cloud_notm}} and check is in the list of supported regions.
-
-4. Check that the user who is configuring {{site.data.keyword.logs_routing_full_notm}} for the {{site.data.keyword.cloud}} account has sufficient permissions to manage the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [Managing IAM access for {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
-
-    You need service role **reader** to view tenants and targets.
-
-    You need service role **manager** to create, delete, update tenants and targets.
-
-5. Install the following tools:
+4. Install the following tools:
 
     - [Download and install the {{site.data.keyword.cloud}} CLI](/docs/cli).
 
-    - Provision an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
-
     - [Download and install jq](https://stedolan.github.io/jq/){: external} to process output and query desired results.
 
+5. Provision or have acces to an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
 
 ## Creating a service to service authorization
 {: #getting-started-v3-create-s2s}
@@ -81,7 +72,7 @@ Complete the following steps:
 
 For more information, see [Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
-## Configure the primary metadata location
+## Configure the primary metadata location and API version
 {: #getting-started-v3-settings}
 {: step}
 
@@ -95,8 +86,11 @@ Complete the following steps:
 
 4. Click the **Settings** tab.
 
-5. Click **Edit** next to the setting to be changed. Enter a **Primary Metadata location**.
+5. Click **Edit** next to the setting to be changed.
 
+    Enter a **Primary Metadata location**.
+
+    Set the API version to `3`.
 
 
 ## Create a target

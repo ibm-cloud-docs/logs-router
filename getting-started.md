@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-09-02"
+  years:  2023, 2026
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -18,8 +18,11 @@ subcollection: logs-router
 Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to your chosen target destination.
 {: shortdesc}
 
-![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Flow of routed logs" caption-side="bottom"}
+With the release of IBM Cloud Logs Routing REST API V3, you can migrate your account to use the V3 API so that you can route platform logs to multiple destinations and manage the service at the Enterprise account level by using enterprise IAM action controls. For more information on migration, see [Migrating to use IBM Cloud Logs Routing REST API V3](/docs/logs-router?topic=logs-router-v3-migration). If you have a new account, follow the steps in [Getting started with multiple destinations](/docs/logs-router?topic=logs-router-getting-started-v3).
+{: attention}
 
+
+![Flow of routed logs](/images/cloud-logs-platform-logs.png "Flow of routed logs"){: caption="Flow of routed logs" caption-side="bottom"}
 
 
 Complete the following steps to start using {{site.data.keyword.logs_routing_full}}:
