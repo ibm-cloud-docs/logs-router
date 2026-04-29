@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-27"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -59,32 +59,234 @@ This configuration ensures complete regional isolation of log data and is often 
 
 To implement this scenario in v3, you will need to create a separate target and route for each region where you operate, ensuring that each regional route includes filters that restrict log routing to only that region's {{site.data.keyword.logs_full_notm}} instance.
 
-## Section 1: Configure Your New v3 Setup
-{: #v3-migration-s1-configure-v3}
+## Migration Approaches
+{: #v3-migration-approaches}
 
-Before migrating from v1 to v3, you must configure your new v3 environment. This section guides you through the required manual setup steps.
+There are two approaches to migrate from v1 to v3:
+1. **Automated Migration (Recommended)**: Use the migration APIs to automatically generate v3 targets and routes based on your existing v1 tenants. This approach is covered in the Automated Migration section.
+2. **Manual Configuration**: Manually configure your v3 environment from scratch before completing the migration. This approach is covered in the Manual Migration section.
 
-### Step 1.1: Set the Primary Metadata Region
-{: #v3-migration-s1-configure-v3-metadata-region}
 
-The first step is to configure the primary metadata region for your v3 setup. This setting determines in which region your routing metadata will be stored. Select the region that best meets your data residency or compliance requirements.
+Choose the approach that best fits your needs. The automated migration approach is recommended for most users as it simplifies the migration process and reduces the risk of configuration errors.
 
-To set the primary metadata region, run the following API call:
+## Automated Migration
+{: #v3-migration-automated}
+
+The automated migration process uses the migration APIs to generate v3 targets and routes based on your existing v1 tenant configuration. This approach streamlines the migration by automatically creating the necessary v3 resources.
+
+### Understanding Migration States
+{: #v3-migration-states}
+
+The migration process progresses through several states:
+
+- **BEFORE**: The initial state before migration has started. If a previous migration attempt failed, the error message will be included.
+- **IN_PROGRESS**: The migration process is actively running. This may take several minutes depending on your configuration.
+- **PENDING_COMPLETION**: Your v3 routes and targets have been created successfully. You should verify the configuration before completing the migration.
+- **COMPLETE**: The migration has been completed successfully, and your account is now using the v3 configuration.
+
+### Step 1: Generate the Migration Plan
+{: #v3-migration-generate}
+
+The first step is to generate a migration plan. This is an asynchronous process that analyzes your existing v1 tenants and creates corresponding v3 targets and routes.
+
+Run the following API call to generate the migration plan:
+
+```sh
+curl -X POST \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/migrate?action=generate" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+Where `<region>` is your primary metadata region.
+
+The authorization bearer token must have the `logs-router.migration.post` permission (Administrator role) for the {{site.data.keyword.logs_routing_full_notm}} service. For more information, see [IAM roles](/docs/logs-router?topic=logs-router-iam#iam-bytask).
+
+### Step 2: Check Migration Status
+{: #v3-migration-status}
+
+After initiating the migration plan generation, you need to monitor its progress. Use the following API call to check the status:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/migrate" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+The authorization bearer token must have the `logs-router.migration.get` permission (Administrator, Editor, Operator, or Viewer role).
+
+The API will return one of the following responses based on the current state:
+
+**COMPLETE state** (HTTP 200 OK):
+```json
+{
+  "version": "3",
+  "state": "COMPLETE",
+  "message": "Migration complete"
+}
+```
+{: codeblock}
+
+**BEFORE state** (HTTP 200 OK):
+```json
+{
+  "version": "1",
+  "state": "BEFORE",
+  "message": "Error message with reason for previous failure"
+}
+```
+{: codeblock}
+
+If the message is empty, no previous migration attempt has been made or failed.
+
+**IN_PROGRESS state** (HTTP 200 OK):
+```json
+{
+  "version": "1",
+  "state": "IN_PROGRESS",
+  "message": "The migration process is still running - check back in a few minutes"
+}
+```
+{: codeblock}
+
+**PENDING_COMPLETION state** (HTTP 200 OK):
+```json
+{
+  "version": "1",
+  "state": "PENDING_COMPLETION",
+  "message": "Your v3 routes and targets have been created - verify the content and then use action=complete to switch your account permanently to the v3 configuration."
+}
+```
+{: codeblock}
+
+Continue checking the status until the state changes to `PENDING_COMPLETION`.
+
+### Step 3: Review Generated Targets and Routes
+{: #v3-migration-review}
+
+Once the migration reaches the `PENDING_COMPLETION` state, you should review the automatically generated v3 targets and routes to ensure they match your requirements.
+
+To list all targets, run:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/targets" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+To list all routes, run:
+
+```sh
+curl -X GET \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+For more information about these API endpoints, see [List targets](/apidocs/logs-router-service-api/logs-router-v3#list-targets){: external} and [List routes](/apidocs/logs-router-service-api/logs-router-v3#list-routes){: external}.
+
+### Step 4: Modify Configuration (Optional)
+{: #v3-migration-modify}
+
+If you need to make changes to the generated targets or routes, you can update them using the v3 API endpoints before completing the migration.
+
+To update a target:
 
 ```sh
 curl -X PATCH \
-  https://api.<region>.logs-router.cloud.ibm.com/v3/settings \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/targets/<target_id>" \
   -H "Authorization: Bearer <IAM_TOKEN>" \
-  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
   -d '{
-    "primary_metadata_region": "<region>"
+    "name": "<NEW_NAME>"
   }'
 ```
 {: codeblock}
 
-Set `<region>` to your desired region such as `us-south`, or `eu-de`.
+To update a route:
 
-For detailed information about this API endpoint and available parameters, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
+```sh
+curl -X PATCH \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes/<route_id>" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "name": "<NEW_NAME>",
+    "rules": [...]
+  }'
+```
+{: codeblock}
+
+For detailed information about updating targets and routes, see [Update target](/apidocs/logs-router-service-api/logs-router-v3#update-target){: external} and [Update route](/apidocs/logs-router-service-api/logs-router-v3#update-route){: external}.
+
+### Step 5: Delete Migration Plan (Optional)
+{: #v3-migration-delete}
+
+If you need to start over or cancel the migration, you can delete the generated migration plan. This will remove all automatically created v3 targets and routes.
+
+Run the following API call to delete the migration plan:
+
+```sh
+curl -X DELETE \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/migrate" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+The authorization bearer token must have the `logs-router.migration.delete` permission (Administrator role).
+
+After deleting the migration plan, you can start the process again from Step 1.
+
+### Step 6: Complete the Migration
+{: #v3-migration-complete}
+
+Once you have reviewed and are satisfied with the generated v3 configuration, you can complete the migration. This action is irreversible and will switch your account from v1 to v3.
+
+Run the following API call to complete the migration:
+
+```sh
+curl -X POST \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/migrate?action=complete" \
+  -H "Authorization: Bearer <IAM_TOKEN>"
+```
+{: codeblock}
+
+The authorization bearer token must have the `logs-router.migration.post` permission (Administrator role).
+
+After executing this command:
+
+1. The v1 service will shut down and stop processing logs.
+## Manual Migration
+{: #v3-migration-manual}
+
+If you prefer to manually configure your v3 environment, the process differs depending on whether you have an existing v1 setup or are starting fresh with a new account.
+
+### For New Accounts (No V1 Setup)
+{: #v3-migration-manual-new}
+
+If you are setting up {{site.data.keyword.logs_routing_full_notm}} for the first time without any existing v1 configuration, follow these steps:
+
+
+#### Step 1: Set Primary Region and Version
+{: #v3-migration-manual-new-step-1}
+
+Configure the primary metadata region and set the API version to v3 in a single operation:
+
+```sh
+curl -X PATCH \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/settings" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "primary_metadata_region": "<region>",
+    "api_version": 3
+  }'
+```
+{: codeblock}
+
+Where `<region>` is your desired region such as `us-south`, or `eu-de`.
 
 ### Step 1.2: Generate a V3 configuration from your existing V1 configuration
 {: #v3-migration-s1-configure-v3-generate}
@@ -103,13 +305,15 @@ curl -X POST \
 ### Step 1.3: Create a Target for Platform Logs
 {: #v3-migration-s1-configure-v3-create-target}
 
-Next, you need to create a target destination where your platform logs will be delivered. A target represents the endpoint that will receive your log data.
 
-Run the following API call to create a target:
+#### Step 2: Create Targets
+{: #v3-migration-manual-new-step-2}
+
+Create target destinations where your platform logs will be delivered:
 
 ```sh
 curl -X POST \
-  https://api.<region>.logs-router.cloud.ibm.com/v3/targets \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/targets" \
   -H "Authorization: Bearer <IAM_TOKEN>" \
   -H 'content-type: application/json' \
   -d '{
@@ -119,25 +323,27 @@ curl -X POST \
 ```
 {: codeblock}
 
-Where
+Where:
 - `<NAME>` is a descriptive name for your target
 - `<CRN>` is the Cloud Resource Name of your destination {{site.data.keyword.logs_full_notm}} instance
 
-The API response will include a target ID. Make sure to save this ID, as you will need it in the next step.
+Save the target ID from the response for use in the next step.
 
-For more information about creating targets and available configuration options, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external}
+For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external}
 
+
+#### Step 3: Create Routes
+{: #v3-migration-manual-new-step-3}
 
 ### Step 1.4: Create a Route to the Target
 {: #v3-migration-s1-configure-v3-create-route}
 
-After creating your target, you must create a route that defines how logs should be directed to that target. Routes contain rules that determine which logs are sent to which targets.
 
-Run the following API call to create a route that delivers platform logs from all regions to a central target:
+Create routes to define how logs are directed to your targets. Logs will start flowing once the route is defined:
 
 ```sh
 curl -X POST \
-  https://api.<region>.logs-router.cloud.ibm.com/v3/routes \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes" \
   -H "Authorization: Bearer <IAM_TOKEN>" \
   -H 'content-type: application/json' \
   -d '{
@@ -147,7 +353,7 @@ curl -X POST \
         "action": "send",
         "targets": [
           {
-            "id": "<ID FROM PREV STEP>"
+            "id": "<TARGET_ID>"
           }
         ]
       }
@@ -156,43 +362,141 @@ curl -X POST \
 ```
 {: codeblock}
 
-Where
+Where:
 - `<NAME>` is a descriptive name for your route
-- `<ID FROM PREV STEP>` is the target ID that defines the {{site.data.keyword.logs_full_notm}} instance where platform logs are routed.
+- `<TARGET_ID>` is the target ID from the previous step
 
-You can add additional filters and routing rules to customize log delivery behavior. For detailed information about route configuration options, including filtering capabilities, see [Create route](/apidocs/logs-router-service-api/logs-router-v3#create-route){: external}
+For detailed information about route configuration options, including filtering capabilities, see [Create route](/apidocs/logs-router-service-api/logs-router-v3#create-route){: external}
 
+### For Existing Accounts (With V1 Setup)
+{: #v3-migration-manual-existing}
 
-## Section 2: Migrate from v1 to v3
-{: #v3-migration-s2-migrate}
+If you have an existing v1 configuration and want to manually migrate to v3, follow these steps:
 
-Once you have completed the v3 setup in Section 1, you are ready to perform the actual migration from v1 to v3.
+#### Step 1: Set Primary Metadata Region
+{: #v3-migration-manual-existing-step-1}
 
-
-### Step 2.1: Initiate the Migration
-{: #v3-migration-s2-migrate-s1}
-
-To migrate from v1 to v3, you need to instruct the v1 service to switch over to the v3 configuration. This is accomplished by calling the migration API endpoint.
-
-Run the following API call to complete the migration:
+Configure the primary metadata region for your v3 setup:
 
 ```sh
-curl -X POST \
-  https://api.<region>.logs-router.cloud.ibm.com/v3/migrate?action=complete \
+curl -X PATCH \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/settings" \
   -H "Authorization: Bearer <IAM_TOKEN>" \
-  -H 'content-type: application/json'
+  -H 'content-type: application/json' \
+  -d '{
+    "primary_metadata_region": "<region>"
+  }'
 ```
 {: codeblock}
 
-The authorization bearer token must have the IAM roles `Manager` and `Administrator` for the {{site.data.keyword.logs_routing_full_notm}} service in order to complete the call successfully. For more information, see [IAM roles](/docs/logs-router?topic=logs-router-iam#iam-bytask).
+Where `<region>` is your desired region such as `us-south`, or `eu-de`.
 
-For additional information about the migration API and available actions, see [Migrate from old API version to version 3](/apidocs/logs-router-service-api/logs-router-v3#migrate-actions){: external}.
+For detailed information about this API endpoint, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
 
+#### Step 2: Create Targets
+{: #v3-migration-manual-existing-step-2}
 
-### Step 2.2: Post-Migration Behavior
-{: #v3-migration-s2-migrate-s2}
+Create target destinations for your v3 configuration:
 
-After executing the migration API call, the following changes will occur:
+```sh
+curl -X POST \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/targets" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "name": "<NAME>",
+    "destination_crn": "<CRN>"
+  }'
+```
+{: codeblock}
+
+Where:
+- `<NAME>` is a descriptive name for your target
+- `<CRN>` is the Cloud Resource Name of your destination {{site.data.keyword.logs_full_notm}} instance
+
+Save the target ID from the response for use in the next step. Repeat this step for each target you need based on your migration scenario.
+
+For more information, see [Create target](/apidocs/logs-router-service-api/logs-router-v3#create-target){: external}
+
+#### Step 3: Create Routes
+{: #v3-migration-manual-existing-step-3}
+
+Create routes to define how logs should be directed to your targets:
+
+```sh
+curl -X POST \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "name": "<NAME>",
+    "rules": [
+      {
+        "action": "send",
+        "targets": [
+          {
+            "id": "<TARGET_ID>"
+          }
+        ]
+      }
+    ]
+  }'
+```
+{: codeblock}
+
+Where:
+- `<NAME>` is a descriptive name for your route
+- `<TARGET_ID>` is the target ID from the previous step
+
+You can add filters to customize log routing. For example, to route logs from specific regions:
+
+```sh
+curl -X POST \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/routes" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "name": "<NAME>",
+    "rules": [
+      {
+        "action": "send",
+        "targets": [
+          {
+            "id": "<TARGET_ID>"
+          }
+        ],
+        "inclusion_filters": [
+          {
+            "operand": "location",
+            "operator": "in",
+            "values": ["us-south", "us-east"]
+          }
+        ]
+      }
+    ]
+  }'
+```
+{: codeblock}
+
+For detailed information about route configuration options, see [Create route](/apidocs/logs-router-service-api/logs-router-v3#create-route){: external}
+
+#### Step 4: Switch to V3
+{: #v3-migration-manual-existing-step-4}
+
+Once you have configured all your v3 targets and routes, switch your account to use the v3 API version. This action is irreversible and will migrate your account from v1 to v3.
+
+```sh
+curl -X PATCH \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/settings" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "api_version": 3
+  }'
+```
+{: codeblock}
+
+After executing this command:
 
 1. The v1 service will shut down and stop processing logs.
 2. The v3 service will become active and begin routing logs according to your new configuration.
@@ -200,6 +504,32 @@ After executing the migration API call, the following changes will occur:
 During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
 {: important}
 
+**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
+{: important}
+
+For additional information about the settings API, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
+
+2. The v3 service will become active and begin routing logs according to your new configuration.
+
+During the migration process, there will be a brief interruption period (typically a few minutes) during which platform logs will not be received. Plan your migration accordingly to minimize the impact on your operations.
+{: important}
+
+**WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
+{: important}
+
+For additional information about the migration API and available actions, see [Migrate from old API version to version 3](/apidocs/logs-router-service-api/logs-router-v3#migrate-actions){: external}.
+
+
+## IAM Permissions for Migration
+{: #v3-migration-iam}
+
+The migration process requires specific IAM permissions. The following global actions are available for managing the migration:
+
+- **logs-router.migration.post**: Configures and starts the migration. This is a two-step process to set up account metadata and then start the actual update of all regions. Requires Administrator role.
+- **logs-router.migration.get**: Retrieves the status of the migration. Available to Administrator, Editor, Operator, and Viewer roles.
+- **logs-router.migration.delete**: Deletes the generated migration plan, including all automatically created v3 targets and routes. Requires Administrator role.
+
+For more information about IAM roles and permissions, see [IAM roles](/docs/logs-router?topic=logs-router-iam#iam-bytask).
 
 ## Conclusion
 {: #v3-migration-conclusion}
