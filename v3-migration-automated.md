@@ -36,8 +36,27 @@ During the migration process, there will be a brief interruption period (typical
 **WARNING**: This migration is irreversible. Once you have migrated to v3, you cannot move back to v1.
 {: important}
 
+## Step 1: Set Primary Metadata Region
+{: #v3-migration-automated-metadata}
 
-## Step 1: Generate the Migration Plan
+Configure the primary metadata region for your v3 setup:
+
+```sh
+curl -X PATCH \
+  "https://api.<region>.logs-router.cloud.ibm.com/v3/settings" \
+  -H "Authorization: Bearer <IAM_TOKEN>" \
+  -H 'content-type: application/json' \
+  -d '{
+    "primary_metadata_region": "<region>"
+  }'
+```
+{: codeblock}
+
+Where `<region>` is your desired region such as `us-south`, or `eu-de`.
+
+For detailed information about this API endpoint, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
+
+## Step 2: Generate the Migration Plan
 {: #v3-migration-automated-generate}
 
 The first step is to generate a migration plan.
@@ -60,7 +79,7 @@ The authorization bearer token must have the `logs-router.migration.post` permis
 
 
 
-## Step 2: Check Migration Status
+## Step 3: Check Migration Status
 {: #v3-migration-automated-status}
 
 After initiating the migration plan generation, you need to monitor its progress. Continue checking the status until the state changes to `PENDING_COMPLETION`.
@@ -126,7 +145,7 @@ The API will return one of the following responses based on the current state:
 
 
 
-## Step 3: Review Generated Targets and Routes
+## Step 4: Review Generated Targets and Routes
 {: #v3-migration-automated-review}
 
 Once the migration reaches the `PENDING_COMPLETION` state, you should review the automatically generated v3 targets and routes to ensure they match your requirements.
@@ -159,7 +178,7 @@ curl -X GET \
 
 For more information, see [List routes](/apidocs/logs-router-service-api/logs-router-v3#list-routes){: external}.
 
-## Step 4: Modify Configuration (Optional)
+## Step 5: Modify Configuration (Optional)
 {: #v3-migration-automated-modify}
 
 If you need to make changes to the generated targets or routes, you can update them using the v3 API endpoints before completing the migration.
@@ -201,7 +220,7 @@ curl -X PATCH \
 
 For more information, see [Update route](/apidocs/logs-router-service-api/logs-router-v3#update-route){: external} and [Updating a route](/docs/logs-router?topic=logs-router-route-manage&interface=api#route-manage-api-update).
 
-## Step 5: Delete Migration Plan (Optional)
+## Step 6: Delete Migration Plan (Optional)
 {: #v3-migration-automated-delete}
 
 If you need to start over or cancel the migration, you can delete the generated migration plan. This will remove all automatically created v3 targets and routes.
@@ -219,7 +238,7 @@ The authorization bearer token must have the `logs-router.migration.delete` perm
 
 After deleting the migration plan, you can start the process again from Step 1.
 
-## Step 6: Complete the migration by switching to V3
+## Step 7: Complete the migration by switching to V3
 {: #v3-migration-automated-complete}
 
 Once you have reviewed the generated v3 configuration, you can complete the migration. This action is irreversible and will switch your account from v1 to v3.
