@@ -25,6 +25,17 @@ toc:
       - topic: cloud-services.md
         navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
+          label: Migration to API V3
+          topics:
+          - topic: migration.md
+            navtitle: Migration guide to API V3
+          - topic: v3-migration-automated.md
+            navtitle: Automated Migration
+          - topic: v3-migration-manual-new-acc.md
+            navtitle: Manual migration for new accounts
+          - topic: v3-migration-manual-existing.md
+            navtitle: Manual migration for existing accounts
+      - topicgroup:
           label: Tutorials
           topics:
           - topic: enterprise-routing-scenario.md
@@ -118,17 +129,6 @@ toc:
                 navtitle: Routing platform logs across accounts
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
-      - topicgroup:
-          label: Migration to API V3
-          topics:
-          - topic: migration.md
-            navtitle: Migration guide to API V3
-          - topic: v3-migration-automated.md
-            navtitle: Automated Migration
-          - topic: v3-migration-manual-new-acc.md
-            navtitle: Manual migration for new accounts (No V1 setup)
-          - topic: v3-migration-manual-existing.md
-            navtitle: Manual migration for existing accounts with V1 setup
       - topicgroup:
           label: Observability
           topics:
