@@ -23,18 +23,6 @@ You can manage routes in your account by using the {{site.data.keyword.logs_rout
 For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see [routes](/docs/logs-router?topic=logs-router-routes&interface=cli).
 
 
-
-## About routes
-{: #route-manage-about}
-
-You can configure {{site.data.keyword.logs_routing_full_notm}} to route platform logs that are generated in different regions where the service is supported to a target destination.
-
--  You can only route platform logs that are generated in regions where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Regions](/docs/logs-router?topic=logs-router-locations).
-
-- If you have regulatory and compliance requirements, check the route rules comply with them.
-
-
-
 ## IAM Access
 {: #route-manage-iam}
 
@@ -46,39 +34,33 @@ You must have the correct IAM permissions to manage routes. For information, see
 {: #route-create-ui}
 {: ui}
 
-Do the following to create a route using the UI.
+Complete the following steps to create a route using the UI.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Logging**.
+3. Click **Logging > Routing**.
 
-4. Click **Routing**.
+4. In the *Routes* tab, click **Create**.
 
-5. Click the **Routes** tab.
+5. In *Routing rules* section, modify the *Action* for *Rule 1*:
 
-6. Click **Create** to open the create a route page.
+    Select an *Action* for *Rule 1*:
 
-7. Enter a meaningful name for the route.
+    - Select **Send logs from** for the rule to route platform logs to the associated targets.
 
-8. Click **Next**.
+    - Select **Drop logs from** for the rule to drop platform logs matching this rule.
 
-9. In **Routing rules**, modify the **Action** for **Rule 1**:
+    Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
 
-    - Select `Send` for the rule to route platform logs to the associated targets.
+    - Select a condition, and specify the location values to be matched by the inclusion filter.
 
-    - Select `Drop` for the rule to drop platform logs matching this rule.
+    - To add multiple inclusion filters, click **Add filter** to add additional filters.
 
-10. Add the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
+    Add the [targets](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new one.
 
-   Select the desired filter and condition and specify the value to be matched by the inclusion filter.
-
-   To add multiple inclusion filters, click **Add filter** to add additional filters.
-
-11. Add the [target](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
-
-12. Click **Add rule** to add additional rules to the route.
+6. Click **Add rule** to add additional rules to the route.
 
     The order of route rules affects the routing behavior. Rules are processed in order and once a rule is matched, the subsequent rules are not processed.
 
@@ -89,50 +71,51 @@ Do the following to create a route using the UI.
     You can configure up to 10 rules per route.
     {: note}
 
-13. After defining your route, click **Next**.
+7. Click **Next**.
 
-14. Review the route definition ensuring the order of the rules is as intended.
+8. Enter a name for the route.
 
-15. Click **Create**.
+9. Review the route definition ensuring the order of the rules is as intended.
+
+    For more information, see [Understanding routing precedence](/docs/logs-router?topic=logs-router-routes_precedence).
+
+10. Click **Create**.
+
 
 
 ## Updating a route using the UI
 {: #route-update-ui}
 {: ui}
 
-Do the following to update a route using the UI.
+Complete the following steps to update a route using the UI.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Monitoring**.
+3. Click **Logging > Routing**.
 
-4. Click **Routing**.
+4. In the *Routes* tab, determine which route to update and click the ![Actions icon](../icons/action-menu-icon.svg "Actions").
 
-5. Click the **Routes** tab.
+5. Click **Rename** to rename the route.
 
-6. Determine which route to update and click the ![Actions icon](../icons/action-menu-icon.svg "Actions").
+6. Click **Edit** to update the route rules.
 
-7. Click **Rename** to rename the route.
-
-8. Click **Edit** to update the route rules.
-
-9. In **Routing rules**, modify the **Action** for the rule:
+    In **Routing rules**, modify the **Action** for the rule:
 
     - Select `Send` for the rule to route platform logs to the associated targets.
 
     - Select `Drop` for the rule to drop platform logs matching this rule.
 
-10. Add or modify the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
+    Add or modify the [inclusion filters](/docs/logs-router?topic=logs-router-route_rules_definitions&interface=ui#route_rules_definitions_filters) to determine the platform logs routed to the targets specified in the rule.
 
-   Select the desired filter and condition and specify the value to be matched by the inclusion filter.
+    Select the desired filter and condition and specify the value to be matched by the inclusion filter.
 
-   To add multiple inclusion filters, click **Add filter** to add additional filters.
+    To add multiple inclusion filters, click **Add filter** to add additional filters.
 
-11. Modify the [target](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
+7. Modify the [target](/docs/logs-router?topic=logs-router-target&interface=ui) to associate with the rule by selecting a target from the list. If you do not have a target defined, click **Add target** to create a new target.
 
-12. Click **Add rule** to add additional rules to the route.
+8. Click **Add rule** to add additional rules to the route.
 
     The order of route rules affects the routing behavior. Rules are processed in order and once a rule is matched, the subsequent rules are not processed.
 
@@ -143,52 +126,45 @@ Do the following to update a route using the UI.
     You can configure up to 10 rules per route.
     {: note}
 
-
-13. Click **Update** to make changes to your route.
+9. Click **Update** to make changes to your route.
 
 
 ## Viewing a route using the UI
 {: #route-view-ui}
 {: ui}
 
-Do the following to view a route using the UI.
+Complete the following steps to view a route using the UI.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Monitoring**.
+3. Click **Logging > Routing**.
 
-4. Click **Routing**.
+4. In the *Routes* tab, you can see the list of configured routes.
 
-5. Click the **Routes** tab.
+    The order of the routes does not affect the routing behavior since they are processed independently.
 
-   The configured routes are listed. The order of the routes does not affect the routing behavior since they are processed independently.
+    Each route displays the route name and rules.
 
-   Each route displays the route name and rules.
-
-   The routes page also displays **Routing guidance** with additional information about configuring routing.
+    The routes page also displays **Routing guidance** with additional information about configuring routing.
 
 
 ## Deleting a route using the UI
 {: #route-delete-ui}
 {: ui}
 
-Do the following to delete a route using the UI.
+Complete the following steps to delete a route using the UI.
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 
 2. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) &gt; **Observability**.
 
-3. Click **Monitoring**.
+3. Click **Logging > Routing**.
 
-4. Click **Routing**.
+4. In the *Routes* tab, determine which route to delete and click the ![Actions icon](../icons/action-menu-icon.svg "Actions").
 
-5. Click the **Routes** tab.
-
-6. Determine which route to delete and click the ![Actions icon](../icons/action-menu-icon.svg "Actions").
-
-7. Click **Delete** to delete the entire route. You must enter the route name before the route is deleted.
+5. Click **Delete** to delete the entire route. You must enter the route name before the route is deleted.
 
 
 
@@ -215,7 +191,7 @@ Route names are unique in the account.
 {: note}
 
 ```sh
-ibmcloud logs-router route create --name ROUTE_NAME ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
+ibmcloud logs-router route create --name NAME --rules RULES | @RULES-FILE [--output FORMAT] [--force]
 ```
 {: pre}
 
@@ -225,14 +201,23 @@ ibmcloud logs-router route create --name ROUTE_NAME ( --rules RULES |  --file RU
 `--name ROUTE_NAME`
 :   The name to be given to the route.
 
+    The maximum length is 1000 characters.
+
+    The minimum length is 1 character.
+
+    The name cannot include any special characters other than empty space, `-`, `.`, `_`, `:`.
+
     Do not include any personal identifying information (PII) in any resource names.
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON string or a path to a JSON file prefix with `@` that define how platform logs are routed.
 
-`--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+    Rules are evaluated in the order in which they are configured.
+
+    The maximum length is 10 rules.
+
+    For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -243,25 +228,94 @@ ibmcloud logs-router route create --name ROUTE_NAME ( --rules RULES |  --file RU
 ### Example
 {: #route-manage-cli-create-sample}
 
-The following is an example using the **`ibmcloud logs-router route create`** command.
-
-This example shows an example successful route creation.
-{: note}
+The following is an example using the `ibmcloud logs-router route create` command.
 
 ```text
-ibmcloud mr route create --name target1 --rules '[{"action": "send", "targets":[{"id":"551957a7-c1e3-4160-84d8-4268709f6743"}]}]'
-OK
-Route
-Name:         target1
-ID:           06a29ca2-40f5-4371-ae3c-76a896577bd3
-CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
-Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
-Created At:   2023-05-30T21:14:21.460Z
-Updated At:   2023-05-30T21:14:21.460Z
+ibmcloud logs-router route create --name route3 --rules '[{"action": "send", "targets":[{"id":"0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7"},{"id":"6f9137b3-2bb9-4724-851b-153e23c82d80"}],"inclusion_filters": [{"operand": "location", "operator": "in", "values": ["us-south","eu-de"]}]}]'
+
+```
+{: codeblock}
+
+The output looks as follows:
+
+```text
+Id           cfa2be32-979d-4e99-a2a2-e68e65e9b8cc
+Name         route3
+Rules
+             action              send
+             inclusion_filters
+                                 operand    location
+                                 operator   in
+                                 values     [us-south, eu-de]
+
+             targets
+                                 id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                                 name          cl-target2
+                                 target_type   cloud-logs
+
+                                 id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                                 name          cl-platform-logs-sydney-113
+                                 target_type   cloud-logs
+
+
+Created At   2026-04-29T12:59:25.764Z
+Updated At   2026-04-29T12:59:25.764Z
+Managed By   account
 
 ```
 {: screen}
 
+Another example:
+
+```text
+ibmcloud logs-router route create --name route4 --rules '[{"action": "send", "targets":[{"id":"0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7"},{"id":"6f9137b3-2bb9-4724-851b-153e23c82d80"}],"inclusion_filters": [{"operand": "location", "operator": "in", "values": ["us-south","eu-de"]}]},{"action": "send", "targets":[{"id":"0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7"},{"id":"6f9137b3-2bb9-4724-851b-153e23c82d80"}],"inclusion_filters": [{"operand": "location", "operator": "is", "values": ["us-east"]}]}]'
+```
+{: codeblock}
+
+The output looks as follows:
+
+```text
+Id           6bb85c44-7187-4e45-b850-c912ddd2d0bf
+Name         route4
+Rules
+             action              send
+             inclusion_filters
+                                 operand    location
+                                 operator   in
+                                 values     [us-south, eu-de]
+
+             targets
+                                 id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                                 name          cl-target2
+                                 target_type   cloud-logs
+
+                                 id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                                 name          cl-platform-logs-sydney-113
+                                 target_type   cloud-logs
+
+
+             action              send
+             inclusion_filters
+                                 operand    location
+                                 operator   is
+                                 values     [us-east]
+
+             targets
+                                 id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                                 name          cl-target2
+                                 target_type   cloud-logs
+
+                                 id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                                 name          cl-platform-logs-sydney-113
+                                 target_type   cloud-logs
+
+
+Created At   2026-04-29T13:01:11.685Z
+Updated At   2026-04-29T13:01:11.685Z
+Managed By   account
+
+```
+{: screen}
 
 
 ## Updating a route using the CLI
@@ -271,27 +325,36 @@ Updated At:   2023-05-30T21:14:21.460Z
 Use this command to update a route. Any specified value that is different from when the route was originally created will be updated to the value specified in the command.
 
 ```sh
-ibmcloud logs-router route update --route ROUTE [--name ROUTE_NAME] ( --rules RULES |  --file RULES_DEFINITION_JSON_FILE ) [--output FORMAT] [--force]
+ibmcloud logs-router route update --id ROUTE [--name NAME] [--rules RULES | @RULES-FILE] [--output FORMAT] [--force]
 ```
 {: pre}
 
 ### Command options
 {: #route-manage-cli-update-cmd}
 
-`--route ROUTE`
-:   The ID or current route name.
+`--id ROUTE`
+:   The ID of the route.
 
-`--name route_NAME`
+`--name ROUTE_NAME`
 :   The name to be given to the route.
+
+    The maximum length is 1000 characters.
+
+    The minimum length is 1 character.
+
+    The name cannot include any special characters other than empty space, `-`, `.`, `_`, `:`.
 
     Do not include any personal identifying information (PII) in any resource names.
     {: important}
 
 `--rules RULES`
-:   JSON formatted rules array definition in single quotes that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+:   JSON string or a path to a JSON file prefix with `@` that define how platform logs are routed.
 
-`--file RULES_DEFINITION_JSON_FILE`
-:    JSON file that includes the routing rules that define how platform logs are routed. For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
+    Rules are evaluated in the order in which they are configured.
+
+    The maximum length is 10 rules.
+
+    For more information, see [Defining routing rules](/docs/logs-router?topic=logs-router-route_rules_definitions).
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format.  If `JSON` is not specified, output will be returned in a tabular format.
@@ -302,18 +365,50 @@ ibmcloud logs-router route update --route ROUTE [--name ROUTE_NAME] ( --rules RU
 ### Example
 {: #route-manage-cli-update-sample}
 
-The following is an example using the **`ibmcloud logs-router route update --route my-route --name my-new-route-name`** command.
+The following is an example using the `ibmcloud logs-router route update --id 6bb85c44-7187-4e45-b850-c912ddd2d0bf --name my-new-route-name` command.
+
+The output looks as follows:
 
 ```text
-ibmcloud mr route update --route target1 --name target2
-OK
-Route
-Name:         target2
-ID:           06a29ca2-40f5-4371-ae3c-76a896577bd3
-CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:06a29ca2-40f5-4371-ae3c-76a896577bd3
-Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
-Created At:   2023-05-30T21:14:21.460Z
-Updated At:   2023-05-30T21:19:40.953Z
+Id           6bb85c44-7187-4e45-b850-c912ddd2d0bf
+Name         my-new-route-name
+Rules
+             action              send
+             inclusion_filters
+                                 operand    location
+                                 operator   in
+                                 values     [us-south, eu-de]
+
+             targets
+                                 id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                                 name          cl-target2
+                                 target_type   cloud-logs
+
+                                 id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                                 name          cl-platform-logs-sydney-113
+                                 target_type   cloud-logs
+
+
+             action              send
+             inclusion_filters
+                                 operand    location
+                                 operator   is
+                                 values     [us-east]
+
+             targets
+                                 id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                                 name          cl-target2
+                                 target_type   cloud-logs
+
+                                 id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                                 name          cl-platform-logs-sydney-113
+                                 target_type   cloud-logs
+
+
+Created At   2026-04-29T13:01:11.685Z
+Updated At   2026-04-29T13:07:32.677Z
+Managed By   account
+
 ```
 {: screen}
 
@@ -325,15 +420,15 @@ Updated At:   2023-05-30T21:19:40.953Z
 Use this command to delete a route.
 
 ```sh
-ibmcloud logs-router ROUTE rm --route route [--force]
+ibmcloud logs-router route delete --id route [--force]
 ```
 {: pre}
 
 ### Command options
 {: #route-manage-cli-delete-cmd}
 
-`--route ROUTE`
-:   The ID or name of the route.
+`--id ROUTE`
+:   The ID of the route.
 
 `--force` | `-f`
 :   Will delete the route without providing the user with any additional prompt.
@@ -344,12 +439,13 @@ ibmcloud logs-router ROUTE rm --route route [--force]
 ### Example
 {: #route-manage-cli-delete-sample}
 
-The following is an example using the **`ibmcloud logs-router route rm --route xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`** command.
+The following is an example using the `ibmcloud logs-router route delete --id 6bb85c44-7187-4e45-b850-c912ddd2d0bf` command.
+
+You are asked to confirm deletion of the route.  The following is the output of running the delete command:
 
 ```text
-Are you sure you want to remove the route with route ID xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx? [y/N]>y
+Are you sure you want to delete? [y/n]> y
 OK
-Route with name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx was successfully removed.
 ```
 {: screen}
 
@@ -361,7 +457,7 @@ Route with name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx was successfully removed.
 Use this command to get information about a route for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
-ibmcloud logs-router ROUTE get --route route [--output FORMAT]
+ibmcloud logs-router route get --id route [--output FORMAT]
 ```
 {: pre}
 
@@ -369,7 +465,7 @@ ibmcloud logs-router ROUTE get --route route [--output FORMAT]
 {: #route-manage-cli-read-cmd}
 
 `--route ROUTE`
-:   The ID or name of the route.
+:   The ID of the route.
 
 `--output FORMAT`
 :   Currently supported format is JSON. If specified, output will be returned in JSON format. If `JSON` is not specified, output will be returned in a tabular format.
@@ -380,19 +476,28 @@ ibmcloud logs-router ROUTE get --route route [--output FORMAT]
 ### Example
 {: #route-manage-cli-read-sample}
 
-The following is an example using the **`ibmcloud logs-router route get --route new-route-name`** command showing a route.
+The following is an example using the `ibmcloud logs-router route get --id 2a4739ee-7cd6-4e05-b60d-9b2e7b0b7981` command showing a route.
+
+The output looks as follows:
 
 ```text
-ibmcloud mr route get --route route-all
-OK
-Route
-Name:         route-all
-ID:           f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
-Created At:   2023-05-30T08:04:53.183Z
-Updated At:   2023-05-30T08:53:22.824Z
+Id           2a4739ee-7cd6-4e05-b60d-9b2e7b0b7981
+Name         route2
+Rules
+             action    send
+             targets
+                       id            0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7
+                       name          cl-target2
+                       target_type   cloud-logs
 
+                       id            6f9137b3-2bb9-4724-851b-153e23c82d80
+                       name          cl-platform-logs-sydney-113
+                       target_type   cloud-logs
+
+
+Created At   2026-04-29T12:55:23.106Z
+Updated At   2026-04-29T12:55:23.106Z
+Managed By   account
 ```
 {: screen}
 
@@ -403,7 +508,7 @@ Updated At:   2023-05-30T08:53:22.824Z
 Use this command to list the configured routes for an {{site.data.keyword.logs_routing_full_notm}} region.
 
 ```sh
-ibmcloud logs-router route ls [--output FORMAT]
+ibmcloud logs-router route list [--output FORMAT]
 ```
 {: pre}
 
@@ -419,20 +524,8 @@ ibmcloud logs-router route ls [--output FORMAT]
 ### Example
 {: #route-manage-cli-list-sample}
 
-The following is an example using the **`ibmcloud logs-router route ls`** command.
+The following is an example using the `ibmcloud logs-router route list` command.
 
-```text
-ibmcloud mr route ls
-OK
-Routes
-Name:         route-all
-ID:           f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-CRN:          crn:v1:bluemix:public:logs-router:global:a/xxxx::route:f22e9cb6-2fcd-456d-9cf2-27813b1cc375
-Rule 0:       [[551957a7-c1e3-4160-84d8-4268709f6743(mon-std)], []]
-Created At:   2023-05-30T08:04:53.183Z
-Updated At:   2023-05-30T08:53:22.824Z
-```
-{: screen}
 
 
 ## API routes and actions
@@ -443,23 +536,22 @@ The following table lists the actions that you can run to manage routes:
 
 | Action                     | REST API Method  | API_URL                                          |
 |----------------------------|------------------|--------------------------------------------------|
-| Create a route            | `POST`           | `<ENDPOINT>/api/v3/routes`              |
-| Update a route            | `PATCH`            | `<ENDPOINT>/api/v3/routes/<route_ID>`  |
-| Delete a route            | `DELETE`         | `<ENDPOINT>/api/v3/routes/<route_ID>`  |
-| Read a route              | `GET`            | `<ENDPOINT>/api/v3/routes/<route_ID>`  |
-| List all routes           | `GET`            | `<ENDPOINT>/api/v3/routes`             |
+| Create a route            | `POST`            | `<ENDPOINT>/v3/routes`              |
+| Update a route            | `PATCH`           | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| Delete a route            | `DELETE`          | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| Read a route              | `GET`             | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| List all routes           | `GET`             | `<ENDPOINT>/v3/routes`             |
 {: caption="route actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
 You can use private and public endpoints to manage routes. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+* You can manage routes from the private network using an API endpoint with the following format: `https://api.private.REGION.logs-router.cloud.ibm.com`
+* You can manage routes from the public network using an API endpoint with the following format: `https://api.REGION.logs-router.cloud.ibm.com`
 
-
-* You can manage routes from the private network using an API endpoint with the following format: `https://private.REGION.logs-router.cloud.ibm.com`
-* You can manage routes from the public network using an API endpoint with the following format: `https://REGION.logs-router.cloud.ibm.com`
-
-* You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/logs-router?topic=logs-router-settings).
+You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/logs-router?topic=logs-router-endpoints).
+{: note}
 
 For more information about the REST API, see [routes](https://{DomainName}/apidocs/logs-router/logs-router-v3#create-route){: external}.
-{: note}
+
 
 
 ## API prerequisites
@@ -467,10 +559,8 @@ For more information about the REST API, see [routes](https://{DomainName}/apido
 {: api}
 
 To make API calls to manage routes, complete the following steps:
-1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-iam-retrieve-token&interface=cli).
+1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-access-token&interface=api).
 2. Identify the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
-
-
 
 ## Creating a route using the API
 {: #route-manage-api-create}
@@ -482,11 +572,27 @@ Route names are unique in the account. You cannot reuse a route name to configur
 {: note}
 
 ```shell
-curl -X POST <ENDPOINT>/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
-    -d '{
+curl -X POST <ENDPOINT>/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "ROUTE_NAME",
     "rules": [
-      RULES
+      {
+        "action": "send",
+        "targets": [
+          {
+            "id": "50375218-7cff-4234-bbb4-171bebab8408"
+          },
+          {
+            "id": "c7519d8a-5f97-498b-a229-8542f60955cd"
+          }
+        ],
+        "inclusion_filters": [
+          {
+            "operand": "location",
+            "operator": "is",
+            "values": ["us-east"]
+          }
+        ]
+      }
     ]
   }'
 ```
@@ -510,17 +616,17 @@ Where
 For example, you can use the following cURL request to create a route:
 
 ```shell
-curl -X POST https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X POST https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "My-route",
     "rules": [
       {
         "action": "send",
         "targets": [
           {
-            "id": "50375218-7cff-4234-bbb4-171bebab8408"
+            "id": "0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7"
           },
           {
-            "id": "c7519d8a-5f97-498b-a229-8542f60955cd"
+            "id": "6f9137b3-2bb9-4724-851b-153e23c82d80"
           }
         ],
         "inclusion_filters": [
@@ -541,6 +647,12 @@ curl -X POST https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H
 ```
 {: screen}
 
+The output looks as follows:
+
+```text
+{"id":"c7673f63-1260-4f86-bc1a-aaedb89391d8","name":"route5","crn":"crn:v1:bluemix:public:logs-router:global:a/xxxxxxx::route:c7673f63-1260-4f86-bc1a-aaedb89391d8","rules":[{"action":"send","targets":[{"id":"0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7","name":"cl-target2","crn":"crn:v1:bluemix:public:logs-router:eu-gb:a/xxxxxxx::target:0b4e6aa9-257c-4a3a-ae42-9a36a5b3adc7","target_type":"cloud-logs"},{"id":"6f9137b3-2bb9-4724-851b-153e23c82d80","name":"cl-platform-logs-sydney-113","crn":"crn:v1:bluemix:public:logs-router:eu-gb:a/xxxxxxx::target:6f9137b3-2bb9-4724-851b-153e23c82d80","target_type":"cloud-logs"}],"inclusion_filters":[{"operand":"location","operator":"is","values":["us-east"]}]}],"managed_by":"account","created_at":"2026-04-29T13:26:34.237Z","updated_at":"2026-04-29T13:26:34.237Z"}
+```
+{: screen}
 
 ## Updating a route using the API
 {: #route-manage-api-update}
@@ -558,7 +670,7 @@ Route names are unique in the account. You cannot reuse a route name to configur
 You can use the following cURL command to update a route:
 
 ```shell
-curl -X PATCH <ENDPOINT>/api/v3/routes/ROUTE_ID -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X PATCH <ENDPOINT>/v3/routes/ROUTE_ID -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "ROUTE_NAME",
     "rules": [
       RULES
@@ -587,7 +699,7 @@ Where
 For example, you can use the following cURL request to create a route in Dallas:
 
 ```shell
-curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
+curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json" -d '{
     "name": "My route",
     "rules": [
       {
@@ -628,7 +740,7 @@ curl -X PATCH https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -
 You can use the following cURL command to delete a route:
 
 ```shell
-curl -X DELETE <ENDPOINT>/api/v3/routes/<route_ID> -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X DELETE <ENDPOINT>/v3/routes/<route_ID> -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -643,7 +755,7 @@ Where
 For example, you can use the following cURL request to delete a route with the ID `00000000-0000-0000-0000-000000000000`:
 
 ```shell
-curl -X DELETE https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X DELETE https://private.us-south.logs-router.cloud.ibm.com/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -655,7 +767,7 @@ curl -X DELETE https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/
 You can use the following cURL command to view the configuration details of 1 route:
 
 ```shell
-curl -X GET <ENDPOINT>/api/v3/routes/<route_ID> -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET <ENDPOINT>/v3/routes/<route_ID> -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -670,7 +782,7 @@ Where
 For example, you can run the following cURL request to get information about a route with the ID `00000000-0000-0000-0000-000000000000`:
 
 ```shell
-curl -X GET https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/routes/00000000-0000-0000-0000-000000000000 -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 
@@ -683,7 +795,7 @@ curl -X GET https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes/000
 You can use the following cURL command to view all routes:
 
 ```shell
-curl -X GET <ENDPOINT>/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET <ENDPOINT>/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: codeblock}
 
@@ -695,7 +807,7 @@ Where
 For example, you can run the following cURL request to get information about the routes that are defined in Dallas:
 
 ```shell
-curl -X GET https://private.us-south.logs-router.cloud.ibm.com/api/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
+curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authorization: $ACCESS_TOKEN" -H "content-type: application/json"
 ```
 {: screen}
 

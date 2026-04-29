@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -83,7 +83,7 @@ Inclusion filters are composed of an `operand`, `operator`, and `value`:
         When using `is`, only 1 value can be specified.
 
 `value`
-:   A string, or an array of strings, to be compared with the `operand` property to determine whether the metric is routed or not. When the `is` `operator` is used, `value` must include a single string. When the `in` `operator` is used, `value` can include multiple strings in an array.
+:   A string, or an array of strings, to be compared with the `operand` property to determine whether the log is routed or not. When the `is` `operator` is used, `value` must include a single string. When the `in` `operator` is used, `value` can include multiple strings in an array.
 
     Valid values depend on the `operand`.
 
