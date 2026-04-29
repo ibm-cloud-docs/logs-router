@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -29,7 +29,7 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 {: #logs-router-apr3026}
 
 `Route platform logs to multiple destinations`
-:   For more information, see [Getting started with {{site.data.keyword.logs_routing_full}} V3]().
+:   For more information, see [Getting started with {{site.data.keyword.logs_routing_full}} V3](/docs/logs-router?topic=logs-router-getting-started-v3).
 
 `{{site.data.keyword.logs_routing_full_notm}} Enterprise routing by using enterprise IAM action controls`
 :   You can use {{site.data.keyword.logs_routing_full}} Enterprise routing to configure routing of platform logs from your enterprise child accounts to your enterprise parent account and routing of platform logs from your enterprise child accounts to an {{site.data.keyword.logs_full_notm}} instance in another account of your choice. You must use {{site.data.keyword.iamshort}} (IAM) Action Control to restrict changes to the enterprise-managed routing. Your child account administrators can separately define destinations to keep a copy of the platform logs in their account. For more information, see [Enterprise routing](/docs/logs-router?topic=logs-router-enterprise-routing-scenario&interface=terraform).

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -45,7 +45,7 @@ You can define any of the following information:
 
     You can choose any of the supported locations where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Locations](/docs/logs-router?topic=logs-router-locations).
 
-    You can choose a location where the data is stored. You can also configure a backup location where the metadata is stored for recovery purposes.
+    You can choose a location where the metadata is stored. You can also configure a backup location where the metadata is stored for recovery purposes.
 
     Take into account any corporate or industry compliance requirements such as Financial Services Validated locations, or EU-managed regions.
 
@@ -65,10 +65,10 @@ You can define any of the following information:
 
 * Default target locations, that is, 1 or more targets in the account, that will collect logs from supported {{site.data.keyword.logs_routing_full_notm}} locations where you have not configured how you want to collect logs.
 
-   If you define more than 1 target, all default targets get a copy of logs that do not have a routing rule to indicate where to collect them in the account. You can define up to 2 default targets per account.
+   If you define more than 1 target, all default targets get a copy of logs that do not have a routing rule to indicate where to deliver them in the account. You can define up to 2 default targets per account.
    {: note}
 
-* The API version that is enabled in the account for {{site.data.keyword.logs_routing_full_notm}}. Valid values are: `V1` or `V3`.
+* The API version that is enabled in the account for {{site.data.keyword.logs_routing_full_notm}}. Valid values are: `1` or `3`.
 
 
 ## IAM permissions
