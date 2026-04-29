@@ -122,36 +122,99 @@ For {{site.data.keyword.logs_routing_full_notm}}, the IAM actions and Activity T
 
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| Grant other account members access to configure {{site.data.keyword.logs_routing_full_notm}} | `iam-am.policy.create` |![Checkmark icon](/icons/checkmark-icon.svg) | | | |
-| Revoke member access to configure {{site.data.keyword.logs_routing_full_notm}} | `iam-am.policy.delete` | ![Checkmark icon](/icons/checkmark-icon.svg) | | | |
-| Modify member access to configure {{site.data.keyword.logs_routing_full_notm}}  | `iam-am.policy.update` | ![Checkmark icon](/icons/checkmark-icon.svg) | | | |
+| Grant other account members access to configure {{site.data.keyword.logs_routing_full_notm}} | `iam-am.policy.create` |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Revoke member access to configure {{site.data.keyword.logs_routing_full_notm}} | `iam-am.policy.delete` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Modify member access to configure {{site.data.keyword.logs_routing_full_notm}}  | `iam-am.policy.update` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} access actions" caption-side="top"}
 
+### Targets
+{: #iam_ater_bytask_targets}
 
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| View a target      | `logs-router.target.read` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |
-| List all targets   | `logs-router.target.list` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |
-| Create a target    | `logs-router.target.create` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
-| Update a target    | `logs-router.target.update` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
-| Delete a target    | `logs-router.target.delete` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
+| View a target      | `logs-router.target.read` |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |
+| List all targets   | `logs-router.target.list` |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |
+| Create a target    | `logs-router.target.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a target    | `logs-router.target.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a target    | `logs-router.target.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} target actions" caption-side="top"}
 
+### Targets managed by the enterprise
+{: #iam_ater_bytask_targets_enterprise}
+
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| View a route | `logs-router.route.read` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |
-| List all routes | `logs-router.route.list` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) |
-| Create a route | `logs-router.route.create` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
-| Update a route | `logs-router.route.update` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
-| Delete a route | `logs-router.route.delete` |![Checkmark icon](/icons/checkmark-icon.svg) |![Checkmark icon](/icons/checkmark-icon.svg) | | |
+| Create a target managed by the enterprise   | `logs-router.enterprise-target.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a target managed by the enterprise   | `logs-router.enterprise-target.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a target managed by the enterprise   | `logs-router.enterprise-target.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} target actions managed by the enterprise" caption-side="top"}
+
+
+
+### Routes
+{: #iam_ater_bytask_routes}
+
+| Action | IAM action | Administrator | Editor | Operator | Viewer |
+|--------|------------|---------------|--------|-----------|--------|
+| View a route | `logs-router.route.read` |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |
+| List all routes | `logs-router.route.list` |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |[Yes]{: tag-green} |
+| Create a route | `logs-router.route.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a route | `logs-router.route.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a route | `logs-router.route.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} route actions" caption-side="top"}
 
+### Routes managed by the enterprise
+{: #iam_ater_bytask_routes_enterprise}
 
 | Action | IAM action | Administrator | Editor | Operator | Viewer |
 |--------|------------|---------------|--------|-----------|--------|
-| View configuration settings  | `logs-router.setting.get` | ![Checkmark icon](/icons/checkmark-icon.svg) | ![Checkmark icon](/icons/checkmark-icon.svg) | ![Checkmark icon](/icons/checkmark-icon.svg) | ![Checkmark icon](/icons/checkmark-icon.svg) |
-| Update configuration settings | `logs-router.setting.update` | ![Checkmark icon](/icons/checkmark-icon.svg) | | | |
+| Create a route managed by the enterprise | `logs-router.enterprise-route.create` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Update a route managed by the enterprise | `logs-router.enterprise-route.update` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| Delete a route managed by the enterprise | `logs-router.enterprise-route.delete` |[Yes]{: tag-green} |[Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} route actions managed by the enterprise" caption-side="top"}
+
+
+### Settings
+{: #iam_ater_bytask_settings}
+
+| Action | IAM action | Administrator | Editor | Operator | Viewer |
+|--------|------------|---------------|--------|-----------|--------|
+| View configuration settings  | `logs-router.setting.get` | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Update configuration settings | `logs-router.setting.update` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} configuration actions" caption-side="top"}
+
+### UI
+{: #iam_ater_bytask_ui}
+
+| Action | IAM action | Administrator | Editor | Operator | Viewer |
+|--------|------------|---------------|--------|-----------|--------|
+| View the {{site.data.keyword.logs_routing_full_notm}} UI  | `logs-router.dashboard.view` | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} configuration actions" caption-side="top"}
+
+
+logs-router.dashboard.view
+
+
+### Destinations
+{: #iam_ater_bytask_destinations}
+
+| Action | IAM action | Administrator | Editor | Operator | Viewer |
+|--------|------------|---------------|--------|-----------|--------|
+| Search for target destinations from {{site.data.keyword.logs_routing_full_notm}} configurations  | `logs-router.destination.search` | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} configuration actions" caption-side="top"}
+
+
+### Migration
+{: #iam_ater_bytask_migration}
+
+| Action | IAM action | Administrator | Editor | Operator | Viewer |
+|--------|------------|---------------|--------|-----------|--------|
+| Get the migration status for the account | `logs-router.migration.get` | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Initiate migration for the account | `logs-router.migration.post` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Clear the migration state for the account | `logs-router.migration.delete` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| Initiate migration for the account | `logs-router.migration.post` | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="IAM platform roles for {{site.data.keyword.logs_routing_full_notm}} migration actions" caption-side="top"}
+
 
 
 ## {{site.data.keyword.cloud_notm}} platform roles
