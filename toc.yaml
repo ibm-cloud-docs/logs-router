@@ -212,7 +212,7 @@ toc:
           - topic: endpoints.md
             navtitle: Endpoints
           - topic: reference/vpe-connection-crn.md
-            navtitle: Endpoints CRNs (V1)
+            navtitle: Endpoints CRNs
   - navgroup:
       id: help
       topics:
