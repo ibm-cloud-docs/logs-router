@@ -156,7 +156,7 @@ toc:
           links:
           - link:
               label: Logs Routing API
-              href: https://{DomainName}/apidocs/logs-router-service-api
+              href: https://{DomainName}/apidocs/logs-router-service-api/logs-router-v3
       - topicgroup:
           label: CLI Reference
           topics:
@@ -169,9 +169,9 @@ toc:
           links:
           - link:
               label: Terraform reference
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_router_route
       - topicgroup:
-          label: Logs Routing single destination
+          label: Logs Routing single destination (V1)
           topics:
           - topic: getting-started.md
             navtitle: Getting started
@@ -213,6 +213,18 @@ toc:
             navtitle: Endpoints
           - topic: reference/vpe-connection-crn.md
             navtitle: Endpoints CRNs
+          - topicgroup:
+              label: API Reference
+              links:
+              - link:
+                  label: Logs Routing API
+                  href: https://{DomainName}/apidocs/logs-router-service-api/logs-router-v1
+          - topicgroup:
+              label: Terraform Reference
+              links:
+              - link:
+                  label: Terraform reference
+                  href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
   - navgroup:
       id: help
       topics:
