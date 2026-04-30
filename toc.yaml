@@ -16,6 +16,8 @@ toc:
         navtitle: Getting started
       - topic: getting-started-v3.md
         navtitle: Getting started with multiple destinations
+      - topic: scenarios.md
+        navtitle: Configuration scenarios
       - topic: about-v3.md
         navtitle: About Logs Routing
       - topic: platform-logs-about.md
