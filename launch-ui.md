@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-08-24"
+  years:  2023, 2026
+lastupdated: "2026-04-28"
 
 keywords:
 
@@ -18,12 +18,8 @@ subcollection: logs-router
 {{site.data.keyword.logs_routing_full}} provides an {{site.data.keyword.cloud_notm}} console that can be used to configure and review the {{site.data.keyword.logs_routing_full_notm}} routing configuration.
 {: shortdesc}
 
-{{site.data.keyword.logs_routing_full_notm}} uses the concept of tenants and targets.
 
-{{site.data.content.tenant_definition-paragraph}}
-
-
-To access the {{site.data.keyword.logs_routing_full_notm}} console:
+To launch the {{site.data.keyword.logs_routing_full_notm}} console, complete the following steps:
 
 1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
 

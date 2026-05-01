@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-07-31"
+  years:  2023, 2026
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -18,8 +18,9 @@ subcollection: logs-router
 Access {{site.data.keyword.logs_routing_full_notm}} by using the listed endpoints for each supported {{site.data.keyword.cloud_notm}} location.
 {: shortdesc}
 
+
 ## Public Endpoints
-{: #public-endpoints}
+{: #public_endpoints_v1}
 
 The management API supports public endpoints, which can be accessed from the public internet. 
 
@@ -39,7 +40,7 @@ The management API supports public endpoints, which can be accessed from the pub
 {: caption="List of {{site.data.keyword.logs_routing_full_notm}} public endpoints" caption-side="top"}
 
 ## Private Endpoints
-{: #private-endpoints}
+{: #private_endpoints_v1}
 
 Private endpoints restrict access to the {{site.data.keyword.cloud_notm}} private network.  
 

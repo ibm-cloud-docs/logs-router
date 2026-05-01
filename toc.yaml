@@ -14,17 +14,30 @@ toc:
       topics:
       - topic: getting-started.md
         navtitle: Getting started
-      - topic: about.md
+      - topic: getting-started-v3.md
+        navtitle: Getting started with multiple destinations
+      - topic: scenarios.md
+        navtitle: Configuration scenarios
+      - topic: about-v3.md
         navtitle: About Logs Routing
       - topic: platform-logs-about.md
         navtitle: Platform logs
       - topic: cloud-services.md
         navtitle: IBM Cloud services that generate platform logs
       - topicgroup:
+          label: Migration to API V3
+          topics:
+          - topic: migration.md
+            navtitle: Migration guide to API V3
+          - topic: v3-migration-automated.md
+            navtitle: Automated Migration
+          - topic: v3-migration-manual-new-acc.md
+            navtitle: Manual migration for new accounts
+          - topic: v3-migration-manual-existing.md
+            navtitle: Manual migration for existing accounts
+      - topicgroup:
           label: Tutorials
           topics:
-          - topic: target-cloud-logs.md
-            navtitle: Routing platform logs to a Cloud Logs instance
           - topic: enterprise-routing-scenario.md
             navtitle: Enterprise routing
       - topic: releasenotes.md
@@ -35,7 +48,7 @@ toc:
       - topicgroup:
           label: Controlling access (IAM)
           topics:
-          - topic: iam.md
+          - topic: iam-v3.md
             navtitle: Managing IAM access
           - topic: iam-permissions.md
             navtitle: Granting IAM permissions
@@ -51,7 +64,7 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
-          - topic: architecture-workload-isolation.md
+          - topic: compute-isolation-v3.md
             navtitle: Architecture and workload isolation
           - topic: mng-data.md
             navtitle: Securing your data
@@ -65,41 +78,67 @@ toc:
       - topic: launch-ui.md
         navtitle: Launching the UI
       - topicgroup:
-          label: Managing tenants
+          label: Managing account settings
           topics:
-          - topic: tenant-get.md
-            navtitle: Getting information about a tenant
-          - topic: tenant-get-id.md
-            navtitle: Getting information about a tenant by using the tenant ID
-          - topic: tenant-create.md
-            navtitle: Creating a tenant and a target destination
-          - topic: tenant-update-name.md
-            navtitle: Changing the name of a tenant
-          - topic: tenant-delete.md
-            navtitle: Deleting a tenant
-          - topic: terraform-setup.md
-            navtitle: Using Terraform
+          - topic: settings-about.md
+            navtitle: About account settings
+          - topic: settings.md
+            navtitle: Configuring account settings
+          - topic: config_report.md
+            navtitle: Generating a report
+          - topic: getting-started-mng-endpoints.md
+            navtitle: Enforcing private endpoints
       - topicgroup:
           label: Managing targets
           topics:
-          - topic: tenants-list.md
-            navtitle: Listing targets through the UI
-          - topic: target-update.md
-            navtitle: Updating the configuration of a target
-          - topic: target-get.md
-            navtitle: Retrieving information about a target
+          - topic: target.md
+            navtitle: About targets
+          - topic: target-manage.md
+            navtitle: Managing targets
+          - topic: target-default.md
+            navtitle: Configuring default targets
+          - topic: target-locations.md
+            navtitle: Enforcing target locations
+          - topic: target-default-reset.md
+            navtitle: Reseting default targets
+          - topic: target-default-locations-reset.md
+            navtitle: Reseting permitted target locations
+      - topicgroup:
+          label: Managing routes
+          topics:
+          - topic: route.md
+            navtitle: About routes
+          - topic: route-manage.md
+            navtitle: Managing routes
+          - topic: route_precedence.md
+            navtitle: Routing precedence
+          - topic: route_rules_definitions.md
+            navtitle: Defining a rule
+          - topicgroup:
+              label: Example routing scenarios
+              topics:
+              - topic: route-rule-all-logs.md
+                navtitle: Routing all platform logs
+              - topic: route-from-1-location.md
+                navtitle: Routing platform logs from 1 location
+              - topic: route-drop.md
+                navtitle: Excluding platform logs by using the drop action
+              - topic: route-drop-all.md
+                navtitle: Excluding all platform logs by using the drop action
+              - topic: cross-account-scenario.md
+                navtitle: Routing platform logs across accounts
+              - topic: enterprise-routing-scenario.md
+                navtitle: Enterprise routing
       - topicgroup:
           label: Observability
           topics:
-          - topic: activity-tracker.md
+          - topic: at_events_v3.md
             navtitle: Auditing events
   - navgroup:
       id: reference
       topics:
-      - topic: endpoints.md
+      - topic: endpoints-v3.md
         navtitle: Endpoints
-      - topic: reference/vpe-connection-crn.md
-        navtitle: Endpoints CRNs
       - topic: data-portability.md
         navtitle: Data portability
       - topic: reference/ha-dr-new.md
@@ -117,15 +156,75 @@ toc:
           links:
           - link:
               label: Logs Routing API
-              href: https://{DomainName}/apidocs/logs-router-service-api
+              href: https://{DomainName}/apidocs/logs-router-service-api/logs-router-v3
+      - topicgroup:
+          label: CLI Reference
+          topics:
+          - topic: logs-router-cli-config.md
+            navtitle: Configuring the CLI
+          - topic: logs-router-cli.md
+            navtitle: Logs Routing CLI
       - topicgroup:
           label: Terraform Reference
           links:
           - link:
               label: Terraform reference
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
-      - topic: migration.md
-        navtitle: Migration guide to API v3 (Select availability)
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_router_route
+      - topicgroup:
+          label: Logs Routing single destination (V1)
+          topics:
+          - topic: getting-started.md
+            navtitle: Getting started
+          - topic: about.md
+            navtitle: About Logs Routing
+          - topic: target-cloud-logs.md
+            navtitle: Routing platform logs to a Cloud Logs instance
+          - topic: iam.md
+            navtitle: Managing IAM access
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+          - topicgroup:
+              label: Managing tenants
+              topics:
+              - topic: tenant-get.md
+                navtitle: Getting information about a tenant
+              - topic: tenant-get-id.md
+                navtitle: Getting information about a tenant by using the tenant ID
+              - topic: tenant-create.md
+                navtitle: Creating a tenant and a target destination
+              - topic: tenant-update-name.md
+                navtitle: Changing the name of a tenant
+              - topic: tenant-delete.md
+                navtitle: Deleting a tenant
+              - topic: terraform-setup.md
+                navtitle: Using Terraform
+          - topicgroup:
+              label: Managing targets
+              topics:
+              - topic: tenants-list.md
+                navtitle: Listing targets through the UI
+              - topic: target-update.md
+                navtitle: Updating the configuration of a target
+              - topic: target-get.md
+                navtitle: Retrieving information about a target
+          - topic: activity-tracker.md
+            navtitle: Auditing events
+          - topic: endpoints.md
+            navtitle: Endpoints
+          - topic: reference/vpe-connection-crn.md
+            navtitle: Endpoints CRNs
+          - topicgroup:
+              label: API Reference
+              links:
+              - link:
+                  label: Logs Routing API
+                  href: https://{DomainName}/apidocs/logs-router-service-api/logs-router-v1
+          - topicgroup:
+              label: Terraform Reference
+              links:
+              - link:
+                  label: Terraform reference
+                  href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs-router_tenant
   - navgroup:
       id: help
       topics:

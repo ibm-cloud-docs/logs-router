@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-05-01"
+  years:  2023, 2026
+lastupdated: "2026-04-28"
 
 keywords:
 
@@ -50,8 +50,6 @@ To collect platform logs that are generated in a region where you operate in {{s
 ## Where can you route platform logs
 {: #about-platform-logs-route}
 
-
-
 {{site.data.keyword.logs_full_notm}} instances are supported destinations where the {{site.data.keyword.logs_routing_full_notm}} service can route platform logs.
 
 ## Configuring the {{site.data.keyword.logs_routing_full_notm}} service
@@ -67,6 +65,12 @@ All platform logs are generated in JSON.
 
 Platform logs include the following fields in addition to the log information:
 
+`applicationName`
+:   This field is set to `ibm-platform-logs`
+
+`subsystemName`
+:   This field is set to `CRNserviceName:instanceID` where CRNserviceName defines the {{site.data.keyword.cloud_notm}} CRN service name. For more information, see [Metadata](/docs/cloud-logs?topic=cloud-logs-metadata#md-sys-name).
+
 `serviceName`
 :   The [service name](/docs/account?topic=account-crn#service-name-crn) of the {{site.data.keyword.cloud_notm}} service generating the log.
 
@@ -75,6 +79,3 @@ Platform logs include the following fields in addition to the log information:
 
 `saveServiceCopy`
 :   A field indicating if the {{site.data.keyword.cloud_notm}} service generating the log receives a copy of the log back from {{site.data.keyword.logs_routing_full_notm}}.
-
-`tag`
-:   A value for IBM-only use.

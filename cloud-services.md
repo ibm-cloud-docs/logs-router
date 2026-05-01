@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-11-17"
+  years:  2023, 2026
+lastupdated: "2026-04-28"
 
 keywords:
 
@@ -34,7 +34,6 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | {{site.data.keyword.iae_full_notm}} | The {{site.data.keyword.iae_full_notm}} Standard Serverless plan for Apache Spark offers the ability to spin up {{site.data.keyword.iae_full_notm}} serverless instances within seconds, customize them with library packages of your choice, and run your Spark workloads. | [More information](/docs/AnalyticsEngine?topic=AnalyticsEngine-platform-logs) |
 | {{site.data.keyword.openpages_full_notm}} | {{site.data.keyword.openpages_full_notm}} provides an AI-powered, highly scalable, governance, risk and compliance (GRC) solution that can run on any cloud. | [More information](/docs/openpages?topic=openpages-logging) |
 {: caption="List of analytics services" caption-side="top"}
-
 
 
 ## Compute serverless services

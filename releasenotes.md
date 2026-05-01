@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-09-03"
+  years:  2023, 2026
+lastupdated: "2026-04-29"
 
 keywords:
 
@@ -20,9 +20,25 @@ content-type: release-note
 Use these release notes to learn about updates to {{site.data.keyword.logs_routing_full}}.
 {: shortdesc}
 
-For detailed release notes about the {{site.data.keyword.agent}}, 
+For detailed release notes about the {{site.data.keyword.agent}},
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+
+## 30 April 2026
+{: #logs-router-apr3026}
+
+`Route platform logs to multiple destinations`
+:   For more information, see [Getting started with {{site.data.keyword.logs_routing_full}} V3](/docs/logs-router?topic=logs-router-getting-started-v3).
+
+`{{site.data.keyword.logs_routing_full_notm}} Enterprise routing by using enterprise IAM action controls`
+:   You can use {{site.data.keyword.logs_routing_full}} Enterprise routing to configure routing of platform logs from your enterprise child accounts to your enterprise parent account and routing of platform logs from your enterprise child accounts to an {{site.data.keyword.logs_full_notm}} instance in another account of your choice. You must use {{site.data.keyword.iamshort}} (IAM) Action Control to restrict changes to the enterprise-managed routing. Your child account administrators can separately define destinations to keep a copy of the platform logs in their account. For more information, see [Enterprise routing](/docs/logs-router?topic=logs-router-enterprise-routing-scenario&interface=terraform).
+
+`Migration from {{site.data.keyword.logs_routing_full_notm}} V1 to {{site.data.keyword.logs_routing_full_notm}} V3`
+:   You can migrate your account to use the V3 API so that you can route platform logs to multiple destinations and manage the service at the Enterprise account level by using enterprise IAM action controls. For more information, see [Migrating to use {{site.data.keyword.logs_routing_full_notm}} REST API V3](/docs/logs-router?topic=logs-router-v3-migration)
+
+`Released {{site.data.keyword.logs_routing_full_notm}} V3 CLI`
+:   New CLI released to configure {{site.data.keyword.logs_routing_full_notm}}. For more information, see [{{site.data.keyword.logs_routing_full_notm}} V3 CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
 
 
 ## 31 July 2025
