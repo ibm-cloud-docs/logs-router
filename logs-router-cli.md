@@ -538,25 +538,28 @@ ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS | @DEFAUL
 ### Command options
 {: #settings-update-options}
 
-`--api-version int`
-:   `backup-metadata-region` : API version for IBM Cloud Logs Routing service in the IBM Cloud account. Valid values are 1 and 3. The default value is 1. You can update from 1 to 3 to migrate your service configuration only if you created valid targets and tenants in V1. Notice that once you make this udpate, there is no option to got back to version 1. For more information, see https://ibm.biz/lr-v3migration. 
-
-`backup-metadata-region`
-:   `backup-metadata-region` is the region that is used to backup the metadata for your {{site.data.keyword.logs_routing_full_notm}} configuration. The maximum length is 256 characters. The minimum length is 3 characters.
-
-`default-targets`
-:   `default-targets` : Targets that receive logs that are not explicitly managed in the IBM Cloud Logs Routing account's routing rules. You can define up to 2 targets. The minimum number of targets is 0.
- 
-
-`permitted-target-regions`
-:   `permitted-target-regions` : Comma separated list of regions that are supported by {{site.data.keyword.logs_routing_full_notm}} where users can create targets in the account. For more information, see https://cloud.ibm.com/docs/logs-router?topic=logs-router-locations. The maximum length is 16 regions. The minimum length is 0 region. 
+`--api-version`
+:   API version for IBM Cloud Logs Routing service in the IBM Cloud account. Valid values are 1 and 3. The default value is 1. You can update from 1 to 3 to migrate your service configuration only if you created valid targets and tenants in V1. Notice that once you make this udpate, there is no option to got back to version 1. For more information, see https://ibm.biz/lr-v3migration.
 
 
-`primary-metadata-region`
-:   `primary-metadata-region` is used to backup the {{site.data.keyword.logs_routing_full_notm}} metadata. The maximum lenghth is 256 characters. The minimum length is 3 characters.
+`--backup-metadata-region`
+:   Backup region that is used to backup the IBM Cloud Logs Routing metadata. The maximum length is 256 characters. The minimum length is 3 characters.
 
-`private-api-endpoint-only` 
-:   `private-api-endpoint-only` : Endpoint connectivity supported. Set this value to "false" to access the API through the public network. Set this value to "true" to access the API through the private network only.
+
+`--default-targets`
+:   Targets that receive logs that are not explicitly managed in the IBM Cloud Logs Routing account's routing rules. You can define up to 2 targets. The minimum number of targets is 0.
+
+
+`--permitted-target-regions` 
+:  Comma separated list of regions that are supported by {{site.data.keyword.logs_routing_full_notm}} where users can create targets in the account. For more information, see https://cloud.ibm.com/docs/logs-router?topic=logs-router-locations. The maximum length is 16 regions. The minimum length is 0 region. 
+
+
+`--primary-metadata-region` 
+:  Primary region that is used to backup the IBM Cloud Logs Routing metadata. The maximum length is 256 characters. The minimum length is 3 characters.
+
+
+`--private-api-endpoint-only` 
+:  Endpoint connectivity supported. Set this value to "false" to access the API through the public network. Set this value to "true" to access the API through the private network only.
 
 
  `help` | `--help` | `-h`
