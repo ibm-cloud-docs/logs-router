@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-01"
+lastupdated: "2026-05-04"
 
 subcollection: logs-router
 
@@ -538,25 +538,25 @@ ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS | @DEFAUL
 ### Command options
 {: #settings-update-options}
 
+`--api-version int`
+:   `backup-metadata-region` : API version for {site.data.keyword.logs_routing_full_notm}} service in the IBM Cloud account. Valid values are 1 and 3. The default value is 1. You can update from 1 to 3 to migrate your service configuration only if you created valid targets and tenants in V1. Notice that once you make this udpate, there is no option to got back to version 1. For more information, see https://ibm.biz/lr-v3migration). 
+
 `backup-metadata-region`
-:   `backup-metadata-region` is the location where a backup of the metadata for your {{site.data.keyword.logs_routing_full_notm}} configuration is stored.
+:   `backup-metadata-region` is the region that is used to backup the metadata for your {{site.data.keyword.logs_routing_full_notm}} configuration. The maximum length is 256 characters. The minimum length is 3 characters.
 
 `default-targets`
-:   `default-targets` is a list of target IDs. If no routing rules cause logs to be sent to other targets, these targets receive the logs. TARGET is a comma-separated list of target IDs.
+:   `default-targets` : Targets that receive logs that are not explicitly managed in the IBM Cloud Logs Routing account's routing rules. You can define up to 2 targets. The minimum number of targets is 0.
+ 
+If no routing rules cause logs to be sent to other targets, these targets receive the logs. TARGET is a comma-separated list of target IDs.
 
 `permitted-target-regions`
-:   `permitted-target-regions` is the list of regions that can be used to define a target. REGION is a comma-separated list of regions. If not specified, any number of regions can be used to define a target.
+:   `permitted-target-regions` Comma separated list of regions that are supported by {{site.data.keyword.logs_routing_full_notm}} where users can create targets in the account. For more information, see https://cloud.ibm.com/docs/logs-router?topic=logs-router-locations. The maximum length is 16 regions. The minimum length is 0 region. 
 
-    For example, to limit the regions that can be used to define targets to `us-south` and `eu-de`, specify: `--permitted-target-regions us-south,eu-de`.
-
-    To delete all configured regions, specify `--permitted-target-regions ""`.
 
 `primary-metadata-region`
-:   `primary-metadata-region` is the location where the metadata for your {{site.data.keyword.logs_routing_full_notm}} configuration is stored.
+:   `primary-metadata-region` is used to backup the {{site.data.keyword.logs_routing_full_notm}} metadata. The maximum lenghth is 256 characters. The minimum length is 3 characters.
 
-`private-api-endpoint-only`
-:   Specifies whether a private endpoint can be used. If `TRUE`, only a private endpoint can be used.
-
+`private-api-endpoint-only` : Endpoint connectivity supported. Set this value to "false" to access the API through the public network. Set this value to "true" to access the API through the private network only.
 
 
  `help` | `--help` | `-h`
