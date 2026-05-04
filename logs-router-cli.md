@@ -1,13 +1,14 @@
-
 ---
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-05-01"
 
 subcollection: logs-router
 
 keywords:
+
+content-type: cli-docs
 
 ---
 
