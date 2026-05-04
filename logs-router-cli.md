@@ -531,7 +531,7 @@ Before you disable public endpoints by setting `--private-api-endpoint-only TRUE
 {: important}
 
 ```sh
-ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS | @DEFAULT-TARGETS-FILE] [--permitted-target-regions PERMITTED-TARGET-REGIONS] [--primary-metadata-region PRIMARY-METADATA-REGION] [--backup-metadata-region BACKUP-METADATA-REGION] [--private-api-endpoint-only=PRIVATE-API-ENDPOINT-ONLY]
+ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS] [--permitted-target-regions PERMITTED-TARGET-REGIONS] [--primary-metadata-region PRIMARY-METADATA-REGION] [--backup-metadata-region BACKUP-METADATA-REGION] [--private-api-endpoint-only=PRIVATE-API-ENDPOINT-ONLY]
 ```
 {: pre}
 
