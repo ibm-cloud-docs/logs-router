@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-04"
 
 keywords:
 
@@ -76,9 +76,9 @@ There are two approaches to migrate from v1 to v3. Choose the approach that best
 
     Choose one of the following options:
 
-    - [Manual migration from V1 to V3 for new accounts (No V1 Setup)](/docs/logs-router?topic=logs-router-v3-migration-manual).
+    - [Manual migration from V1 to V3 for new accounts (No V1 Setup)](/docs/logs-router?topic=logs-router-v3-migration-manual-existing).
 
-    - [Manual migration from v1 to v3 for existing accounts (With V1 Setup)](/docs/logs-router?topic=logs-router-v3-migration-manual).
+    - [Manual migration from v1 to v3 for existing accounts (With V1 Setup)](/docs/logs-router?topic=logs-router-v3-migration-manual-new-acc).
 
 
 ## Understanding Migration States
