@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-04"
+lastupdated: "2026-05-05"
 
 subcollection: logs-router
 
@@ -542,7 +542,7 @@ ibmcloud logs-router setting update [--default-targets DEFAULT-TARGETS] [--permi
 
 `--api-version`
 
-:   API version for IBM Cloud Logs Routing service in the IBM Cloud account. Valid values are 1 and 3. The default value is 1. You can update from 1 to 3 to migrate your service configuration only if you created valid targets and tenants in V1. Notice that once you make this udpate, there is no option to got back to version 1. For more information, see https://ibm.biz/lr-v3migration.
+:   API version for IBM Cloud Logs Routing service in the IBM Cloud account. Valid values are 1 and 3. The default value is 1. You can update from 1 to 3 to migrate your service configuration only if you created valid targets and tenants in V1. Notice that once you make this update, there is no option to got back to version 1. For more information, see https://ibm.biz/lr-v3migration.
 
 
 
