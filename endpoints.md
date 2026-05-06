@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-06"
 
 keywords:
 
@@ -26,6 +26,8 @@ The management API supports public endpoints, which can be accessed from the pub
 
 | Geography | Region                           | Management Endpoint | Ingestion Endpoint |
 |-----------|----------------------------------|---------------------|--------------------|
+| Asia Pacific | Chennai (`in-che`) | `management.in-che.logs-router.cloud.ibm.com` | NA |
+| Asia Pacific | Mumbai (`in-mum`) | `management.in-mum.logs-router.cloud.ibm.com` | NA |
 | Asia Pacific | Osaka (`jp-osa`) | `management.jp-osa.logs-router.cloud.ibm.com` | NA |
 | Asia Pacific | Sydney (`au-syd`) | `management.au-syd.logs-router.cloud.ibm.com` | NA |
 | Asia Pacific | Tokyo (`jp-tok`) | `management.jp-tok.logs-router.cloud.ibm.com` | NA |
