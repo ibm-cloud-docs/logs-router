@@ -29,7 +29,8 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 {: #logs-router-may1126}
 
 Mumbai support
-The {{site.data.keyword.logs_routing_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
+
+:   The {{site.data.keyword.logs_routing_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 
 ## 30 April 2026
