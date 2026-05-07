@@ -28,7 +28,8 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 ## 11 May 2026
 {: #logs-router-may1126}
 
-The IBM Cloud Logs Routing service is fully supported in the Mumbai (`in-mum`) region.
+Mumbai support
+The {{site.data.keyword.logs_routing_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 
 ## 30 April 2026
