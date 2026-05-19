@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-19"
 
 subcollection: logs-router
 
@@ -186,21 +186,21 @@ Any specified value that is different from when the route was originally created
 {: attention}
 
 ```sh
-ibmcloud logs-router route update --id ID [--name ROUTE_NAME] [--rules RULES | @RULES-FILE ] [--output FORMAT]
+ibmcloud logs-router route update --route ROUTE [--name NAME] [--rules RULES | @RULES-FILE]
 ```
 {: pre}
 
 ### Command options
 {: #route-update-options}
 
-`--id ID`
-:   The ID of the route.
+`--route ROUTE`
+:   The ID or name of the route.
 
     The ID is a v4 UUID that uniquely identifies the route.
 
     The maximum length is 1028 characters. The minimum length is 24 characters.
 
-`--name ROUTE_NAME`
+`--name NAME`
 :   The new name to be given to the route (optional).
 
     Do not include any personal identifying information (PII) in any resource names.
@@ -316,15 +316,15 @@ ibmcloud logs-router route update --id ID [--name ROUTE_NAME] [--rules RULES | @
 Use this command to delete an {{site.data.keyword.logs_routing_full_notm}} route.
 
 ```sh
-ibmcloud logs-router route delete --id ID [--force]
+ibmcloud logs-router route delete --route ROUTE
 ```
 {: pre}
 
 ### Command options
 {: #route-rm-options}
 
-`--id ID`
-:   The ID of the route to be deleted.
+`--route ROUTE`
+:   The ID or name of the route to be deleted.
 
 
 `--force` or `--f`
@@ -341,15 +341,15 @@ ibmcloud logs-router route delete --id ID [--force]
 Use this command to get configuration information about an {{site.data.keyword.logs_routing_full_notm}} route.
 
 ```sh
-ibmcloud logs-router route get --id ID
+ibmcloud logs-router route get --route ROUTE
 ```
 {: pre}
 
 ### Command options
 {: #route-get-options}
 
-`--id ID`
-:   The ID of the route.
+`--route ROUTE`
+:   The ID or name of the route.
 
 
 
@@ -417,15 +417,15 @@ Targets must be {{site.data.keyword.logs_full_notm}} instances.
 {: restriction}
 
 ```sh
-ibmcloud logs-router target update --id ID [--name NAME] [--destination-crn DESTINATION-CRN]
+ibmcloud logs-router target update --target TARGET [--name NAME] [--destination-crn DESTINATION-CRN]
 ```
 {: pre}
 
 ### Command options
 {: #target-update-options}
 
-`--id ID`
-The id of the target to be created.
+`--target TARGET`
+The id or name of the target to be created.
 
 `--name NAME`
 :   The new name to be given to the target.
@@ -447,15 +447,15 @@ The id of the target to be created.
 Use this command to delete a target.
 
 ```sh
-ibmcloud logs-router target delete --id ID
+ibmcloud logs-router target delete --target TARGET
 ```
 {: pre}
 
 ### Command options
 {: #target-rm-options-cos}
 
-`--id ID`
-:   The ID of the target.
+`--target TARGET`
+:   The ID or name of the target.
 
 
 `--force` | `-f`
@@ -471,15 +471,15 @@ ibmcloud logs-router target delete --id ID
 Use this command to get information about an {{site.data.keyword.logs_routing_full_notm}} target.
 
 ```sh
-ibmcloud logs-router target get --id ID
+ibmcloud logs-router target get --target TARGET
 ```
 {: pre}
 
 ### Command options
 {: #target-get-options}
 
-`--id ID`
-:   The ID of the target.
+`--target TARGET`
+:   The ID or name of the target.
 
 
 
