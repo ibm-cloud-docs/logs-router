@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-05-06"
 
 keywords:
 
@@ -35,6 +35,7 @@ The following table lists the locations where the service is available:
 | Asia Pacific  | Sydney (`au-syd`) | NO | MZR       |
 | Asia Pacific  | Tokyo (`jp-tok`) | NO | MZR       |
 | Asia Pacific  | Chennai (`in-che`) | NO | MZR       |
+| Asia Pacific  | Chennai (`in-mum`) | NO | MZR       |
 | Europe  | Frankfurt (`eu-de`) | NO | MZR       |
 | Europe  | London (`eu-gb`) | NO | MZR       |
 | Europe  | Madrid (`eu-es`) | NO | MZR       |

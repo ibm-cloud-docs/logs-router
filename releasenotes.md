@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-07"
 
 keywords:
 
@@ -23,6 +23,14 @@ Use these release notes to learn about updates to {{site.data.keyword.logs_routi
 For detailed release notes about the {{site.data.keyword.agent}},
 see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=cloud-logs-release-notes-agent).
 {: note}
+
+
+## 11 May 2026
+{: #logs-router-may1126}
+
+Mumbai support
+
+:   The {{site.data.keyword.logs_routing_full_notm}} service is fully supported in the Mumbai (`in-mum`) region.
 
 
 ## 30 April 2026

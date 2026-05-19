@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-06"
 
 keywords:
 
@@ -37,9 +37,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Montreal (`ca-mon`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Montreal (`ca-mon`) | Sao Paulo (`br-sao`) |
+|---------------------|------------------------|--------------------|---------------------|----------------------|
+| [Yes]{: tag-green}  | [Yes]{: tag-green}     | [Yes]{: tag-green} | [Yes]{: tag-green}  | [Yes]{: tag-green}   |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at_events_v3-table-1}
 {: tab-title="Americas"}
@@ -48,9 +48,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: row-headers}
 
 
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Tokyo (`jp-tok`)   | Sydney (`au-syd`)  | Osaka (`jp-osa`)   | Chennai (`in-che`) | Mumbai (`in-mum`)  |
+|--------------------|--------------------|--------------------|--------------------|--------------------|
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #at_events_v3-table-2}
 {: tab-title="Asia Pacific"}
@@ -58,9 +58,9 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [Yes]{: tag-green} | [Yes]{: tag-green} |
+| Frankfurt (`eu-de`) | London (`eu-gb`)   | Madrid (`eu-es`)   |
+|---------------------|--------------------|--------------------|
+| [Yes]{: tag-green}  | [Yes]{: tag-green} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #at_events_v3-table-3}
 {: tab-title="Europe"}
