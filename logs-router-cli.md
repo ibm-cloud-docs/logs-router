@@ -198,7 +198,7 @@ ibmcloud logs-router route update --route ROUTE [--name NAME] [--rules RULES | @
 
     The ID is a v4 UUID that uniquely identifies the route.
 
-    The maximum length is 1028 characters. The minimum length is 24 characters.
+    The maximum length of ID is 1028 characters. The minimum length of ID is 24 characters.
 
 `--name NAME`
 :   The new name to be given to the route (optional).
@@ -425,7 +425,7 @@ ibmcloud logs-router target update --target TARGET [--name NAME] [--destination-
 {: #target-update-options}
 
 `--target TARGET`
-The id or name of the target to be created.
+The id or name of the target.
 
 `--name NAME`
 :   The new name to be given to the target.
