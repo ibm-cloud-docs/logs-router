@@ -44,7 +44,6 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| IBM Log Analysis and IBM Cloud Activity Tracker | Access management, Availability, Operations, Security compliance | Yes | Both |  Same region  |
 | IBM Cloud Public IP Address Management | Availability, Change management | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | {{site.data.keyword.secrets-manager_full}} | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
@@ -63,6 +62,8 @@ The following dependencies apply to the following deployment locations: Dallas (
 | {{site.data.keyword.iamlong}} | Availability, Change management, Security compliance | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
 | {{site.data.keyword.keymanagementservicefull}} | Availability, Change management, Disaster recovery, Security compliance | No | Both |  Same region  |
 | IBM Cloud Classic NTP Servers | Availability, Change management | No | Both |  Same data center  |
+| {{site.data.keyword.atracker_full}} | Availability, Operations, Security compliance | No | Both |  Same region  |
+| {{site.data.keyword.logs_full}} | Availability, Operations | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Log Routing - Data and Control plane deployment service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}

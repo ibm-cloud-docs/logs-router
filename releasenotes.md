@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-07"
+lastupdated: "2026-05-21"
 
 keywords:
 
@@ -35,6 +35,7 @@ Mumbai support
 
 ## 30 April 2026
 {: #logs-router-apr3026}
+{: release-note}
 
 `Route platform logs to multiple destinations`
 :   For more information, see [Getting started with {{site.data.keyword.logs_routing_full}} V3](/docs/logs-router?topic=logs-router-getting-started-v3).
@@ -51,6 +52,7 @@ Mumbai support
 
 ## 31 July 2025
 {: #logs-router-jul3125}
+{: release-note}
 
 Montreal support
 :   The {{site.data.keyword.logs_routing_full_notm}} service is fully supported in the Montreal (`ca-mon`) region.
@@ -58,6 +60,7 @@ Montreal support
 
 ## 9 July 2025
 {: #logs-router-jul0925}
+{: release-note}
 
 Updated Montreal considerations
 :   As {{site.data.keyword.cloud_notm}} provides support for the Montreal (`ca-mon`) region, you need to understand how {{site.data.keyword.cloud_notm}} Observability services are made available and the actions you need to take to operate in Montreal. 
