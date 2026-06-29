@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-29"
 
 keywords:
 
@@ -19,7 +19,7 @@ subcollection: logs-router
 {: shortdesc}
 
 
-![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/logs-router-regions.png){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
+![The image shows the locations where the {{site.data.keyword.logs_routing_full_notm}} service is available.](/images/Cloud-LogsRouter-Location.png){: caption="Displays the regions where you can create and manage {{site.data.keyword.logs_routing_full_notm}} resources." caption-side="bottom"}
 
 
 This image is an artistic representation and does not reflect actual political or geographic boundaries.
