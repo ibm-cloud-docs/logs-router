@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-04-30"
+  years:  2023, 2026
+lastupdated: "2026-07-23"
 
 keywords:
 
@@ -32,6 +32,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 | Incident and operations management | Maintain the service and infrastructure workloads. | Maintain incident and operations management of your data. |
 | Monitor incidents  | Provide notifications for planned maintenance, security bulletins, or unplanned outages. | Set preferences to [receive emails about platform notifications](/docs/account?topic=account-email-prefs).   \n  \n Monitor the [IBM Cloud status page](https://{DomainName}/status?selected=announcement) for general announcements. |
 | Maintain {{site.data.keyword.cloud_notm}} high availability SLA for {{site.data.keyword.logs_routing_full_notm}}   | Provide {{site.data.keyword.logs_routing_full_notm}} functionality across availability zones in a Multi-Zone Region (MZR).    \n  \n Provide replication, fail-over features, and infrastructure maintenance and updates. |  |
+| Monitor {{site.data.keyword.logs_routing_short}} targets  |  |  You can configure alerts in {{site.data.keyword.mon_short}} to monitor the health and status of your targets, detect problems writing events, and send notifications to {{site.data.keyword.en_full_notm}}. |
 {: row-headers}
 {: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
