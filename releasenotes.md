@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-09-01"
 
 keywords:
 
@@ -27,6 +27,7 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 
 ## 11 May 2026
 {: #logs-router-may1126}
+{: release-note}
 
 Mumbai support
 
