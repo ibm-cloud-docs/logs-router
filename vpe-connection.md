@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-11-17"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using virtual private endpoints for VPC to privately connect to {{site.data.keyword.logs_routing_full_notm}}
+# How do I set up a virtual private endpoint to connect to {{site.data.keyword.logs_routing_full_notm}}
 {: #vpe-connection}
 
 {{site.data.keyword.cloud}} Virtual Private Endpoints (VPE) for VPC enables you to connect to {{site.data.keyword.logs_routing_full_notm}} from your VPC network by using the IP addresses of your choosing, allocated from a subnet within your VPC.
@@ -42,7 +42,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.logs_routin
 
 
 
-## Setting up a VPE for VPC
+## How do I set up a VPE for VPC
 {: #vpe-connection-setup}
 
 To configure a virtual private endpoint in a region to enable connectivity to the {{site.data.keyword.logs_routing_full_notm}} service, follow these steps:
@@ -84,12 +84,12 @@ Now from your VPC, you can access {{site.data.keyword.logs_routing_full_notm}} p
 For more information, see [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 
-## Using your VPE for {{site.data.keyword.logs_routing_full_notm}}
+## How to I connect to {{site.data.keyword.logs_routing_full_notm}} using VPE
 {: #vpe-connection-using}
 
 After you create an endpoint gateway for {{site.data.keyword.logs_routing_full_notm}}, follow these steps to connect to {{site.data.keyword.logs_routing_full_notm}}:
 
-### Using the VPE with the {{site.data.keyword.logs_routing_full_notm}} API
+### How do I configure the {{site.data.keyword.logs_routing_full_notm}} to use your API
 {: #vpe-connection-using-api}
 {: api}
 

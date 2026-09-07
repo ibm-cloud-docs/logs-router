@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About targets
+# What are targets in {{site.data.keyword.logs_routing_full}}
 {: #target}
 
 You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, CLI, REST API V3, and Terraform scripts. A target is a resource where you can route platform logs that are generated in an {{site.data.keyword.cloud_notm}} account.

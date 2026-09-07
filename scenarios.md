@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-30"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.logs_routing_full_notm}} configuration scenarios (V3)
+# What is the difference between {{site.data.keyword.logs_routing_full_notm}} configuration scenarios (V3) for your IBM Cloud account
 {: #scenarios}
 
 You can configure a centralize logging model, a geographic logging model or regional logging model when you setup {{site.data.keyword.logs_routing_full_notm}}.
@@ -20,7 +20,7 @@ You can configure a centralize logging model, a geographic logging model or regi
 
 The following scenarios represent the most common logging configurations and will help you determine the appropriate setup for your v3 environment.
 
-## Scenario 1: Centralized Logging
+## Scenario 1: How do I configure a centralized logging architecture in an IBM Cloud Account 
 {: #scenarios-1}
 
 In a centralized logging configuration, all platform logs for your entire account are consolidated into a single {{site.data.keyword.logs_full_notm}} instance.
@@ -29,7 +29,7 @@ This approach simplifies log management by providing a unified view of all platf
 
 To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and [configure one route with a wildcard rule](/docs/logs-router?topic=logs-router-route-rule-all-logs) to capture all platform logs regardless of their source region.
 
-## Scenario 2: Geographic Logging
+## Scenario 2: How do I configure a regional architecture in an IBM Cloud account 
 {: #scenarios-2}
 
 The geographic logging scenario is designed for organizations that maintain multiple logging instances distributed across different geographic locations.

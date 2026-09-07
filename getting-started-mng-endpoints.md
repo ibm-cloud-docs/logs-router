@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Enforcing private endpoints to configure {{site.data.keyword.logs_routing_full_notm}} resources
+# How do I configure {{site.data.keyword.logs_routing_full_notm}} resources to enforce private enpoints
 {: #getting-started-mng-endpoints}
 {: toc-content-type="tutorial"}
 {: toc-services="logs-router"}

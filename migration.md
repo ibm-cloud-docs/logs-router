@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-05-04"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migration Guide: Transitioning from v1 to v3
+# How to migrate from {{site.data.keyword.logs_routing_full}} V1 to V3
 {: #v3-migration}
 
 This guide provides step-by-step instructions for migrating your {{site.data.keyword.logs_routing_full_notm}} service from version 1 (v1) to version 3 (v3). While v1 provides a regional concept, v3 offers a global approach with routes and filters to adjust routing of platform logs to your needs. The migration process involves configuring your new v3 environment and then switching from v1 to v3.

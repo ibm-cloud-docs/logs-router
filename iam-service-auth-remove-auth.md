@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-12"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Removing authorizations between services
+# How to remove service-to-service authorizations in {{site.data.keyword.logs_routing_full}}
 {: #iam-service-auth-remove-auth}
 
 Use {{site.data.keyword.iamlong}} (IAM) to remove an authorization that removes {{site.data.keyword.logs_routing_full}} access to work with other services.
@@ -22,7 +22,7 @@ Use {{site.data.keyword.iamlong}} (IAM) to remove an authorization that removes 
 
 
 
-## Removing an authorization in the console
+## How to remove service-to-service authorizations in the console
 {: #iam-service-auth-remove-auth-ui}
 {: ui}
 

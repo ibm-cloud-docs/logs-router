@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-25"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}
+# What is the best way to authorize {{site.data.keyword.logs_full_notm}} to send logs to IBM Cloud logs
 {: #iam-service-auth-logs-routing}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).

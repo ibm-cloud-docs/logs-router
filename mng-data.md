@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-04-30"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Securing your data
+# How do I secure data in {{site.data.keyword.logs_routing_full}}
 {: #mng-data}
 
 So you can securely manage your data when you use {{site.data.keyword.logs_routing_full}}, you must know what data is stored, how the data is encrypted, and how you can delete any stored data.
@@ -26,7 +26,7 @@ So you can securely manage your data when you use {{site.data.keyword.logs_routi
 {{site.data.keyword.logs_routing_full_notm}} does not store any log data.
 
 
-## How your data is stored and encrypted
+## How is data stored and encrypted
 {: #data-storage}
 
 ### Configuration data
@@ -48,7 +48,7 @@ Log data that is routed by {{site.data.keyword.logs_routing_full_notm}} is secur
 {: note}
 
 
-## Deleting your data
+## How do I delete the data
 {: #mng-data-storage-delete}
 
 ### Configuration data

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About platform logs
+# How do I set up platform log routing in IBM Cloud account
 {: #about-platform-logs}
 
 Selected {{site.data.keyword.cloud}} services can generate logging data about their services. You can use the {{site.data.keyword.logs_routing_full_notm}} service to collect the data and route it to an {{site.data.keyword.logs_full_notm}} destination of your choice.

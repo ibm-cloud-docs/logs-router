@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing {{site.data.keyword.logs_full_notm}} targets
+# How to configure and manage targets in {{site.data.keyword.logs_full_notm}}
 {: #target_icl}
 
 You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. A target is a resource where you can collect platform logs.

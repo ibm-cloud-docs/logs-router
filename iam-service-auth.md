@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-11-12"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing authorizations to grant access between services
+# How to set up service-to-service authorizations for {{site.data.keyword.logs_routing_full}}
 {: #iam-service-auth}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create or remove an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to work with other services.

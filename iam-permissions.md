@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-09-03"
+  years:  2023, 2026
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Granting IAM permissions
+# How to configure IAM permissions for {{site.data.keyword.logs_routing_full}}
 {: #iam-permissions}
 
 To manage the {{site.data.keyword.logs_routing_full_notm}} service in an account so that you can configure collection and routing of platform logs that are generated in the account, you must have the `Manager` role for {{site.data.keyword.logs_routing_full_notm}}. To see what IAM roles are available for {{site.data.keyword.logs_routing_full_notm}}, see [Managing IAM access](/docs/logs-router?topic=logs-router-iam).

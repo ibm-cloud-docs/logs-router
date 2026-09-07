@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-07"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About {{site.data.keyword.logs_routing_full_notm}} V3
+# How to configure platform log routing with {{site.data.keyword.logs_routing_full_notm}} V3
 {: #about-v3}
 
 Use {{site.data.keyword.logs_routing_full_notm}} to configure how to route platform logs in your {{site.data.keyword.cloud_notm}} account.
