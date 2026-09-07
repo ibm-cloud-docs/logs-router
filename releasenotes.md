@@ -2,12 +2,12 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-07"
 
 keywords:
 
 subcollection: logs-router
-
+service name: logs-router
 content-type: release-note
 
 ---
