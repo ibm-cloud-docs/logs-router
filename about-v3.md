@@ -20,7 +20,7 @@ Use {{site.data.keyword.logs_routing_full_notm}} to configure how to route platf
 {: shortdesc}
 
 
-## What are the features of {{site.data.keyword.logs_routing_full_notm}}
+## What are the key features of {{site.data.keyword.logs_routing_full_notm}}
 {: #about-v3-features}
 
 By default, you can use {{site.data.keyword.logs_routing_full_notm}} that is based on the REST API V1 to route platform logs to a single destination per region.
@@ -66,7 +66,7 @@ The following table lists core features that the {{site.data.keyword.logs_routin
 
     Control at the enterprise account level how platform logs are routed across your Enterprise so account administrators that have full privileges within their accounts cannot modify or delete enterprise managed routes. You can meet compliance requirements while development teams maintain the flexibility they need for day to day operations.
 
-## What are the concepts for {{site.data.keyword.logs_routing_full_notm}}
+## What are the key concepts in {{site.data.keyword.logs_routing_full_notm}} 
 {: #about-v3-concepts}
 
 Before you can start configuring and using the {{site.data.keyword.logs_routing_full_notm}} service, you must configure the primary metadata location, and optionally the backup metadata location in the account settings. Next, you can define the destinations and rules that define how platform logs are routed in your {{site.data.keyword.cloud_notm}} account.

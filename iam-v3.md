@@ -52,7 +52,6 @@ To get up and running quickly with IAM by setting up access groups for quick acc
 {: tip}
 
 
-
 ## How do I manage IAM access in {{site.data.keyword.logs_routing_full_notm}} by using trusted profiles
 {: #configure-tp}
 
@@ -216,7 +215,7 @@ logs-router.dashboard.view
 
 
 
-## {{site.data.keyword.cloud_notm}} platform roles
+## What are the {{site.data.keyword.cloud_notm}} platform roles that are supported by {{site.data.keyword.logs_routing_full_notm}} 
 {: #iam-platform}
 
 The following table detail actions that are mapped to platform roles.

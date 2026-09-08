@@ -61,14 +61,14 @@ The following table outlines the permissions that are needed on the target servi
 
 Users can only see authorizations that they configure in the account.
 
-## How do I create a service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
+## How do I create a service-to-service (S2S) authorization for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-create}
 
 Choose one of the following options to create a S2S authorization:
 - [Authorize sending logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 
-## How do I remove service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
+## How do I remove a service-to-service (S2S) authorization for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-mgmt-auth-remove-auth}
 
 Choose one of the following options to remove a S2S authorization:

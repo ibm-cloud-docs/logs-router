@@ -47,13 +47,15 @@ To collect platform logs that are generated in a region where you operate in {{s
 
 
 
-## Where can you route platform logs in {{site.data.keyword.cloud_notm}}
+## What are the supported destinations in {{site.data.keyword.logs_routing_full_notm}} where you can route platform logs that are generated in an {{site.data.keyword.cloud_notm}} account
 {: #about-platform-logs-route}
 
 {{site.data.keyword.logs_full_notm}} instances are supported destinations where the {{site.data.keyword.logs_routing_full_notm}} service can route platform logs.
 
 ## How do I configure the {{site.data.keyword.logs_routing_full_notm}} service in an {{site.data.keyword.cloud_notm}} account
 {: #about-platform-logs-config}
+
+You can configure a centralized logging model, a geographic logging model or regional logging model when you setup {{site.data.keyword.logs_routing_full_notm}}. For more information, see [Configuration scenarios for {{site.data.keyword.logs_routing_full_notm}} (V3) in IBM Cloud](/docs/logs-router?topic=logs-router-scenarios).
 
 To configure the {{site.data.keyword.logs_routing_full_notm}} service, see [Configuring the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-target-cloud-logs&interface=ui).
 

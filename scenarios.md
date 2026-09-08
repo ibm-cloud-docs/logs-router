@@ -12,10 +12,10 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuration scenarios for {{site.data.keyword.logs_routing_full_notm}} (V3) for your IBM Cloud account
+# Configuration scenarios for {{site.data.keyword.logs_routing_full_notm}} (V3) in IBM Cloud
 {: #scenarios}
 
-You can configure a centralize logging model, a geographic logging model or regional logging model when you setup {{site.data.keyword.logs_routing_full_notm}}.
+You can configure a centralized logging model, a geographic logging model or regional logging model when you setup {{site.data.keyword.logs_routing_full_notm}}.
 {: shortdesc}
 
 The following scenarios represent the most common logging configurations and will help you determine the appropriate setup for your v3 environment.
