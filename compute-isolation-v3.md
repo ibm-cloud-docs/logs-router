@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -15,12 +15,11 @@ subcollection: logs-router
 
 
 
-# What is the difference between {{site.data.keyword.logs_routing_full_notm}} architecture and workload isolation models (V3)
+# Learning about {{site.data.keyword.logs_routing_full_notm}} architecture and workload isolation (V3)
 {: #compute-isolation-v3}
 
 Review the following sample architecture for {{site.data.keyword.atracker_full}}, and learn more about different isolation levels so that you can choose the solution that best meets the requirements of the workloads that you want to run in the cloud.
 {: shortdesc}
-
 
 
 ## {{site.data.keyword.logs_routing_full_notm}} architecture

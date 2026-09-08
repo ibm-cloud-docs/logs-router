@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -42,7 +42,7 @@ Before you target a virtual private endpoint for {{site.data.keyword.logs_routin
 
 
 
-## How do I set up a VPE for VPC
+## How do I set up a VPE for VPC in {{site.data.keyword.cloud_notm}}
 {: #vpe-connection-setup}
 
 To configure a virtual private endpoint in a region to enable connectivity to the {{site.data.keyword.logs_routing_full_notm}} service, follow these steps:
@@ -84,7 +84,7 @@ Now from your VPC, you can access {{site.data.keyword.logs_routing_full_notm}} p
 For more information, see [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 
 
-## How to I connect to {{site.data.keyword.logs_routing_full_notm}} using VPE
+## How do I connect to {{site.data.keyword.logs_routing_full_notm}} using VPE 
 {: #vpe-connection-using}
 
 After you create an endpoint gateway for {{site.data.keyword.logs_routing_full_notm}}, follow these steps to connect to {{site.data.keyword.logs_routing_full_notm}}:

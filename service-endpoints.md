@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How do I configure service endpoints to privately connect to {{site.data.keyword.logs_routing_full_notm}}
+# How do I configure private routes by using {{site.data.keyword.cloud_notm}} service endpoints (CSE) to privately connect to {{site.data.keyword.logs_routing_full_notm}} in {{site.data.keyword.cloud_notm}}
 {: #service-endpoints}
 
 To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.logs_routing_full_notm}}, you have the option of using private routes to {{site.data.keyword.cloud}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
@@ -32,7 +32,7 @@ You can connect to {{site.data.keyword.logs_routing_full_notm}} over a private n
 You must first enable virtual routing and forwarding in your account, and then, you can enable the use of IBM Cloud private service endpoints.
 {: note}
 
-### How do I check if the account is VRF enabled
+### How do I check if the account is VRF enabled in {{site.data.keyword.cloud_notm}} 
 {: #service-endpoints-prereqs-1}
 
 To check whether the account is VRF enabled, run the following command:
@@ -42,7 +42,7 @@ ibmcloud account show
 ```
 {: pre}
 
-### How do I enable VRF in the account
+### How do I enable VRF in the {{site.data.keyword.cloud_notm}} account
 {: #service-endpoints-prereqs-2}
 
 To enable private endpoints, run the following command:
@@ -53,7 +53,7 @@ ibmcloud account update --service-endpoint-enable true
 {: pre}
 
 
-## How do I set up service endpoints for {{site.data.keyword.logs_routing_full_notm}}
+## How do I set up service endpoints for {{site.data.keyword.logs_routing_full_notm}} in {{site.data.keyword.cloud_notm}}
 {: #service-endpoints-setup}
 
 You can connect to {{site.data.keyword.logs_routing_full_notm}} management API by using either a public endpoint or a private endpoint. A public endpoint can be reached over the internet, whereas a private endpoint can be accessed only from within the {{site.data.keyword.cloud_notm}} private network.
@@ -62,12 +62,12 @@ The ingestion API supports only private endpoints and is therefore not accessibl
 
 By default, private and public endpoints are enabled. For more information about supported endpoints, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
-## How do I disable public service endpoints for {{site.data.keyword.logs_routing_full_notm}}
+## How do I disable public service endpoints for {{site.data.keyword.logs_routing_full_notm}} in {{site.data.keyword.cloud_notm}}
 {: #service-endpoints-disable}
 
 You cannot disable public endpoints.
 
-## How do I disable private service endpoints
+## How do I disable private service endpoints in {{site.data.keyword.cloud_notm}}
 {: #endpoint-disable-private}
 
 You cannot disable private endpoints.
