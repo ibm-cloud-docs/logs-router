@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Routing all platform logs
+# How do I configure routing for all platform types in {{site.data.keyword.logs_routing_full}}
 {: #route-rule-all-logs}
 
 Route all platform logs that are generated in all of the {{site.data.keyword.logs_routing_full_notm}} supported locations to multiple destination targets.

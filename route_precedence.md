@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding routing precedence
+# What is the difference between routing precendence rules in {{site.data.keyword.logs_routing_full}} account
 {: #routes_precedence}
 
 By configuring {{site.data.keyword.logs_routing_full_notm}} routing rules, you can specify how and where platform logs are routed in your account.
@@ -22,7 +22,7 @@ By configuring {{site.data.keyword.logs_routing_full_notm}} routing rules, you c
 .
 How the configuration is processed determines the final destination where platform logs are sent; each platform log is processed individually.
 
-## How are routes and rules applied
+## How do I apply routes and rules
 {: #routes_precedence_how}
 
 1. Routes are processed independently.

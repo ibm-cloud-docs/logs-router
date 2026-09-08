@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Reseting the default targets in the account
+# How do I reset the default targets in {{site.data.keyword.logs_routing_full}} account
 {: #target-default-reset}
 
 To reset the {{site.data.keyword.logs_routing_full_notm}} account's default targets, you must delete any default targets from the account configuration.

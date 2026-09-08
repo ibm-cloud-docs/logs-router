@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,7 +13,8 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Enforcing target locations
+# Why should I enforce target locations in 
+{{site.data.keyword.logs_routing_full}}
 {: #target-locations}
 
 To enforce target locations in your {{site.data.keyword.cloud_notm}} account, you must configure {{site.data.keyword.logs_routing_full_notm}} account settings to limit the locations.
@@ -56,7 +57,7 @@ ibmcloud logs-router setting get
 
 The setting **Permitted target regions** list all the locations where you allowed administrators to configure targets in the account.
 
-## Step 2.
+## Step 2. Manage permitted regions 
 {: #target-locations-step2}
 {: cli}
 

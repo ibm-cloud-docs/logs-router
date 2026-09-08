@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Managing routes
+# How do I configure and manage routes in {{site.data.keyword.logs_routing_full}} account
 {: #route-manage}
 
 You can manage routes in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API V3, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what platform logs are routed in a region and where to route them.

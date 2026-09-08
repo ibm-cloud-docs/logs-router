@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding your responsibilities when you are using {{site.data.keyword.logs_routing_full_notm}}
+# How do I set up {{site.data.keyword.logs_routing_full_notm}} in line with shared responsibilites 
 {: #shared-responsibilities}
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.logs_routing_full}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).

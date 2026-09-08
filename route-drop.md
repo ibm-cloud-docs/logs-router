@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Excluding metrics by using the drop action
+# How to I configure the drop action to exclude metrics in {{site.data.keyword.logs_routing_full}}
 {: #route-drop}
 
 You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop) metrics based on a configured rule. Dropped metrics are not sent on to a target.

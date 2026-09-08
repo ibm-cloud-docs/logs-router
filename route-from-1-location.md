@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Routing platform logs from 1 location
+# How do I configure routing for platform logs from a single location in {{site.data.keyword.logs_routing_full}}
 {: #route-from-1-location}
 
 To route platform logs that are generated in 1 {{site.data.keyword.logs_routing_full_notm}} supported location to a destination target, you must create a route in your {{site.data.keyword.cloud_notm}} account that specifies the target and the location as an inclusion filter.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Reseting the permitted target regions in the account
+# How do I reset the permitted target regions in the {{site.data.keyword.logs_routing_full}}
 {: #target-default-locations-reset}
 
 To reset the {{site.data.keyword.logs_routing_full_notm}} account's permitted target regions, you must delete the permitted target regions from the account configuration.

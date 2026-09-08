@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022, 2023
-lastupdated: "2023-12-26"
+  years:  2023, 2026
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,13 +12,13 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Retrieving an access token
+# How do I retrieve an IAM access token for {{site.data.keyword.logs_routing_full}}
 {: #retrieve-access-token}
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service.
 {: shortdesc}
 
-## Retrieving an access token with the CLI
+## How do I retrieve an access token with the CLI
 {: #retrieve-token-cli}
 {: cli}
 
@@ -41,7 +41,7 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getti
     ```
     {: pre}
 
-## Retrieving an access token with the API
+## How do I retrieve an access token with the API
 {: #retrieve-token-api}
 {: api}
 

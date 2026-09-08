@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Locations
+# Which locations are supported for {{site.data.keyword.logs_routing_full}}
 {: #locations}
 
 {{site.data.keyword.logs_routing_full_notm}} is available in the following locations.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,22 +13,19 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Enforcing default targets
+# How to configure default targets in 
+{{site.data.keyword.logs_routing_full}} 
 {: #target-default}
 
 You can configure up to two default targets for collecting logs data that is not explicitly managed in the {{site.data.keyword.logs_routing_full_notm}} account's routing rules.
 {: shortdesc}
 
 
-
-
-## Managing default targets using the UI
+## How to I manage default targets using the UI
 {: #default_targets_ui}
 {: ui}
 
 You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_create) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_update).
-
-
 
 
 ## Prereqs
