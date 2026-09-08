@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What is the difference between {{site.data.keyword.logs_routing_full_notm}} configuration scenarios (V3) for your IBM Cloud account
+# Configuration scenarios for {{site.data.keyword.logs_routing_full_notm}} (V3) for your IBM Cloud account
 {: #scenarios}
 
 You can configure a centralize logging model, a geographic logging model or regional logging model when you setup {{site.data.keyword.logs_routing_full_notm}}.
@@ -29,7 +29,7 @@ This approach simplifies log management by providing a unified view of all platf
 
 To implement this scenario in v3, you will need to create one target pointing to your centralized {{site.data.keyword.logs_full_notm}} instance and [configure one route with a wildcard rule](/docs/logs-router?topic=logs-router-route-rule-all-logs) to capture all platform logs regardless of their source region.
 
-## Scenario 2: How do I configure a regional architecture in an IBM Cloud account 
+## Scenario 2: How do I configure a regional centralized logging architecture in an IBM Cloud account 
 {: #scenarios-2}
 
 The geographic logging scenario is designed for organizations that maintain multiple logging instances distributed across different geographic locations.
@@ -38,7 +38,7 @@ In this configuration, platform logs from various regions are routed to their ne
 
 To implement this scenario, you will need to create multiple targets (one for each geographic {{site.data.keyword.logs_full_notm}} instance) and configure routes with appropriate region-based filters to direct logs to the correct geographic destination.
 
-## Scenario 3: Regional Logging
+## Scenario 3: How do I configure a distributed or regional logging architecture in an IBM Cloud account 
 {: #scenarios-3}
 
 Regional logging represents the most distributed approach, where each {{site.data.keyword.cloud_notm}} region has its own dedicated {{site.data.keyword.logs_full_notm}} instance.

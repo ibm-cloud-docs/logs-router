@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How to configure routing for {{site.data.keyword.cloud_notm}} services that generate platform logs
+# Which {{site.data.keyword.cloud_notm}} services generate platform logs in an {{site.data.keyword.cloud_notm}} account
 {: #cloud_services}
 
 {{site.data.keyword.cloud}} services can send logs about their services to {{site.data.keyword.logs_routing_full_notm}}. These logs are called platform logs.
