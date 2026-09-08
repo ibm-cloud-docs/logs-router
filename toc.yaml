@@ -58,7 +58,7 @@ toc:
               - topic: iam-service-auth.md
                 navtitle: Managing authorizations
               - topic: iam-service-auth-logs-routing.md
-                navtitle: S2S for Logs Routing
+                navtitle: S2S for IBM Cloud Logs
               - topic: iam-service-auth-remove-auth.md
                 navtitle: Removing authorizations
       - topicgroup:

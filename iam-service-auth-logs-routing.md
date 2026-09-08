@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What is the best way to authorize {{site.data.keyword.logs_full_notm}} to send logs to IBM Cloud logs
+# How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-logs-routing}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).
@@ -36,7 +36,7 @@ The authorization that you define for the {{site.data.keyword.logs_routing_full_
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
 {: important}
 
-## Service access roles
+## What are the IAM service access roles (permissions) that I need to configure service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account
 {: #iam-service-auth-logs-routing-roles}
 
 You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.

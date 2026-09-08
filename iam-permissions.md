@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How to configure IAM permissions for {{site.data.keyword.logs_routing_full}}
+# How do I configure IAM permissions for {{site.data.keyword.logs_routing_full_notm}} in IBM {{site.data.keyword.cloud_notm}} 
 {: #iam-permissions}
 
 To manage the {{site.data.keyword.logs_routing_full_notm}} service in an account so that you can configure collection and routing of platform logs that are generated in the account, you must have the `Manager` role for {{site.data.keyword.logs_routing_full_notm}}. To see what IAM roles are available for {{site.data.keyword.logs_routing_full_notm}}, see [Managing IAM access](/docs/logs-router?topic=logs-router-iam).
@@ -24,7 +24,7 @@ If you are the account owner, you might already have sufficient access without r
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
 {: important}
 
-## Assigning access to {{site.data.keyword.logs_routing_full_notm}} in the console
+## How do I assign IAM for {{site.data.keyword.logs_routing_full_notm}} in the {{site.data.keyword.cloud_notm}} UI console
 {: #tenant-iam-permissions-ui}
 {: ui}
 
@@ -36,9 +36,7 @@ There are two common ways to assign access to {{site.data.keyword.logs_routing_f
 * Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console).
 
 
-
-
-## Setting up permissions by using the CLI
+## How do I assign IAM permissions for {{site.data.keyword.logs_routing_full_notm}} by using the CLI
 {: #tenant-iam-permissions-cli}
 {: cli}
 
@@ -62,7 +60,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 
 
-## Assigning access by using the API
+## How do I assign IAM permissions for {{site.data.keyword.logs_routing_full_notm}} by using the API
 {: #tenant-iam-permissions-api}
 {: api}
 
@@ -285,7 +283,7 @@ fmt.Println(string(b))
 {: go}
 {: codeblock}
 
-## Assigning access by using Terraform
+## How do I assign IAM permissions for {{site.data.keyword.logs_routing_full_notm}} by using Terraform
 {: #iam-assign-access-terraform}
 {: terraform}
 

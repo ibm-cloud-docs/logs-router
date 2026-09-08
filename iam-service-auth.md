@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,14 +12,14 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# How to set up service-to-service authorizations for {{site.data.keyword.logs_routing_full}}
+# How do I configure service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account
 {: #iam-service-auth}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create or remove an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to work with other services.
 {: shortdesc}
 
 
-## Authorizations
+## What are service-to-service (S2S) authorizations
 {: #iam-service-auth-1}
 
 In a service to service (S2S) authorization:
@@ -42,8 +42,7 @@ The following table lists the different S2S authorizations that you might need w
 For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
 
 
-
-## Permissions to manage authorizations
+## What are the IAM permissions that I need to configure service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-permissions}
 
 You must have access to the target service to manage authorization between services.
@@ -62,14 +61,14 @@ The following table outlines the permissions that are needed on the target servi
 
 Users can only see authorizations that they configure in the account.
 
-## Creating an authorization
+## How do I create a service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-create}
 
 Choose one of the following options to create a S2S authorization:
 - [Authorize sending logs to an {{site.data.keyword.logs_full_notm}} instance](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing).
 
 
-## Removing an authorization
+## How do I remove service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-mgmt-auth-remove-auth}
 
 Choose one of the following options to remove a S2S authorization:

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Defining routing rules
+# What are the different types of routing rules in {{site.data.keyword.logs_routing_full}}
 {: #route_rules_definitions}
 
 To define a routing rule, you must specify 1 or more targets as the destinations for platform logs. You can also define 1 or more inclusion filters that define the conditions of how those platform logs are routed to those destinations.
