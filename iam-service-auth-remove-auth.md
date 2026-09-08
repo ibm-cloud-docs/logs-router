@@ -14,14 +14,14 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full-notm}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account 
+# How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-remove-auth}
 
 Use {{site.data.keyword.iamlong}} (IAM) to remove an authorization that removes {{site.data.keyword.logs_routing_full}} access to work with other services.
 {: shortdesc}
 
 
-## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full-notm}} and {{site.data.keyword.logs_full_notm}} in the {{site.data.keyword.cloud_notm}} UI console
+## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in the {{site.data.keyword.cloud_notm}} UI console
 {: #iam-service-auth-remove-auth-ui}
 {: ui}
 
@@ -35,7 +35,7 @@ You can remove any authorization between services in the account if you are assi
 If the source service is removed from the account, any policies that are created by that service for its dependent services are deleted automatically. Similarly, if the dependent service is removed from the account, any access policies that are delegated to that service are also deleted.
 {: note}
 
-## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full-notm}} and {{site.data.keyword.logs_full_notm}} by using the CLI
+## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} by using the CLI
 {: #iam-service-auth-remove-auth-cli}
 {: cli}
 
@@ -53,7 +53,7 @@ For more information about all of the parameters that are available for this com
 If the source service is removed from the account, any policies that are created by that service for its dependent services are deleted automatically. Similarly, if the dependent service is removed from the account, any access policies that are delegated to that service are also deleted.
 {: note}
 
-## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full-notm}} and {{site.data.keyword.logs_full_notm}} by using the API
+## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} by using the API
 {: #iam-service-auth-remove-auth-api}
 {: api}
 
@@ -121,7 +121,7 @@ if err != nil {
 If the source service is removed from the account, any policies that are created by that service for its dependent services are deleted automatically. Similarly, if the dependent service is removed from the account, any access policies that are delegated to that service are also deleted.
 {: note}
 
-## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full-notm}} and {{site.data.keyword.logs_full_notm}} by using Terraform
+## How do I remove a service-to-service authorization (S2S) between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} by using Terraform
 {: #iam-service-auth-remove-auth-tf}
 {: terraform}
 
