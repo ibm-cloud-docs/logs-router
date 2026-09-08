@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,14 +12,14 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What are targets in {{site.data.keyword.logs_routing_full}}
+# What are targets in {{site.data.keyword.logs_routing_full_notm}} 
 {: #target}
 
 You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, CLI, REST API V3, and Terraform scripts. A target is a resource where you can route platform logs that are generated in an {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 
-## Understanding how targets work in your account
+## How do {{site.data.keyword.logs_routing_full_notm}} targets work in your {{site.data.keyword.cloud_notm}} account
 {: #target_behavior}
 
 Note the following information about targets:
@@ -41,7 +41,7 @@ Note the following information about targets:
     * You can disable the public endpoints by updating the account settings. For more information, see [Enforcing private endpoints](/docs/logs-router?topic=logs-router-getting-started-mng-endpoints).
 
 
-## Target types
+## What target types (destinations) are supported in {{site.data.keyword.logs_routing_full_notm}} 
 {: #target_types}
 
 You can configure any of the following target types:
@@ -53,7 +53,7 @@ You can configure any of the following target types:
 
 
 
-## IAM Access
+## What IAM permissions do I need to manage targets in the {{site.data.keyword.logs_routing_full_notm}} 
 {: #target_iam_access}
 
 You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/account?topic=account-assign-access-resources).
@@ -76,7 +76,7 @@ Users with regional scope will be limited to access targets in their authorized 
 | `logs-router.target.list`   | Account           | `Administrator`  \n `Editor`  \n `Viewer`  \n `Operator` | List all targets |
 {: caption="IAM actions and the IAM roles that include them."}
 
-## Authentication
+## What service-to-service (S2S) authorizations are supported in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_auth_opts}
 
 When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}}.
@@ -94,9 +94,7 @@ Choose 1 of the following options:
 
 
 
-
-
-## Validating targets
+## How do I validate a target in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_validate}
 
 When you validate a target, you check that the credentials that are configured for a target are valid. These credentials are used by {{site.data.keyword.logs_routing_full_notm}} to authenticate with the destination target.
@@ -107,7 +105,7 @@ You can validate a target by using the {{site.data.keyword.metrics_router_full_n
 - [Validate via API](/docs/logs-router?topic=logs-router-target_icl&interface=api#target_icl_api_view)
 
 
-## CLI prerequisites
+## What are the CLI prerequisites to work with targets through the command line 
 {: #target_cli}
 {: cli}
 
@@ -118,7 +116,7 @@ Before you use the CLI to manage targets, complete the following steps:
 2. [Install the {{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli-config).
 
 
-## CLI commands
+## What are the CLI commands that I can use to manage targets in {{site.data.keyword.logs_routing_full_notm}} through the command line 
 {: #target_v2_cli_cmd}
 {: cli}
 
@@ -135,7 +133,6 @@ The following table lists the actions that you can run to manage targets:
 
 
 For more information, see [{{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
-
 
 
 ## API targets and actions
