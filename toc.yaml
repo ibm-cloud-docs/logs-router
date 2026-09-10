@@ -94,7 +94,7 @@ toc:
           - topic: target.md
             navtitle: About targets
           - topic: target-manage.md
-            navtitle: Managing targets
+            navtitle: Managing a Cloud Logs target
           - topic: target-default.md
             navtitle: Configuring default targets
           - topic: target-locations.md

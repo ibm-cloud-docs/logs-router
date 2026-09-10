@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -15,14 +15,14 @@ subcollection: logs-router
 
 
 
-# What are routes in {{site.data.keyword.logs_routing_full}} account
+# What are routes in {{site.data.keyword.logs_routing_full}}
 {: #routes}
 
 You can manage routes in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API V3, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what platform logs are routed in a region and where to route them.
 {: shortdesc}
 
 
-## Understanding how routes work in your account
+## Understanding how routes work in {{site.data.keyword.logs_routing_full}}
 {: #route_behaviour}
 
 Note the following information about routes:
@@ -69,13 +69,13 @@ Note the following information about routes:
 After you configure a route, it might take up to 1 hour for the configuration to be enabled.
 {: note}
 
-## IAM Access
-{: #route_access}
 
-Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}}.](/docs/logs-router?topic=logs-router-iam)
 
-## IAM permissions
+## What IAM permissions do I need to manage routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route_iam}
+
+Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}}](/docs/logs-router?topic=logs-router-iam).
+
 
 The following table lists the IAM actions, their scope and the roles required to manage routes.
 
@@ -89,7 +89,7 @@ The following table lists the IAM actions, their scope and the roles required to
 {: caption="IAM action scopes and roles for managing routes" caption-side="top"}
 
 
-## Auditing events
+## Auditing events for routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route_at_events}
 
 The following table lists the IAM actions, their scope and the roles required to manage routes.
@@ -105,7 +105,7 @@ The following table lists the IAM actions, their scope and the roles required to
 
 
 
-## CLI prerequisites
+## What CLI prerequisites do I need to manage routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route-prereqs-cli}
 {: cli}
 
@@ -117,7 +117,7 @@ Before you use the CLI to manage routes, complete the following steps:
 
 
 
-## Managing routes using the UI
+## How do I manage routes routes in {{site.data.keyword.logs_routing_full_notm}} using the UI
 {: #route_ui}
 {: ui}
 
@@ -125,7 +125,7 @@ You can manage your route definition using the {{site.data.keyword.logs_routing_
 
 
 
-## CLI commands
+## CLI commands to manage routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route_v3_cli_cmd}
 {: cli}
 
@@ -143,7 +143,7 @@ The following table lists the actions that you can run to manage routes:
 
 For more information, see [{{site.data.keyword.logs_routing_full_notm}} v3 CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
 
-## API prerequsites
+## What API prerequisites do I need to manage routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route-prereqs-api}
 {: api}
 
@@ -152,27 +152,33 @@ Before you use the API to manage routes, complete the following steps:
 2. Identify the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
-## API methods
+## What API methods can I use to manage routes in {{site.data.keyword.logs_routing_full_notm}}
 {: #route-actions-api}
 {: api}
 
+
 The following table lists the actions that you can run to manage routes:
 
-| Action                             | REST API Method  | API_URL                                          |
-|------------------------------------|------------------|--------------------------------------------------|
-| `Create a route`                     | `POST`           | `<ENDPOINT>/v3/routes`              |
-| `Update a route`                     | `PATCH`            | `<ENDPOINT>/v3/routes/<ROUTE_ID>`  |
-| `Delete a route`                     | `DELETE`         | `<ENDPOINT>/v3/routes/<ROUTE_ID>`  |
-| `Get information about a route`      | `GET`            | `<ENDPOINT>/v3/routes/<ROUTE_ID>`  |
-| `List all routes`                    | `GET`            | `<ENDPOINT>/v3/routes`             |
+| Action                     | REST API Method  | API_URL                                          |
+|----------------------------|------------------|--------------------------------------------------|
+| Create a route            | `POST`            | `<ENDPOINT>/v3/routes`              |
+| Update a route            | `PATCH`           | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| Delete a route            | `DELETE`          | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| Read a route              | `GET`             | `<ENDPOINT>/v3/routes/<route_ID>`  |
+| List all routes           | `GET`             | `<ENDPOINT>/v3/routes`             |
 {: caption="Route actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
 
-For more information about the REST API, see [Routes](https://{DomainName}/apidocs/logs-router/logs-router-v3#create-route){: external}.
+You can use private and public endpoints to manage routes. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
+* You can manage routes from the private network using an API endpoint with the following format: `https://api.private.REGION.logs-router.cloud.ibm.com`
+* You can manage routes from the public network using an API endpoint with the following format: `https://api.REGION.logs-router.cloud.ibm.com`
+
+You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/logs-router?topic=logs-router-endpoints).
 {: note}
 
+For more information about the REST API, see [Routes](https://{DomainName}/apidocs/logs-router/logs-router-v3#create-route){: external}.
 
 
-## HTTP response codes
+## HTTP response codes for API calls in {{site.data.keyword.logs_routing_full_notm}}
 {: #route-target-rc}
 {: api}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# How do I reset the default targets in {{site.data.keyword.logs_routing_full}} account
+# How do I reset the default targets in {{site.data.keyword.logs_routing_full}}
 {: #target-default-reset}
 
 To reset the {{site.data.keyword.logs_routing_full_notm}} account's default targets, you must delete any default targets from the account configuration.
@@ -22,14 +22,7 @@ To reset the {{site.data.keyword.logs_routing_full_notm}} account's default targ
 
 
 
-## Removing all default targets using the UI
-{: #remove_default_targets_ui}
-{: ui}
-
-You can remove all default targets using the {{site.data.keyword.logs_routing_full_notm}} UI by updating your account settings and deleting the default targets. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).
-
-
-## Prereqs
+## What are the CLI prerequisites to reset the default targets in {{site.data.keyword.logs_routing_full}}
 {: #target-default-reset-prereqs}
 {: cli}
 
@@ -71,7 +64,7 @@ ibmcloud logs-router setting get
 
 The setting **Default targets** lists any targets in the account that have been configured as default targets.
 
-## Reset the default targets
+## How do I reset the default targets in {{site.data.keyword.logs_routing_full}}
 {: #target-default-reset-step3}
 {: cli}
 {: step}
@@ -82,3 +75,11 @@ Run the following command to reset the account's default targets:
 ibmcloud logs-router setting update --default-targets '[{}]'
 ```
 {: pre}
+
+
+
+## How do I remove all default targets in {{site.data.keyword.logs_routing_full}} using the UI
+{: #remove_default_targets_ui}
+{: ui}
+
+You can remove all default targets using the {{site.data.keyword.logs_routing_full_notm}} UI by updating your account settings and deleting the default targets. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).

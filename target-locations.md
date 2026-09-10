@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,8 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Why should I enforce target locations in 
-{{site.data.keyword.logs_routing_full}}
+# How can I enforce target locations in {{site.data.keyword.logs_routing_full}}
 {: #target-locations}
 
 To enforce target locations in your {{site.data.keyword.cloud_notm}} account, you must configure {{site.data.keyword.logs_routing_full_notm}} account settings to limit the locations.
@@ -22,15 +21,7 @@ To enforce target locations in your {{site.data.keyword.cloud_notm}} account, yo
 
 
 
-## Configuring permitted target regions using the UI
-{: #permitted_targets_ui}
-{: ui}
-
-You can configure permitted target regions using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).
-
-
-
-## Prereqs
+## What are the CLI prerequisites to enforce target locations in {{site.data.keyword.logs_routing_full}}
 {: #target-locations-prereqs}
 {: cli}
 
@@ -57,7 +48,7 @@ ibmcloud logs-router setting get
 
 The setting **Permitted target regions** list all the locations where you allowed administrators to configure targets in the account.
 
-## Step 2. Manage permitted regions 
+## Step 2. Manage permitted regions
 {: #target-locations-step2}
 {: cli}
 
@@ -76,3 +67,11 @@ For example, you can run the following command to set 3 regions only:
 ibmcloud logs-router setting update --permitted-target-regions "us-south","us-east","eu-de"
 ```
 {: screen}
+
+
+
+## How do I configure permitted target regions in {{site.data.keyword.logs_routing_full}} using the UI
+{: #permitted_targets_ui}
+{: ui}
+
+You can configure permitted target regions using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).

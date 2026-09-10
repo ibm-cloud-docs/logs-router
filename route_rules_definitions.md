@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# What are the different types of routing rules in {{site.data.keyword.logs_routing_full}}
+# How do I configure routing rules in {{site.data.keyword.logs_routing_full}}
 {: #route_rules_definitions}
 
 To define a routing rule, you must specify 1 or more targets as the destinations for platform logs. You can also define 1 or more inclusion filters that define the conditions of how those platform logs are routed to those destinations.
@@ -25,7 +25,7 @@ A rule consists of 1 action, 1 or more targets, and 0 or more inclusion filters.
 
 
 
-## Targets
+## About targets in a routing rule configuration in {{site.data.keyword.logs_routing_full}}
 {: #route_rules_definitions_targets}
 
 Targets define the list of target IDs where the platform logs are routed.
@@ -45,7 +45,7 @@ Targets must be {{site.data.keyword.logs_full_notm}} instances.
 {: restriction}
 
 
-## Action
+## About actions in a routing rule configuration in {{site.data.keyword.logs_routing_full}}
 {: #route_rules_definitions_action}
 
 Action defines whether {{site.data.keyword.logs_routing_full_notm}} includes or excludes platform logs on the route. Two actions are supported: `send` and `drop`. If not specified, the default action is to send the platform logs.
@@ -56,7 +56,7 @@ Action defines whether {{site.data.keyword.logs_routing_full_notm}} includes or 
 `drop`
 :   Platform logs are excluded, based on the routing rule, when platform logs are sent on the defined route.
 
-## Inclusion filters
+## About inclusion filters in a routing rule configuration in {{site.data.keyword.logs_routing_full}}
 {: #route_rules_definitions_filters}
 
 Inclusion filters define the conditions that are used to determine which platform logs are routed to the targets specified in the rule.
@@ -98,21 +98,21 @@ Note these limitations when configuring inclusion filters.
 
 * Each value configured for `inclusion_filter.values` can be a maximum of 100 characters.
 
-## IAM Access
+## IAM Access to configure a routing rule in {{site.data.keyword.logs_routing_full}}
 {: #rules_iam}
 
 Users must have the appropriate IAM roles to work with routing rules. For information on IAM roles, see [Managing IAM access.](/docs/logs-router?topic=logs-router-iam)
 
 
 
-## Defining routing rules by using the UI
+## How do I configure a routing rules in {{site.data.keyword.logs_routing_full}} by using the UI
 {: #define_rule_ui}
 {: ui}
 
 You can configure action and inclusion filter routing rules in the UI. For more information, see [Managing routes](/docs/logs-router?topic=logs-router-route-manage&interface=ui).
 
 
-## Defining routing rules by using the CLI
+## How do I configure a routing rules in {{site.data.keyword.logs_routing_full}} by using the CLI
 {: #define_rule}
 {: cli}
 
@@ -213,7 +213,7 @@ The `rules_def.json` file contains:
 
 
 
-## Define routing rules by using the API
+## How do I configure a routing rules in {{site.data.keyword.logs_routing_full}} by using the API
 {: #define_rules_api}
 {: api}
 

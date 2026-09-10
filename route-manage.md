@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# How do I configure and manage routes in {{site.data.keyword.logs_routing_full}} account
+# How do I configure and manage routes in {{site.data.keyword.logs_routing_full}}
 {: #route-manage}
 
 You can manage routes in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API V3, and the {{site.data.keyword.logs_routing_full_notm}} Terraform provider. A route defines the rules that indicate what platform logs are routed in a region and where to route them.
@@ -23,14 +23,14 @@ You can manage routes in your account by using the {{site.data.keyword.logs_rout
 For more information on {{site.data.keyword.logs_routing_full_notm}} routes, see [routes](/docs/logs-router?topic=logs-router-routes&interface=cli).
 
 
-## IAM Access
+## What IAM permissions do I need to manage routes in {{site.data.keyword.logs_routing_full}}
 {: #route-manage-iam}
 
 You must have the correct IAM permissions to manage routes. For information, see [Managing IAM access.](/docs/logs-router?topic=logs-router-iam)
 
 
 
-## Creating a route using the UI
+## How do I create a route in {{site.data.keyword.logs_routing_full}} using the UI
 {: #route-create-ui}
 {: ui}
 
@@ -83,7 +83,7 @@ Complete the following steps to create a route using the UI.
 
 
 
-## Updating a route using the UI
+## How do I update a route in {{site.data.keyword.logs_routing_full}} using the UI
 {: #route-update-ui}
 {: ui}
 
@@ -129,7 +129,7 @@ Complete the following steps to update a route using the UI.
 9. Click **Update** to make changes to your route.
 
 
-## Viewing a route using the UI
+## How do I view a route in {{site.data.keyword.logs_routing_full}} using the UI
 {: #route-view-ui}
 {: ui}
 
@@ -150,7 +150,7 @@ Complete the following steps to view a route using the UI.
     The routes page also displays **Routing guidance** with additional information about configuring routing.
 
 
-## Deleting a route using the UI
+## How do I delete a route in {{site.data.keyword.logs_routing_full}} using the UI
 {: #route-delete-ui}
 {: ui}
 
@@ -168,7 +168,7 @@ Complete the following steps to delete a route using the UI.
 
 
 
-## CLI prerequisites
+## What are the CLI prerequisites to configure and manage routes in {{site.data.keyword.logs_routing_full}}
 {: #route-manage-cli-prereqs}
 {: cli}
 
@@ -181,7 +181,7 @@ Before you use the CLI to manage routes, complete the following steps:
 3. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
 
-## Creating a route by using the CLI
+## How do I create a route in {{site.data.keyword.logs_routing_full}} by using the CLI
 {: #route-manage-cli-create}
 {: cli}
 
@@ -318,7 +318,7 @@ Managed By   account
 {: screen}
 
 
-## Updating a route using the CLI
+## How do I update a route in {{site.data.keyword.logs_routing_full}} using the CLI
 {: #route-manage-cli-update}
 {: cli}
 
@@ -413,7 +413,7 @@ Managed By   account
 {: screen}
 
 
-## Deleting a route using the CLI
+## How do I delete a route in {{site.data.keyword.logs_routing_full}} using the CLI
 {: #route-manage-cli-delete}
 {: cli}
 
@@ -450,7 +450,7 @@ OK
 {: screen}
 
 
-## Getting information about a route using the CLI
+## How do I get information about a route in {{site.data.keyword.logs_routing_full}} using the CLI
 {: #route-manage-cli-read}
 {: cli}
 
@@ -501,7 +501,7 @@ Managed By   account
 ```
 {: screen}
 
-## Listing all routes in a region
+## How do I list routes in {{site.data.keyword.logs_routing_full}} using the CLI
 {: #route-manage-cli-list}
 {: cli}
 
@@ -528,33 +528,7 @@ The following is an example using the `ibmcloud logs-router route list` command.
 
 
 
-## API routes and actions
-{: #route-manage-api-actions}
-{: api}
-
-The following table lists the actions that you can run to manage routes:
-
-| Action                     | REST API Method  | API_URL                                          |
-|----------------------------|------------------|--------------------------------------------------|
-| Create a route            | `POST`            | `<ENDPOINT>/v3/routes`              |
-| Update a route            | `PATCH`           | `<ENDPOINT>/v3/routes/<route_ID>`  |
-| Delete a route            | `DELETE`          | `<ENDPOINT>/v3/routes/<route_ID>`  |
-| Read a route              | `GET`             | `<ENDPOINT>/v3/routes/<route_ID>`  |
-| List all routes           | `GET`             | `<ENDPOINT>/v3/routes`             |
-{: caption="route actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
-
-You can use private and public endpoints to manage routes. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
-* You can manage routes from the private network using an API endpoint with the following format: `https://api.private.REGION.logs-router.cloud.ibm.com`
-* You can manage routes from the public network using an API endpoint with the following format: `https://api.REGION.logs-router.cloud.ibm.com`
-
-You can disable the public endpoints by updating the account settings. For more information, see [Configuring route and region settings](/docs/logs-router?topic=logs-router-endpoints).
-{: note}
-
-For more information about the REST API, see [routes](https://{DomainName}/apidocs/logs-router/logs-router-v3#create-route){: external}.
-
-
-
-## API prerequisites
+## What are the API prerequisites to configure and manage routes in {{site.data.keyword.logs_routing_full}}
 {: #route-manage-api-prereqs}
 {: api}
 
@@ -562,7 +536,7 @@ To make API calls to manage routes, complete the following steps:
 1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-access-token&interface=api).
 2. Identify the API endpoint in the region where you plan to configure or manage a route. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
-## Creating a route using the API
+## How do I create a route in {{site.data.keyword.logs_routing_full}} using the API
 {: #route-manage-api-create}
 {: api}
 
@@ -668,7 +642,7 @@ The output looks as follows:
 ```
 {: screen}
 
-## Updating a route using the API
+## How do I update a route in {{site.data.keyword.logs_routing_full}} using the API
 {: #route-manage-api-update}
 {: api}
 
@@ -770,7 +744,7 @@ curl -X PATCH https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63-
 {: screen}
 
 
-## Deleting a route using the API
+## How do I delete a route in {{site.data.keyword.logs_routing_full}} using the API
 {: #route-manage-api-delete}
 {: api}
 
@@ -797,7 +771,7 @@ curl -X DELETE https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63
 {: screen}
 
 
-## Viewing a route using the API
+## How do I view a route in {{site.data.keyword.logs_routing_full}} using the API
 {: #route-manage-api-read}
 {: api}
 
@@ -825,7 +799,7 @@ curl -X GET https://api.us-south.logs-router.cloud.ibm.com/v3/routes/c7673f63-12
 
 
 
-## Listing all routes using the API
+## How do I list all routes in {{site.data.keyword.logs_routing_full}} using the API
 {: #route-manage-api-list}
 {: api}
 
@@ -851,7 +825,7 @@ curl -X GET https://api.us-south.logs-router.cloud.ibm.com/v3/routes -H "Authori
 
 
 
-## HTTP response codes
+## HTTP response codes using the API in {{site.data.keyword.logs_routing_full}}
 {: #route-manage-api-rc}
 {: api}
 

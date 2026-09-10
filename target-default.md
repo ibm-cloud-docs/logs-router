@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,22 +13,14 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How to configure default targets in 
-{{site.data.keyword.logs_routing_full}} 
+# How do I configure a default target in {{site.data.keyword.logs_routing_full_notm}}
 {: #target-default}
 
 You can configure up to two default targets for collecting logs data that is not explicitly managed in the {{site.data.keyword.logs_routing_full_notm}} account's routing rules.
 {: shortdesc}
 
 
-## How to I manage default targets using the UI
-{: #default_targets_ui}
-{: ui}
-
-You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_create) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_update).
-
-
-## Prereqs
+## What are the CLI prerequisites to configure a default target in {{site.data.keyword.logs_routing_full_notm}}
 {: #target-default-prereqs}
 {: cli}
 
@@ -93,3 +85,11 @@ For example,
 ibmcloud logs-router setting update --default-targets '[{"id": "c3af557f-fb0e-4476-85c3-0889e7fe7bc4"}]'
 ```
 {: pre}
+
+
+
+## How do I configure a default target in {{site.data.keyword.logs_routing_full_notm}} using the UI
+{: #default_targets_ui}
+{: ui}
+
+You can manage your default targets using the {{site.data.keyword.logs_routing_full_notm}} UI. For more information, see [Creating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_create) and [Updating a target using the UI](/docs/logs-router?topic=logs-router-target_icl&interface=ui#target_icl_ui_update).

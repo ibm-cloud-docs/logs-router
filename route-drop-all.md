@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,13 +13,13 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How do I configure the drop action to excluse all metrics in {{site.data.keyword.logs_routing_full}}
+# How do I exclude all (drop) logs in {{site.data.keyword.logs_routing_full}} from being routed to a target destination
 {: #route-drop-all}
 
-You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop) metrics based on a configured rule. Dropped metrics are not sent on to a target.
+You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude all (drop) logs based on a configured rule. Dropped logs are not sent on to a target.
 {: shortdesc}
 
-## Prereqs
+## What are the CLI prerequisites to exclude all (drop) logs in {{site.data.keyword.logs_routing_full}} from being routed to a target destination
 {: #route-drop-all-prereqs}
 {: cli}
 
@@ -37,7 +37,7 @@ You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop)
 {: #route-drop-all-step2}
 {: cli}
 
-Run the following command to exclude all metrics received by {{site.data.keyword.logs_routing_full_notm}} across all regions in the account.
+Run the following command to exclude all logs received by {{site.data.keyword.logs_routing_full_notm}} across all regions in the account.
 
 ```text
 ibmcloud logs-router route create --name drop-all-route --rules '[{"action":"drop"}]'

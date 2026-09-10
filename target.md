@@ -19,7 +19,7 @@ You can manage {{site.data.keyword.logs_full_notm}} targets in your account by u
 {: shortdesc}
 
 
-## {{site.data.keyword.logs_routing_full_notm}} targets
+## Understanding how targets work in {{site.data.keyword.logs_routing_full}}
 {: #target_behavior}
 
 Note the following information about targets:
