@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -12,14 +12,14 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What are V3 endpoints in {{site.data.keyword.logs_routing_full}}
+# What endpoints are supported in {{site.data.keyword.logs_routing_full}} V3
 {: #endpoints-v3}
 
 Access {{site.data.keyword.logs_routing_full_notm}} by using the listed endpoints for each supported {{site.data.keyword.cloud_notm}} location.
 {: shortdesc}
 
 
-## Private API endpoints
+## Private API endpoints in {{site.data.keyword.logs_routing_full}} V3
 {: #endpoints_api_v3_private}
 
 The following table shows the private API endpoints. The port for all endpoints is `https/443` .
@@ -42,7 +42,7 @@ The following table shows the private API endpoints. The port for all endpoints 
 {: caption="Lists of private API endpoints for interacting with {{site.data.keyword.logs_routing_full_notm}}" caption-side="top"}
 
 
-## Public API endpoints
+## Public API endpoints in {{site.data.keyword.logs_routing_full}} V3
 {: #endpoints_api_v3_public}
 
 The following table shows the public API endpoints:

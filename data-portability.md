@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What is the best way to manage data portability for {{site.data.keyword.logs_routing_full_notm}}
+# Understanding data portability for {{site.data.keyword.logs_routing_full_notm}}
 {: #data-portability}
 
 Data portability involves a set of tools and procedures that enable customers to export the digital artifacts that are needed to implement similar workload and data processing on different service providers or on-premises software. It includes procedures for copying and storing the service customer content, including the related configuration that is used by the service to store and process the data, on the customer's own location.

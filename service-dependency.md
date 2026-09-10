@@ -14,9 +14,9 @@ subcollection: logs-router
 
 
 
-{{site.data.keyword.attribute-definition-list}} 
+{{site.data.keyword.attribute-definition-list}}
 
-# How do I identify {{site.data.keyword.logs_routing_full_notm}} service dependencies in {{site.data.keyword.logs_full_notm}} account 
+# Service dependency map for {{site.data.keyword.logs_routing_full_notm}}
 {: #service-dependencies}
 
 If a service depends on other {{site.data.keyword.cloud_notm}} services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
