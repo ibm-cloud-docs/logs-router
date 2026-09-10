@@ -13,8 +13,8 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How do I configure and manage targets for {{site.data.keyword.logs_full_notm}} destinations 
-{: #target_icl} 
+# How do I manage {{site.data.keyword.logs_full_notm}} targets in {{site.data.keyword.logs_routing_full_notm}}
+{: #target_icl}
 
 You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. A target is a resource where you can collect platform logs.
 {: shortdesc}
@@ -22,7 +22,7 @@ You can manage {{site.data.keyword.logs_full_notm}} targets in your account by u
 For more information on {{site.data.keyword.logs_routing_full_notm}} targets, see [Targets](/docs/logs-router?topic=logs-router-target).
 
 
-## What IAM permissions do I need to manage {{site.data.keyword.logs_full_notm}} targets in {{site.data.keyword.logs_routing_full_notm}} 
+## What IAM permissions do I need to manage {{site.data.keyword.logs_full_notm}} targets in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_icl_iam_access}
 
 You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/account?topic=account-assign-access-resources).
@@ -45,25 +45,26 @@ Users with regional scope will be limited to access targets in their authorized 
 | `logs-router.target.list`   | Account           | `Administrator`  \n `Editor`  \n `Viewer`  \n `Operator` | List all targets |
 {: caption="IAM actions and the IAM roles that include them."}
 
-
-## How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}}
+## How do I configure an IAM service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}}
 {: #target_icl_auth_opts}
 
-When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword. logs_full_notm}}.
+When writing to an {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}}.
 {: note}
 
 Choose 1 of the following options:
 
-- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account authorization using the UI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=ui)
+- [Configure service-to-service (S2S) authorizations between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using the UI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=ui)
 
-- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using the CLI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=cli)
+- [Configure service-to-service (S2S) authorizations between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using the CLI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=cli)
 
-- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using the API](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=api)
+- [Configure service-to-service (S2S) authorizations between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using the API](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=api)
 
-- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using Terraform](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=terraform)
+- [Configure service-to-service (S2S) authorizations between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using Terraform](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=terraform)
 
 
-## What are the CLI prerequisites to work with {{site.data.keyword.logs_routing_full_notm}} targets through the command line 
+
+
+## What are the CLI prerequisites to work with targets in {{site.data.keyword.logs_routing_full_notm}} through the command line
 {: #target_icl_prereqs_cli}
 {: cli}
 
@@ -152,7 +153,7 @@ Managed By        account
 {: screen}
 
 
-## Updating a {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the CLI
+## Updating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the CLI
 {: #target_icl_update_cli}
 {: cli}
 
@@ -211,7 +212,7 @@ Managed By        account
 ```
 {: screen}
 
-## Deleting a {{site.data.keyword.logs_full_notm}} target {{site.data.keyword.logs_routing_full_notm}} using the CLI
+## Deleting an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the CLI
 {: #target_icl_delete_cli}
 {: cli}
 
@@ -264,7 +265,7 @@ Something went wrong. Error:
 {: screen}
 
 
-## Validating and viewing details of a {{site.data.keyword.logs_full_notm}} target {{site.data.keyword.logs_routing_full_notm}} by using the CLI
+## Validating and viewing details of an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} by using the CLI
 {: #target_icl_get_cli}
 {: cli}
 
@@ -312,7 +313,7 @@ Updated:                    2024-06-05T17:49:56.452Z
 ```
 {: screen}
 
-## Listing all {{site.data.keyword.logs_full_notm}} targets {{site.data.keyword.logs_routing_full_notm}} in a region
+## Listing all targets in {{site.data.keyword.logs_routing_full_notm}} in a region by using the CLI
 {: #target_icl_list_cli}
 {: cli}
 
@@ -343,34 +344,8 @@ target-01                  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx   us-south   clo
 {: screen}
 
 
-## API targets and actions
-{: #target_icl_api}
-{: api}
 
-The following table lists the actions that you can run to manage targets:
-
-| Action                     | REST API Method  | API_URL                                          |
-|----------------------------|------------------|--------------------------------------------------|
-| Create a target            | `POST`           | `<ENDPOINT>/v3/targets`              |
-| Update a target            | `PATCH`          | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
-| Delete a target            | `DELETE`         | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
-| Read a target              | `GET`            | `<ENDPOINT>/v3/targets/<TARGET_ID>`  |
-| List all targets           | `GET`            | `<ENDPOINT>/v3/targets`              |
-| Validate a target          | `GET`            | `<ENDPOINT>/v3/targets`              |
-{: caption="Target actions by using the {{site.data.keyword.logs_routing_full_notm}} REST API" caption-side="top"}
-
-You can use private and public endpoints to manage targets. For more information about the list of `ENDPOINTS` that are available, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
-
-- You can manage targets from the private network using an API endpoint with the following format: `https://private.REGION.logs-router.cloud.ibm.com`
-- You can manage targets from the public network using an API endpoint with the following format: `https://REGION.logs-router.cloud.ibm.com`
-
-- You can disable the public endpoints by updating the account settings. For more information, see [Configuring target and region settings](/docs/logs-router?topic=logs-router-settings).
-
-For more information about the REST API, see [{{site.data.keyword.logs_routing_full_notm}} REST API v3](/apidocs/logs-router-service-api/logs-router-v3).
-{: note}
-
-
-## API prerequisites
+## What are the API prerequisites to work with targets in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_icl_api_prereqs}
 {: api}
 
@@ -378,7 +353,7 @@ To make API calls to manage targets, complete the following steps:
 1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-access-token&interface=api).
 2. Identify the API endpoint in the region where you plan to configure or manage a target. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
-## Creating an {{site.data.keyword.logs_full_notm}} target using the API
+## Creating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the API
 {: #target_icl_api_create}
 {: api}
 
@@ -451,7 +426,7 @@ curl -X POST   https://api.us-south.logs-router.cloud.ibm.com/v3/targets   -H "A
 In the response, you get information about the target such as the `id`, that indicates the GUID of the target, and the `crn`, that indicates the CRN of the target.
 
 
-## Updating a {{site.data.keyword.logs_full_notm}} target using the API
+## Updating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the API
 {: #target_icl_api_update}
 {: api}
 
@@ -505,7 +480,7 @@ curl -X PATCH   https://api.us-south.logs-router.cloud.ibm.com/v3/targets/TARGET
 
 
 
-## Deleting a target using the API
+## Deleting an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the API
 {: #target_icl_api_delete}
 {: api}
 
@@ -538,7 +513,7 @@ In the response, you get an empty result if the deletion was successful:
 
 
 
-## Validating and viewing details of a target by using the API
+## Validating and viewing details of an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} by using the API
 {: #target_icl_api_view}
 {: api}
 
@@ -586,7 +561,7 @@ The response looks as follows:
 ```
 {: screen}
 
-## Listing all targets using the API
+## Listing all targets in {{site.data.keyword.logs_routing_full_notm}} using the API
 {: #target_icl_api_list}
 {: api}
 
@@ -610,34 +585,7 @@ curl -X GET https://private.us-south.logs-router.cloud.ibm.com/v3/targets -H "Au
 {: screen}
 
 
-
-## HTTP response codes
-{: #target_icl_api_rc}
-{: api}
-
-When you use the {{site.data.keyword.logs_routing_full_notm}} REST API, you can get standard HTTP response codes to indicate whether a method completed successfully.
-
-- A 200 response always indicates success.
-- A 4xx response indicates a failure.
-- A 5xx response usually indicates an internal system error.
-
-See the following table for some HTTP response codes:
-
-| Status code | Status | Description |
-|-------------|--------|-------------|
-| `200` | OK | A list of targets were successfully retrieved. |
-| `201` | OK | The request was successful. A resource is created. |
-| `400` | Bad Request |	The request was unsuccessful. You might be missing a parameter that is required. |
-| `401` | Unauthorized | The IAM token that is used in the API request is invalid or expired. |
-| `403` | Forbidden | The operation is forbidden due to insufficient permissions. |
-| `404` | Not Found |	The requested resource doesn't exist or is already deleted. |
-| `409`|  Conflict | There is a conflict with the request data and the state of resources in system. |
-| `429` | Too Many Requests |	Too many requests hit the API too quickly. |
-| `500` | Internal Server Error |	Something went wrong. Your request could not be processed. Try again later. If the problem persists, note the transaction-id in the response header and contact [IBM Cloud support](https://watson.service-now.com/wcp).|
-{: caption="List of HTTP response codes" caption-side="top"}
-
-
-## Creating a {{site.data.keyword.logs_full_notm}} target using the UI
+## Creating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the UI
 {: #target_icl_ui_create}
 {: ui}
 
@@ -667,7 +615,7 @@ Complete the following steps to create a target:
 7. Click **Create target**.
 
 
-## Updating a {{site.data.keyword.logs_full_notm}} target using the UI
+## Updating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the UI
 {: #target_icl_ui_update}
 {: ui}
 
@@ -686,7 +634,7 @@ Complete the following steps:
 
 
 
-## Deleting a target using the UI
+## Deleting an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the UI
 {: #target_icl_ui_delete}
 {: ui}
 
@@ -700,7 +648,7 @@ You cannot delete an {{site.data.keyword.logs_routing_full_notm}} target if it i
 7. Select **Delete** and then click **Delete** in the confirmation panel.
 
 
-## Listing all targets in a region using the UI
+## Listing all targets in {{site.data.keyword.logs_routing_full_notm}} in a region using the UI
 {: #target_icl_ui_list}
 {: ui}
 
