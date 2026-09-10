@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Service dependency map for IBM Cloud Log Routing
+# How do I identify {{site.data.keyword.logs_routing_full_notm}} service dependencies in {{site.data.keyword.logs_full_notm}} account 
 {: #service-dependencies}
 
 If a service depends on other {{site.data.keyword.cloud_notm}} services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
