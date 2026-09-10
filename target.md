@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -105,7 +105,7 @@ You can validate a target by using the {{site.data.keyword.metrics_router_full_n
 - [Validate via API](/docs/logs-router?topic=logs-router-target_icl&interface=api#target_icl_api_view)
 
 
-## What are the CLI prerequisites to work with targets through the command line 
+## What are the CLI prerequisites to work with {{site.data.keyword.logs_routing_full_notm}} targets through the command line 
 {: #target_cli}
 {: cli}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring account settings
+# How do I configure {{site.data.keyword.logs_routing_full_notm}} settings in an {{site.data.keyword.cloud_notm}} account
 {: #settings}
 
 You can configure {{site.data.keyword.logs_routing_full_notm}} account settings to define where and how platform logs are collected, routed, and managed in your account. You can do it through the UI, or by using the CLI, the REST API V3, or Terraform scripts.
@@ -29,7 +29,7 @@ For more information, see [About account settings](/docs/logs-router?topic=logs-
 
 Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settings.](/docs/logs-router?topic=logs-router-iam)
 
-## Getting details of the account settings by using the UI
+## Getting details of the {{site.data.keyword.logs_routing_full_notm}} settings by using the UI
 {: #settings-get-ui}
 {: ui}
 
@@ -55,7 +55,7 @@ On this page you can view the following settings:
 
 - **Reports**: Displays the configurations in JSON format.
 
-## Updating the account settings using the UI
+## Updating the {{site.data.keyword.logs_routing_full_notm}} settings using the UI
 {: #settings-update-ui}
 {: ui}
 
@@ -76,7 +76,7 @@ On this page you can view the following settings:
 - **Default targets**: Select the target that will be used by default when routing rules do not exist or are not matched.
 
 
-## CLI prerequisites
+## CLI prerequisites for {{site.data.keyword.logs_routing_full_notm}}
 {: #settings-prereqs-cli}
 {: cli}
 
@@ -85,7 +85,7 @@ Before you use the the CLI to manage {{site.data.keyword.logs_routing_full_notm}
 Check that you have IAM permissions to read, update, or both the {{site.data.keyword.logs_routing_full_notm}} account settings.
 
 
-## Getting details of the account settings by using the CLI
+## Getting details of the {{site.data.keyword.logs_routing_full_notm}} settings by using the CLI
 {: #settings-get-using-cli}
 {: cli}
 
@@ -121,7 +121,7 @@ Api Version                 1
 ```
 {: codeblock}
 
-## Updating the account settings using the CLI
+## Updating the {{site.data.keyword.logs_routing_full_notm}} settings using the CLI
 {: #settings-update-using-cli}
 {: cli}
 
@@ -168,7 +168,7 @@ If the update is successful, the current settings will be displayed.
 
 
 
-## API prerequsites
+## API prerequsites for {{site.data.keyword.logs_routing_full_notm}}
 {: #settings-prereqs-api}
 {: api}
 
@@ -177,7 +177,7 @@ To make API calls to manage settings, complete the following steps:
 2. Identify the API endpoint in the region where you plan to configure or manage settings. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 
-## Getting details of the account settings by using the API
+## Getting details of the {{site.data.keyword.logs_routing_full_notm}} settings by using the API
 {: #settings-get-api}
 {: api}
 
@@ -234,7 +234,7 @@ Where:
 `api_version`
 :   Is the version of the API configured for this account.
 
-## Updating the account settings using the API
+## Updating the {{site.data.keyword.logs_routing_full_notm}} settings using the API
 {: #settings-update-api}
 {: api}
 

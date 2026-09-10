@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list}} 
 
 # How do I identify {{site.data.keyword.logs_routing_full_notm}} service dependencies in {{site.data.keyword.logs_full_notm}} account 
 {: #service-dependencies}

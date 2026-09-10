@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,8 +13,8 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# How to configure and manage targets in {{site.data.keyword.logs_full_notm}}
-{: #target_icl}
+# How do I configure and manage targets for {{site.data.keyword.logs_full_notm}} destinations 
+{: #target_icl} 
 
 You can manage {{site.data.keyword.logs_full_notm}} targets in your account by using the {{site.data.keyword.logs_routing_full_notm}} UI, the {{site.data.keyword.logs_routing_full_notm}} CLI, the {{site.data.keyword.logs_routing_full_notm}} REST API, and Terraform scripts. A target is a resource where you can collect platform logs.
 {: shortdesc}
@@ -22,7 +22,7 @@ You can manage {{site.data.keyword.logs_full_notm}} targets in your account by u
 For more information on {{site.data.keyword.logs_routing_full_notm}} targets, see [Targets](/docs/logs-router?topic=logs-router-target).
 
 
-## IAM Access
+## What IAM permissions do I need to manage {{site.data.keyword.logs_full_notm}} targets in {{site.data.keyword.logs_routing_full_notm}} 
 {: #target_icl_iam_access}
 
 You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/account?topic=account-assign-access-resources).
@@ -45,7 +45,8 @@ Users with regional scope will be limited to access targets in their authorized 
 | `logs-router.target.list`   | Account           | `Administrator`  \n `Editor`  \n `Viewer`  \n `Operator` | List all targets |
 {: caption="IAM actions and the IAM roles that include them."}
 
-## Authentication
+
+## How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}}
 {: #target_icl_auth_opts}
 
 When writing to a {{site.data.keyword.logs_full_notm}} target, you must configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword. logs_full_notm}}.
@@ -53,18 +54,16 @@ When writing to a {{site.data.keyword.logs_full_notm}} target, you must configur
 
 Choose 1 of the following options:
 
-- [Configuring S2S authorization using the UI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=ui)
+- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account authorization using the UI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=ui)
 
-- [Configuring S2S authorization using the CLI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=cli)
+- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using the CLI](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=cli)
 
-- [Configuring S2S authorization using the API](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=api)
+- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using the API](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=api)
 
-- [Configuring S2S authorization using Terraform](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=terraform)
-
-
+- [How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an IBM Cloud account using Terraform](/docs/logs-router?topic=logs-router-iam-service-auth-logs-routing&interface=terraform)
 
 
-## CLI prerequisites
+## What are the CLI prerequisites to work with {{site.data.keyword.logs_routing_full_notm}} targets through the command line 
 {: #target_icl_prereqs_cli}
 {: cli}
 
@@ -77,8 +76,7 @@ Before you use the CLI to manage targets, complete the following steps:
 3. Log in to {{site.data.keyword.cloud_notm}}. Run the following command: [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login)
 
 
-
-## Creating an {{site.data.keyword.logs_full_notm}} target using the CLI
+## Creating an {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the CLI
 {: #target_icl_create_cli}
 {: cli}
 
@@ -154,7 +152,7 @@ Managed By        account
 {: screen}
 
 
-## Updating a {{site.data.keyword.logs_full_notm}} target using the CLI
+## Updating a {{site.data.keyword.logs_full_notm}} target in {{site.data.keyword.logs_routing_full_notm}} using the CLI
 {: #target_icl_update_cli}
 {: cli}
 
@@ -213,7 +211,7 @@ Managed By        account
 ```
 {: screen}
 
-## Deleting a target using the CLI
+## Deleting a {{site.data.keyword.logs_full_notm}} target {{site.data.keyword.logs_routing_full_notm}} using the CLI
 {: #target_icl_delete_cli}
 {: cli}
 
@@ -266,7 +264,7 @@ Something went wrong. Error:
 {: screen}
 
 
-## Validating and viewing details of a target by using the CLI
+## Validating and viewing details of a {{site.data.keyword.logs_full_notm}} target {{site.data.keyword.logs_routing_full_notm}} by using the CLI
 {: #target_icl_get_cli}
 {: cli}
 
@@ -314,7 +312,7 @@ Updated:                    2024-06-05T17:49:56.452Z
 ```
 {: screen}
 
-## Listing all targets in a region
+## Listing all {{site.data.keyword.logs_full_notm}} targets {{site.data.keyword.logs_routing_full_notm}} in a region
 {: #target_icl_list_cli}
 {: cli}
 
