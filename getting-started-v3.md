@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with {{site.data.keyword.logs_routing_full}} V3
+# How do I get started with {{site.data.keyword.logs_routing_full}} and multiple destinations
 {: #getting-started-v3}
 
 Use the {{site.data.keyword.logs_routing_full_notm}} service to route platform logs from your {{site.data.keyword.cloud_notm}} account to your chosen target destination.
@@ -42,7 +42,7 @@ Complete the following steps to start using {{site.data.keyword.logs_routing_ful
 
 5. Provision or have acces to an {{site.data.keyword.logs_full_notm}} instance. For more information, see [Provisioning an instance](/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
 
-## Creating a service to service authorization
+## Create a service to service authorization
 {: #getting-started-v3-create-s2s}
 {: step}
 

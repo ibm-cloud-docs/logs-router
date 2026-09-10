@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Manual migration from V1 to V3 for new accounts (No V1 Setup)
+# How do I configure {{site.data.keyword.logs_routing_full}} V3 manually for a new {{site.data.keyword.cloud_notm}} account (No V1 Setup)
 {: #v3-migration-manual-new-acc}
 
 If you prefer to manually configure your v3 environment, the process differs depending on whether you have an existing v1 setup or are starting fresh with a new account.

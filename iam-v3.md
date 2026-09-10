@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing IAM access for {{site.data.keyword.logs_routing_full_notm}} V3
+# How do I configure IAM for {{site.data.keyword.logs_routing_full_notm}} V3 in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-v3}
 
 Access to {{site.data.keyword.logs_routing_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.logs_routing_full_notm}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.logs_routing_full_notm}}.
@@ -32,8 +32,7 @@ If a specific role and its actions don't meet the needs of the use case that you
 {: tip}
 
 
-
-## Managing access by using access groups
+## How do I manage IAM access in {{site.data.keyword.logs_routing_full_notm}} by using access groups
 {: #groups}
 
 An access group can be created to organize a set of users, service IDs, and trusted profiles into a single entity that makes it easy for you to assign access. You can assign a single policy to the group instead of assigning the same access multiple times for an individual user or service ID.
@@ -53,8 +52,7 @@ To get up and running quickly with IAM by setting up access groups for quick acc
 {: tip}
 
 
-
-## Configuring Trusted Profiles
+## How do I manage IAM access in {{site.data.keyword.logs_routing_full_notm}} by using trusted profiles
 {: #configure-tp}
 
 You can use trusted profiles to:
@@ -83,7 +81,7 @@ Adding or Updating Compute Resource:
     {: note}
 
 
-## Managing access by assigning policies directly to users or service IDs
+## How do I manage IAM access in {{site.data.keyword.logs_routing_full_notm}} by assigning policies directly to users or service IDs
 {: #users}
 
 To assign user's access to resources you must be an administrator on all services in the account, or the assigned administrator for the particular service or service instance. To assign access to a service ID, you must be administrator on the identity service or the specific service ID.
@@ -111,7 +109,7 @@ For more information, see [Creating and working with service IDs](/docs/account?
 
 
 
-## IAM actions by task
+## What is the list of IAM actions by task for the {{site.data.keyword.logs_routing_full_notm}} service 
 {: #iam_ater_bytask}
 
 Review the available platform roles that are available, and the actions that are mapped to each to help you assign access.
@@ -217,7 +215,7 @@ logs-router.dashboard.view
 
 
 
-## {{site.data.keyword.cloud_notm}} platform roles
+## What are the {{site.data.keyword.cloud_notm}} platform roles that are supported by {{site.data.keyword.logs_routing_full_notm}} 
 {: #iam-platform}
 
 The following table detail actions that are mapped to platform roles.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -59,7 +59,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Manage permissions for {{site.data.keyword.logs_routing_full_notm}} | Lets you restrict access to the service.   \n  \n {{site.data.keyword.IBM_notm}} is responsible for the security and compliance of the {{site.data.keyword.logs_routing_full_notm}} service. | Restrict access to {{site.data.keyword.logs_routing_full_notm}} by using Cloud IAM access policies. Define IAM policies to control which users within your account have access to manage the service and related resources in your account.    \n  \n [Learn more about controlling access through IAM](/docs/logs-router?topic=logs-router-iam). |
+| Manage permissions for {{site.data.keyword.logs_routing_full_notm}} | Lets you restrict access to the service.   \n  \n {{site.data.keyword.IBM_notm}} is responsible for the security and compliance of the {{site.data.keyword.logs_routing_full_notm}} service. | Restrict access to {{site.data.keyword.logs_routing_full_notm}} by using Cloud IAM access policies. Define IAM policies to control which users within your account have access to manage the service and related resources in your account.    \n  \n [Learn more about controlling access through IAM](/docs/logs-router?topic=logs-router-iam)|
 {: row-headers}
 {: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The first column describes the task that a customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

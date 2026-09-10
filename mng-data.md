@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-04-30"
+  years:  2023, 2026
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Securing your data
+# Securing your data in {{site.data.keyword.logs_routing_full}} 
 {: #mng-data}
 
 So you can securely manage your data when you use {{site.data.keyword.logs_routing_full}}, you must know what data is stored, how the data is encrypted, and how you can delete any stored data.
@@ -26,7 +26,7 @@ So you can securely manage your data when you use {{site.data.keyword.logs_routi
 {{site.data.keyword.logs_routing_full_notm}} does not store any log data.
 
 
-## How your data is stored and encrypted
+## How is data stored and encrypted in {{site.data.keyword.logs_routing_full_notm}} 
 {: #data-storage}
 
 ### Configuration data
@@ -44,11 +44,11 @@ Any stored credentials are individually secured with envelope encryption by usin
 
 Log data that is routed by {{site.data.keyword.logs_routing_full_notm}} is secured by using a private connection. The connection supports TLS 1.2.
 
- Log data is routed to an {{site.data.keyword.logs_full_notm}} instance.You manage the instance and the data that is collected in the instance. 
+Log data is routed to an {{site.data.keyword.logs_full_notm}} instance.You manage the instance and the data that is collected in the instance.
 {: note}
 
 
-## Deleting your data
+## How do I delete data in {{site.data.keyword.logs_routing_full_notm}}
 {: #mng-data-storage-delete}
 
 ### Configuration data
@@ -66,7 +66,7 @@ To completely delete all the configuration data of the account, complete the fol
 
 
 
-### Log data
+### Log data 
 {: #mng-data-storage-delete-logs}
 
 The {{site.data.keyword.logs_routing_full_notm}} service routes data to destinations. It does not store log data. You must follow the guidance that is provided by the destination to delete log data.

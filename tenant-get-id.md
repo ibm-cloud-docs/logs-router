@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-04-30"
+  years:  2023, 2026
+lastupdated: "2026-08-06"
 
 keywords:
 
@@ -11,6 +11,7 @@ subcollection: logs-router
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Retrieving tenant information in {{site.data.keyword.logs_routing_full_notm}} by using the tenant ID
 {: #tenant-get-id}
@@ -34,9 +35,9 @@ Complete the following steps:
 
 4. To get details on a tenant by using the API, check that you can connect to {{site.data.keyword.logs_routing_full_notm}} by using the management API. For more information, see [Connecting to {{site.data.keyword.logs_routing_full}}](/docs/logs-router?topic=logs-router-about#about_connecting).
 
+
 ## Getting the IAM bearer token
 {: #tenant-get-id-iam-token}
-
 
 You must get an {{site.data.keyword.iamlong}} (IAM) access token to authenticate your requests to the {{site.data.keyword.logs_routing_full}} service. For more information, see [Retrieving an access token](/docs/logs-router?topic=logs-router-retrieve-access-token).
 
@@ -44,13 +45,16 @@ For example, you can retrieve your IAM bearer token and export it as an environm
 
 ```sh
 export IAM_TOKEN=`ibmcloud iam oauth-tokens --output json | jq -r '.iam_token'`
+
+
+
+
 ```
 {: pre}
 
 
 ## Choosing the management endpoint
 {: #tenant-get-id-endpoint}
-
 
 A tenant is the account-specific configuration of {{site.data.keyword.logs_routing_full_notm}} running within a region.
 
@@ -62,17 +66,14 @@ You can use private or public endpoints.
 For more information, see [Management endpoint URLs](/docs/logs-router?topic=logs-router-endpoints).
 
 
-
 ## Retrieving the tenant ID
 {: #tenant-get-id-tenant-id}
 
 To get the tenant ID, see [Retrieving tenant information](/docs/logs-router?topic=logs-router-tenant-get).
 
 
-
 ## Getting tenant information by using the API
 {: #tenant-get-id-api}
-
 
 Run the following command to get the details of a tenant in a region by using the **private endpoint**:
 
@@ -80,6 +81,10 @@ Run the following command to get the details of a tenant in a region by using th
 curl -X GET https://management.private.{REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID} \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE"
+
+
+
+
 ```
 {: pre}
 
@@ -89,16 +94,19 @@ Run the following command to get the details of a tenant in a region by using th
 curl -X GET https://management.{REGION}.logs-router.cloud.ibm.com/v1/tenants/${TENANT_ID} \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: API_VERSION_DATE"
+
+
+
+
 ```
 {: pre}
 
-
 Where
+
 - `REGION` defines the location where the tenant is configured.
 - `IAM_TOKEN` defines the credentials that you use to authenticate your requests.
 - `API_VERSION_DATE` defines the current date to request the latest version of the API. The valid format is `YYYY-MM-DD`. Any date up to the current date can be provided.
 - `TENANT_ID` defines the ID of the tenant for which you want to get details.
-
 
 The following example shows how to get information about an {{site.data.keyword.logs_routing_full_notm}} tenant in the `us-east` region by using a VPE:
 
@@ -106,6 +114,10 @@ The following example shows how to get information about an {{site.data.keyword.
 curl -X GET https://management.private.us-east.logs-router.cloud.ibm.com/v1/tenants/97543c-77b7-eg23-8114-999b31a2b3 \
 -H "Authorization: ${IAM_TOKEN}" \
 -H "IBM-API-Version: 2024-03-01"
+
+
+
+
 ```
 {: pre}
 
@@ -138,6 +150,10 @@ A successful request returns a response that contains a single tenant, for examp
     "status": "success"
   }
 }
+
+
+
+
 ```
 {: screen}
 

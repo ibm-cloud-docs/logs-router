@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Configuring account settings
+# What do I need to know about {{site.data.keyword.logs_routing_full_notm}} settings in {{site.data.keyword.cloud_notm}}
 {: #settings-about}
 
 You can configure {{site.data.keyword.logs_routing_full_notm}} account settings to define where and how platform logs are collected, routed, and managed in your account. You can do it through the UI, or by using the CLI, the REST API V3, or Terraform scripts.
@@ -34,7 +34,7 @@ You can use private and public endpoints to manage settings. For more informatio
 - Through the public network, you must use an API endpoint with the following format: `https://api.<region>.logs-router.cloud.ibm.com`
 
 
-## What data can you configure through the {{site.data.keyword.logs_routing_full_notm}} account settings?
+## What data can be configured through settings in {{site.data.keyword.logs_routing_full_notm}} account
 {: #settings-about-what}
 
 You can define any of the following information:
@@ -71,15 +71,14 @@ You can define any of the following information:
 * The API version that is enabled in the account for {{site.data.keyword.logs_routing_full_notm}}. Valid values are: `1` or `3`.
 
 
-## IAM permissions
+## What are the IAM permissions that I need to manage {{site.data.keyword.logs_routing_full_notm}} settings in an {{site.data.keyword.cloud_notm}} account
 {: #settings-about-access}
 
 Ensure you have the [correct IAM permissions to configure {{site.data.keyword.logs_routing_full_notm}} settingss.](/docs/logs-router?topic=logs-router-iam)
 
 
 
-
-## Managing settings using the UI
+## How can I manage {{site.data.keyword.logs_routing_full_notm}} settings using the {{site.data.keyword.cloud_notm}} UI
 {: #settings_ui}
 {: ui}
 
@@ -87,9 +86,7 @@ You can manage your settings definition using the {{site.data.keyword.logs_routi
 
 
 
-
-
-## CLI commands
+## What are the CLI commands that I can use to manage {{site.data.keyword.logs_routing_full_notm}} settings 
 {: #settings-about-cli}
 {: cli}
 
@@ -105,7 +102,7 @@ The following table lists the actions that you can run to manage settings:
 For more information, see [{{site.data.keyword.logs_routing_full_notm}} CLI](/docs/logs-router?topic=logs-router-logs-router-cli).
 
 
-## API methods
+## What are the API methods that I can ue to manage {{site.data.keyword.logs_routing_full_notm}} settings 
 {: #settings-about-api}
 {: api}
 
@@ -128,10 +125,9 @@ For more information about the REST API, see [the settings API](https://{DomainN
 
 
 
-### HTTP response codes
+### What are the HTTP response codes that I can get when using {{site.data.keyword.logs_routing_full_notm}} API settings methods
 {: #settings-about-rc}
 {: api}
-
 
 When you use the {{site.data.keyword.logs_routing_full_notm}} REST API, you can get standard HTTP response codes to indicate whether a method completed successfully.
 

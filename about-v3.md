@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -13,14 +13,14 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About {{site.data.keyword.logs_routing_full_notm}} V3
+# What do I need to know about {{site.data.keyword.logs_routing_full_notm}} V3
 {: #about-v3}
 
 Use {{site.data.keyword.logs_routing_full_notm}} to configure how to route platform logs in your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 
-## Features
+## What are the key features of {{site.data.keyword.logs_routing_full_notm}}
 {: #about-v3-features}
 
 By default, you can use {{site.data.keyword.logs_routing_full_notm}} that is based on the REST API V1 to route platform logs to a single destination per region.
@@ -39,7 +39,7 @@ The following table lists core features that the {{site.data.keyword.logs_routin
 
 
 
-## Advantages of migrating to {{site.data.keyword.logs_routing_full_notm}} V3
+## What are the advantages of migrating to {{site.data.keyword.logs_routing_full_notm}} V3
 {: #about-v3-advantages}
 
 - Add flexibility at scale with the multiple target routing capability.
@@ -66,7 +66,7 @@ The following table lists core features that the {{site.data.keyword.logs_routin
 
     Control at the enterprise account level how platform logs are routed across your Enterprise so account administrators that have full privileges within their accounts cannot modify or delete enterprise managed routes. You can meet compliance requirements while development teams maintain the flexibility they need for day to day operations.
 
-## Concepts
+## What are the key concepts in {{site.data.keyword.logs_routing_full_notm}} 
 {: #about-v3-concepts}
 
 Before you can start configuring and using the {{site.data.keyword.logs_routing_full_notm}} service, you must configure the primary metadata location, and optionally the backup metadata location in the account settings. Next, you can define the destinations and rules that define how platform logs are routed in your {{site.data.keyword.cloud_notm}} account.
@@ -100,7 +100,7 @@ You can configure the following type of target:
 {: caption="List of targets" caption-side="top"}
 
 
-## Enterprise account management
+## How to configure {{site.data.keyword.logs_routing_full_notm}} in an enterprise account 
 {: #about-v3-enterprise}
 
 You can use {{site.data.keyword.logs_routing_full}} Enterprise routing to configure:

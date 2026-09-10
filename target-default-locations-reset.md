@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Reseting the permitted target regions in the account
+# How do I reset the permitted target regions in {{site.data.keyword.logs_routing_full}}
 {: #target-default-locations-reset}
 
 To reset the {{site.data.keyword.logs_routing_full_notm}} account's permitted target regions, you must delete the permitted target regions from the account configuration.
@@ -22,14 +22,7 @@ To reset the {{site.data.keyword.logs_routing_full_notm}} account's permitted ta
 
 
 
-## Resetting target regions using the UI
-{: #reset_permitted_targets_ui}
-{: ui}
-
-You can remove all permitted target regions using the {{site.data.keyword.logs_routing_full_notm}} UI by updating your account settings and removing all permitted target regions. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).
-
-
-## Prereqs
+## What are the CLI prerequisites to reset the permitted target regions in {{site.data.keyword.logs_routing_full}}
 {: #target-default-locations-reset-prereqs}
 {: cli}
 
@@ -43,7 +36,7 @@ You can remove all permitted target regions using the {{site.data.keyword.logs_r
 
 
 
-## Check your current account settings
+## How do I check the current {{site.data.keyword.cloud_notm}} settings for {{site.data.keyword.logs_routing_full_notm}}
 {: #target-acct-reset-step1}
 {: cli}
 {: step}
@@ -57,7 +50,7 @@ ibmcloud logs-router setting get
 
 The setting **Permitted target regions** lists the locations in the account that have been configured as valid locations where targets can be created.
 
-## Reset the default targets
+## How do I reset the default targets setting in {{site.data.keyword.logs_routing_full_notm}}
 {: #target-acct-reset-step2}
 {: cli}
 {: step}
@@ -68,3 +61,11 @@ Run the following command to reset the account's default targets:
 ibmcloud logs-router setting update --default-targets '[{}]'
 ```
 {: pre}
+
+
+
+## How do I reset permitted target regions in {{site.data.keyword.logs_routing_full}} using the UI
+{: #reset_permitted_targets_ui}
+{: ui}
+
+You can remove all permitted target regions using the {{site.data.keyword.logs_routing_full_notm}} UI by updating your account settings and removing all permitted target regions. For more information, see [Configuring account settings](/docs/logs-router?topic=logs-router-settings&interface=ui).

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 
 
 
-# Creating a report of the {{site.data.keyword.logs_routing_full_notm}} configuration
+# What is the best way to create a configuration report for {{site.data.keyword.logs_routing_full_notm}} 
 {: #config_report}
 
 After configuring your {{site.data.keyword.logs_routing_full_notm}} resources for your account, you should save a copy of your configuration for reference and backup purposes.
@@ -37,7 +37,7 @@ Before you use the CLI to save your {{site.data.keyword.logs_routing_full_notm}}
 5. Make sure you have configured your [settings](/docs/logs-router?topic=logs-router-settings), [targets](/docs/logs-router?topic=logs-router-target_icl) and [routes](/docs/logs-router?topic=logs-router-route-manage).
 
 
-## Saving a copy of your account settings
+## How do I save a copy of the {{site.data.keyword.logs_routing_full_notm}} settings in my {{site.data.keyword.cloud_notm}} account by using the CLI
 {: #config_report_save_settings_cli}
 {: cli}
 
@@ -50,7 +50,7 @@ ibmcloud logs-router setting get --output JSON > ACCOUNT_settings.json
 
 Where `ACCOUNT` is a unique indicator for your account.
 
-## Saving a copy of your route configurations
+## How do I save a copy of {{site.data.keyword.logs_routing_full_notm}} routes in my {{site.data.keyword.cloud_notm}} account by using the CLI
 {: #config_report_save_route_cli}
 {: cli}
 
@@ -63,7 +63,7 @@ ibmcloud logs-router route list --output JSON > ACCOUNT_routes.json
 
 Where `ACCOUNT` is a unique indicator for your account.
 
-## Saving a copy of your target configurations
+## How do I save a copy of {{site.data.keyword.logs_routing_full_notm}} targets in my {{site.data.keyword.cloud_notm}} account by using the CLI
 {: #config_report_save_target_cli}
 {: cli}
 
@@ -77,7 +77,7 @@ ibmcloud logs-router target list --output JSON > ACCOUNT_targets.json
 Where `ACCOUNT` is a unique indicator for your account.
 
 
-## Saving a copy of your account settings
+## How do I save a copy of {{site.data.keyword.logs_routing_full_notm}} settings in my {{site.data.keyword.cloud_notm}} account by using the API
 {: #config_report_save_settings_api}
 {: api}
 
@@ -93,7 +93,7 @@ Where:
 `REGION`
 :   Is the primary metadata region for your account.
 
-## Saving a copy of your route configurations
+## How do I save a copy of {{site.data.keyword.logs_routing_full_notm}} routes in my {{site.data.keyword.cloud_notm}} account by using the API
 {: #config_report_save_route_api}
 {: api}
 
@@ -109,8 +109,7 @@ Where:
 `REGION`
 :   Is the primary metadata region for your account.
 
-## Saving a copy of your target configurations
-
+## How do I save a copy of {{site.data.keyword.logs_routing_full_notm}} targets in my {{site.data.keyword.cloud_notm}} account by using the API
 {: #config_report_save_target_api}
 {: api}
 

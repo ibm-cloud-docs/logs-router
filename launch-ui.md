@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Launching the {{site.data.keyword.logs_routing_full_notm}} UI
+# How do I open the {{site.data.keyword.logs_routing_full_notm}} UI in {{site.data.keyword.cloud_notm}} 
 {: #launch-ui}
 
 {{site.data.keyword.logs_routing_full}} provides an {{site.data.keyword.cloud_notm}} console that can be used to configure and review the {{site.data.keyword.logs_routing_full_notm}} routing configuration.

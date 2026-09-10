@@ -2,12 +2,12 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-09-07"
 
 keywords:
 
 subcollection: logs-router
-
+service name: logs-router
 content-type: release-note
 
 ---
@@ -27,6 +27,7 @@ see [Release notes for the {{site.data.keyword.agent}}](/docs/cloud-logs?topic=c
 
 ## 11 May 2026
 {: #logs-router-may1126}
+{: release-note}
 
 Mumbai support
 

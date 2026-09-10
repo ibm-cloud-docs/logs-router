@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2024
-lastupdated: "2024-09-25"
+  years:  2023, 2026
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a S2S authorization to grant access to send logs to {{site.data.keyword.logs_full_notm}}
+# How do I configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full_notm}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account 
 {: #iam-service-auth-logs-routing}
 
 Use {{site.data.keyword.iamlong}} (IAM) to create an authorization that grants {{site.data.keyword.logs_routing_full_notm}} access to {{site.data.keyword.logs_full_notm}} so the {{site.data.keyword.logs_routing_full_notm}} service can send logs to your {{site.data.keyword.logs_full_notm}} instance destination (target).
@@ -36,14 +36,14 @@ The authorization that you define for the {{site.data.keyword.logs_routing_full_
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
 {: important}
 
-## Service access roles
+## What are the IAM service access roles (permissions) that I need to configure a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} in an {{site.data.keyword.cloud_notm}} account
 {: #iam-service-auth-logs-routing-roles}
 
 You can select any of the following roles that the source can use to interact with the target. You can grant only the level of access that you have as a user of the target that you selected.
 
 - `Sender`: As a sender, you can send logs to your IBM Cloud Logs service instance - but not query or tail logs. This role is meant to be used by agents and routers sending logs.
 
-## Creating an authorization in the console
+## How do I create a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} in the {{site.data.keyword.cloud_notm}} UI console
 {: #iam-service-auth-logs-routing-create-ui}
 {: ui}
 
@@ -66,7 +66,7 @@ Complete the following steps:
 If you create an authorization between a service in another account and a target service in your current account, you need to have access only to the target resource. For the source account, you need only the account number. 
 {: note}
 
-## Creating an authorization by using the CLI
+## How do I create a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using the CLI
 {: #iam-service-auth-logs-routing-create-cli}
 {: cli}
 
@@ -83,7 +83,7 @@ You can scope a specific {{site.data.keyword.logs_full_notm}} target instance by
 For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
 
 
-## Creating an authorization by using Terraform
+## How do I create a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using Terraform
 {: #iam-service-auth-logs-routing-create-terra}
 {: terraform}
 
@@ -138,7 +138,7 @@ Use the following steps to create an authorization by using Terraform:
       ```
       {: pre}
 
-## Creating an authorization by using the API
+## How do I create a service-to-service (S2S) authorization between {{site.data.keyword.logs_routing_full}} and {{site.data.keyword.logs_full_notm}} by using the API
 {: #iam-service-auth-logs-routing-create-api}
 {: api}
 

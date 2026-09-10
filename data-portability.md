@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-11-08"
+  years: 2023, 2026
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -37,5 +37,3 @@ For more information about your responsibilities for {{site.data.keyword.logs_ro
 The {{site.data.keyword.logs_routing_full_notm}} service is an {{site.data.keyword.cloud_notm}} service that routes logging data to {{site.data.keyword.logs_full_notm}} instances. As such it does not retain any customer data that can be exported.
 
 Export of data routed through {{site.data.keyword.logs_routing_full_notm}} is possible through the [{{site.data.keyword.logs_full_notm}} instances](/docs/cloud-logs?topic=cloud-logs-data-portability) receiving the logging data.
-
-

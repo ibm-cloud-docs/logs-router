@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migration Guide: Automated Migration from v1 to v3
+# How do I automate migration from {{site.data.keyword.logs_routing_full}} V1 to V3 in an {{site.data.keyword.cloud_notm}} account
 {: #v3-migration-automated}
 
 The automated migration process uses the migration APIs to generate v3 targets and routes based on your existing v1 tenant configuration.

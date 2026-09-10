@@ -2,7 +2,7 @@
 
 copyright:
   years:  2026, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-09-08"
 
 keywords: enterprise
 
@@ -12,7 +12,7 @@ subcollection: logs-router
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enterprise-managed platform logs routing
+# Tutorial on how to configure the routing of platform logs across enterprise accounts in {{site.data.keyword.cloud_notm}} 
 {: #enterprise-routing-scenario}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -13,16 +13,18 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Understanding routing precedence
+# How does {{site.data.keyword.logs_routing_full}} processes routes and rules to define the destination of logs
 {: #routes_precedence}
 
 By configuring {{site.data.keyword.logs_routing_full_notm}} routing rules, you can specify how and where platform logs are routed in your account.
 - You can use route rule inclusion filters to provide elevated control over how your platform logs are routed.
 - You can configure default targets by using {{site.data.keyword.logs_routing_full_notm}} settings to collect logs that are generated in the account and do not have a routing rule associated to define where they are routed
 .
-How the configuration is processed determines the final destination where platform logs are sent; each platform log is processed individually.
 
-## How are routes and rules applied
+How the configuration is processed determines the final destination where platform logs are sent. Each platform log is processed individually.
+{: note}
+
+## How are routes and rules applied in {{site.data.keyword.logs_routing_full}}
 {: #routes_precedence_how}
 
 1. Routes are processed independently.

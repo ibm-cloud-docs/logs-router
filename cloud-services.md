@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-08"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: logs-router
 {{site.data.keyword.attribute-definition-list}}
 
 
-# {{site.data.keyword.cloud_notm}} services that generate platform logs
+# Which {{site.data.keyword.cloud_notm}} services generate platform logs in an {{site.data.keyword.cloud_notm}} account
 {: #cloud_services}
 
 {{site.data.keyword.cloud}} services can send logs about their services to {{site.data.keyword.logs_routing_full_notm}}. These logs are called platform logs.
@@ -24,7 +24,7 @@ The more information link for each service describes the logging support for tha
 {: tip}
 
 
-## Analytics services
+## How to configure analytics services to send logs to {{site.data.keyword.logs_routing_full_notm}}
 {: #analytics}
 
 The following table lists services that send logs to {{site.data.keyword.logs_routing_full_notm}}:

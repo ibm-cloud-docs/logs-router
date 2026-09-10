@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-10"
 
 keywords:
 
@@ -14,13 +14,13 @@ subcollection: logs-router
 
 
 
-# Excluding metrics by using the drop action
+# How do I exclude (drop) logs in {{site.data.keyword.logs_routing_full}} from being routed to a target destination
 {: #route-drop}
 
-You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop) metrics based on a configured rule. Dropped metrics are not sent on to a target.
+You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop) logs based on a configured rule. Dropped logs are not sent on to a target.
 {: shortdesc}
 
-## Prereqs
+## What are the CLI prerequisites to exclude (drop) logs in {{site.data.keyword.logs_routing_full}} from being routed to a target destination
 {: #route-drop-prereqs}
 {: cli}
 
@@ -35,9 +35,10 @@ You can configure {{site.data.keyword.logs_routing_full_notm}} to exclude (drop)
 
 ## Define the inclusion filter
 {: #route-drop-step1}
+{: step}
 {: cli}
 
-Inclusion filters determine which metrics are routed to the targets.
+Inclusion filters determine which logs are routed to the targets.
 
 Inclusion filters are comprised of an `operand`, `operator`, and `values`:
 
@@ -66,7 +67,7 @@ Inclusion filters are comprised of an `operand`, `operator`, and `values`:
     :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-locations)
 
 
-For example, to define an inclusion filter that defines the condition where only metrics that are generated in the us-south region are routed, looks as follows:
+For example, to define an inclusion filter that defines the condition where only logs that are generated in the us-south region are routed, looks as follows:
 
 ```json
 {"operand": "location","operator": "is","values": "us-south"}
@@ -76,9 +77,10 @@ For example, to define an inclusion filter that defines the condition where only
 
 ## Configure the route
 {: #route-drop-step2}
+{: step}
 {: cli}
 
-Run the following command to exclude all metrics received by {{site.data.keyword.logs_routing_full_notm}} from the `us-south` region.
+Run the following command to exclude all logs received by {{site.data.keyword.logs_routing_full_notm}} from the `us-south` region.
 
 ```text
 ibmcloud logs-router route create --name drop-route --rules '[{"action": "drop", "inclusion_filters":[{"operand": "location","operator": "is","values": ["us-south"]}]}]' --managed-by account
