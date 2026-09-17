@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-07-03"
+  years:  2023, 2026
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -90,7 +90,7 @@ Complete the following steps:
         ```
         {: codeblock}
 
-        Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/account?topic=account-groups&interface=cli)
+        Instead of assigning roles directly to identities, a common strategy is to assign roles to access groups, and add identities as members to those access groups. For more information about access groups, see [setting up access groups.](/docs/iam?topic=iam-groups&interface=ui)
         {: tip}
 
 

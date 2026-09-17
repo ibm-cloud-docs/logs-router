@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -88,7 +88,7 @@ Inclusion filters are composed of an `operand`, `operator`, and `value`:
     Valid values depend on the `operand`.
 
     `location`
-    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-regions)
+    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-locations)
 
 Note these limitations when configuring inclusion filters.
 

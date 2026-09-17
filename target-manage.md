@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -25,7 +25,7 @@ For more information on {{site.data.keyword.logs_routing_full_notm}} targets, se
 ## What IAM permissions do I need to manage {{site.data.keyword.logs_full_notm}} targets in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_icl_iam_access}
 
-You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/account?topic=account-assign-access-resources).
+You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 {: note}
 
 When you define a policy, you can indicate the scope of the permissions. You can choose from granting permissions for a specific region or for the entire account.

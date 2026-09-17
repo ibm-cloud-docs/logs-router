@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -56,7 +56,7 @@ You can configure any of the following target types:
 ## What IAM permissions do I need to manage targets in {{site.data.keyword.logs_routing_full_notm}}
 {: #target_iam_access}
 
-You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/account?topic=account-assign-access-resources).
+You must grant users IAM permissions to manage targets. For more information, see [Assign access to resources](/docs/iam?topic=iam-assign-access-resources&interface=ui).
 {: note}
 
 When you define a policy, you can indicate the scope of the permissions. You can choose from granting permissions for a specific region or for the entire account.
@@ -140,7 +140,7 @@ For more information, see [{{site.data.keyword.logs_routing_full_notm}} CLI](/do
 {: api}
 
 To make API calls to manage targets, complete the following steps:
-1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-iam-token).
+1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-access-token&interface=cli).
 2. Identify the API endpoint in the region where you plan to configure or manage a target. For more information, see [API Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 | Action                     | REST API Method  | API_URL                                          |

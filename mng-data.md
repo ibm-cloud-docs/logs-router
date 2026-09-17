@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -62,7 +62,7 @@ To stop {{site.data.keyword.logs_routing_full_notm}} from routing logs to a dest
 To completely delete all the configuration data of the account, complete the following steps:
 
 1. [Delete the tenant.](/docs/logs-router?topic=logs-router-tenant-delete&interface=ui)
-2. Open an IBM support ticket to request deletion of all your service metadata. For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/account?topic=account-open-case&interface=ui).
+2. Open an IBM support ticket to request deletion of all your service metadata. For more information about opening an IBM support ticket, or about support levels and ticket severities, see [Creating support cases](/docs/support?topic=support-open-case&interface=ui).
 
 
 

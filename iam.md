@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2023, 2025
-lastupdated: "2025-02-23"
+  years:  2023, 2026
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -28,7 +28,7 @@ For information about how to assign roles by using the IBM Cloud CLI, see [Grant
 If you have the IAM permission to create policies and authorizations, you can grant only the level of access that you have as a user of the target service. For example, if you have viewer access for the target service, you can assign only the viewer role for the authorization. If you attempt to assign a higher permission such as administrator, it might appear that permission is granted, however, only the highest level permission you have for the target service, that is viewer, will be assigned. 
 {: important}
 
-If a specific role and its actions don't meet the needs of the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles&interface=ui) and pick the actions to include.
+If a specific role and its actions don't meet the needs of the use case that you're looking to address, you can [create a custom role](/docs/iam?topic=iam-custom-roles&interface=ui) and pick the actions to include.
 {: tip}
 
 
@@ -40,16 +40,16 @@ An access group can be created to organize a set of users, service IDs, and trus
 
 Access groups are assigned policies that grant roles and permissions to the members of that group. Members of an access group can include multiple identity types, like users, service IDs, and trusted profiles. The members inherit the policies, roles, and permissions that are assigned to the access group, and also keep the roles that they are assigned individually.
 
-For more information, see [Setting up access groups](/docs/account?topic=account-groups).
+For more information, see [Setting up access groups](/docs/iam?topic=iam-groups&interface=ui).
 
 To manage access or assign new access for users by using access groups, you must be the account owner, administrator, or editor on all Identity and Access enabled services in the account. Or, you can be the assigned administrator or editor for the IAM Access Groups Service.
 
 Choose any of the following actions to manage access groups in the {{site.data.keyword.cloud_notm}}:
 
-* [Creating an access group](/docs/account?topic=account-groups&interface=ui#create_ag).
-* [Assigning access to a group](/docs/account?topic=account-groups&interface=ui#access_ag).
+* [Creating an access group](/docs/iam?topic=iam-groups&interface=ui#create_ag).
+* [Assigning access to a group](/docs/iam?topic=iam-groups&interface=ui#access_ag).
 
-To get up and running quickly with IAM by setting up access groups for quick access assignments, inviting users to your account, and managing their access, see [Assigning access to resources by using access groups](/docs/account?topic=account-access-getstarted).
+To get up and running quickly with IAM by setting up access groups for quick access assignments, inviting users to your account, and managing their access, see [Assigning access to resources by using access groups](/docs/iam?topic=iam-access-getstarted).
 {: tip}
 
 
@@ -65,9 +65,9 @@ You can use trusted profiles to:
 
 Choose any of the following actions to manage trusted profiles in the {{site.data.keyword.cloud_notm}}:
 
-- To create a trusted profile, see [Creating trusted profiles](/docs/account?topic=account-create-trusted-profile).
-- To update a trusted profile, see [Updating trusted profiles](/docs/account?topic=account-trusted-profile-update).
-- To delete a trusted profile, see [Removing a trusted profile](/docs/account?topic=account-trusted-profile-update&interface=ui#remove-tp-console).
+- To create a trusted profile, see [Creating trusted profiles](/docs/iam?topic=iam-create-trusted-profile&interface=ui).
+- To update a trusted profile, see [Updating trusted profiles](/docs/iam?topic=iam-trusted-profile-update&interface=ui).
+- To delete a trusted profile, see [Removing a trusted profile](/docs/iam?topic=iam-trusted-profile-update&interface=ui#remove-tp-console).
 
 When using Trusted Profiles for authentication, it's important that the `Compute Resource` is configured with the correct values. If necessary, follow the steps below to add or update the 'Compute Resource' in your Trusted Profile:
 
@@ -90,9 +90,9 @@ To assign user's access to resources you must be an administrator on all service
 
 Choose any of the following actions to manage access for users or service IDs by using IAM policies:
 
-* To grant permissions, see [Assigning access](/docs/account?topic=account-assign-access-resources&interface=ui#assign-new-access).
-* To revoke permissions, see [Removing access](/docs/account?topic=account-assign-access-resources&interface=ui#removing-access-console).
-* To review assigned permissions, see [Reviewing your assigned access](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+* To grant permissions, see [Assigning access](/docs/iam?topic=iam-assign-access-resources&interface=ui#assign-new-access).
+* To revoke permissions, see [Removing access](/docs/iam?topic=iam-assign-access-resources&interface=ui#removing-access-console).
+* To review assigned permissions, see [Reviewing your assigned access](/docs/iam?topic=iam-assign-access-resources&interface=ui#review-your-access-console).
 
 
 ### About service IDs
@@ -104,10 +104,10 @@ You can assign specific access policies to the service ID that restrict permissi
 
 For more information, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
 
-- [Creating a service ID](/docs/account?topic=account-serviceids&interface=ui#create_serviceid).
-- [Updating a service ID](/docs/account?topic=account-serviceids&interface=ui#update_serviceid).
-- [Deleting a service ID](/docs/account?topic=account-serviceids&interface=ui#delete-group-ui).
-- To avoid a situation where your service ID is deleted causing an outage or disruption for the users of your service, you have the option to lock your service ID. Locking a service ID also prevents any policies from being changed, deleted, or assigned. For more information, see [Locking a service ID](/docs/account?topic=account-serviceids).
+- [Creating a service ID](/docs/iam?topic=iam-serviceids&interface=ui#create_serviceid).
+- [Updating a service ID](/docs/iam?topic=iam-serviceids&interface=ui#update_serviceid).
+- [Deleting a service ID](/docs/iam?topic=iam-serviceids#delete-group-ui).
+- To avoid a situation where your service ID is deleted causing an outage or disruption for the users of your service, you have the option to lock your service ID. Locking a service ID also prevents any policies from being changed, deleted, or assigned. For more information, see [Locking a service ID](/docs/iam?topic=iam-serviceids&interface=ui).
 
 
 ## IAM actions by task
