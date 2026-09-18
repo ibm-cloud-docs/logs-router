@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -119,7 +119,7 @@ Inclusion filters are comprised of an `operand`, `operator`, and `values`:
     Valid values depend on the `operand`.
 
     `location`
-    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-regions)
+    :   Any location where [{{site.data.keyword.logs_routing_full_notm}} is available.](/docs/logs-router?topic=logs-router-locations)
 
 For example, to define an inclusion filter that defines the condition where only platform logs that are generated in the us-south region are routed, looks as follows:
 

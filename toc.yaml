@@ -125,8 +125,6 @@ toc:
                 navtitle: Excluding platform logs by using the drop action
               - topic: route-drop-all.md
                 navtitle: Excluding all platform logs by using the drop action
-              - topic: cross-account-scenario.md
-                navtitle: Routing platform logs across accounts
               - topic: enterprise-routing-scenario.md
                 navtitle: Enterprise routing
       - topicgroup:

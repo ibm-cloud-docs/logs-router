@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -173,7 +173,7 @@ If the update is successful, the current settings will be displayed.
 {: api}
 
 To make API calls to manage settings, complete the following steps:
-1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-iam-retrieve-token&interface=cli).
+1. Get an IAM access token. For more information, see [Retrieving IAM access tokens](/docs/logs-router?topic=logs-router-retrieve-access-token&interface=cli).
 2. Identify the API endpoint in the region where you plan to configure or manage settings. For more information, see [Endpoints](/docs/logs-router?topic=logs-router-endpoints).
 
 

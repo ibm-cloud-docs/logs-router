@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -59,7 +59,7 @@ You can define any of the following information:
 
 * The locations where an account administrator can define targets to collect logs.
 
-    You can choose any of the supported locations where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Locations](/docs/logs-router?topic=logs-router-regions&interface=cli).
+    You can choose any of the supported locations where {{site.data.keyword.logs_routing_full_notm}} is available. For more information, see [Locations](/docs/logs-router?topic=logs-router-locations&interface=cli).
 
     Take into account any corporate or industry compliance requirements such as Financial Services Validated locations, or EU-managed regions.
 

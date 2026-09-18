@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-07"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -39,7 +39,7 @@ You can use the {{site.data.keyword.logs_routing_full_notm}} CLI or the {{site.d
 
 - If you prefer to work with the command line, you must install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Installing the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-- Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.logs_routing_full_notm}} service. Contact the account owner. The account owner can grant another user access to the account for the purposes of managing user access, and managing account resources. [Learn more](/docs/account?topic=account-userroles).
+- Your user ID needs **administrator platform permissions** to manage the {{site.data.keyword.logs_routing_full_notm}} service. Contact the account owner. The account owner can grant another user access to the account for the purposes of managing user access, and managing account resources. [Learn more](/docs/iam?topic=iam-userroles).
 
 
 ## Check your account is VRF enabled

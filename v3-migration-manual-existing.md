@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-17"
 
 keywords:
 
@@ -55,7 +55,7 @@ curl -X PATCH \
 
 Where `<region>` is your desired region such as `us-south`, or `eu-de`.
 
-For detailed information about this API endpoint, see [Modify settings](/apidocs/logs-router-service-api/logs-router-v3#update-settings){: external}
+For detailed information about this API endpoint, see [Modify settings](docs/apis/logs-router-service-api/logs-router-v3#update-settings){: external}
 
 ## Step 2: Generate a V3 configuration from your existing V1 configuration
 {: #v3-migration-manual-existing-generate}
