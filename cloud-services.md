@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -72,7 +72,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 | Service     | Description |  More information |
 |-------------|-------------|--------------------------------------------------------------------------------------------|
 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant_short_notm}} is a document-oriented database as a service (DBaaS). It stores data as documents in JSON format. | [More information](/docs/Cloudant?topic=Cloudant-log-analysis-integration) |
-| {{site.data.keyword.Db2_on_Cloud_long}} | {{site.data.keyword.Db2_on_Cloud_long}} is a managed Db2 service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [More information](/docs/Db2onCloud?topic=Db2onCloud-log_mon) |
+| {{site.data.keyword.Db2_on_Cloud_long}} | {{site.data.keyword.Db2_on_Cloud_long}} is a managed Db2 service that is hosted in the {{site.data.keyword.cloud_notm}} and integrated with other {{site.data.keyword.cloud_notm}} services. | [More information](/docs/db2-saas?topic=db2-saas-monitor) |
 | {{site.data.keyword.databases-for-postgresql_full}} | {{site.data.keyword.databases-for-postgresql_full_notm}} is a powerful, open source object-relational database that is highly customizable. | [More information](/docs/databases-for-postgresql?topic=databases-for-postgresql-logging) |
 | {{site.data.keyword.databases-for-redis_full}} | {{site.data.keyword.databases-for-redis_full_notm}} is a blazingly fast, in-memory data structure store. | [More information](/docs/databases-for-redis?topic=databases-for-redis-logging) |
 | {{site.data.keyword.databases-for-elasticsearch_full}} | {{site.data.keyword.databases-for-elasticsearch_full_notm}} combines the power of a full text search engine with the indexing strengths of a JSON document database. | [More information](/docs/databases-for-elasticsearch?topic=databases-for-elasticsearch-logging) |
@@ -101,7 +101,7 @@ The following table lists services that send logs to {{site.data.keyword.logs_ro
 
 | Service     | Description | More information |
 |-------------|-------------|-------------------------------------------------------------------------|
-| {{site.data.keyword.mq_short}} | MQ on IBM Cloud enables you to quickly and easily deploy queue managers in the cloud and connect your applications to them, for reliable data transfer between different parts of your enterprise application landscape. | [More information](/docs/mqcloud?topic=mqcloud-logging) |
+| {{site.data.keyword.mq_short}} | MQ on IBM Cloud enables you to quickly and easily deploy queue managers in the cloud and connect your applications to them, for reliable data transfer between different parts of your enterprise application landscape. | [More information](/docs/en/mq-as-a-service?topic=observability-activity-tracking-events-mq-as-service) |
 | {{site.data.keyword.apiconnect_full}} | {{site.data.keyword.apiconnect_full}} makes it easy to create, securely expose, manage, and monetize APIs so that you and your customers can power digital applications and spur innovation. | [More information](/docs/apiconnect?topic=apiconnect-logging) |
 {: caption="List of integration Cloud services" caption-side="top"}
 
@@ -157,7 +157,7 @@ The following table lists Cloud services that send logs to {{site.data.keyword.l
 | Service     | Description | More information |
 |-------------|-------------|-------------------------------------------------------------------------|
 | {{site.data.keyword.secrets-manager_full_notm}} | With {{site.data.keyword.secrets-manager_full_notm}}, you can create, lease, and centrally manage secrets that are used in {{site.data.keyword.cloud_notm}} services or your custom-built applications. | [More information](/docs/secrets-manager?topic=secrets-manager-logging) |
-| {{site.data.keyword.compliance_short}} | With {{site.data.keyword.compliance_short}}, you can continuously evaluate your resource configurations for compliance. | [More information](/docs/security-compliance?topic=security-compliance-logging) |
+| {{site.data.keyword.compliance_short}} | With {{site.data.keyword.compliance_short}}, you can continuously evaluate your resource configurations for compliance. | [More information](/docs/workload-protection?topic=workload-protection-at_events) |
 {: caption="List of security Cloud services" caption-side="top"}
 
 ## VMware Solutions services

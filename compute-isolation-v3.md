@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -93,7 +93,7 @@ Review the {{site.data.keyword.cloud_notm}} services that {{site.data.keyword.lo
 | {{site.data.keyword.cis_full_notm}} | {{site.data.keyword.cis_full_notm}} is used as a provider for DNS and load-balancing capabilities. |
 | {{site.data.keyword.containerlong_notm}} | {{site.data.keyword.logs_routing_full_notm}} uses {{site.data.keyword.containerlong_notm}} to run its service. |
 | {{site.data.keyword.mon_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} integrates with {{site.data.keyword.mon_short}}, by using a private connection, to send platform metrics. For more information, see [Monitoring metrics for {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-monitoring_metrics). |
-| {{site.data.keyword.cos_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} stores customer data in {{site.data.keyword.cos_short}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-mng-data).|
+| {{site.data.keyword.cos_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} stores customer data in {{site.data.keyword.cos_short}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-data-security).|
 | {{site.data.keyword.cloud_notm}} Platform | To authenticate requests to the service and authorize user actions, {{site.data.keyword.logs_routing_full_notm}} implements platform and service access roles in {{site.data.keyword.iamshort}} (IAM). For more information about required IAM permissions to work with the service, see [Managing access for {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-iam). Connections from {{site.data.keyword.logs_routing_full_notm}} to IAM do not use private connections. |
 | {{site.data.keyword.databases-for-postgresql_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} uses {{site.data.keyword.databases-for-postgresql_full_notm}}  for storing metadata. |
 | {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} routes customer data to {{site.data.keyword.logs_full_notm}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-mng-data).|
