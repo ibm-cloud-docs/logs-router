@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-21"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -96,7 +96,7 @@ Review the {{site.data.keyword.cloud_notm}} services that {{site.data.keyword.lo
 | {{site.data.keyword.cos_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} stores customer data in {{site.data.keyword.cos_short}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-data-security).|
 | {{site.data.keyword.cloud_notm}} Platform | To authenticate requests to the service and authorize user actions, {{site.data.keyword.logs_routing_full_notm}} implements platform and service access roles in {{site.data.keyword.iamshort}} (IAM). For more information about required IAM permissions to work with the service, see [Managing access for {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-iam). Connections from {{site.data.keyword.logs_routing_full_notm}} to IAM do not use private connections. |
 | {{site.data.keyword.databases-for-postgresql_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} uses {{site.data.keyword.databases-for-postgresql_full_notm}}  for storing metadata. |
-| {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} routes customer data to {{site.data.keyword.logs_full_notm}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-mng-data).|
+| {{site.data.keyword.logs_full_notm}} | {{site.data.keyword.logs_routing_full_notm}} routes customer data to {{site.data.keyword.logs_full_notm}} by using a private connection. All data is encrypted in transit and at rest. For more information, see [Managing your data in {{site.data.keyword.logs_routing_full_notm}}](/docs/atracker?topic=atracker-data-security).|
 {: caption="{{site.data.keyword.logs_routing_full_notm}} dependencies to other {{site.data.keyword.cloud_notm}} services." caption-side="top"}
 {: summary="The first column is the service. The second column is a description of the service."}
 

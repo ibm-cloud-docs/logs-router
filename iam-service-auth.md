@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -39,7 +39,7 @@ The following table lists the different S2S authorizations that you might need w
 | Authorize sending logs to an {{site.data.keyword.logs_full_notm}} instance | {{site.data.keyword.logs_routing_full}} | {{site.data.keyword.logs_full_notm}} |
 {: caption="S2S authorizations."}
 
-For more information, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
+For more information, see [Using authorizations to grant access between services](/docs/account).
 
 
 ## What are the IAM permissions that I need to configure service-to-service (S2S) authorizations for {{site.data.keyword.logs_routing_full}} in an {{site.data.keyword.cloud_notm}} account

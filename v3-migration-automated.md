@@ -2,7 +2,7 @@
 
 copyright:
   years: "2026"
-lastupdated: "2026-09-17"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -54,7 +54,7 @@ curl -X PATCH \
 
 Where `<region>` is your desired region such as `us-south`, or `eu-de`.
 
-For detailed information about this API endpoint, see [Modify settings](/docs/apis/logs-router-service-api/logs-router-v3#update-settings){: external}
+For detailed information about this API endpoint, see [Modify settings](docs/apis/logs-router-service-api/logs-router-v3#update-settings){: external}
 
 ## Step 2: Generate the Migration Plan
 {: #v3-migration-automated-generate}
