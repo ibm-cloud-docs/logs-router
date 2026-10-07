@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -47,7 +47,7 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getti
 
 You can also retrieve your access token programmatically by first creating a [service ID API key](/docs/iam?topic=iam-serviceidapikeys&interface=ui){: external} for your application, and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token.
 
-1. Create a [service ID API key](/docs/account?topic=account-serviceidapikeys){: external}.
+1. Create a [service ID API key](/docs/iam?topic=iam-serviceidapikeys&interface=ui){: external}.
 
 2. Call the [IAM Identity Services API](/apidocs/iam-identity-token-api){: external} to retrieve your access token.
 

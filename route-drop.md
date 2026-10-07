@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-10"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -83,7 +83,7 @@ For example, to define an inclusion filter that defines the condition where only
 Run the following command to exclude all logs received by {{site.data.keyword.logs_routing_full_notm}} from the `us-south` region.
 
 ```text
-ibmcloud logs-router route create --name drop-route --rules '[{"action": "drop", "inclusion_filters":[{"operand": "location","operator": "is","values": ["us-south"]}]}]' --managed-by account
+ibmcloud logs-router route create --name NAME --rules RULES | @RULES-FILE
 ```
 {: pre}
 

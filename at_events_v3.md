@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-05-06"
+lastupdated: "2026-10-07"
 
 keywords:
 
@@ -74,7 +74,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 
 {{site.data.keyword.atracker_short}} routes events based on the location that is specified in the `logSourceCRN` field included in the event.
 
-You can define a target, the resource where events are routed to, in any {{site.data.keyword.atracker_short}} supported region. However, the target resource can be located in any region where that type of target is supported, in the same account or in a different account. For more information about supported targets, see [Targets](/docs/atracker?topic=atracker-atracker-resources#at_events_v3-resources-targets).
+You can define a target, the resource where events are routed to, in any {{site.data.keyword.atracker_short}} supported region. However, the target resource can be located in any region where that type of target is supported, in the same account or in a different account. For more information about supported targets, see [Targets](/docs/docs/atracker?topic=atracker-atracker-resources#at_events_v3-resources-targets).
 
 You can define rules to determine where auditing events are to be routed by configuring 1 or more routes in the account. You can define rules for managing global events and location-based events that are generated in regions where {{site.data.keyword.atracker_short}} is supported. For more information, see [supported regions](/docs/atracker?topic=atracker-regions).
 

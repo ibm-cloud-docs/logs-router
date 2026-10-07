@@ -2,7 +2,7 @@
 
 copyright:
   years:  2023, 2026
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-21"
 
 keywords:
 
@@ -102,7 +102,7 @@ A service ID identifies a service or application similar to how a user ID identi
 
 You can assign specific access policies to the service ID that restrict permissions for using specific services, or even combine permissions for accessing different services. Since service IDs are not tied to a specific user, if a user leaves an organization and is deleted from the account, the service ID remains. This way, your application or service stays up and running.
 
-For more information, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
+For more information, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids&interface=ui)
 
 - [Creating a service ID](/docs/iam?topic=iam-serviceids&interface=ui#create_serviceid).
 - [Updating a service ID](/docs/iam?topic=iam-serviceids&interface=ui#update_serviceid).
